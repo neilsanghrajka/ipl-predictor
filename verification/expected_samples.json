@@ -1,0 +1,57 @@
+[
+  {
+    "full_name": "Virat Kohli",
+    "nickname": "VK",
+    "career_matches_expected": 267,
+    "career_runs_expected": 8661,
+    "career_wickets_expected": 0,
+    "season_2025_runs_expected": 657,
+    "season_2024_runs_expected": 741,
+    "tolerance_pct": 0.10,
+    "notes": "All-time IPL top scorer. RCB. Pure batter."
+  },
+  {
+    "full_name": "Jasprit Bumrah",
+    "nickname": "Bumrah",
+    "career_matches_expected": 133,
+    "career_runs_expected": 56,
+    "career_wickets_expected": 165,
+    "season_2025_runs_expected": 0,
+    "season_2024_runs_expected": 0,
+    "tolerance_pct": 0.15,
+    "notes": "MI lead bowler. Minimal batting contribution."
+  },
+  {
+    "full_name": "Ravindra Jadeja",
+    "nickname": "Jadeja",
+    "career_matches_expected": 232,
+    "career_runs_expected": 2500,
+    "career_wickets_expected": 155,
+    "season_2025_runs_expected": 200,
+    "season_2024_runs_expected": 200,
+    "tolerance_pct": 0.15,
+    "notes": "All-rounder. Was at CSK, traded to RR for IPL 2026. Dual contributor."
+  },
+  {
+    "full_name": "Sunil Narine",
+    "nickname": "Narine",
+    "career_matches_expected": 177,
+    "career_runs_expected": 1500,
+    "career_wickets_expected": 180,
+    "season_2025_runs_expected": 200,
+    "season_2024_runs_expected": 488,
+    "tolerance_pct": 0.20,
+    "notes": "KKR legend. Bowling all-rounder who became opening batter in 2024."
+  },
+  {
+    "full_name": "Rishabh Pant",
+    "nickname": "Pant",
+    "career_matches_expected": 115,
+    "career_runs_expected": 3300,
+    "career_wickets_expected": 0,
+    "season_2025_runs_expected": 400,
+    "season_2024_runs_expected": 446,
+    "tolerance_pct": 0.15,
+    "notes": "WK-Batter. Was at DC, now at LSG. Pure batter."
+  }
+]
