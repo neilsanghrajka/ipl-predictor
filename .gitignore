@@ -9,3 +9,4 @@ tsconfig.tsbuildinfo
 player_data.json
 predictions.json
 data/kaggle_stats.csv
+.vercel

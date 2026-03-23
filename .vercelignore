@@ -1,0 +1,10 @@
+node_modules
+.next
+.vercel
+__pycache__
+data
+verification
+*.py
+*.pyc
+*.csv
+*.md
