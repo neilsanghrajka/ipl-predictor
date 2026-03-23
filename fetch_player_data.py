@@ -1,155 +1,104 @@
 """
-STUB — You implement this.
-
-Fetches real IPL stats for all 186 players and outputs player_data.json.
-
-See PRD.md for the full specification.
-
-Input: player_templates.json (186 players with search queries)
-Output: player_data.json (same schema, stats filled in)
-
-Recommended approach:
-1. Use iplt20.com player pages as primary source
-2. Fall back to espncricinfo or Google search
-3. Parallelize with asyncio or concurrent.futures (10-20 workers)
-4. Rate limit to avoid getting blocked
-
-URL patterns:
-  iplt20.com:    https://www.iplt20.com/players/{firstname-lastname}/{id}
-  espncricinfo:  https://www.espncricinfo.com/cricketers/{name}-{id}
+Fetch official IPL player stats and write them back into player_registry.csv.
 """
 
-import json
+from __future__ import annotations
+
+import argparse
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime, timezone
+from pathlib import Path
+
+from official_ipl import fetch_player_stats_feed, flatten_stat_row
+from registry_csv import STATS_FIELDS, read_registry_csv, registry_key, write_registry_csv
 
 
-def fetch_career_stats(full_name: str) -> dict:
-    """
-    Fetch IPL career stats for a player.
-
-    Returns:
-    {
-        "career": {"matches": int, "innings_batted": int, "runs": int, "innings_bowled": int, "wickets": int},
-        "season_2025": {"matches": int, "innings_batted": int, "runs": int, "innings_bowled": int, "wickets": int},
-        "season_2024": {"matches": int, "innings_batted": int, "runs": int, "innings_bowled": int, "wickets": int},
-        "source_url": str,
-    }
-    """
-    # TODO: Implement — scrape iplt20.com or espncricinfo
-    raise NotImplementedError
+def clear_stats(row: dict[str, str]) -> None:
+    for field in STATS_FIELDS:
+        row[field] = ""
 
 
-def fetch_injury_status(full_name: str) -> dict:
-    """
-    Check current injury/fitness status for a player.
+def process_row(row: dict[str, str], raw_dir: Path) -> tuple[tuple[str, str, str], dict[str, str]]:
+    result: dict[str, str] = {}
+    timestamp = datetime.now(timezone.utc).isoformat()
+    stats_feed_url = row.get("official_stats_feed_url", "")
+    player_id = row.get("official_player_id", "")
 
-    Returns:
-    {
-        "availability_modifier": float,  # 0.0 to 1.0
-        "availability_note": str,        # Human-readable note
-        "source_url": str,
-    }
-    """
-    # TODO: Implement — Google search for injury updates
-    raise NotImplementedError
+    result["stats_source"] = stats_feed_url
+    result["stats_fetched_at"] = timestamp
 
+    if not player_id or not stats_feed_url:
+        result["stats_status"] = "missing_mapping"
+        result["confidence"] = "Low"
+        return registry_key(row), result
 
-def assign_playing_xi_tier(player: dict) -> str:
-    """
-    Determine the player's likely playing XI status.
+    payload = fetch_player_stats_feed(
+        player_id=player_id,
+        stats_feed_url=stats_feed_url,
+        raw_dir=raw_dir,
+    )
 
-    Uses: career stats, role, overseas status, team context.
+    if payload is None:
+        result["stats_status"] = "feed_missing"
+        result["confidence"] = "Low"
+        return registry_key(row), result
 
-    Returns one of: "GUARANTEED", "LIKELY", "ROTATION", "UNLIKELY"
-    """
-    # TODO: Implement — use heuristics based on career matches, runs, role
-    # Suggested logic:
-    #   - If career matches > 100 and runs > 2000 or wickets > 100 → GUARANTEED
-    #   - If career matches > 50 → LIKELY
-    #   - If career matches > 15 → ROTATION
-    #   - Else → UNLIKELY
-    # Override for known captains/stars
-    raise NotImplementedError
+    for season_key in ("career", "season_2025", "season_2024"):
+        result.update(flatten_stat_row(payload=payload, season_key=season_key))
 
-
-def process_player(player_template: dict) -> dict:
-    """
-    Full pipeline for one player:
-    1. Fetch stats
-    2. Fetch injury status
-    3. Assign tier
-    4. Return filled-in player dict
-    """
-    player = player_template.copy()
-
-    try:
-        stats = fetch_career_stats(player["full_name"])
-        player["career_stats"] = {
-            "season": 0,
-            **stats["career"],
-        }
-        player["season_2025"] = {
-            "season": 2025,
-            **stats["season_2025"],
-        }
-        player["season_2024"] = {
-            "season": 2024,
-            **stats["season_2024"],
-        }
-        player["stats_source"] = stats["source_url"]
-        player["confidence"] = "High"
-    except Exception as e:
-        player["confidence"] = "Low"
-        player["availability_note"] = f"Stats fetch failed: {e}"
-
-    try:
-        injury = fetch_injury_status(player["full_name"])
-        player["availability_modifier"] = injury["availability_modifier"]
-        player["availability_note"] = injury["availability_note"]
-        player["availability_source"] = injury["source_url"]
-    except Exception:
-        player["availability_modifier"] = 1.0  # Default: assume available
-
-    try:
-        player["playing_xi_tier"] = assign_playing_xi_tier(player)
-    except Exception:
-        player["playing_xi_tier"] = "LIKELY"  # Default
-
-    # Remove search_queries from output (not needed downstream)
-    player.pop("search_queries", None)
-
-    return player
+    result["stats_status"] = "ok"
+    result["confidence"] = "High"
+    return registry_key(row), result
 
 
-def main():
-    with open("player_templates.json") as f:
-        templates = json.load(f)
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Fetch official IPL player stats into player_registry.csv.")
+    parser.add_argument("--registry", default="player_registry.csv", help="Path to the canonical registry CSV.")
+    parser.add_argument(
+        "--raw-dir",
+        default="data/raw/player_stats",
+        help="Directory where latest raw official stats payloads should be stored.",
+    )
+    parser.add_argument(
+        "--workers",
+        type=int,
+        default=8,
+        help="Number of concurrent worker threads for official stats fetches.",
+    )
+    args = parser.parse_args()
 
-    print(f"Processing {len(templates)} players...")
+    rows = read_registry_csv(args.registry)
+    raw_dir = Path(args.raw_dir)
+    raw_dir.mkdir(parents=True, exist_ok=True)
 
-    # TODO: Parallelize this loop
-    results = []
-    for i, template in enumerate(templates):
-        print(f"  [{i+1}/{len(templates)}] {template['full_name']} ({template['ipl_team']})")
-        result = process_player(template)
-        results.append(result)
+    updates: dict[tuple[str, str, str], dict[str, str]] = {}
+    with ThreadPoolExecutor(max_workers=args.workers) as executor:
+        future_map = {executor.submit(process_row, row, raw_dir): row for row in rows}
+        for future in as_completed(future_map):
+            row = future_map[future]
+            key = registry_key(row)
+            try:
+                resolved_key, update = future.result()
+                updates[resolved_key] = update
+            except Exception as exc:
+                updates[key] = {
+                    "stats_source": row.get("official_stats_feed_url", ""),
+                    "stats_fetched_at": datetime.now(timezone.utc).isoformat(),
+                    "stats_status": f"error:{type(exc).__name__}",
+                    "confidence": "Low",
+                }
 
-    with open("player_data.json", "w") as f:
-        json.dump(results, f, indent=2)
+    for row in rows:
+        key = registry_key(row)
+        clear_stats(row)
+        update = updates[key]
+        for field, value in update.items():
+            if field in row:
+                row[field] = value
 
-    print(f"\nDone! Saved {len(results)} players to player_data.json")
-
-    # Summary
-    tiers = {}
-    for r in results:
-        tier = r["playing_xi_tier"]
-        tiers[tier] = tiers.get(tier, 0) + 1
-    print(f"\nTier distribution: {tiers}")
-
-    confidence = {}
-    for r in results:
-        c = r["confidence"]
-        confidence[c] = confidence.get(c, 0) + 1
-    print(f"Confidence distribution: {confidence}")
+    write_registry_csv(args.registry, rows)
+    ok_count = sum(1 for row in rows if row["stats_status"] == "ok")
+    print(f"Updated stats for {len(rows)} rows in {args.registry} (ok={ok_count})")
 
 
 if __name__ == "__main__":

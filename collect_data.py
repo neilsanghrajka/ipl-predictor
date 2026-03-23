@@ -1,21 +1,17 @@
 """
-Data Collection Script for IPL Fantasy Predictor
-=================================================
+CSV adapters for the IPL fantasy predictor.
 
-This script defines the search strategy for each player.
-It will be executed by calling web search APIs for each player
-to populate the model with real data.
-
-The output is a JSON file: player_data.json
-Each player entry contains all the fields needed by model.py
+The canonical input is player_registry.csv. This module translates flattened
+CSV rows into the in-memory PlayerData contract used by model.py.
 """
 
-import json
-from player_registry import PLAYER_REGISTRY
-from model import (
-    PlayerData, PlayerRole, PlayingXITier, SeasonStats,
-    load_draft_from_excel, predict_all
-)
+from __future__ import annotations
+
+from pathlib import Path
+
+from model import PlayerData, PlayerRole, PlayingXITier, SeasonStats, predict_all
+from registry_csv import parse_bool, parse_float, read_registry_csv, season_payload_from_row
+
 
 ROLE_MAP = {
     "BAT": PlayerRole.BATTER,
@@ -24,158 +20,96 @@ ROLE_MAP = {
     "WK": PlayerRole.WICKETKEEPER_BATTER,
 }
 
+TIER_MAP = {
+    "GUARANTEED": PlayingXITier.GUARANTEED,
+    "LIKELY": PlayingXITier.LIKELY,
+    "ROTATION": PlayingXITier.ROTATION,
+    "UNLIKELY": PlayingXITier.UNLIKELY,
+}
 
-def create_blank_player_data(nickname: str, ipl_team: str, fantasy_owner: str) -> dict:
-    """
-    Creates a blank player data template that needs to be filled by web search.
-    This defines exactly what data we need for each player.
-    """
-    if nickname in PLAYER_REGISTRY:
-        full_name, role_str, is_overseas = PLAYER_REGISTRY[nickname]
-    else:
-        full_name = nickname
-        role_str = "BAT"
-        is_overseas = False
 
+def _season_from_row(row: dict[str, str], prefix: str) -> SeasonStats:
+    return SeasonStats(**season_payload_from_row(row, prefix))
+
+
+def registry_row_to_dict(row: dict[str, str]) -> dict:
     return {
-        "nickname": nickname,
-        "full_name": full_name,
-        "ipl_team": ipl_team,
-        "fantasy_owner": fantasy_owner,
-        "role": role_str,
-        "is_overseas": is_overseas,
-
-        # To be filled by web search
-        "season_2025": {
-            "season": 2025,
-            "matches": 0,
-            "innings_batted": 0,
-            "runs": 0,
-            "innings_bowled": 0,
-            "wickets": 0,
-        },
-        "season_2024": {
-            "season": 2024,
-            "matches": 0,
-            "innings_batted": 0,
-            "runs": 0,
-            "innings_bowled": 0,
-            "wickets": 0,
-        },
-        "career_stats": {
-            "season": 0,
-            "matches": 0,
-            "innings_batted": 0,
-            "runs": 0,
-            "innings_bowled": 0,
-            "wickets": 0,
-        },
-
-        # To be assessed from web search
-        "playing_xi_tier": "LIKELY",  # Default, to be overridden
-        "availability_modifier": 1.0,
-        "availability_note": "",
-        "overseas_competition_note": "",
-        "stats_source": "",
-        "availability_source": "",
-        "confidence": "Medium",
-
-        # Web search queries to run
-        "search_queries": {
-            "stats": f"{full_name} IPL career statistics runs wickets matches espncricinfo",
-            "form_2025": f"{full_name} IPL 2025 stats runs wickets",
-            "injury": f"{full_name} injury fitness update IPL 2026",
-        }
+        "nickname": row["nickname"],
+        "full_name": row["full_name"],
+        "ipl_team": row["ipl_team"],
+        "fantasy_owner": row["fantasy_owner"],
+        "role": row["role"],
+        "is_overseas": parse_bool(row["is_overseas"]),
+        "official_name": row["official_name"],
+        "official_player_id": row["official_player_id"],
+        "official_player_url": row["official_player_url"],
+        "official_stats_feed_url": row["official_stats_feed_url"],
+        "mapping_source": row["mapping_source"],
+        "mapping_notes": row["mapping_notes"],
+        "season_2025": season_payload_from_row(row, "season_2025"),
+        "season_2024": season_payload_from_row(row, "season_2024"),
+        "career_stats": season_payload_from_row(row, "career"),
+        "playing_xi_tier": row["playing_xi_tier"] or "LIKELY",
+        "availability_modifier": parse_float(row["availability_modifier"], 1.0),
+        "availability_note": row["availability_note"],
+        "overseas_competition_note": row["overseas_competition_note"],
+        "stats_source": row["stats_source"],
+        "availability_source": row["availability_source"],
+        "stats_fetched_at": row["stats_fetched_at"],
+        "stats_status": row["stats_status"],
+        "confidence": row["confidence"] or "Medium",
     }
 
 
-def generate_all_player_templates(draft_file: str) -> list[dict]:
-    """Parse the draft and generate blank templates for every player."""
-    draft = load_draft_from_excel(draft_file)
-    all_players = []
-
-    for owner, players in draft.items():
-        for p in players:
-            template = create_blank_player_data(
-                nickname=p["nickname"],
-                ipl_team=p["ipl_team"],
-                fantasy_owner=owner,
-            )
-            all_players.append(template)
-
-    return all_players
-
-
-def dict_to_player_data(d: dict) -> PlayerData:
-    """Convert a filled-in dict back to a PlayerData for the model."""
-    role = ROLE_MAP.get(d["role"], PlayerRole.BATTER)
-
-    tier_map = {
-        "GUARANTEED": PlayingXITier.GUARANTEED,
-        "LIKELY": PlayingXITier.LIKELY,
-        "ROTATION": PlayingXITier.ROTATION,
-        "UNLIKELY": PlayingXITier.UNLIKELY,
-    }
-
-    def to_season(s: dict) -> SeasonStats:
+def dict_to_player_data(data: dict) -> PlayerData:
+    def to_season(season: dict) -> SeasonStats:
         return SeasonStats(
-            season=s["season"],
-            matches=s["matches"],
-            innings_batted=s["innings_batted"],
-            runs=s["runs"],
-            innings_bowled=s["innings_bowled"],
-            wickets=s["wickets"],
+            season=season["season"],
+            matches=season["matches"],
+            innings_batted=season["innings_batted"],
+            runs=season["runs"],
+            innings_bowled=season["innings_bowled"],
+            wickets=season["wickets"],
         )
 
+    if "season_2025" not in data:
+        data = registry_row_to_dict(data)
+
     return PlayerData(
-        nickname=d["nickname"],
-        full_name=d["full_name"],
-        ipl_team=d["ipl_team"],
-        fantasy_owner=d["fantasy_owner"],
-        role=role,
-        is_overseas=d["is_overseas"],
-        season_2025=to_season(d["season_2025"]),
-        season_2024=to_season(d["season_2024"]),
-        career_stats=to_season(d["career_stats"]),
-        playing_xi_tier=tier_map.get(d["playing_xi_tier"], PlayingXITier.LIKELY),
-        availability_modifier=d["availability_modifier"],
-        availability_note=d.get("availability_note", ""),
-        overseas_competition_note=d.get("overseas_competition_note", ""),
-        stats_source=d.get("stats_source", ""),
-        availability_source=d.get("availability_source", ""),
-        confidence=d.get("confidence", "Medium"),
+        nickname=data["nickname"],
+        full_name=data["full_name"],
+        ipl_team=data["ipl_team"],
+        fantasy_owner=data["fantasy_owner"],
+        role=ROLE_MAP.get(data["role"], PlayerRole.BATTER),
+        is_overseas=data["is_overseas"],
+        season_2025=to_season(data["season_2025"]),
+        season_2024=to_season(data["season_2024"]),
+        career_stats=to_season(data["career_stats"]),
+        playing_xi_tier=TIER_MAP.get(data["playing_xi_tier"], PlayingXITier.LIKELY),
+        availability_modifier=data["availability_modifier"],
+        availability_note=data.get("availability_note", ""),
+        overseas_competition_note=data.get("overseas_competition_note", ""),
+        stats_source=data.get("stats_source", ""),
+        availability_source=data.get("availability_source", ""),
+        confidence=data.get("confidence", "Medium"),
     )
 
 
-def run_predictions(player_data_file: str) -> dict:
-    """Load filled player data and run the full prediction model."""
-    with open(player_data_file) as f:
-        players_raw = json.load(f)
-
-    players = [dict_to_player_data(d) for d in players_raw]
-    return predict_all(players)
+def load_registry_rows(path: str | Path = "player_registry.csv") -> list[dict[str, str]]:
+    return read_registry_csv(path)
 
 
-if __name__ == "__main__":
-    # Step 1: Generate blank templates
-    draft_file = '/sessions/adoring-intelligent-galileo/mnt/uploads/Teamwise Players-2 (1).xlsx'
-    templates = generate_all_player_templates(draft_file)
+def load_player_dicts(path: str | Path = "player_registry.csv") -> list[dict]:
+    return [registry_row_to_dict(row) for row in load_registry_rows(path)]
 
-    print(f"Generated {len(templates)} player templates")
-    print(f"\nFantasy owners: {set(t['fantasy_owner'] for t in templates)}")
-    print(f"IPL teams: {set(t['ipl_team'] for t in templates)}")
 
-    # Save blank templates
-    with open('/sessions/adoring-intelligent-galileo/ipl-predictor/player_templates.json', 'w') as f:
-        json.dump(templates, f, indent=2)
+def load_player_objects(path: str | Path = "player_registry.csv") -> list[PlayerData]:
+    return [dict_to_player_data(player) for player in load_player_dicts(path)]
 
-    print(f"\nSaved to player_templates.json")
-    print(f"\nSample player template:")
-    print(json.dumps(templates[0], indent=2))
 
-    # Show all search queries that need to be run
-    print(f"\n\n=== TOTAL SEARCH QUERIES NEEDED ===")
-    total_queries = sum(len(t["search_queries"]) for t in templates)
-    print(f"Players: {len(templates)}")
-    print(f"Queries per player: 3 (stats, recent form, injury)")
-    print(f"Total queries: {total_queries}")
+def load_players_from_registry_csv(path: str | Path = "player_registry.csv") -> list[PlayerData]:
+    return load_player_objects(path)
+
+
+def run_predictions(player_registry_file: str | Path = "player_registry.csv") -> dict:
+    return predict_all(load_player_objects(player_registry_file))

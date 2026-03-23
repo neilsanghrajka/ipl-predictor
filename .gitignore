@@ -5,3 +5,4 @@ node_modules/
 .next/
 player_data.json
 predictions.json
+data/kaggle_stats.csv

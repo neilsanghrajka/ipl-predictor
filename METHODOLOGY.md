@@ -1,5 +1,8 @@
 # IPL 2026 Fantasy Draft — Prediction Methodology
 
+> Note: the current runtime data flow is CSV-first. `player_registry.csv` is
+> the canonical store for player identity, official mapping, and fetched stats.
+
 ## Scoring System
 
 - 1 run scored = 1 point

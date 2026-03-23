@@ -1,5 +1,9 @@
 # IPL 2026 Fantasy Draft Predictor — Data Collection PRD
 
+> Note: this document describes the original JSON-based collection plan. The
+> current runtime pipeline is CSV-first and uses `player_registry.csv` as the
+> canonical store.
+
 ## Overview
 
 We have a fantasy IPL draft with 7 owners and 186 players across 10 IPL teams. We need to predict which fantasy owner will win based on: **1 run = 1 point, 1 wicket = 25 points**.

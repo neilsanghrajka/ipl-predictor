@@ -8,11 +8,12 @@ Methodology:
 - Stats weighted: 50% last season, 30% season before, 20% career average
 """
 
-import json
-import pandas as pd
 from dataclasses import dataclass, field, asdict
 from typing import Optional
 from enum import Enum
+from pathlib import Path
+
+from official_ipl import load_draft_entries
 
 
 class PlayerRole(Enum):
@@ -258,30 +259,22 @@ def load_draft_from_excel(filepath: str) -> dict[str, list[str]]:
     Parse the fantasy draft Excel file.
     Returns: {fantasy_owner: [list of player nicknames]}
     """
-    df = pd.read_excel(filepath)
+    entries = load_draft_entries(Path(filepath))
+    owners = []
+    result: dict[str, list[dict[str, str]]] = {}
 
-    # Map IPL team to row ranges
-    ipl_teams = ['CSK', 'MI', 'SRH', 'RCB', 'PBKS', 'RR', 'DC', 'KKR', 'LSG', 'GT']
-    owners = df.columns[1:].tolist()
+    for entry in entries:
+        if entry.fantasy_owner not in result:
+            owners.append(entry.fantasy_owner)
+            result[entry.fantasy_owner] = []
+        result[entry.fantasy_owner].append(
+            {
+                "nickname": entry.nickname,
+                "ipl_team": entry.ipl_team,
+            }
+        )
 
-    # Build owner -> [(nickname, ipl_team)] mapping
-    result = {owner: [] for owner in owners}
-    current_team = None
-
-    for idx, row in df.iterrows():
-        team_cell = row.iloc[0]
-        if pd.notna(team_cell) and str(team_cell).strip() in ipl_teams:
-            current_team = str(team_cell).strip()
-
-        for owner in owners:
-            player = row[owner]
-            if pd.notna(player) and str(player).strip():
-                result[owner].append({
-                    "nickname": str(player).strip(),
-                    "ipl_team": current_team,
-                })
-
-    return result
+    return {owner: result[owner] for owner in owners}
 
 
 if __name__ == "__main__":

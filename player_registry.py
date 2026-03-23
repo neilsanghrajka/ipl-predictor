@@ -1,8 +1,8 @@
 """
-Player Registry: Maps draft nicknames to full names, roles, and overseas status.
-This is the master reference that the data collection script uses to search for stats.
+Legacy nickname registry used to bootstrap player_registry.csv.
 
-We need this because the draft sheet uses short names like "VK", "Sky", "QDK", "MSD" etc.
+The canonical source of truth is now player_registry.csv. This file remains only as
+the migration input for bootstrap scripts and team-scoped nickname resolution.
 """
 
 # Format: (nickname, full_name, role, is_overseas)
@@ -13,8 +13,8 @@ PLAYER_REGISTRY = {
     "Samson": ("Sanju Samson", "WK", False),
     "R Chahar": ("Rahul Chahar", "BOWL", False),
     "Henry": ("Matt Henry", "BOWL", True),
-    "Kartik": ("Kartik Tyagi", "BOWL", False),  # Note: different from KKR's Kartik Tyagi — context says CSK
-    "prashant": ("Prashant Solanki", "BOWL", False),
+    "Kartik": ("Kartik Sharma", "BOWL", False),
+    "prashant": ("Prashant Veer", "BOWL", False),
     "Dube": ("Shivam Dube", "AR", False),
     "Khaleel": ("Khaleel Ahmed", "BOWL", False),
     "MSD": ("MS Dhoni", "WK", False),
@@ -27,7 +27,7 @@ PLAYER_REGISTRY = {
     "Overton": ("Jamie Overton", "AR", True),
     "Akeal": ("Akeal Hosein", "BOWL", True),
     "Ruturaj": ("Ruturaj Gaikwad", "BAT", False),
-    "Mhatre": ("Prathamesh Mhatre", "BAT", False),
+    "Mhatre": ("Ayush Mhatre", "BAT", False),
     "Ellis": ("Nathan Ellis", "BOWL", True),
 
     # === MI ===
@@ -48,19 +48,19 @@ PLAYER_REGISTRY = {
     "Tilak": ("Tilak Varma", "BAT", False),
     "Sky": ("Suryakumar Yadav", "BAT", False),
     "Deepak": ("Deepak Chahar", "BOWL", False),
-    "Ashwini": ("Ashwini Kumar", "BOWL", False),
+    "Ashwini": ("Ashwani Kumar", "BOWL", False),
 
     # === SRH ===
     "Klaasen": ("Heinrich Klaasen", "WK", True),
     "E Malinga": ("Eshan Malinga", "BOWL", False),
     "Abhishek": ("Abhishek Sharma", "AR", False),
     "Jaydev": ("Jaydev Unadkat", "BOWL", False),
-    "Fuletra": ("Sachin Fuletra", "BAT", False),
+    "Fuletra": ("Krains Fuletra", "BAT", False),
     "Harshal": ("Harshal Patel", "AR", False),
     "Cummins": ("Pat Cummins", "BOWL", True),
     "Aniket": ("Aniket Verma", "BAT", False),
     "NKR": ("Nitish Kumar Reddy", "AR", False),
-    "Shivang": ("Shivang Bhatt", "BAT", False),
+    "Shivang": ("Shivang Kumar", "BAT", False),
     "Zeeshan": ("Zeeshan Ansari", "BOWL", False),
     "Head": ("Travis Head", "BAT", True),
     "Livingstone": ("Liam Livingstone", "AR", True),
@@ -68,20 +68,20 @@ PLAYER_REGISTRY = {
     "Kishan": ("Ishan Kishan", "WK", False),
     "Mavi": ("Shivam Mavi", "BOWL", False),
     "Carse": ("Brydon Carse", "AR", True),
-    "Salil": ("Salil Arunkumar", "BAT", False),
+    "Salil": ("Salil Arora", "BAT", False),
     "Harsh Dubey": ("Harsh Dubey", "BOWL", False),
 
     # === RCB ===
     "Krunal": ("Krunal Pandya", "AR", False),
     "Hazelwood": ("Josh Hazlewood", "BOWL", True),
     "Jitesh": ("Jitesh Sharma", "WK", False),
-    "Rasikh": ("Rasikh Salam", "BOWL", False),
+    "Rasikh": ("Rasikh Dar", "BOWL", False),
     "Bethell": ("Jacob Bethell", "AR", True),
     "Salt": ("Phil Salt", "WK", True),
     "Romario": ("Romario Shepherd", "AR", True),
     "Patidar": ("Rajat Patidar", "BAT", False),
     "Dayal": ("Yash Dayal", "BOWL", False),
-    "Mangesh": ("Mangesh Kumar", "BOWL", False),
+    "Mangesh": ("Mangesh Yadav", "BOWL", False),
     "David": ("Tim David", "BAT", True),
     "Suyash": ("Suyash Sharma", "BOWL", False),
     "Swapnil": ("Swapnil Singh", "AR", False),
@@ -101,8 +101,8 @@ PLAYER_REGISTRY = {
     "Yash Thakur": ("Yash Thakur", "BOWL", False),
     "Wadhera": ("Nehal Wadhera", "BAT", False),
     "Stoinis": ("Marcus Stoinis", "AR", True),
-    "Suyansh": ("Suyansh Mankad", "BAT", False),
-    "P Dube": ("Priyansh Dube", "BAT", False),
+    "Suyansh": ("Suryansh Shedge", "AR", False),
+    "P Dube": ("Pravin Dubey", "BOWL", False),
     "Iyer": ("Shreyas Iyer", "BAT", False),
     "Omarzai": ("Azmatullah Omarzai", "AR", True),
     "Shashank": ("Shashank Singh", "AR", False),
@@ -124,10 +124,10 @@ PLAYER_REGISTRY = {
     "Sushant": ("Sushant Mishra", "BOWL", False),
     "Jofra": ("Jofra Archer", "BOWL", True),
     "Kuldeep Sen": ("Kuldeep Sen", "BOWL", False),
-    "Puthur": ("Akash Madhwal", "BOWL", False),  # Need to verify
+    "Puthur": ("Vignesh Puthur", "BOWL", False),
     "Jaiswal": ("Yashasvi Jaiswal", "BAT", False),
-    "Burger": ("Lizaad Williams", "BOWL", True),  # Need to verify — could be Nandre Burger
-    "Yudhvir": ("Yudhvir Singh", "AR", False),
+    "Burger": ("Nandre Burger", "BOWL", True),
+    "Yudhvir": ("Yudhvir Singh Charak", "AR", False),
     "Hetmyr": ("Shimron Hetmyer", "BAT", True),
     "Jadeja": ("Ravindra Jadeja", "AR", False),
     "Sandeep": ("Sandeep Sharma", "BOWL", False),
@@ -139,19 +139,19 @@ PLAYER_REGISTRY = {
     "Mukesh": ("Mukesh Kumar", "BOWL", False),
     "Vipraj": ("Vipraj Nigam", "AR", False),
     "Karun": ("Karun Nair", "BAT", False),
-    "Ngidi": ("Lungi Ngidi", "BOWL", True),
+    "Ngidi": ("Lungisani Ngidi", "BOWL", True),
     "Nitish Rana": ("Nitish Rana", "BAT", False),
     "Ashutosh": ("Ashutosh Sharma", "BAT", False),
     "KLR": ("KL Rahul", "WK", False),
-    "Aquib": ("Aquib Nabi", "BOWL", False),
+    "Aquib": ("Auqib Dar", "BOWL", False),
     "Duckett": ("Ben Duckett", "BAT", True),
     "Kuldeep": ("Kuldeep Yadav", "BOWL", False),
-    "Porel": ("Ishan Porel", "BOWL", False),
+    "Porel": ("Abishek Porel", "WK", False),
     "Chameera": ("Dushmantha Chameera", "BOWL", True),
     "Axar": ("Axar Patel", "AR", False),
     "Starc": ("Mitchell Starc", "BOWL", True),
     "Shaw": ("Prithvi Shaw", "BAT", False),
-    "Rizwi": ("Mohammad Rizwan", "WK", True),  # Need to verify — or could be a domestic player
+    "Rizwi": ("Sameer Rizvi", "BAT", False),
 
     # === KKR ===
     "Ramandeep": ("Ramandeep Singh", "AR", False),
@@ -165,7 +165,7 @@ PLAYER_REGISTRY = {
     "Powell": ("Rovman Powell", "BAT", True),
     "Green": ("Cameron Green", "AR", True),
     "Angkrish": ("Angkrish Raghuvanshi", "BAT", False),
-    "Tejaswi": ("Tejaswi Dahiya", "BAT", False),
+    "Tejaswi": ("Tejasvi Singh", "BAT", False),
     "Seifert": ("Tim Seifert", "WK", True),
     "Tripathi": ("Rahul Tripathi", "BAT", False),
     "Harshit": ("Harshit Rana", "BOWL", False),
@@ -175,10 +175,10 @@ PLAYER_REGISTRY = {
 
     # === LSG ===
     "Pooran": ("Nicholas Pooran", "WK", True),
-    "Digvesh Rathi": ("Digvesh Rathi", "BOWL", False),
+    "Digvesh Rathi": ("Digvesh Singh", "BOWL", False),
     "Abdul Samad": ("Abdul Samad", "AR", False),
     "Mohsin": ("Mohsin Khan", "BOWL", False),
-    "Shahbaz": ("Shahbaz Ahmed", "AR", False),
+    "Shahbaz": ("Shahbaz Ahamad", "AR", False),
     "Himmat": ("Himmat Singh", "BAT", False),
     "Inglis": ("Josh Inglis", "WK", True),
     "Prince": ("Prince Yadav", "BOWL", False),
@@ -186,7 +186,7 @@ PLAYER_REGISTRY = {
     "Hasaranga": ("Wanindu Hasaranga", "AR", True),
     "Akshat Raghu": ("Akshat Raghuwanshi", "BAT", False),
     "Shami": ("Mohammad Shami", "BOWL", False),
-    "Mayank": ("Mayank Agarwal", "BAT", False),
+    "Mayank": ("Mayank Yadav", "BOWL", False),
     "Avesh": ("Avesh Khan", "BOWL", False),
     "Pant": ("Rishabh Pant", "WK", False),
     "Nortje": ("Anrich Nortje", "BOWL", True),
@@ -195,8 +195,8 @@ PLAYER_REGISTRY = {
     "Mukul": ("Mukul Choudhary", "BOWL", False),
 
     # === GT ===
-    "Sai Kishore": ("R Sai Kishore", "BOWL", False),
-    "Arshad Khan": ("Arshad Khan", "BOWL", False),
+    "Sai Kishore": ("Sai Kishore", "BOWL", False),
+    "Arshad Khan": ("Mohd Arshad Khan", "BOWL", False),
     "Sudarshan": ("Sai Sudharsan", "BAT", False),
     "Glenn": ("Glenn Phillips", "AR", True),
     "Ashok": ("Ashok Sharma", "AR", False),
@@ -205,7 +205,7 @@ PLAYER_REGISTRY = {
     "Tewatia": ("Rahul Tewatia", "AR", False),
     "Buttler": ("Jos Buttler", "WK", True),
     "Rashid": ("Rashid Khan", "BOWL", True),
-    "Kumar": ("Nishant Sindhu", "AR", False),  # Need to verify
+    "Kumar": ("Nishant Sindhu", "AR", False),
     "Gill": ("Shubman Gill", "BAT", False),
     "Siraj": ("Mohammed Siraj", "BOWL", False),
     "Anuj Rawat": ("Anuj Rawat", "WK", False),
@@ -214,6 +214,28 @@ PLAYER_REGISTRY = {
     "Washington": ("Washington Sundar", "AR", False),
     "Ishant": ("Ishant Sharma", "BOWL", False),
 }
+
+
+TEAM_SCOPED_PLAYER_OVERRIDES = {
+    ("PBKS", "Suyansh"): ("Suryansh Shedge", "AR", False),
+    ("PBKS", "P Dube"): ("Pravin Dubey", "BOWL", False),
+    ("RR", "Burger"): ("Nandre Burger", "BOWL", True),
+    ("RR", "Puthur"): ("Vignesh Puthur", "BOWL", False),
+    ("RR", "Shanaka"): ("Dasun Shanaka", "AR", True),
+    ("DC", "Aquib"): ("Auqib Dar", "BOWL", False),
+    ("DC", "Porel"): ("Abishek Porel", "WK", False),
+    ("DC", "Rizwi"): ("Sameer Rizvi", "BAT", False),
+    ("KKR", "Vaibhav"): ("Vaibhav Arora", "BOWL", False),
+    ("LSG", "Mayank"): ("Mayank Yadav", "BOWL", False),
+}
+
+
+def resolve_registry_entry(ipl_team: str, nickname: str) -> tuple[str, str, bool]:
+    """Resolve a draft nickname to the accepted player identity for that IPL team."""
+    if (ipl_team, nickname) in TEAM_SCOPED_PLAYER_OVERRIDES:
+        return TEAM_SCOPED_PLAYER_OVERRIDES[(ipl_team, nickname)]
+
+    return PLAYER_REGISTRY[nickname]
 
 
 def get_search_queries_for_player(nickname: str) -> dict:
