@@ -1,8 +1,5 @@
 # IPL 2026 Fantasy Draft — Prediction Methodology
 
-> Note: the current runtime data flow is CSV-first. `player_registry.csv` is
-> the canonical store for player identity, official mapping, and fetched stats.
-
 ## Scoring System
 
 - 1 run scored = 1 point
@@ -66,6 +63,37 @@ Wickets Per Match = Total Wickets in Period ÷ Total Matches in Period
 ```
 
 For pure batters this is 0. For part-time bowlers it will be a small positive number. For frontline bowlers it's typically 1.0–1.5 wickets per match.
+
+---
+
+## Handling IPL Debutants (No IPL Stats)
+
+Some players in the draft have zero IPL career stats — they're debutants in IPL 2026. When all three stat windows (2025, 2024, career) are empty, the weighted average formula would return 0, which may underestimate players who do get games.
+
+**Rule: Fixed baseline by role.** Every debutant with zero IPL matches gets a flat per-match estimate based on their role:
+
+| Role | Baseline Runs/Match | Baseline Wickets/Match | Rationale |
+|------|---------------------|----------------------|-----------|
+| Batter | 15 | 0 | Conservative — below average IPL batter output (~22 runs/match for regulars) |
+| Bowler | 3 | 0.5 | Reflects a bowler who bats at 9-11 and takes a wicket every 2 matches |
+| All-Rounder | 15 | 0.5 | Combined baseline for dual contributors |
+| Wicketkeeper-Batter | 15 | 0 | Same as batter — keepers rarely bowl |
+
+**When this applies:** Only when a player has 0 IPL career matches. If a player has even 1 IPL match, we use their actual stats.
+
+**Confidence:** All debutants are automatically rated `Low` confidence.
+
+**Why fixed baselines instead of international/domestic T20 stats:** Simpler, no extra data collection needed, and these players are almost all ROTATION or UNLIKELY tier — so their total point contribution is small regardless. The fixed baseline prevents them from being wildly wrong without adding complexity.
+
+**Known IPL 2026 debutants in this draft (16 players):**
+- CSK: Kartik Sharma, Prashant Veer
+- MI: Mohammad Izhar
+- SRH: Brydon Carse, Shivang Kumar, Salil Arora, Krains Fuletra
+- RCB: Mangesh Yadav, Jacob Duffy
+- PBKS: Ben Dwarshuis, Cooper Connolly
+- DC: Auqib Dar, Ben Duckett
+- KKR: Tejasvi Singh
+- LSG: Akshat Raghuwanshi, Mukul Choudhary
 
 ---
 

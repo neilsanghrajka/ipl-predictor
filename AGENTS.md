@@ -1,4 +1,11 @@
-# Repository Instructions
+# IPL 2026 Fantasy Draft Predictor
+
+Predicts the winner of a 7-person fantasy IPL draft.
+
+## Scoring
+
+- `1 run = 1 point`
+- `1 wicket = 25 points`
 
 ## Canonical Data Flow
 
@@ -7,7 +14,7 @@
 - Official IPL data is the only source of truth for player stats and official player IDs.
 - Kaggle data is not part of the runtime pipeline.
 
-## Pipeline
+## Quick Start
 
 Run the pipeline in this order:
 
@@ -19,7 +26,24 @@ python3 verification/verify.py
 python3 run_predictions.py
 ```
 
-## Data Files
+## Files
+
+| File | Description |
+|------|-------------|
+| `player_registry.csv` | Canonical source of truth for draft slots, official IDs, and stats |
+| `build_registry_csv.py` | Bootstrap builder for `player_registry.csv` |
+| `populate_official_ids.py` | Refreshes official IPL player IDs and URLs from squad pages |
+| `fetch_player_data.py` | Fetches official IPL batting and bowling stats into the CSV |
+| `collect_data.py` | CSV-to-model adapter layer |
+| `registry_csv.py` | Canonical CSV schema and row helpers |
+| `official_ipl.py` | Official IPL draft, squad, and stats fetch helpers |
+| `model.py` | Prediction engine |
+| `run_predictions.py` | Generates final rankings |
+| `verification/verify.py` | 4-suite verification against the CSV pipeline |
+| `verification/expected_samples.json` | Known stats for spot-check players |
+| `data/raw/` | Latest raw official squad pages and player stats payloads |
+
+## Data Rules
 
 - Keep canonical tabular data in CSV format.
 - Keep latest raw official fetches under `data/raw/`.
@@ -28,5 +52,5 @@ python3 run_predictions.py
 
 ## Cleanup Rules
 
-- Do not add new debug export artifacts like crosswalk JSON/CSV files at repo root.
+- Do not add new debug export artifacts like crosswalk JSON or CSV files at repo root.
 - If temporary inspection files are needed, keep them out of the canonical flow and remove them before finishing.

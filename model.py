@@ -41,6 +41,14 @@ TIER_PROBABILITIES = {
 LEAGUE_MATCHES = 14
 WICKET_POINTS = 25
 
+# Debutant baselines: fixed per-match estimates for players with 0 IPL matches
+DEBUTANT_BASELINES = {
+    PlayerRole.BATTER:             {"runs_per_match": 15, "wickets_per_match": 0.0},
+    PlayerRole.BOWLER:             {"runs_per_match": 3,  "wickets_per_match": 0.5},
+    PlayerRole.ALL_ROUNDER:        {"runs_per_match": 15, "wickets_per_match": 0.5},
+    PlayerRole.WICKETKEEPER_BATTER: {"runs_per_match": 15, "wickets_per_match": 0.0},
+}
+
 
 @dataclass
 class SeasonStats:
@@ -95,10 +103,18 @@ class PlayerData:
     confidence: str = "Medium"             # High / Medium / Low — how confident are we in the data
 
 
+def _is_debutant(player: PlayerData) -> bool:
+    """Player has zero IPL career matches — true debutant."""
+    has_2025 = player.season_2025 and player.season_2025.matches > 0
+    has_2024 = player.season_2024 and player.season_2024.matches > 0
+    has_career = player.career_stats and player.career_stats.matches > 0
+    return not (has_2025 or has_2024 or has_career)
+
+
 def compute_weighted_runs_per_match(player: PlayerData) -> float:
     """
     Weighted average runs per match: 50% last season, 30% previous, 20% career.
-    Falls back gracefully if seasons are missing.
+    Falls back to fixed debutant baseline if player has 0 IPL matches.
     """
     values = []
     weights = []
@@ -116,7 +132,8 @@ def compute_weighted_runs_per_match(player: PlayerData) -> float:
         weights.append(0.20)
 
     if not values:
-        return 0.0
+        # Debutant: use fixed baseline by role
+        return DEBUTANT_BASELINES[player.role]["runs_per_match"]
 
     # Normalize weights to sum to 1
     total_weight = sum(weights)
@@ -143,7 +160,8 @@ def compute_weighted_wickets_per_match(player: PlayerData) -> float:
         weights.append(0.20)
 
     if not values:
-        return 0.0
+        # Debutant: use fixed baseline by role
+        return DEBUTANT_BASELINES[player.role]["wickets_per_match"]
 
     total_weight = sum(weights)
     return sum(v * (w / total_weight) for v, w in zip(values, weights))
@@ -160,6 +178,7 @@ def predict_player_points(player: PlayerData) -> dict:
     Full prediction for a single player.
     Returns a dict with all intermediate calculations for auditability.
     """
+    debutant = _is_debutant(player)
     weighted_runs = compute_weighted_runs_per_match(player)
     weighted_wickets = compute_weighted_wickets_per_match(player)
     expected_matches = compute_expected_matches(player)
@@ -176,6 +195,7 @@ def predict_player_points(player: PlayerData) -> dict:
         "fantasy_owner": player.fantasy_owner,
         "role": player.role.value,
         "is_overseas": player.is_overseas,
+        "is_debutant": debutant,  # True = using fixed baseline, no IPL history
 
         # Intermediate calculations (for audit trail)
         "weighted_runs_per_match": round(weighted_runs, 2),
@@ -260,7 +280,7 @@ def load_draft_from_excel(filepath: str) -> dict[str, list[str]]:
     Returns: {fantasy_owner: [list of player nicknames]}
     """
     entries = load_draft_entries(Path(filepath))
-    owners = []
+    owners: list[str] = []
     result: dict[str, list[dict[str, str]]] = {}
 
     for entry in entries:
