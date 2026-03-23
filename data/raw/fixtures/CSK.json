@@ -1,0 +1,73 @@
+{
+  "competition_id": "284",
+  "fixtures": [
+    {
+      "city": "Guwahati",
+      "competition_id": "284",
+      "is_home": false,
+      "match_date": "2026-03-30",
+      "match_date_display": "30 Mar 2026",
+      "match_datetime_local": "2026-03-30 19:30:00",
+      "match_id": "2419",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "RR",
+      "opponent_name": "Rajasthan Royals",
+      "team_code": "CSK",
+      "team_name": "Chennai Super Kings",
+      "venue": "ACA Stadium"
+    },
+    {
+      "city": "Chennai",
+      "competition_id": "284",
+      "is_home": true,
+      "match_date": "2026-04-03",
+      "match_date_display": "3 Apr 2026",
+      "match_datetime_local": "2026-04-03 19:30:00",
+      "match_id": "2423",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "PBKS",
+      "opponent_name": "Punjab Kings",
+      "team_code": "CSK",
+      "team_name": "Chennai Super Kings",
+      "venue": "MA Chidambaram Stadium"
+    },
+    {
+      "city": "Bengaluru",
+      "competition_id": "284",
+      "is_home": false,
+      "match_date": "2026-04-05",
+      "match_date_display": "5 Apr 2026",
+      "match_datetime_local": "2026-04-05 19:30:00",
+      "match_id": "2427",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "RCB",
+      "opponent_name": "Royal Challengers Bengaluru",
+      "team_code": "CSK",
+      "team_name": "Chennai Super Kings",
+      "venue": "M Chinnaswamy Stadium"
+    },
+    {
+      "city": "Chennai",
+      "competition_id": "284",
+      "is_home": true,
+      "match_date": "2026-04-11",
+      "match_date_display": "11 Apr 2026",
+      "match_datetime_local": "2026-04-11 19:30:00",
+      "match_id": "2434",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "DC",
+      "opponent_name": "Delhi Capitals",
+      "team_code": "CSK",
+      "team_name": "Chennai Super Kings",
+      "venue": "MA Chidambaram Stadium"
+    }
+  ],
+  "published_fixture_count": 4,
+  "season": "2026",
+  "team": "CSK",
+  "team_name": "Chennai Super Kings"
+}

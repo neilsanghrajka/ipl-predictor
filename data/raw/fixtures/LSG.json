@@ -1,0 +1,73 @@
+{
+  "competition_id": "284",
+  "fixtures": [
+    {
+      "city": "Lucknow",
+      "competition_id": "284",
+      "is_home": true,
+      "match_date": "2026-04-01",
+      "match_date_display": "1 Apr 2026",
+      "match_datetime_local": "2026-04-01 19:30:00",
+      "match_id": "2421",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "DC",
+      "opponent_name": "Delhi Capitals",
+      "team_code": "LSG",
+      "team_name": "Lucknow Super Giants",
+      "venue": "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium"
+    },
+    {
+      "city": "Hyderabad",
+      "competition_id": "284",
+      "is_home": false,
+      "match_date": "2026-04-05",
+      "match_date_display": "5 Apr 2026",
+      "match_datetime_local": "2026-04-05 15:30:00",
+      "match_id": "2426",
+      "match_status": "UpComing",
+      "match_time_local": "15:30",
+      "opponent_code": "SRH",
+      "opponent_name": "Sunrisers Hyderabad",
+      "team_code": "LSG",
+      "team_name": "Lucknow Super Giants",
+      "venue": "Rajiv Gandhi International Stadium"
+    },
+    {
+      "city": "Kolkata",
+      "competition_id": "284",
+      "is_home": false,
+      "match_date": "2026-04-09",
+      "match_date_display": "9 Apr 2026",
+      "match_datetime_local": "2026-04-09 19:30:00",
+      "match_id": "2431",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "KKR",
+      "opponent_name": "Kolkata Knight Riders",
+      "team_code": "LSG",
+      "team_name": "Lucknow Super Giants",
+      "venue": "Eden Gardens"
+    },
+    {
+      "city": "Lucknow",
+      "competition_id": "284",
+      "is_home": true,
+      "match_date": "2026-04-12",
+      "match_date_display": "12 Apr 2026",
+      "match_datetime_local": "2026-04-12 15:30:00",
+      "match_id": "2435",
+      "match_status": "UpComing",
+      "match_time_local": "15:30",
+      "opponent_code": "GT",
+      "opponent_name": "Gujarat Titans",
+      "team_code": "LSG",
+      "team_name": "Lucknow Super Giants",
+      "venue": "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium"
+    }
+  ],
+  "published_fixture_count": 4,
+  "season": "2026",
+  "team": "LSG",
+  "team_name": "Lucknow Super Giants"
+}

@@ -1,0 +1,451 @@
+{
+  "parsed": {
+    "availability_basis": "confirmed_available",
+    "availability_comment": "Available for selection across the published RR fixtures; full-season estimate assumes no later adverse news.",
+    "availability_expected_matches_available": 14,
+    "availability_modifier": 1.0,
+    "availability_note": "No current injury/suspension report found; T20 World Cup 2026 duty preceded RR's March 30, 2026 opener.",
+    "availability_source_urls": [
+      "https://www.rajasthanroyals.com/news/kwena-maphaka-donovan-ferreira-south-africa-squad-t20-world-cup-2026",
+      "https://www.rajasthanroyals.com/latest-news/rajasthan-royals-ipl-2026-schedule-match-time"
+    ],
+    "followup_reason": "Need first-match XI/team-sheet evidence to separate Maphaka from Burger/Curran in RR's overseas pecking order.",
+    "full_name": "Kwena Maphaka",
+    "needs_player_followup": true,
+    "official_player_id": "20724",
+    "overseas_competition_basis": "overseas_slot_pressure",
+    "overseas_competition_comment": "Primary barrier is combination fit, not availability.",
+    "overseas_competition_note": "Strong overseas-slot squeeze: Archer, Burger, Hetmyer, Curran, Ferreira and Pretorius all compete for four spots.",
+    "overseas_competition_source_urls": [
+      "https://www.rajasthanroyals.com/news/indian-premier-league-ipl-2026-auction-date",
+      "https://www.rajasthanroyals.com/latest-news/ipl-2026-auction-rajasthan-royals-squad-full-players-list",
+      "https://www.rajasthanroyals.com/news/ipl-2026-rr-players-retention-list"
+    ],
+    "playing_xi_basis": "inferred_from_team_context",
+    "playing_xi_comment": "Available squad member but behind multiple established overseas options, especially Archer and Burger in the pace mix.",
+    "playing_xi_source_urls": [
+      "https://www.rajasthanroyals.com/news/ipl-2026-rr-players-retention-list",
+      "https://www.rajasthanroyals.com/news/indian-premier-league-ipl-2026-auction-date",
+      "https://www.iplt20.com/teams/rajasthan-royals/squad-details/20716"
+    ],
+    "playing_xi_tier": "ROTATION",
+    "research_confidence": "Medium"
+  },
+  "request": {
+    "input": [
+      {
+        "content": [
+          {
+            "text": "You are doing a focused IPL 2026 player availability and lineup audit.\n\nYou are refining one player's non-stats fields after an initial team-level pass.\nUse web search. Prefer official IPL / franchise / BCCI sources, then reputable cricket reporting.\n\nRules:\n- Return JSON only.\n- Keep the same schema as the team-level player object.\n- Resolve ambiguity where possible using recent evidence.\n- Keep comments short and audit-friendly.\n- If evidence remains conflicting, say so explicitly and keep needs_player_followup=true.\n- Every source URL array must contain at least one URL.",
+            "type": "input_text"
+          }
+        ],
+        "role": "system"
+      },
+      {
+        "content": [
+          {
+            "text": "Refine this single-player non-stats assessment and return the structured JSON.\n\n{\n  \"fixtures\": [\n    {\n      \"city\": \"Guwahati\",\n      \"is_home\": true,\n      \"match_date\": \"2026-03-30\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"19:30\",\n      \"opponent_code\": \"CSK\",\n      \"opponent_name\": \"Chennai Super Kings\",\n      \"venue\": \"ACA Stadium\"\n    },\n    {\n      \"city\": \"Ahmedabad\",\n      \"is_home\": false,\n      \"match_date\": \"2026-04-04\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"19:30\",\n      \"opponent_code\": \"GT\",\n      \"opponent_name\": \"Gujarat Titans\",\n      \"venue\": \"Narendra Modi Stadium\"\n    },\n    {\n      \"city\": \"Guwahati\",\n      \"is_home\": true,\n      \"match_date\": \"2026-04-07\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"19:30\",\n      \"opponent_code\": \"MI\",\n      \"opponent_name\": \"Mumbai Indians\",\n      \"venue\": \"ACA Stadium\"\n    },\n    {\n      \"city\": \"Guwahati\",\n      \"is_home\": true,\n      \"match_date\": \"2026-04-10\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"19:30\",\n      \"opponent_code\": \"RCB\",\n      \"opponent_name\": \"Royal Challengers Bengaluru\",\n      \"venue\": \"ACA Stadium\"\n    }\n  ],\n  \"league_matches_expected\": 14,\n  \"player\": {\n    \"full_name\": \"Kwena Maphaka\",\n    \"is_overseas\": true,\n    \"nickname\": \"Kwena\",\n    \"official_player_id\": \"20724\",\n    \"official_player_url\": \"https://www.iplt20.com/players/kwena-maphaka/20724\",\n    \"role\": \"BOWL\",\n    \"season_2024_matches\": \"2\",\n    \"season_2024_runs\": \"\",\n    \"season_2024_wickets\": \"1\",\n    \"season_2025_matches\": \"2\",\n    \"season_2025_runs\": \"8\",\n    \"season_2025_wickets\": \"1\"\n  },\n  \"published_fixture_count\": 4,\n  \"team_code\": \"RR\",\n  \"team_level_baseline\": {\n    \"availability_basis\": \"confirmed_available\",\n    \"availability_comment\": \"Available for all published RR fixtures. Only 4 of 14 league fixtures are currently published, so full-season estimate assumes no later adverse news.\",\n    \"availability_expected_matches_available\": 14,\n    \"availability_modifier\": 1.0,\n    \"availability_note\": \"No reported IPL 2026 unavailability; T20 World Cup duty ended before RR's March 30 opener.\",\n    \"availability_source_urls\": [\n      \"https://www.rajasthanroyals.com/news/kwena-maphaka-donovan-ferreira-south-africa-squad-t20-world-cup-2026\",\n      \"https://www.rajasthanroyals.com/latest-news/rajasthan-royals-ipl-2026-schedule-match-time\"\n    ],\n    \"followup_reason\": \"Need closer confirmation of pecking order among RR overseas pacers after full squad/first XI is revealed.\",\n    \"full_name\": \"Kwena Maphaka\",\n    \"needs_player_followup\": true,\n    \"official_player_id\": \"20724\",\n    \"overseas_competition_basis\": \"overseas_slot_pressure\",\n    \"overseas_competition_comment\": \"Overseas cap, not fitness, is the main limiter.\",\n    \"overseas_competition_note\": \"Competing with Archer, Hetmyer, Burger, Ferreira and other overseas options for four slots.\",\n    \"overseas_competition_source_urls\": [\n      \"https://www.rajasthanroyals.com/news/ipl-2026-rr-players-retention-list\",\n      \"https://www.rajasthanroyals.com/latest-news/ipl-2026-auction-rajasthan-royals-squad-full-players-list\"\n    ],\n    \"playing_xi_basis\": \"inferred_from_team_context\",\n    \"playing_xi_comment\": \"Overseas quick in a crowded pace group; not clearly first-choice in the XI.\",\n    \"playing_xi_source_urls\": [\n      \"https://www.rajasthanroyals.com/news/ipl-2026-rr-players-retention-list\",\n      \"https://www.rajasthanroyals.com/news/indian-premier-league-ipl-2026-auction-date\"\n    ],\n    \"playing_xi_tier\": \"ROTATION\",\n    \"research_confidence\": \"Medium\"\n  },\n  \"team_name\": \"Rajasthan Royals\"\n}",
+            "type": "input_text"
+          }
+        ],
+        "role": "user"
+      }
+    ],
+    "max_output_tokens": 2500,
+    "model": "gpt-5.4",
+    "text": {
+      "format": {
+        "name": "rr_20724_followup",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "availability_basis": {
+              "enum": [
+                "confirmed_available",
+                "conflicting_reports",
+                "inferred_no_adverse_news",
+                "injury_report",
+                "late_joining",
+                "suspension",
+                "tournament_conflict",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "availability_comment": {
+              "type": "string"
+            },
+            "availability_expected_matches_available": {
+              "type": "integer"
+            },
+            "availability_modifier": {
+              "type": "number"
+            },
+            "availability_note": {
+              "type": "string"
+            },
+            "availability_source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "followup_reason": {
+              "type": "string"
+            },
+            "full_name": {
+              "type": "string"
+            },
+            "needs_player_followup": {
+              "type": "boolean"
+            },
+            "official_player_id": {
+              "type": "string"
+            },
+            "overseas_competition_basis": {
+              "enum": [
+                "confirmed_role",
+                "conflicting_reports",
+                "domestic_player",
+                "overseas_slot_pressure",
+                "role_depth_competition",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "overseas_competition_comment": {
+              "type": "string"
+            },
+            "overseas_competition_note": {
+              "type": "string"
+            },
+            "overseas_competition_source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "playing_xi_basis": {
+              "enum": [
+                "confirmed_role",
+                "conflicting_reports",
+                "inferred_from_team_context",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "playing_xi_comment": {
+              "type": "string"
+            },
+            "playing_xi_source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "playing_xi_tier": {
+              "enum": [
+                "GUARANTEED",
+                "LIKELY",
+                "ROTATION",
+                "UNLIKELY"
+              ],
+              "type": "string"
+            },
+            "research_confidence": {
+              "enum": [
+                "High",
+                "Low",
+                "Medium"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "official_player_id",
+            "full_name",
+            "playing_xi_tier",
+            "playing_xi_basis",
+            "playing_xi_comment",
+            "playing_xi_source_urls",
+            "availability_modifier",
+            "availability_basis",
+            "availability_expected_matches_available",
+            "availability_note",
+            "availability_comment",
+            "availability_source_urls",
+            "overseas_competition_note",
+            "overseas_competition_basis",
+            "overseas_competition_comment",
+            "overseas_competition_source_urls",
+            "research_confidence",
+            "needs_player_followup",
+            "followup_reason"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ]
+  },
+  "request_id": "66f562fe-0f56-4f2e-b4dc-270883e03837",
+  "response": {
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1774271336,
+    "created_at": 1774271324,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "id": "resp_031b3226ac9d601c0069c13b5c39d4819c82da46b15b817390",
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": 2500,
+    "max_tool_calls": null,
+    "metadata": {},
+    "model": "gpt-5.4-2026-03-05",
+    "object": "response",
+    "output": [
+      {
+        "action": {
+          "queries": [
+            "site:rajasthanroyals.com Kwena Maphaka Rajasthan Royals 2026 squad",
+            "site:iplt20.com Kwena Maphaka Rajasthan Royals 2026",
+            "Kwena Maphaka Rajasthan Royals 2026 Cricbuzz",
+            "Kwena Maphaka Rajasthan Royals 2026 ESPNcricinfo"
+          ],
+          "query": "site:rajasthanroyals.com Kwena Maphaka Rajasthan Royals 2026 squad",
+          "type": "search"
+        },
+        "id": "ws_031b3226ac9d601c0069c13b5cb088819c9262dea0bdbd32c7",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "action": {
+          "queries": [
+            "site:iplt20.com Rajasthan Royals squad 2026 Archer Burger Hetmyer Ferreira Curran Pretorius Maphaka",
+            "site:rajasthanroyals.com Rajasthan Royals 2026 squad full players list Maphaka",
+            "site:espncricinfo.com Rajasthan Royals probable XI 2026 Kwena Maphaka",
+            "site:cricbuzz.com Rajasthan Royals probable xi 2026 Kwena Maphaka"
+          ],
+          "query": "site:iplt20.com Rajasthan Royals squad 2026 Archer Burger Hetmyer Ferreira Curran Pretorius Maphaka",
+          "type": "search"
+        },
+        "id": "ws_031b3226ac9d601c0069c13b5eb85c819ca0f82a15cf1c15e2",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "content": [
+          {
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"official_player_id\":\"20724\",\"full_name\":\"Kwena Maphaka\",\"playing_xi_tier\":\"ROTATION\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Available squad member but behind multiple established overseas options, especially Archer and Burger in the pace mix.\",\"playing_xi_source_urls\":[\"https://www.rajasthanroyals.com/news/ipl-2026-rr-players-retention-list\",\"https://www.rajasthanroyals.com/news/indian-premier-league-ipl-2026-auction-date\",\"https://www.iplt20.com/teams/rajasthan-royals/squad-details/20716\"],\"availability_modifier\":1,\"availability_basis\":\"confirmed_available\",\"availability_expected_matches_available\":14,\"availability_note\":\"No current injury/suspension report found; T20 World Cup 2026 duty preceded RR's March 30, 2026 opener.\",\"availability_comment\":\"Available for selection across the published RR fixtures; full-season estimate assumes no later adverse news.\",\"availability_source_urls\":[\"https://www.rajasthanroyals.com/news/kwena-maphaka-donovan-ferreira-south-africa-squad-t20-world-cup-2026\",\"https://www.rajasthanroyals.com/latest-news/rajasthan-royals-ipl-2026-schedule-match-time\"],\"overseas_competition_note\":\"Strong overseas-slot squeeze: Archer, Burger, Hetmyer, Curran, Ferreira and Pretorius all compete for four spots.\",\"overseas_competition_basis\":\"overseas_slot_pressure\",\"overseas_competition_comment\":\"Primary barrier is combination fit, not availability.\",\"overseas_competition_source_urls\":[\"https://www.rajasthanroyals.com/news/indian-premier-league-ipl-2026-auction-date\",\"https://www.rajasthanroyals.com/latest-news/ipl-2026-auction-rajasthan-royals-squad-full-players-list\",\"https://www.rajasthanroyals.com/news/ipl-2026-rr-players-retention-list\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"Need first-match XI/team-sheet evidence to separate Maphaka from Burger/Curran in RR's overseas pecking order.\"}",
+            "type": "output_text"
+          }
+        ],
+        "id": "msg_031b3226ac9d601c0069c13b613584819c8731d9b711dc7d0e",
+        "phase": "final_answer",
+        "role": "assistant",
+        "status": "completed",
+        "type": "message"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": null,
+    "reasoning": {
+      "effort": "none",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "store": true,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "description": null,
+        "name": "rr_20724_followup",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "availability_basis": {
+              "enum": [
+                "confirmed_available",
+                "conflicting_reports",
+                "inferred_no_adverse_news",
+                "injury_report",
+                "late_joining",
+                "suspension",
+                "tournament_conflict",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "availability_comment": {
+              "type": "string"
+            },
+            "availability_expected_matches_available": {
+              "type": "integer"
+            },
+            "availability_modifier": {
+              "type": "number"
+            },
+            "availability_note": {
+              "type": "string"
+            },
+            "availability_source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "followup_reason": {
+              "type": "string"
+            },
+            "full_name": {
+              "type": "string"
+            },
+            "needs_player_followup": {
+              "type": "boolean"
+            },
+            "official_player_id": {
+              "type": "string"
+            },
+            "overseas_competition_basis": {
+              "enum": [
+                "confirmed_role",
+                "conflicting_reports",
+                "domestic_player",
+                "overseas_slot_pressure",
+                "role_depth_competition",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "overseas_competition_comment": {
+              "type": "string"
+            },
+            "overseas_competition_note": {
+              "type": "string"
+            },
+            "overseas_competition_source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "playing_xi_basis": {
+              "enum": [
+                "confirmed_role",
+                "conflicting_reports",
+                "inferred_from_team_context",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "playing_xi_comment": {
+              "type": "string"
+            },
+            "playing_xi_source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "playing_xi_tier": {
+              "enum": [
+                "GUARANTEED",
+                "LIKELY",
+                "ROTATION",
+                "UNLIKELY"
+              ],
+              "type": "string"
+            },
+            "research_confidence": {
+              "enum": [
+                "High",
+                "Low",
+                "Medium"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "official_player_id",
+            "full_name",
+            "playing_xi_tier",
+            "playing_xi_basis",
+            "playing_xi_comment",
+            "playing_xi_source_urls",
+            "availability_modifier",
+            "availability_basis",
+            "availability_expected_matches_available",
+            "availability_note",
+            "availability_comment",
+            "availability_source_urls",
+            "overseas_competition_note",
+            "overseas_competition_basis",
+            "overseas_competition_comment",
+            "overseas_competition_source_urls",
+            "research_confidence",
+            "needs_player_followup",
+            "followup_reason"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "search_context_size": "medium",
+        "type": "web_search",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 13999,
+      "input_tokens_details": {
+        "cached_tokens": 3712
+      },
+      "output_tokens": 735,
+      "output_tokens_details": {
+        "reasoning_tokens": 244
+      },
+      "total_tokens": 14734
+    },
+    "user": null
+  },
+  "saved_at": "2026-03-23T13:08:56.257691+00:00"
+}

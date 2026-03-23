@@ -1,0 +1,478 @@
+{
+  "parsed": {
+    "availability_basis": "confirmed_available",
+    "availability_comment": "In West Indies' final T20 World Cup 2026 squad and no fresh injury/suspension report found before GT's March 31 opener.",
+    "availability_expected_matches_available": 12,
+    "availability_modifier": 0.86,
+    "availability_note": "Available for IPL start; no current injury report found. Small deduction remains because full league fixture list is not yet published and overseas management can change.",
+    "availability_source_urls": [
+      "https://www.icc-cricket.com/tournaments/mens-t20-world-cup-2026/news/final-squads-for-icc-men-s-t20-world-cup-2026-confirmed",
+      "https://www.cricbuzz.com/cricket-match-squads/149651/pbks-vs-gt-4th-match-indian-premier-league-2026",
+      "https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report"
+    ],
+    "followup_reason": "Recent public XI projections conflict on Holder's role versus Phillips/Rabada/Banton, so final GT combination still needs toss-and-conditions confirmation.",
+    "full_name": "Jason Holder",
+    "needs_player_followup": true,
+    "official_player_id": "1075",
+    "overseas_competition_basis": "overseas_slot_pressure",
+    "overseas_competition_comment": "Not an overseas lock because Buttler and Rashid are near-certain picks, leaving Holder in a tactical contest mainly with Rabada/Phillips depending on balance.",
+    "overseas_competition_note": "Competes for one of four overseas spots with Buttler, Rashid Khan, Rabada, Glenn Phillips, plus Banton/Luke Wood as backup options.",
+    "overseas_competition_source_urls": [
+      "https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report",
+      "https://www.wisden.com/series/ipl-2026/cricket-news/ipl-2026-best-playing-xis-for-each-team-after-the-mini-auction",
+      "https://khelnow.com/cricket/ipl-2026-best-playing-xi-gujarat-titans-202512",
+      "https://sports.ndtv.com/ipl-2026/gujarat-titans-bet-on-jason-holder-is-interesting-his-six-hitting-abilities-have-improved-says-irfan-pathan-10045272"
+    ],
+    "playing_xi_basis": "conflicting_reports",
+    "playing_xi_comment": "Auction buy and squad option, but projected GT XIs differ on whether Holder or Phillips/Tom Banton gets the extra overseas slot.",
+    "playing_xi_source_urls": [
+      "https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report",
+      "https://www.wisden.com/series/ipl-2026/cricket-news/ipl-2026-best-playing-xis-for-each-team-after-the-mini-auction",
+      "https://khelnow.com/cricket/ipl-2026-best-playing-xi-gujarat-titans-202512",
+      "https://sports.ndtv.com/ipl-2026/ipl-2026-strongest-xis-of-all-10-franchises-with-impact-player-choice-after-mini-auction-9829797"
+    ],
+    "playing_xi_tier": "ROTATION",
+    "research_confidence": "Medium"
+  },
+  "request": {
+    "input": [
+      {
+        "content": [
+          {
+            "text": "You are doing a focused IPL 2026 player availability and lineup audit.\n\nYou are refining one player's non-stats fields after an initial team-level pass.\nUse web search. Prefer official IPL / franchise / BCCI sources, then reputable cricket reporting.\n\nRules:\n- Return JSON only.\n- Keep the same schema as the team-level player object.\n- Resolve ambiguity where possible using recent evidence.\n- Keep comments short and audit-friendly.\n- If evidence remains conflicting, say so explicitly and keep needs_player_followup=true.\n- Every source URL array must contain at least one URL.",
+            "type": "input_text"
+          }
+        ],
+        "role": "system"
+      },
+      {
+        "content": [
+          {
+            "text": "Refine this single-player non-stats assessment and return the structured JSON.\n\n{\n  \"fixtures\": [\n    {\n      \"city\": \"New Chandigarh\",\n      \"is_home\": false,\n      \"match_date\": \"2026-03-31\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"19:30\",\n      \"opponent_code\": \"PBKS\",\n      \"opponent_name\": \"Punjab Kings\",\n      \"venue\": \"PCA International Cricket Stadium\"\n    },\n    {\n      \"city\": \"Ahmedabad\",\n      \"is_home\": true,\n      \"match_date\": \"2026-04-04\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"19:30\",\n      \"opponent_code\": \"RR\",\n      \"opponent_name\": \"Rajasthan Royals\",\n      \"venue\": \"Narendra Modi Stadium\"\n    },\n    {\n      \"city\": \"Delhi\",\n      \"is_home\": false,\n      \"match_date\": \"2026-04-08\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"19:30\",\n      \"opponent_code\": \"DC\",\n      \"opponent_name\": \"Delhi Capitals\",\n      \"venue\": \"Arun Jaitley Stadium\"\n    },\n    {\n      \"city\": \"Lucknow\",\n      \"is_home\": false,\n      \"match_date\": \"2026-04-12\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"15:30\",\n      \"opponent_code\": \"LSG\",\n      \"opponent_name\": \"Lucknow Super Giants\",\n      \"venue\": \"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium\"\n    }\n  ],\n  \"league_matches_expected\": 14,\n  \"player\": {\n    \"full_name\": \"Jason Holder\",\n    \"is_overseas\": true,\n    \"nickname\": \"Holder\",\n    \"official_player_id\": \"1075\",\n    \"official_player_url\": \"https://www.iplt20.com/players/jason-holder/1075\",\n    \"role\": \"AR\",\n    \"season_2024_matches\": \"\",\n    \"season_2024_runs\": \"\",\n    \"season_2024_wickets\": \"\",\n    \"season_2025_matches\": \"\",\n    \"season_2025_runs\": \"\",\n    \"season_2025_wickets\": \"\"\n  },\n  \"published_fixture_count\": 4,\n  \"team_code\": \"GT\",\n  \"team_level_baseline\": {\n    \"availability_basis\": \"inferred_no_adverse_news\",\n    \"availability_comment\": \"No fresh injury or international-conflict report identified from searched sources.\",\n    \"availability_expected_matches_available\": 11,\n    \"availability_modifier\": 0.79,\n    \"availability_note\": \"No current adverse availability report found; estimate provisional because official fixture publication is incomplete.\",\n    \"availability_source_urls\": [\n      \"https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report\",\n      \"https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf\"\n    ],\n    \"followup_reason\": \"Need opening-combination decision between Holder and Phillips/extra bowler.\",\n    \"full_name\": \"Jason Holder\",\n    \"needs_player_followup\": true,\n    \"official_player_id\": \"1075\",\n    \"overseas_competition_basis\": \"overseas_slot_pressure\",\n    \"overseas_competition_comment\": \"Useful flexibility option but not a clear overseas lock.\",\n    \"overseas_competition_note\": \"Faces direct overseas-slot competition with Buttler, Rashid Khan, Rabada and Glenn Phillips.\",\n    \"overseas_competition_source_urls\": [\n      \"https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report\",\n      \"https://www.wisden.com/series/ipl-2026/cricket-news/ipl-2026-best-playing-xis-for-each-team-after-the-mini-auction\"\n    ],\n    \"playing_xi_basis\": \"inferred_from_team_context\",\n    \"playing_xi_comment\": \"New overseas auction buy, but best XI spot depends on whether GT prioritize Phillips or an extra quick/all-rounder.\",\n    \"playing_xi_source_urls\": [\n      \"https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report\",\n      \"https://www.wisden.com/series/ipl-2026/cricket-news/ipl-2026-best-playing-xis-for-each-team-after-the-mini-auction\"\n    ],\n    \"playing_xi_tier\": \"ROTATION\",\n    \"research_confidence\": \"Medium\"\n  },\n  \"team_name\": \"Gujarat Titans\"\n}",
+            "type": "input_text"
+          }
+        ],
+        "role": "user"
+      }
+    ],
+    "max_output_tokens": 2500,
+    "model": "gpt-5.4",
+    "text": {
+      "format": {
+        "name": "gt_1075_followup",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "availability_basis": {
+              "enum": [
+                "confirmed_available",
+                "conflicting_reports",
+                "inferred_no_adverse_news",
+                "injury_report",
+                "late_joining",
+                "suspension",
+                "tournament_conflict",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "availability_comment": {
+              "type": "string"
+            },
+            "availability_expected_matches_available": {
+              "type": "integer"
+            },
+            "availability_modifier": {
+              "type": "number"
+            },
+            "availability_note": {
+              "type": "string"
+            },
+            "availability_source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "followup_reason": {
+              "type": "string"
+            },
+            "full_name": {
+              "type": "string"
+            },
+            "needs_player_followup": {
+              "type": "boolean"
+            },
+            "official_player_id": {
+              "type": "string"
+            },
+            "overseas_competition_basis": {
+              "enum": [
+                "confirmed_role",
+                "conflicting_reports",
+                "domestic_player",
+                "overseas_slot_pressure",
+                "role_depth_competition",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "overseas_competition_comment": {
+              "type": "string"
+            },
+            "overseas_competition_note": {
+              "type": "string"
+            },
+            "overseas_competition_source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "playing_xi_basis": {
+              "enum": [
+                "confirmed_role",
+                "conflicting_reports",
+                "inferred_from_team_context",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "playing_xi_comment": {
+              "type": "string"
+            },
+            "playing_xi_source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "playing_xi_tier": {
+              "enum": [
+                "GUARANTEED",
+                "LIKELY",
+                "ROTATION",
+                "UNLIKELY"
+              ],
+              "type": "string"
+            },
+            "research_confidence": {
+              "enum": [
+                "High",
+                "Low",
+                "Medium"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "official_player_id",
+            "full_name",
+            "playing_xi_tier",
+            "playing_xi_basis",
+            "playing_xi_comment",
+            "playing_xi_source_urls",
+            "availability_modifier",
+            "availability_basis",
+            "availability_expected_matches_available",
+            "availability_note",
+            "availability_comment",
+            "availability_source_urls",
+            "overseas_competition_note",
+            "overseas_competition_basis",
+            "overseas_competition_comment",
+            "overseas_competition_source_urls",
+            "research_confidence",
+            "needs_player_followup",
+            "followup_reason"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ]
+  },
+  "request_id": "d6eabacd-a78d-45ac-938a-d2ceb5148258",
+  "response": {
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1774269587,
+    "created_at": 1774269568,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "id": "resp_0f8547dc25ecf1f60069c13480b8f881a1b2de3cc10b97e67f",
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": 2500,
+    "max_tool_calls": null,
+    "metadata": {},
+    "model": "gpt-5.4-2026-03-05",
+    "object": "response",
+    "output": [
+      {
+        "action": {
+          "queries": [
+            "site:gujarattitansipl.com Jason Holder Gujarat Titans 2026 auction Holder GT 2026",
+            "site:iplt20.com Jason Holder Gujarat Titans 2026",
+            "Jason Holder Gujarat Titans 2026 playing xi Holder GT 2026 Cricbuzz ESPNcricinfo",
+            "Jason Holder injury March 2026 cricket"
+          ],
+          "query": "site:gujarattitansipl.com Jason Holder Gujarat Titans 2026 auction Holder GT 2026",
+          "type": "search"
+        },
+        "id": "ws_0f8547dc25ecf1f60069c134812c3881a1a2b6e275d4a8fb9a",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "action": {
+          "type": "open_page",
+          "url": "https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report"
+        },
+        "id": "ws_0f8547dc25ecf1f60069c13483f82481a1bb269643bebf64c4",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "action": {
+          "queries": [
+            "site:espncricinfo.com Jason Holder injury 2026 March",
+            "site:cricbuzz.com Jason Holder injury 2026 March",
+            "site:icc-cricket.com Jason Holder 2026 injury",
+            "site:windiescricket.com Jason Holder March 2026"
+          ],
+          "query": "site:espncricinfo.com Jason Holder injury 2026 March",
+          "type": "search"
+        },
+        "id": "ws_0f8547dc25ecf1f60069c13484f94081a18431b5e87f37786a",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "action": {
+          "queries": [
+            "site:wisden.com Gujarat Titans best playing xi 2026 Jason Holder Wisden",
+            "site:espncricinfo.com Gujarat Titans 2026 squad Jason Holder playing XI",
+            "site:cricbuzz.com Gujarat Titans strongest XI 2026 Jason Holder",
+            "site:sports.ndtv.com Gujarat Titans strongest XI 2026 Jason Holder"
+          ],
+          "query": "site:wisden.com Gujarat Titans best playing xi 2026 Jason Holder Wisden",
+          "type": "search"
+        },
+        "id": "ws_0f8547dc25ecf1f60069c134881f3481a197cc238cc71b4b1a",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "content": [
+          {
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"official_player_id\":\"1075\",\"full_name\":\"Jason Holder\",\"playing_xi_tier\":\"ROTATION\",\"playing_xi_basis\":\"conflicting_reports\",\"playing_xi_comment\":\"Auction buy and squad option, but projected GT XIs differ on whether Holder or Phillips/Tom Banton gets the extra overseas slot.\",\"playing_xi_source_urls\":[\"https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report\",\"https://www.wisden.com/series/ipl-2026/cricket-news/ipl-2026-best-playing-xis-for-each-team-after-the-mini-auction\",\"https://khelnow.com/cricket/ipl-2026-best-playing-xi-gujarat-titans-202512\",\"https://sports.ndtv.com/ipl-2026/ipl-2026-strongest-xis-of-all-10-franchises-with-impact-player-choice-after-mini-auction-9829797\"],\"availability_modifier\":0.86,\"availability_basis\":\"confirmed_available\",\"availability_expected_matches_available\":12,\"availability_note\":\"Available for IPL start; no current injury report found. Small deduction remains because full league fixture list is not yet published and overseas management can change.\",\"availability_comment\":\"In West Indies' final T20 World Cup 2026 squad and no fresh injury/suspension report found before GT's March 31 opener.\",\"availability_source_urls\":[\"https://www.icc-cricket.com/tournaments/mens-t20-world-cup-2026/news/final-squads-for-icc-men-s-t20-world-cup-2026-confirmed\",\"https://www.cricbuzz.com/cricket-match-squads/149651/pbks-vs-gt-4th-match-indian-premier-league-2026\",\"https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report\"],\"overseas_competition_note\":\"Competes for one of four overseas spots with Buttler, Rashid Khan, Rabada, Glenn Phillips, plus Banton/Luke Wood as backup options.\",\"overseas_competition_basis\":\"overseas_slot_pressure\",\"overseas_competition_comment\":\"Not an overseas lock because Buttler and Rashid are near-certain picks, leaving Holder in a tactical contest mainly with Rabada/Phillips depending on balance.\",\"overseas_competition_source_urls\":[\"https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report\",\"https://www.wisden.com/series/ipl-2026/cricket-news/ipl-2026-best-playing-xis-for-each-team-after-the-mini-auction\",\"https://khelnow.com/cricket/ipl-2026-best-playing-xi-gujarat-titans-202512\",\"https://sports.ndtv.com/ipl-2026/gujarat-titans-bet-on-jason-holder-is-interesting-his-six-hitting-abilities-have-improved-says-irfan-pathan-10045272\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"Recent public XI projections conflict on Holder's role versus Phillips/Rabada/Banton, so final GT combination still needs toss-and-conditions confirmation.\"}",
+            "type": "output_text"
+          }
+        ],
+        "id": "msg_0f8547dc25ecf1f60069c1348a625081a18103c2b2cc1f484e",
+        "phase": "final_answer",
+        "role": "assistant",
+        "status": "completed",
+        "type": "message"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": null,
+    "reasoning": {
+      "effort": "none",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "store": true,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "description": null,
+        "name": "gt_1075_followup",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "availability_basis": {
+              "enum": [
+                "confirmed_available",
+                "conflicting_reports",
+                "inferred_no_adverse_news",
+                "injury_report",
+                "late_joining",
+                "suspension",
+                "tournament_conflict",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "availability_comment": {
+              "type": "string"
+            },
+            "availability_expected_matches_available": {
+              "type": "integer"
+            },
+            "availability_modifier": {
+              "type": "number"
+            },
+            "availability_note": {
+              "type": "string"
+            },
+            "availability_source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "followup_reason": {
+              "type": "string"
+            },
+            "full_name": {
+              "type": "string"
+            },
+            "needs_player_followup": {
+              "type": "boolean"
+            },
+            "official_player_id": {
+              "type": "string"
+            },
+            "overseas_competition_basis": {
+              "enum": [
+                "confirmed_role",
+                "conflicting_reports",
+                "domestic_player",
+                "overseas_slot_pressure",
+                "role_depth_competition",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "overseas_competition_comment": {
+              "type": "string"
+            },
+            "overseas_competition_note": {
+              "type": "string"
+            },
+            "overseas_competition_source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "playing_xi_basis": {
+              "enum": [
+                "confirmed_role",
+                "conflicting_reports",
+                "inferred_from_team_context",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "playing_xi_comment": {
+              "type": "string"
+            },
+            "playing_xi_source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "playing_xi_tier": {
+              "enum": [
+                "GUARANTEED",
+                "LIKELY",
+                "ROTATION",
+                "UNLIKELY"
+              ],
+              "type": "string"
+            },
+            "research_confidence": {
+              "enum": [
+                "High",
+                "Low",
+                "Medium"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "official_player_id",
+            "full_name",
+            "playing_xi_tier",
+            "playing_xi_basis",
+            "playing_xi_comment",
+            "playing_xi_source_urls",
+            "availability_modifier",
+            "availability_basis",
+            "availability_expected_matches_available",
+            "availability_note",
+            "availability_comment",
+            "availability_source_urls",
+            "overseas_competition_note",
+            "overseas_competition_basis",
+            "overseas_competition_comment",
+            "overseas_competition_source_urls",
+            "research_confidence",
+            "needs_player_followup",
+            "followup_reason"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "search_context_size": "medium",
+        "type": "web_search",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 22077,
+      "input_tokens_details": {
+        "cached_tokens": 3712
+      },
+      "output_tokens": 1044,
+      "output_tokens_details": {
+        "reasoning_tokens": 339
+      },
+      "total_tokens": 23121
+    },
+    "user": null
+  },
+  "saved_at": "2026-03-23T12:39:47.718877+00:00"
+}

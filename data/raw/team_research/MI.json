@@ -1,0 +1,1023 @@
+{
+  "parsed": {
+    "players": [
+      {
+        "availability_basis": "confirmed_available",
+        "availability_comment": "Only 4 fixtures are published in the prompt; full league schedule context is incomplete, but no current injury/suspension report for IPL 2026 was found.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "Available; no current IPL 2026 unavailability report found.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.cricbuzz.com/cricket-news/136871/mumbai-indians-krunal-pandya-ipl-2026-hardik-pandya-leaves-rils-rise-no-impact-on-mi-captaincy-cricbuzzcom"
+        ],
+        "followup_reason": "",
+        "full_name": "Hardik Pandya",
+        "needs_player_followup": false,
+        "official_player_id": "2740",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Selection depends on role balance, not overseas slots.",
+        "overseas_competition_note": "Domestic player; overseas-player cap is not the constraint.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026"
+        ],
+        "playing_xi_basis": "confirmed_role",
+        "playing_xi_comment": "MI captain on official 2026 squad page; central starter when available.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket"
+        ],
+        "playing_xi_tier": "GUARANTEED",
+        "research_confidence": "High"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "No injury or release report located; full fixture publication in prompt is partial.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No recent availability issue found.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket"
+        ],
+        "followup_reason": "",
+        "full_name": "Trent Boult",
+        "needs_player_followup": false,
+        "official_player_id": "969",
+        "overseas_competition_basis": "confirmed_role",
+        "overseas_competition_comment": "Overseas cap exists, yet Boult looks locked into MI's strongest attack.",
+        "overseas_competition_note": "Competes for one of four overseas spots but projects as a primary overseas pick.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.mumbaiindians.com/news/mi-bowlers-statistics-ipl-2025-mumbai-indians-cricket"
+        ],
+        "playing_xi_basis": "confirmed_role",
+        "playing_xi_comment": "Frontline overseas quick and core first-choice bowler in MI material.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket"
+        ],
+        "playing_xi_tier": "GUARANTEED",
+        "research_confidence": "High"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "No recent injury report found for IPL 2026; prompt includes only first 4 fixtures.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No current IPL 2026 absence report found.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.mumbaiindians.com/news/t20-world-cup-2026-skys-men-in-blue---squad-locked-and-loaded"
+        ],
+        "followup_reason": "",
+        "full_name": "Jasprit Bumrah",
+        "needs_player_followup": false,
+        "official_player_id": "1124",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Selection is independent of overseas-slot pressure.",
+        "overseas_competition_note": "Domestic player; overseas-player cap is not the constraint.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026"
+        ],
+        "playing_xi_basis": "confirmed_role",
+        "playing_xi_comment": "Lead Indian pacer and automatic XI pick.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket"
+        ],
+        "playing_xi_tier": "GUARANTEED",
+        "research_confidence": "High"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "No injury/conflict report found; schedule in prompt is incomplete beyond first 4 matches.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No recent availability issue found.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.icc-cricket.com/news/big-name-missing-as-south-africa-name-contracted-squad"
+        ],
+        "followup_reason": "Need closer-to-match confirmation on whether MI prefer Rickelton or de Kock as starting keeper-opener.",
+        "full_name": "Ryan Rickelton",
+        "needs_player_followup": true,
+        "official_player_id": "22003",
+        "overseas_competition_basis": "overseas_slot_pressure",
+        "overseas_competition_comment": "Role is attractive, but not fully locked because MI have multiple overseas combination options.",
+        "overseas_competition_note": "Faces direct overseas-slot and wicketkeeper competition from Quinton de Kock, plus pressure from Jacks/Santner/Rutherford/Boult.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.cricbuzz.com/cricket-news/132545/ipl-2025-auction-how-the-teams-stack-up-cricbuzzcom",
+          "https://www.cricbuzz.com/cricket-news/137058/sa20-2026-quinton-de-kock-v-ryan-rickelton-with-a-dash-of-anrich-nortje"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Strong contender to start as keeper-opener, but MI also carry Quinton de Kock and Robin Minz.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.cricbuzz.com/cricket-news/134276/ipl-2025-preview-mumbai-indians-vs-gujarat-titans-cricbuzzcom",
+          "https://www.cricbuzz.com/cricket-news/132545/ipl-2025-auction-how-the-teams-stack-up-cricbuzzcom"
+        ],
+        "playing_xi_tier": "LIKELY",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "No injury or release report located; prompt schedule is only partial.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No recent availability issue found.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket"
+        ],
+        "followup_reason": "Keeper-opener pecking order versus Rickelton needs late confirmation.",
+        "full_name": "Quinton De Kock",
+        "needs_player_followup": true,
+        "official_player_id": "834",
+        "overseas_competition_basis": "overseas_slot_pressure",
+        "overseas_competition_comment": "Useful option, but not an obvious automatic overseas starter.",
+        "overseas_competition_note": "Heavy overseas-slot pressure; competes most directly with Rickelton for keeper-opener slot and with Boult/Jacks/Santner for overseas balance.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.cricbuzz.com/cricket-news/132545/ipl-2025-auction-how-the-teams-stack-up-cricbuzzcom",
+          "https://www.cricbuzz.com/cricket-news/137058/sa20-2026-quinton-de-kock-v-ryan-rickelton-with-a-dash-of-anrich-nortje"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Backup/alternative overseas keeper-opener with direct overlap against Rickelton.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket",
+          "https://www.cricbuzz.com/cricket-news/137058/sa20-2026-quinton-de-kock-v-ryan-rickelton-with-a-dash-of-anrich-nortje"
+        ],
+        "playing_xi_tier": "ROTATION",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "No recent adverse availability report found; prompt has only 4 published fixtures.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No current IPL 2026 unavailability report found.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.mumbaiindians.com/news/hardik-pandya-lucky-to-have-three-captains-to-put-their-arm-around-my-shoulder-and-be-there-for-me"
+        ],
+        "followup_reason": "",
+        "full_name": "Rohit Sharma",
+        "needs_player_followup": false,
+        "official_player_id": "107",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Batsman selection unaffected by overseas cap.",
+        "overseas_competition_note": "Domestic player; overseas-player cap is not the constraint.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026"
+        ],
+        "playing_xi_basis": "confirmed_role",
+        "playing_xi_comment": "Senior top-order mainstay and clear first XI batter.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket"
+        ],
+        "playing_xi_tier": "GUARANTEED",
+        "research_confidence": "High"
+      },
+      {
+        "availability_basis": "confirmed_available",
+        "availability_comment": "Included in India T20 World Cup 2026 coverage around same period; no adverse IPL 2026 report located. Prompt schedule is partial.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "Available; no current IPL 2026 unavailability report found.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.mumbaiindians.com/news/t20-world-cup-2026-skys-men-in-blue---squad-locked-and-loaded"
+        ],
+        "followup_reason": "",
+        "full_name": "Surya Kumar Yadav",
+        "needs_player_followup": false,
+        "official_player_id": "108",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Selection is independent of overseas-slot limits.",
+        "overseas_competition_note": "Domestic player; overseas-player cap is not the constraint.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026"
+        ],
+        "playing_xi_basis": "confirmed_role",
+        "playing_xi_comment": "Elite Indian middle-order batter and automatic starter.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket"
+        ],
+        "playing_xi_tier": "GUARANTEED",
+        "research_confidence": "High"
+      },
+      {
+        "availability_basis": "confirmed_available",
+        "availability_comment": "No injury or England release conflict found for the IPL window cited by ECB; prompt schedule remains partial.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "ECB lists him as an IPL 2026 participant with MI; no April 2026 conflict found.",
+        "availability_source_urls": [
+          "https://www.ecb.co.uk/news/4420620/england-men-at-the-ipl-auction",
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026"
+        ],
+        "followup_reason": "Overseas combination call may change if MI prioritise a second keeper or extra spinner.",
+        "full_name": "Will Jacks",
+        "needs_player_followup": true,
+        "official_player_id": "5629",
+        "overseas_competition_basis": "overseas_slot_pressure",
+        "overseas_competition_comment": "Near first-choice, though not quite as locked as Boult.",
+        "overseas_competition_note": "Competes with Rickelton/de Kock, Santner and Rutherford for overseas slots, but offers batting plus part-time spin flexibility.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.cricbuzz.com/cricket-news/132545/ipl-2025-auction-how-the-teams-stack-up-cricbuzzcom",
+          "https://www.cricbuzz.com/cricket-news/134276/ipl-2025-preview-mumbai-indians-vs-gujarat-titans-cricbuzzcom"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Repeatedly projected in MI probable XIs, but his place still depends on overseas balance and keeper choice.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.cricbuzz.com/cricket-news/134276/ipl-2025-preview-mumbai-indians-vs-gujarat-titans-cricbuzzcom",
+          "https://www.ecb.co.uk/news/4420620/england-men-at-the-ipl-auction"
+        ],
+        "playing_xi_tier": "LIKELY",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "No injury/suspension report found; prompt schedule is incomplete beyond 4 games.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No recent availability issue found.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket"
+        ],
+        "followup_reason": "Indian middle-order balance and impact-sub use could shift him between XI and bench.",
+        "full_name": "Naman Dhir",
+        "needs_player_followup": true,
+        "official_player_id": "20701",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Indian status strengthens his case versus fringe overseas options.",
+        "overseas_competition_note": "Domestic player; overseas cap is not the constraint, which helps his squad utility.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Indian batting/all-round depth piece frequently around strongest combinations.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.cricbuzz.com/cricket-news/134276/ipl-2025-preview-mumbai-indians-vs-gujarat-titans-cricbuzzcom"
+        ],
+        "playing_xi_tier": "LIKELY",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "No adverse report found; fixture publication in prompt is partial.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No recent availability issue found.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket"
+        ],
+        "followup_reason": "Need venue-specific spin selection clues to separate him from other bowling options.",
+        "full_name": "Mayank Markande",
+        "needs_player_followup": true,
+        "official_player_id": "4951",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Competition is role-based spin depth rather than overseas slots.",
+        "overseas_competition_note": "Domestic player; overseas-player cap is not the constraint.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Domestic spin option, but not clearly ahead of Santner or other balance choices.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket"
+        ],
+        "playing_xi_tier": "ROTATION",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "injury_report",
+        "availability_comment": "Cricbuzz reported a minimum four-month layoff and IPL replacement; absent fresh return confirmation, availability is treated as nil. Prompt also has only first 4 fixtures published.",
+        "availability_expected_matches_available": 0,
+        "availability_modifier": 0.0,
+        "availability_note": "Previously ruled out with spine injury; no later return confirmation found for IPL 2026.",
+        "availability_source_urls": [
+          "https://www.cricbuzz.com/cricket-news/133411/am-ghazanfar-ruled-out-of-champions-trophy-cricbuzzcom",
+          "https://www.cricbuzz.com/cricket-news/133467/mujeeb-to-replace-ghazanfar-for-mi",
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026"
+        ],
+        "followup_reason": "Need explicit post-injury clearance/update because official squad listing and old injury report are out of sync.",
+        "full_name": "Allah Ghazanfar",
+        "needs_player_followup": true,
+        "official_player_id": "20725",
+        "overseas_competition_basis": "overseas_slot_pressure",
+        "overseas_competition_comment": "Availability is the primary issue before overseas-slot competition even applies.",
+        "overseas_competition_note": "If fit, he would still face overseas-slot competition from Boult, Jacks, Santner and keeper options.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.cricbuzz.com/cricket-news/132545/ipl-2025-auction-how-the-teams-stack-up-cricbuzzcom"
+        ],
+        "playing_xi_basis": "confirmed_role",
+        "playing_xi_comment": "Still listed in MI's 2026 squad data, but recent reporting makes him unlikely to feature early due to prior long-term spine injury.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.cricbuzz.com/cricket-news/133411/am-ghazanfar-ruled-out-of-champions-trophy-cricbuzzcom",
+          "https://www.cricbuzz.com/cricket-news/133467/mujeeb-to-replace-ghazanfar-for-mi"
+        ],
+        "playing_xi_tier": "UNLIKELY",
+        "research_confidence": "High"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "No injury/conflict report found; fixture publication in prompt is partial.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No recent availability issue found.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.mumbaiindians.com/news/sherfane-rutherford-trade-in-ipl-2026-mumbai-indians-cricket"
+        ],
+        "followup_reason": "Needs match-specific confirmation if MI seek extra overseas power-hitting.",
+        "full_name": "Sherfane Rutherford",
+        "needs_player_followup": true,
+        "official_player_id": "5396",
+        "overseas_competition_basis": "overseas_slot_pressure",
+        "overseas_competition_comment": "Likely bench cover unless MI want a specific finishing profile.",
+        "overseas_competition_note": "Substantial overseas-slot pressure from Boult, Jacks, Santner, Rickelton and de Kock.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.mumbaiindians.com/news/sherfane-rutherford-trade-in-ipl-2026-mumbai-indians-cricket"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Traded in, but pathway is crowded in MI's overseas batting mix.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.mumbaiindians.com/news/sherfane-rutherford-trade-in-ipl-2026-mumbai-indians-cricket"
+        ],
+        "playing_xi_tier": "ROTATION",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "confirmed_available",
+        "availability_comment": "Included in India T20 World Cup 2026 coverage around this period; no adverse IPL report located. Prompt schedule is partial.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "Available; no current IPL 2026 unavailability report found.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.mumbaiindians.com/news/t20-world-cup-2026-skys-men-in-blue---squad-locked-and-loaded"
+        ],
+        "followup_reason": "",
+        "full_name": "N Tilak Varma",
+        "needs_player_followup": false,
+        "official_player_id": "20594",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Selection unaffected by overseas-slot calculus.",
+        "overseas_competition_note": "Domestic player; overseas-player cap is not the constraint.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026"
+        ],
+        "playing_xi_basis": "confirmed_role",
+        "playing_xi_comment": "Key Indian top-order batter and clear first-choice XI member.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket"
+        ],
+        "playing_xi_tier": "GUARANTEED",
+        "research_confidence": "High"
+      },
+      {
+        "availability_basis": "confirmed_available",
+        "availability_comment": "Cricbuzz reported him fit late in IPL 2025 and no new 2026 setback was found; prompt includes only first 4 fixtures.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "Fit according to late IPL 2025 reporting; no IPL 2026 issue found.",
+        "availability_source_urls": [
+          "https://www.cricbuzz.com/cricket-news/134503/ipl-2025-pedigree-meets-promise-as-mi-and-pbks-vie-for-a-spot-in-the-final-cricbuzzcom",
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026"
+        ],
+        "followup_reason": "Past fitness volatility means final pre-match confirmation would be useful.",
+        "full_name": "Deepak Chahar",
+        "needs_player_followup": true,
+        "official_player_id": "140",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Competes on bowling balance, not overseas-slot availability.",
+        "overseas_competition_note": "Domestic player; overseas cap is not the constraint.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Projected as first-choice Indian seamer alongside Boult and Bumrah when fit.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.cricbuzz.com/cricket-news/134276/ipl-2025-preview-mumbai-indians-vs-gujarat-titans-cricbuzzcom"
+        ],
+        "playing_xi_tier": "LIKELY",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "No injury or national-duty conflict found for early IPL window; prompt schedule is partial.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No recent availability issue found.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket"
+        ],
+        "followup_reason": "Selection may hinge on venue-specific spin demand and which keeper-opener MI choose.",
+        "full_name": "Mitchell Santner",
+        "needs_player_followup": true,
+        "official_player_id": "1903",
+        "overseas_competition_basis": "overseas_slot_pressure",
+        "overseas_competition_comment": "Useful balance piece, though not fully immune from combination changes.",
+        "overseas_competition_note": "Competes for four overseas spots but has a credible path because MI may want a frontline overseas spinner/all-rounder.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.cricbuzz.com/cricket-news/132545/ipl-2025-auction-how-the-teams-stack-up-cricbuzzcom"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Strong overseas spin-all-round option, especially if MI want balance and control.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.cricbuzz.com/cricket-news/132545/ipl-2025-auction-how-the-teams-stack-up-cricbuzzcom"
+        ],
+        "playing_xi_tier": "LIKELY",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "No adverse report found, but evidence on role is thin and prompt fixtures are incomplete.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No recent availability issue found.",
+        "availability_source_urls": [
+          "https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket",
+          "https://www.cricbuzz.com/cricket-match-squads/149629/mi-vs-kkr-2nd-match-indian-premier-league-2026"
+        ],
+        "followup_reason": "Very limited public evidence on role hierarchy or likely debut timing.",
+        "full_name": "Mohammad Izhar",
+        "needs_player_followup": true,
+        "official_player_id": "23045",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Barrier is depth-chart position, not overseas slots.",
+        "overseas_competition_note": "Domestic player; overseas-player cap is not the constraint.",
+        "overseas_competition_source_urls": [
+          "https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Auction depth addition with no strong evidence yet of first-choice role.",
+        "playing_xi_source_urls": [
+          "https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket",
+          "https://www.cricbuzz.com/cricket-match-squads/149629/mi-vs-kkr-2nd-match-indian-premier-league-2026"
+        ],
+        "playing_xi_tier": "UNLIKELY",
+        "research_confidence": "Low"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "No current injury/suspension report found; only 4 fixtures are published in the prompt.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No recent availability issue found.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket"
+        ],
+        "followup_reason": "May rotate in depending on conditions or workload management for seamers.",
+        "full_name": "Shardul Thakur",
+        "needs_player_followup": true,
+        "official_player_id": "1745",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Competes with Indian seam options for XI spot.",
+        "overseas_competition_note": "Domestic player; overseas-player cap is not the constraint.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Experienced domestic seam-bowling all-round option, but not clearly ahead of MI's primary pace core.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket"
+        ],
+        "playing_xi_tier": "ROTATION",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "No adverse report found; prompt schedule covers only first 4 matches.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No recent availability issue found.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket"
+        ],
+        "followup_reason": "Need early match selections to know whether he is ahead of other Indian seam backups.",
+        "full_name": "Ashwani Kumar",
+        "needs_player_followup": true,
+        "official_player_id": "22030",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Competition is with Indian pace depth rather than overseas slots.",
+        "overseas_competition_note": "Domestic player; overseas cap is not the constraint.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Domestic left-arm pace option in broader bowling mix; squad evidence stronger than XI evidence.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/mumbai-indians/squad/2026",
+          "https://www.cricbuzz.com/cricket-match-squads/149629/mi-vs-kkr-2nd-match-indian-premier-league-2026"
+        ],
+        "playing_xi_tier": "ROTATION",
+        "research_confidence": "Medium"
+      }
+    ],
+    "team": "Mumbai Indians"
+  },
+  "request": {
+    "input": [
+      {
+        "content": [
+          {
+            "text": "You are an IPL 2026 squad availability and lineup analyst.\n\nYour job is only to assess non-stats fields for one IPL squad:\n- playing_xi_tier\n- availability_modifier\n- availability_note\n- overseas_competition_note\n- research_confidence\n- source URLs for each aspect\n- whether this player still needs a player-level follow-up\n\nUse web search. Prefer evidence in this order:\n1. Official IPL / franchise / BCCI sources\n2. Reputable cricket reporting\n3. Other high-signal recent coverage only when better sources are unavailable\n\nRules:\n- Do not invent facts.\n- Be conservative. If evidence is weak or conflicting, lower research_confidence.\n- Do not fetch batting/bowling stats; those are handled elsewhere.\n- playing_xi_tier must be one of: GUARANTEED, LIKELY, ROTATION, UNLIKELY\n- playing_xi_basis must be one of: confirmed_role, inferred_from_team_context, conflicting_reports, unknown\n- availability_basis must be one of: confirmed_available, inferred_no_adverse_news, injury_report, late_joining, tournament_conflict, suspension, conflicting_reports, unknown\n- overseas_competition_basis must be one of: overseas_slot_pressure, role_depth_competition, domestic_player, confirmed_role, conflicting_reports, unknown\n- research_confidence must be one of: High, Medium, Low\n- Use actual published IPL 2026 fixtures in the prompt when estimating availability.\n- availability_expected_matches_available must be an integer from 0 to 14.\n- availability_modifier must equal availability_expected_matches_available / 14, rounded reasonably.\n- If published fixtures are incomplete, say so in availability_comment and lower research_confidence where that materially affects the answer.\n- availability_modifier = 1.0 is allowed only with an explicit basis and comment.\n- Every player must have at least one URL in each of:\n  - playing_xi_source_urls\n  - availability_source_urls\n  - overseas_competition_source_urls\n- For domestic players with no overseas-slot issue, overseas_competition_note should still explain that the overseas cap is not the constraint.\n- Keep comments short, factual, and audit-friendly.\n- Return JSON only.",
+            "type": "input_text"
+          }
+        ],
+        "role": "system"
+      },
+      {
+        "content": [
+          {
+            "text": "Assess this IPL 2026 squad and return the structured JSON.\n\n{\n  \"fixtures\": [\n    {\n      \"city\": \"Mumbai\",\n      \"is_home\": true,\n      \"match_date\": \"2026-03-29\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"19:30\",\n      \"opponent_code\": \"KKR\",\n      \"opponent_name\": \"Kolkata Knight Riders\",\n      \"venue\": \"Wankhede Stadium\"\n    },\n    {\n      \"city\": \"Delhi\",\n      \"is_home\": false,\n      \"match_date\": \"2026-04-04\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"15:30\",\n      \"opponent_code\": \"DC\",\n      \"opponent_name\": \"Delhi Capitals\",\n      \"venue\": \"Arun Jaitley Stadium\"\n    },\n    {\n      \"city\": \"Guwahati\",\n      \"is_home\": false,\n      \"match_date\": \"2026-04-07\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"19:30\",\n      \"opponent_code\": \"RR\",\n      \"opponent_name\": \"Rajasthan Royals\",\n      \"venue\": \"ACA Stadium\"\n    },\n    {\n      \"city\": \"Mumbai\",\n      \"is_home\": true,\n      \"match_date\": \"2026-04-12\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"19:30\",\n      \"opponent_code\": \"RCB\",\n      \"opponent_name\": \"Royal Challengers Bengaluru\",\n      \"venue\": \"Wankhede Stadium\"\n    }\n  ],\n  \"league_matches_expected\": 14,\n  \"players\": [\n    {\n      \"full_name\": \"Hardik Pandya\",\n      \"is_overseas\": false,\n      \"nickname\": \"HP\",\n      \"official_player_id\": \"2740\",\n      \"official_player_url\": \"https://www.iplt20.com/players/hardik-pandya/2740\",\n      \"role\": \"AR\",\n      \"season_2024_matches\": \"14\",\n      \"season_2024_runs\": \"216\",\n      \"season_2024_wickets\": \"11\",\n      \"season_2025_matches\": \"15\",\n      \"season_2025_runs\": \"224\",\n      \"season_2025_wickets\": \"14\"\n    },\n    {\n      \"full_name\": \"Trent Boult\",\n      \"is_overseas\": true,\n      \"nickname\": \"Boult\",\n      \"official_player_id\": \"969\",\n      \"official_player_url\": \"https://www.iplt20.com/players/trent-boult/969\",\n      \"role\": \"BOWL\",\n      \"season_2024_matches\": \"16\",\n      \"season_2024_runs\": \"14\",\n      \"season_2024_wickets\": \"16\",\n      \"season_2025_matches\": \"16\",\n      \"season_2025_runs\": \"2\",\n      \"season_2025_wickets\": \"22\"\n    },\n    {\n      \"full_name\": \"Jasprit Bumrah\",\n      \"is_overseas\": false,\n      \"nickname\": \"Bumrah\",\n      \"official_player_id\": \"1124\",\n      \"official_player_url\": \"https://www.iplt20.com/players/jasprit-bumrah/1124\",\n      \"role\": \"BOWL\",\n      \"season_2024_matches\": \"13\",\n      \"season_2024_runs\": \"12\",\n      \"season_2024_wickets\": \"20\",\n      \"season_2025_matches\": \"12\",\n      \"season_2025_runs\": \"0\",\n      \"season_2025_wickets\": \"18\"\n    },\n    {\n      \"full_name\": \"Ryan Rickelton\",\n      \"is_overseas\": true,\n      \"nickname\": \"Rickelton\",\n      \"official_player_id\": \"22003\",\n      \"official_player_url\": \"https://www.iplt20.com/players/ryan-rickelton/22003\",\n      \"role\": \"BAT\",\n      \"season_2024_matches\": \"\",\n      \"season_2024_runs\": \"\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"14\",\n      \"season_2025_runs\": \"388\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Quinton De Kock\",\n      \"is_overseas\": true,\n      \"nickname\": \"QDK\",\n      \"official_player_id\": \"834\",\n      \"official_player_url\": \"https://www.iplt20.com/players/quinton-de-kock/834\",\n      \"role\": \"WK\",\n      \"season_2024_matches\": \"11\",\n      \"season_2024_runs\": \"250\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"8\",\n      \"season_2025_runs\": \"152\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Rohit Sharma\",\n      \"is_overseas\": false,\n      \"nickname\": \"Rohit\",\n      \"official_player_id\": \"107\",\n      \"official_player_url\": \"https://www.iplt20.com/players/rohit-sharma/107\",\n      \"role\": \"BAT\",\n      \"season_2024_matches\": \"14\",\n      \"season_2024_runs\": \"417\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"15\",\n      \"season_2025_runs\": \"418\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Surya Kumar Yadav\",\n      \"is_overseas\": false,\n      \"nickname\": \"Sky\",\n      \"official_player_id\": \"108\",\n      \"official_player_url\": \"https://www.iplt20.com/players/surya-kumar-yadav/108\",\n      \"role\": \"BAT\",\n      \"season_2024_matches\": \"11\",\n      \"season_2024_runs\": \"345\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"16\",\n      \"season_2025_runs\": \"717\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Will Jacks\",\n      \"is_overseas\": true,\n      \"nickname\": \"Jacks\",\n      \"official_player_id\": \"5629\",\n      \"official_player_url\": \"https://www.iplt20.com/players/will-jacks/5629\",\n      \"role\": \"AR\",\n      \"season_2024_matches\": \"8\",\n      \"season_2024_runs\": \"230\",\n      \"season_2024_wickets\": \"2\",\n      \"season_2025_matches\": \"13\",\n      \"season_2025_runs\": \"233\",\n      \"season_2025_wickets\": \"6\"\n    },\n    {\n      \"full_name\": \"Naman Dhir\",\n      \"is_overseas\": false,\n      \"nickname\": \"Naman\",\n      \"official_player_id\": \"20701\",\n      \"official_player_url\": \"https://www.iplt20.com/players/naman-dhir/20701\",\n      \"role\": \"BAT\",\n      \"season_2024_matches\": \"7\",\n      \"season_2024_runs\": \"140\",\n      \"season_2024_wickets\": \"0\",\n      \"season_2025_matches\": \"16\",\n      \"season_2025_runs\": \"252\",\n      \"season_2025_wickets\": \"0\"\n    },\n    {\n      \"full_name\": \"Mayank Markande\",\n      \"is_overseas\": false,\n      \"nickname\": \"Markande\",\n      \"official_player_id\": \"4951\",\n      \"official_player_url\": \"https://www.iplt20.com/players/mayank-markande/4951\",\n      \"role\": \"BOWL\",\n      \"season_2024_matches\": \"7\",\n      \"season_2024_runs\": \"\",\n      \"season_2024_wickets\": \"8\",\n      \"season_2025_matches\": \"\",\n      \"season_2025_runs\": \"\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Allah Ghazanfar\",\n      \"is_overseas\": true,\n      \"nickname\": \"Allah\",\n      \"official_player_id\": \"20725\",\n      \"official_player_url\": \"https://www.iplt20.com/players/allah-ghazanfar/20725\",\n      \"role\": \"BOWL\",\n      \"season_2024_matches\": \"\",\n      \"season_2024_runs\": \"\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"\",\n      \"season_2025_runs\": \"\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Sherfane Rutherford\",\n      \"is_overseas\": true,\n      \"nickname\": \"Rutherford\",\n      \"official_player_id\": \"5396\",\n      \"official_player_url\": \"https://www.iplt20.com/players/sherfane-rutherford/5396\",\n      \"role\": \"BAT\",\n      \"season_2024_matches\": \"0\",\n      \"season_2024_runs\": \"0\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"13\",\n      \"season_2025_runs\": \"291\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"N Tilak Varma\",\n      \"is_overseas\": false,\n      \"nickname\": \"Tilak\",\n      \"official_player_id\": \"20594\",\n      \"official_player_url\": \"https://www.iplt20.com/players/n-tilak-varma/20594\",\n      \"role\": \"BAT\",\n      \"season_2024_matches\": \"13\",\n      \"season_2024_runs\": \"416\",\n      \"season_2024_wickets\": \"0\",\n      \"season_2025_matches\": \"16\",\n      \"season_2025_runs\": \"343\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Deepak Chahar\",\n      \"is_overseas\": false,\n      \"nickname\": \"Deepak\",\n      \"official_player_id\": \"140\",\n      \"official_player_url\": \"https://www.iplt20.com/players/deepak-chahar/140\",\n      \"role\": \"BOWL\",\n      \"season_2024_matches\": \"8\",\n      \"season_2024_runs\": \"\",\n      \"season_2024_wickets\": \"5\",\n      \"season_2025_matches\": \"14\",\n      \"season_2025_runs\": \"37\",\n      \"season_2025_wickets\": \"11\"\n    },\n    {\n      \"full_name\": \"Mitchell Santner\",\n      \"is_overseas\": true,\n      \"nickname\": \"Santner\",\n      \"official_player_id\": \"1903\",\n      \"official_player_url\": \"https://www.iplt20.com/players/mitchell-santner/1903\",\n      \"role\": \"AR\",\n      \"season_2024_matches\": \"3\",\n      \"season_2024_runs\": \"14\",\n      \"season_2024_wickets\": \"2\",\n      \"season_2025_matches\": \"13\",\n      \"season_2025_runs\": \"40\",\n      \"season_2025_wickets\": \"10\"\n    },\n    {\n      \"full_name\": \"Mohammad Izhar\",\n      \"is_overseas\": false,\n      \"nickname\": \"Izhar\",\n      \"official_player_id\": \"23045\",\n      \"official_player_url\": \"https://www.iplt20.com/players/mohammad-izhar/23045\",\n      \"role\": \"BOWL\",\n      \"season_2024_matches\": \"\",\n      \"season_2024_runs\": \"\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"\",\n      \"season_2025_runs\": \"\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Shardul Thakur\",\n      \"is_overseas\": false,\n      \"nickname\": \"Thakur\",\n      \"official_player_id\": \"1745\",\n      \"official_player_url\": \"https://www.iplt20.com/players/shardul-thakur/1745\",\n      \"role\": \"AR\",\n      \"season_2024_matches\": \"9\",\n      \"season_2024_runs\": \"21\",\n      \"season_2024_wickets\": \"5\",\n      \"season_2025_matches\": \"10\",\n      \"season_2025_runs\": \"18\",\n      \"season_2025_wickets\": \"13\"\n    },\n    {\n      \"full_name\": \"Ashwani Kumar\",\n      \"is_overseas\": false,\n      \"nickname\": \"Ashwini\",\n      \"official_player_id\": \"22030\",\n      \"official_player_url\": \"https://www.iplt20.com/players/ashwani-kumar/22030\",\n      \"role\": \"BOWL\",\n      \"season_2024_matches\": \"\",\n      \"season_2024_runs\": \"\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"7\",\n      \"season_2025_runs\": \"\",\n      \"season_2025_wickets\": \"11\"\n    }\n  ],\n  \"published_fixture_count\": 4,\n  \"team_code\": \"MI\",\n  \"team_name\": \"Mumbai Indians\"\n}",
+            "type": "input_text"
+          }
+        ],
+        "role": "user"
+      }
+    ],
+    "max_output_tokens": 9000,
+    "model": "gpt-5.4",
+    "text": {
+      "format": {
+        "name": "mi_team_enrichment",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "players": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "availability_basis": {
+                    "enum": [
+                      "confirmed_available",
+                      "conflicting_reports",
+                      "inferred_no_adverse_news",
+                      "injury_report",
+                      "late_joining",
+                      "suspension",
+                      "tournament_conflict",
+                      "unknown"
+                    ],
+                    "type": "string"
+                  },
+                  "availability_comment": {
+                    "type": "string"
+                  },
+                  "availability_expected_matches_available": {
+                    "type": "integer"
+                  },
+                  "availability_modifier": {
+                    "type": "number"
+                  },
+                  "availability_note": {
+                    "type": "string"
+                  },
+                  "availability_source_urls": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "followup_reason": {
+                    "type": "string"
+                  },
+                  "full_name": {
+                    "type": "string"
+                  },
+                  "needs_player_followup": {
+                    "type": "boolean"
+                  },
+                  "official_player_id": {
+                    "type": "string"
+                  },
+                  "overseas_competition_basis": {
+                    "enum": [
+                      "confirmed_role",
+                      "conflicting_reports",
+                      "domestic_player",
+                      "overseas_slot_pressure",
+                      "role_depth_competition",
+                      "unknown"
+                    ],
+                    "type": "string"
+                  },
+                  "overseas_competition_comment": {
+                    "type": "string"
+                  },
+                  "overseas_competition_note": {
+                    "type": "string"
+                  },
+                  "overseas_competition_source_urls": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "playing_xi_basis": {
+                    "enum": [
+                      "confirmed_role",
+                      "conflicting_reports",
+                      "inferred_from_team_context",
+                      "unknown"
+                    ],
+                    "type": "string"
+                  },
+                  "playing_xi_comment": {
+                    "type": "string"
+                  },
+                  "playing_xi_source_urls": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "playing_xi_tier": {
+                    "enum": [
+                      "GUARANTEED",
+                      "LIKELY",
+                      "ROTATION",
+                      "UNLIKELY"
+                    ],
+                    "type": "string"
+                  },
+                  "research_confidence": {
+                    "enum": [
+                      "High",
+                      "Low",
+                      "Medium"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "official_player_id",
+                  "full_name",
+                  "playing_xi_tier",
+                  "playing_xi_basis",
+                  "playing_xi_comment",
+                  "playing_xi_source_urls",
+                  "availability_modifier",
+                  "availability_basis",
+                  "availability_expected_matches_available",
+                  "availability_note",
+                  "availability_comment",
+                  "availability_source_urls",
+                  "overseas_competition_note",
+                  "overseas_competition_basis",
+                  "overseas_competition_comment",
+                  "overseas_competition_source_urls",
+                  "research_confidence",
+                  "needs_player_followup",
+                  "followup_reason"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "team": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "team",
+            "players"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ]
+  },
+  "request_id": "274121c7-7840-4b54-bc19-8afc56ede4a9",
+  "response": {
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1774270572,
+    "created_at": 1774270488,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "id": "resp_0f8ec221094c99fa0069c1381807788195bff46d89ffc59b16",
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": 9000,
+    "max_tool_calls": null,
+    "metadata": {},
+    "model": "gpt-5.4-2026-03-05",
+    "object": "response",
+    "output": [
+      {
+        "action": {
+          "queries": [
+            "site:iplt20.com Mumbai Indians squad 2026 Hardik Pandya Trent Boult Jasprit Bumrah Ryan Rickelton Quinton de Kock Will Jacks Mitchell Santner Allah Ghazanfar Sherfane Rutherford Deepak Chahar IPL 2026",
+            "site:mumbaiindians.com Mumbai Indians 2026 squad Hardik Pandya Bumrah Boult Rickelton Jacks Santner Rutherford",
+            "site:bcci.tv IPL 2026 schedule Mumbai Indians March 29 2026 KKR April 4 2026 DC April 7 2026 RR April 12 2026 RCB",
+            "site:espncricinfo.com Mumbai Indians 2026 squad injury Hardik Pandya Bumrah Deepak Chahar Ryan Rickelton Quinton de Kock Will Jacks Santner Allah Ghazanfar Rutherford"
+          ],
+          "query": "site:iplt20.com Mumbai Indians squad 2026 Hardik Pandya Trent Boult Jasprit Bumrah Ryan Rickelton Quinton de Kock Will Jacks Mitchell Santner Allah Ghazanfar Sherfane Rutherford Deepak Chahar IPL 2026",
+          "type": "search"
+        },
+        "id": "ws_0f8ec221094c99fa0069c13818771c8195a964f89858c38ce6",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "action": {
+          "queries": [
+            "site:espncricinfo.com Hardik Pandya injury March 2026 Mumbai Indians",
+            "site:espncricinfo.com Jasprit Bumrah injury March 2026 Mumbai Indians",
+            "site:espncricinfo.com Deepak Chahar injury March 2026 Mumbai Indians",
+            "site:espncricinfo.com Allah Ghazanfar injury March 2026 Mumbai Indians"
+          ],
+          "query": "site:espncricinfo.com Hardik Pandya injury March 2026 Mumbai Indians",
+          "type": "search"
+        },
+        "id": "ws_0f8ec221094c99fa0069c1381bae888195abe8d87a935cc7d7",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "action": {
+          "queries": [
+            "site:cricbuzz.com Mumbai Indians pre-season 2026 Hardik Pandya Bumrah injury",
+            "site:espncricinfo.com/story Mumbai Indians pre-season 2026 Bumrah Chahar",
+            "site:icc-cricket.com Ryan Rickelton South Africa central contract 2026 IPL availability",
+            "site:ecb.co.uk Will Jacks IPL 2026 availability England April 2026"
+          ],
+          "query": "site:cricbuzz.com Mumbai Indians pre-season 2026 Hardik Pandya Bumrah injury",
+          "type": "search"
+        },
+        "id": "ws_0f8ec221094c99fa0069c1381d7d788195957bfd8747af6855",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "action": {
+          "queries": [
+            "site:cricbuzz.com Allah Ghazanfar injury 2026 IPL",
+            "site:espncricinfo.com/story Allah Ghazanfar injury IPL 2026 Mumbai Indians",
+            "site:cricbuzz.com Ryan Rickelton Mumbai Indians probable XI 2026",
+            "site:cricbuzz.com Quinton de Kock Mumbai Indians 2026 probable XI"
+          ],
+          "query": "site:cricbuzz.com Allah Ghazanfar injury 2026 IPL",
+          "type": "search"
+        },
+        "id": "ws_0f8ec221094c99fa0069c1381fb5a88195b4508a45901705cc",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "content": [
+          {
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"team\":\"Mumbai Indians\",\"players\":[{\"official_player_id\":\"2740\",\"full_name\":\"Hardik Pandya\",\"playing_xi_tier\":\"GUARANTEED\",\"playing_xi_basis\":\"confirmed_role\",\"playing_xi_comment\":\"MI captain on official 2026 squad page; central starter when available.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket\"],\"availability_modifier\":1,\"availability_basis\":\"confirmed_available\",\"availability_expected_matches_available\":14,\"availability_note\":\"Available; no current IPL 2026 unavailability report found.\",\"availability_comment\":\"Only 4 fixtures are published in the prompt; full league schedule context is incomplete, but no current injury/suspension report for IPL 2026 was found.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.cricbuzz.com/cricket-news/136871/mumbai-indians-krunal-pandya-ipl-2026-hardik-pandya-leaves-rils-rise-no-impact-on-mi-captaincy-cricbuzzcom\"],\"overseas_competition_note\":\"Domestic player; overseas-player cap is not the constraint.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Selection depends on role balance, not overseas slots.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\"],\"research_confidence\":\"High\",\"needs_player_followup\":false,\"followup_reason\":\"\"},{\"official_player_id\":\"969\",\"full_name\":\"Trent Boult\",\"playing_xi_tier\":\"GUARANTEED\",\"playing_xi_basis\":\"confirmed_role\",\"playing_xi_comment\":\"Frontline overseas quick and core first-choice bowler in MI material.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket\"],\"availability_modifier\":1,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":14,\"availability_note\":\"No recent availability issue found.\",\"availability_comment\":\"No injury or release report located; full fixture publication in prompt is partial.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket\"],\"overseas_competition_note\":\"Competes for one of four overseas spots but projects as a primary overseas pick.\",\"overseas_competition_basis\":\"confirmed_role\",\"overseas_competition_comment\":\"Overseas cap exists, yet Boult looks locked into MI's strongest attack.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.mumbaiindians.com/news/mi-bowlers-statistics-ipl-2025-mumbai-indians-cricket\"],\"research_confidence\":\"High\",\"needs_player_followup\":false,\"followup_reason\":\"\"},{\"official_player_id\":\"1124\",\"full_name\":\"Jasprit Bumrah\",\"playing_xi_tier\":\"GUARANTEED\",\"playing_xi_basis\":\"confirmed_role\",\"playing_xi_comment\":\"Lead Indian pacer and automatic XI pick.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket\"],\"availability_modifier\":1,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":14,\"availability_note\":\"No current IPL 2026 absence report found.\",\"availability_comment\":\"No recent injury report found for IPL 2026; prompt includes only first 4 fixtures.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.mumbaiindians.com/news/t20-world-cup-2026-skys-men-in-blue---squad-locked-and-loaded\"],\"overseas_competition_note\":\"Domestic player; overseas-player cap is not the constraint.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Selection is independent of overseas-slot pressure.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\"],\"research_confidence\":\"High\",\"needs_player_followup\":false,\"followup_reason\":\"\"},{\"official_player_id\":\"22003\",\"full_name\":\"Ryan Rickelton\",\"playing_xi_tier\":\"LIKELY\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Strong contender to start as keeper-opener, but MI also carry Quinton de Kock and Robin Minz.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.cricbuzz.com/cricket-news/134276/ipl-2025-preview-mumbai-indians-vs-gujarat-titans-cricbuzzcom\",\"https://www.cricbuzz.com/cricket-news/132545/ipl-2025-auction-how-the-teams-stack-up-cricbuzzcom\"],\"availability_modifier\":1,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":14,\"availability_note\":\"No recent availability issue found.\",\"availability_comment\":\"No injury/conflict report found; schedule in prompt is incomplete beyond first 4 matches.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.icc-cricket.com/news/big-name-missing-as-south-africa-name-contracted-squad\"],\"overseas_competition_note\":\"Faces direct overseas-slot and wicketkeeper competition from Quinton de Kock, plus pressure from Jacks/Santner/Rutherford/Boult.\",\"overseas_competition_basis\":\"overseas_slot_pressure\",\"overseas_competition_comment\":\"Role is attractive, but not fully locked because MI have multiple overseas combination options.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.cricbuzz.com/cricket-news/132545/ipl-2025-auction-how-the-teams-stack-up-cricbuzzcom\",\"https://www.cricbuzz.com/cricket-news/137058/sa20-2026-quinton-de-kock-v-ryan-rickelton-with-a-dash-of-anrich-nortje\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"Need closer-to-match confirmation on whether MI prefer Rickelton or de Kock as starting keeper-opener.\"},{\"official_player_id\":\"834\",\"full_name\":\"Quinton De Kock\",\"playing_xi_tier\":\"ROTATION\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Backup/alternative overseas keeper-opener with direct overlap against Rickelton.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket\",\"https://www.cricbuzz.com/cricket-news/137058/sa20-2026-quinton-de-kock-v-ryan-rickelton-with-a-dash-of-anrich-nortje\"],\"availability_modifier\":1,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":14,\"availability_note\":\"No recent availability issue found.\",\"availability_comment\":\"No injury or release report located; prompt schedule is only partial.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket\"],\"overseas_competition_note\":\"Heavy overseas-slot pressure; competes most directly with Rickelton for keeper-opener slot and with Boult/Jacks/Santner for overseas balance.\",\"overseas_competition_basis\":\"overseas_slot_pressure\",\"overseas_competition_comment\":\"Useful option, but not an obvious automatic overseas starter.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.cricbuzz.com/cricket-news/132545/ipl-2025-auction-how-the-teams-stack-up-cricbuzzcom\",\"https://www.cricbuzz.com/cricket-news/137058/sa20-2026-quinton-de-kock-v-ryan-rickelton-with-a-dash-of-anrich-nortje\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"Keeper-opener pecking order versus Rickelton needs late confirmation.\"},{\"official_player_id\":\"107\",\"full_name\":\"Rohit Sharma\",\"playing_xi_tier\":\"GUARANTEED\",\"playing_xi_basis\":\"confirmed_role\",\"playing_xi_comment\":\"Senior top-order mainstay and clear first XI batter.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket\"],\"availability_modifier\":1,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":14,\"availability_note\":\"No current IPL 2026 unavailability report found.\",\"availability_comment\":\"No recent adverse availability report found; prompt has only 4 published fixtures.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.mumbaiindians.com/news/hardik-pandya-lucky-to-have-three-captains-to-put-their-arm-around-my-shoulder-and-be-there-for-me\"],\"overseas_competition_note\":\"Domestic player; overseas-player cap is not the constraint.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Batsman selection unaffected by overseas cap.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\"],\"research_confidence\":\"High\",\"needs_player_followup\":false,\"followup_reason\":\"\"},{\"official_player_id\":\"108\",\"full_name\":\"Surya Kumar Yadav\",\"playing_xi_tier\":\"GUARANTEED\",\"playing_xi_basis\":\"confirmed_role\",\"playing_xi_comment\":\"Elite Indian middle-order batter and automatic starter.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket\"],\"availability_modifier\":1,\"availability_basis\":\"confirmed_available\",\"availability_expected_matches_available\":14,\"availability_note\":\"Available; no current IPL 2026 unavailability report found.\",\"availability_comment\":\"Included in India T20 World Cup 2026 coverage around same period; no adverse IPL 2026 report located. Prompt schedule is partial.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.mumbaiindians.com/news/t20-world-cup-2026-skys-men-in-blue---squad-locked-and-loaded\"],\"overseas_competition_note\":\"Domestic player; overseas-player cap is not the constraint.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Selection is independent of overseas-slot limits.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\"],\"research_confidence\":\"High\",\"needs_player_followup\":false,\"followup_reason\":\"\"},{\"official_player_id\":\"5629\",\"full_name\":\"Will Jacks\",\"playing_xi_tier\":\"LIKELY\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Repeatedly projected in MI probable XIs, but his place still depends on overseas balance and keeper choice.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.cricbuzz.com/cricket-news/134276/ipl-2025-preview-mumbai-indians-vs-gujarat-titans-cricbuzzcom\",\"https://www.ecb.co.uk/news/4420620/england-men-at-the-ipl-auction\"],\"availability_modifier\":1,\"availability_basis\":\"confirmed_available\",\"availability_expected_matches_available\":14,\"availability_note\":\"ECB lists him as an IPL 2026 participant with MI; no April 2026 conflict found.\",\"availability_comment\":\"No injury or England release conflict found for the IPL window cited by ECB; prompt schedule remains partial.\",\"availability_source_urls\":[\"https://www.ecb.co.uk/news/4420620/england-men-at-the-ipl-auction\",\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\"],\"overseas_competition_note\":\"Competes with Rickelton/de Kock, Santner and Rutherford for overseas slots, but offers batting plus part-time spin flexibility.\",\"overseas_competition_basis\":\"overseas_slot_pressure\",\"overseas_competition_comment\":\"Near first-choice, though not quite as locked as Boult.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.cricbuzz.com/cricket-news/132545/ipl-2025-auction-how-the-teams-stack-up-cricbuzzcom\",\"https://www.cricbuzz.com/cricket-news/134276/ipl-2025-preview-mumbai-indians-vs-gujarat-titans-cricbuzzcom\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"Overseas combination call may change if MI prioritise a second keeper or extra spinner.\"},{\"official_player_id\":\"20701\",\"full_name\":\"Naman Dhir\",\"playing_xi_tier\":\"LIKELY\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Indian batting/all-round depth piece frequently around strongest combinations.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.cricbuzz.com/cricket-news/134276/ipl-2025-preview-mumbai-indians-vs-gujarat-titans-cricbuzzcom\"],\"availability_modifier\":1,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":14,\"availability_note\":\"No recent availability issue found.\",\"availability_comment\":\"No injury/suspension report found; prompt schedule is incomplete beyond 4 games.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket\"],\"overseas_competition_note\":\"Domestic player; overseas cap is not the constraint, which helps his squad utility.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Indian status strengthens his case versus fringe overseas options.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"Indian middle-order balance and impact-sub use could shift him between XI and bench.\"},{\"official_player_id\":\"4951\",\"full_name\":\"Mayank Markande\",\"playing_xi_tier\":\"ROTATION\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Domestic spin option, but not clearly ahead of Santner or other balance choices.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket\"],\"availability_modifier\":1,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":14,\"availability_note\":\"No recent availability issue found.\",\"availability_comment\":\"No adverse report found; fixture publication in prompt is partial.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket\"],\"overseas_competition_note\":\"Domestic player; overseas-player cap is not the constraint.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Competition is role-based spin depth rather than overseas slots.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"Need venue-specific spin selection clues to separate him from other bowling options.\"},{\"official_player_id\":\"20725\",\"full_name\":\"Allah Ghazanfar\",\"playing_xi_tier\":\"UNLIKELY\",\"playing_xi_basis\":\"confirmed_role\",\"playing_xi_comment\":\"Still listed in MI's 2026 squad data, but recent reporting makes him unlikely to feature early due to prior long-term spine injury.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.cricbuzz.com/cricket-news/133411/am-ghazanfar-ruled-out-of-champions-trophy-cricbuzzcom\",\"https://www.cricbuzz.com/cricket-news/133467/mujeeb-to-replace-ghazanfar-for-mi\"],\"availability_modifier\":0,\"availability_basis\":\"injury_report\",\"availability_expected_matches_available\":0,\"availability_note\":\"Previously ruled out with spine injury; no later return confirmation found for IPL 2026.\",\"availability_comment\":\"Cricbuzz reported a minimum four-month layoff and IPL replacement; absent fresh return confirmation, availability is treated as nil. Prompt also has only first 4 fixtures published.\",\"availability_source_urls\":[\"https://www.cricbuzz.com/cricket-news/133411/am-ghazanfar-ruled-out-of-champions-trophy-cricbuzzcom\",\"https://www.cricbuzz.com/cricket-news/133467/mujeeb-to-replace-ghazanfar-for-mi\",\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\"],\"overseas_competition_note\":\"If fit, he would still face overseas-slot competition from Boult, Jacks, Santner and keeper options.\",\"overseas_competition_basis\":\"overseas_slot_pressure\",\"overseas_competition_comment\":\"Availability is the primary issue before overseas-slot competition even applies.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.cricbuzz.com/cricket-news/132545/ipl-2025-auction-how-the-teams-stack-up-cricbuzzcom\"],\"research_confidence\":\"High\",\"needs_player_followup\":true,\"followup_reason\":\"Need explicit post-injury clearance/update because official squad listing and old injury report are out of sync.\"},{\"official_player_id\":\"5396\",\"full_name\":\"Sherfane Rutherford\",\"playing_xi_tier\":\"ROTATION\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Traded in, but pathway is crowded in MI's overseas batting mix.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.mumbaiindians.com/news/sherfane-rutherford-trade-in-ipl-2026-mumbai-indians-cricket\"],\"availability_modifier\":1,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":14,\"availability_note\":\"No recent availability issue found.\",\"availability_comment\":\"No injury/conflict report found; fixture publication in prompt is partial.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.mumbaiindians.com/news/sherfane-rutherford-trade-in-ipl-2026-mumbai-indians-cricket\"],\"overseas_competition_note\":\"Substantial overseas-slot pressure from Boult, Jacks, Santner, Rickelton and de Kock.\",\"overseas_competition_basis\":\"overseas_slot_pressure\",\"overseas_competition_comment\":\"Likely bench cover unless MI want a specific finishing profile.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.mumbaiindians.com/news/sherfane-rutherford-trade-in-ipl-2026-mumbai-indians-cricket\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"Needs match-specific confirmation if MI seek extra overseas power-hitting.\"},{\"official_player_id\":\"20594\",\"full_name\":\"N Tilak Varma\",\"playing_xi_tier\":\"GUARANTEED\",\"playing_xi_basis\":\"confirmed_role\",\"playing_xi_comment\":\"Key Indian top-order batter and clear first-choice XI member.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket\"],\"availability_modifier\":1,\"availability_basis\":\"confirmed_available\",\"availability_expected_matches_available\":14,\"availability_note\":\"Available; no current IPL 2026 unavailability report found.\",\"availability_comment\":\"Included in India T20 World Cup 2026 coverage around this period; no adverse IPL report located. Prompt schedule is partial.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.mumbaiindians.com/news/t20-world-cup-2026-skys-men-in-blue---squad-locked-and-loaded\"],\"overseas_competition_note\":\"Domestic player; overseas-player cap is not the constraint.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Selection unaffected by overseas-slot calculus.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\"],\"research_confidence\":\"High\",\"needs_player_followup\":false,\"followup_reason\":\"\"},{\"official_player_id\":\"140\",\"full_name\":\"Deepak Chahar\",\"playing_xi_tier\":\"LIKELY\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Projected as first-choice Indian seamer alongside Boult and Bumrah when fit.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.cricbuzz.com/cricket-news/134276/ipl-2025-preview-mumbai-indians-vs-gujarat-titans-cricbuzzcom\"],\"availability_modifier\":1,\"availability_basis\":\"confirmed_available\",\"availability_expected_matches_available\":14,\"availability_note\":\"Fit according to late IPL 2025 reporting; no IPL 2026 issue found.\",\"availability_comment\":\"Cricbuzz reported him fit late in IPL 2025 and no new 2026 setback was found; prompt includes only first 4 fixtures.\",\"availability_source_urls\":[\"https://www.cricbuzz.com/cricket-news/134503/ipl-2025-pedigree-meets-promise-as-mi-and-pbks-vie-for-a-spot-in-the-final-cricbuzzcom\",\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\"],\"overseas_competition_note\":\"Domestic player; overseas cap is not the constraint.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Competes on bowling balance, not overseas-slot availability.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"Past fitness volatility means final pre-match confirmation would be useful.\"},{\"official_player_id\":\"1903\",\"full_name\":\"Mitchell Santner\",\"playing_xi_tier\":\"LIKELY\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Strong overseas spin-all-round option, especially if MI want balance and control.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.cricbuzz.com/cricket-news/132545/ipl-2025-auction-how-the-teams-stack-up-cricbuzzcom\"],\"availability_modifier\":1,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":14,\"availability_note\":\"No recent availability issue found.\",\"availability_comment\":\"No injury or national-duty conflict found for early IPL window; prompt schedule is partial.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket\"],\"overseas_competition_note\":\"Competes for four overseas spots but has a credible path because MI may want a frontline overseas spinner/all-rounder.\",\"overseas_competition_basis\":\"overseas_slot_pressure\",\"overseas_competition_comment\":\"Useful balance piece, though not fully immune from combination changes.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.cricbuzz.com/cricket-news/132545/ipl-2025-auction-how-the-teams-stack-up-cricbuzzcom\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"Selection may hinge on venue-specific spin demand and which keeper-opener MI choose.\"},{\"official_player_id\":\"23045\",\"full_name\":\"Mohammad Izhar\",\"playing_xi_tier\":\"UNLIKELY\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Auction depth addition with no strong evidence yet of first-choice role.\",\"playing_xi_source_urls\":[\"https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket\",\"https://www.cricbuzz.com/cricket-match-squads/149629/mi-vs-kkr-2nd-match-indian-premier-league-2026\"],\"availability_modifier\":1,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":14,\"availability_note\":\"No recent availability issue found.\",\"availability_comment\":\"No adverse report found, but evidence on role is thin and prompt fixtures are incomplete.\",\"availability_source_urls\":[\"https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket\",\"https://www.cricbuzz.com/cricket-match-squads/149629/mi-vs-kkr-2nd-match-indian-premier-league-2026\"],\"overseas_competition_note\":\"Domestic player; overseas-player cap is not the constraint.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Barrier is depth-chart position, not overseas slots.\",\"overseas_competition_source_urls\":[\"https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket\"],\"research_confidence\":\"Low\",\"needs_player_followup\":true,\"followup_reason\":\"Very limited public evidence on role hierarchy or likely debut timing.\"},{\"official_player_id\":\"1745\",\"full_name\":\"Shardul Thakur\",\"playing_xi_tier\":\"ROTATION\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Experienced domestic seam-bowling all-round option, but not clearly ahead of MI's primary pace core.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket\"],\"availability_modifier\":1,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":14,\"availability_note\":\"No recent availability issue found.\",\"availability_comment\":\"No current injury/suspension report found; only 4 fixtures are published in the prompt.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket\"],\"overseas_competition_note\":\"Domestic player; overseas-player cap is not the constraint.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Competes with Indian seam options for XI spot.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"May rotate in depending on conditions or workload management for seamers.\"},{\"official_player_id\":\"22030\",\"full_name\":\"Ashwani Kumar\",\"playing_xi_tier\":\"ROTATION\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Domestic left-arm pace option in broader bowling mix; squad evidence stronger than XI evidence.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.cricbuzz.com/cricket-match-squads/149629/mi-vs-kkr-2nd-match-indian-premier-league-2026\"],\"availability_modifier\":1,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":14,\"availability_note\":\"No recent availability issue found.\",\"availability_comment\":\"No adverse report found; prompt schedule covers only first 4 matches.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\"https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket\"],\"overseas_competition_note\":\"Domestic player; overseas cap is not the constraint.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Competition is with Indian pace depth rather than overseas slots.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/mumbai-indians/squad/2026\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"Need early match selections to know whether he is ahead of other Indian seam backups.\"}]}",
+            "type": "output_text"
+          }
+        ],
+        "id": "msg_0f8ec221094c99fa0069c138219aa481958f268fda02d61422",
+        "phase": "final_answer",
+        "role": "assistant",
+        "status": "completed",
+        "type": "message"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": null,
+    "reasoning": {
+      "effort": "none",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "store": true,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "description": null,
+        "name": "mi_team_enrichment",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "players": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "availability_basis": {
+                    "enum": [
+                      "confirmed_available",
+                      "conflicting_reports",
+                      "inferred_no_adverse_news",
+                      "injury_report",
+                      "late_joining",
+                      "suspension",
+                      "tournament_conflict",
+                      "unknown"
+                    ],
+                    "type": "string"
+                  },
+                  "availability_comment": {
+                    "type": "string"
+                  },
+                  "availability_expected_matches_available": {
+                    "type": "integer"
+                  },
+                  "availability_modifier": {
+                    "type": "number"
+                  },
+                  "availability_note": {
+                    "type": "string"
+                  },
+                  "availability_source_urls": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "followup_reason": {
+                    "type": "string"
+                  },
+                  "full_name": {
+                    "type": "string"
+                  },
+                  "needs_player_followup": {
+                    "type": "boolean"
+                  },
+                  "official_player_id": {
+                    "type": "string"
+                  },
+                  "overseas_competition_basis": {
+                    "enum": [
+                      "confirmed_role",
+                      "conflicting_reports",
+                      "domestic_player",
+                      "overseas_slot_pressure",
+                      "role_depth_competition",
+                      "unknown"
+                    ],
+                    "type": "string"
+                  },
+                  "overseas_competition_comment": {
+                    "type": "string"
+                  },
+                  "overseas_competition_note": {
+                    "type": "string"
+                  },
+                  "overseas_competition_source_urls": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "playing_xi_basis": {
+                    "enum": [
+                      "confirmed_role",
+                      "conflicting_reports",
+                      "inferred_from_team_context",
+                      "unknown"
+                    ],
+                    "type": "string"
+                  },
+                  "playing_xi_comment": {
+                    "type": "string"
+                  },
+                  "playing_xi_source_urls": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "playing_xi_tier": {
+                    "enum": [
+                      "GUARANTEED",
+                      "LIKELY",
+                      "ROTATION",
+                      "UNLIKELY"
+                    ],
+                    "type": "string"
+                  },
+                  "research_confidence": {
+                    "enum": [
+                      "High",
+                      "Low",
+                      "Medium"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "official_player_id",
+                  "full_name",
+                  "playing_xi_tier",
+                  "playing_xi_basis",
+                  "playing_xi_comment",
+                  "playing_xi_source_urls",
+                  "availability_modifier",
+                  "availability_basis",
+                  "availability_expected_matches_available",
+                  "availability_note",
+                  "availability_comment",
+                  "availability_source_urls",
+                  "overseas_competition_note",
+                  "overseas_competition_basis",
+                  "overseas_competition_comment",
+                  "overseas_competition_source_urls",
+                  "research_confidence",
+                  "needs_player_followup",
+                  "followup_reason"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "team": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "team",
+            "players"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "search_context_size": "medium",
+        "type": "web_search",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 24025,
+      "input_tokens_details": {
+        "cached_tokens": 8064
+      },
+      "output_tokens": 7189,
+      "output_tokens_details": {
+        "reasoning_tokens": 570
+      },
+      "total_tokens": 31214
+    },
+    "user": null
+  },
+  "saved_at": "2026-03-23T12:56:12.599499+00:00"
+}

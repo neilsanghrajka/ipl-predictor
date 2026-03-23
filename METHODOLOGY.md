@@ -221,15 +221,14 @@ Each player gets a confidence rating based on data quality:
 
 ## Data Sources
 
-Stats are collected from (in order of preference):
-1. https://www.iplt20.com/players/ — official IPL website
-2. https://www.espncricinfo.com — comprehensive cricket statistics
-3. Web search as fallback
+Official batting and bowling stats come only from the official IPL player feeds and player pages.
 
-Injury/availability information from:
-1. Recent news articles (within 30 days)
-2. Team announcements
-3. Cricket news aggregators
+Lineup, availability, and overseas-slot research comes from:
+1. Official IPL, franchise, and BCCI sources
+2. Reputable cricket reporting
+3. Grounded web search only when primary sources are incomplete
+
+For schedule-aware availability, fixtures come from the official IPL schedule feed behind the match-centre widget.
 
 ---
 
@@ -238,9 +237,13 @@ Injury/availability information from:
 | File | Purpose |
 |------|---------|
 | `model.py` | The prediction engine — all formulas above implemented in Python |
-| `player_registry.py` | Maps 186 draft nicknames to full player names, roles, overseas status |
-| `player_templates.json` | Blank data templates for all 186 players |
-| `fetch_player_data.py` | Data collection script (fills templates with real stats) |
-| `collect_data.py` | Bridge between data collection and model |
+| `player_registry.csv` | Canonical CSV for manual identity, official mapping, stats, and non-stats audit fields |
+| `build_registry_csv.py` | Bootstrap builder for `player_registry.csv` |
+| `populate_official_ids.py` | Refreshes official player IDs and official IPL URLs |
+| `fetch_player_data.py` | Phase 1 official batting/bowling stats fetcher |
+| `enrich_non_stats.py` | Phase 2 GPT-5.4 lineup/availability enrichment keyed by `official_player_id` |
+| `repair_availability.py` | Availability-only repair pass that removes schedule-publication contamination from `availability_modifier` |
+| `grounded_research.py` | Shared Responses API transport, structured schemas, validation, and raw exchange persistence |
+| `collect_data.py` | CSV-to-model adapter layer |
 | `run_predictions.py` | Runs model end-to-end, outputs rankings |
-| `verification/verify.py` | 4-suite verification (schema, spot-check, sanity, end-to-end) |
+| `verification/verify.py` | CSV verification for schema, phase-2 audit fields, availability contamination, spot-checks, sanity, raw inputs, and end-to-end model execution |

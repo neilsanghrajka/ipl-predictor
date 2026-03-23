@@ -1,0 +1,73 @@
+{
+  "competition_id": "284",
+  "fixtures": [
+    {
+      "city": "Bengaluru",
+      "competition_id": "284",
+      "is_home": false,
+      "match_date": "2026-03-28",
+      "match_date_display": "28 Mar 2026",
+      "match_datetime_local": "2026-03-28 19:30:00",
+      "match_id": "2417",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "RCB",
+      "opponent_name": "Royal Challengers Bengaluru",
+      "team_code": "SRH",
+      "team_name": "Sunrisers Hyderabad",
+      "venue": "M Chinnaswamy Stadium"
+    },
+    {
+      "city": "Kolkata",
+      "competition_id": "284",
+      "is_home": false,
+      "match_date": "2026-04-02",
+      "match_date_display": "2 Apr 2026",
+      "match_datetime_local": "2026-04-02 19:30:00",
+      "match_id": "2422",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "KKR",
+      "opponent_name": "Kolkata Knight Riders",
+      "team_code": "SRH",
+      "team_name": "Sunrisers Hyderabad",
+      "venue": "Eden Gardens"
+    },
+    {
+      "city": "Hyderabad",
+      "competition_id": "284",
+      "is_home": true,
+      "match_date": "2026-04-05",
+      "match_date_display": "5 Apr 2026",
+      "match_datetime_local": "2026-04-05 15:30:00",
+      "match_id": "2426",
+      "match_status": "UpComing",
+      "match_time_local": "15:30",
+      "opponent_code": "LSG",
+      "opponent_name": "Lucknow Super Giants",
+      "team_code": "SRH",
+      "team_name": "Sunrisers Hyderabad",
+      "venue": "Rajiv Gandhi International Stadium"
+    },
+    {
+      "city": "New Chandigarh",
+      "competition_id": "284",
+      "is_home": false,
+      "match_date": "2026-04-11",
+      "match_date_display": "11 Apr 2026",
+      "match_datetime_local": "2026-04-11 15:30:00",
+      "match_id": "2433",
+      "match_status": "UpComing",
+      "match_time_local": "15:30",
+      "opponent_code": "PBKS",
+      "opponent_name": "Punjab Kings",
+      "team_code": "SRH",
+      "team_name": "Sunrisers Hyderabad",
+      "venue": "PCA International Cricket Stadium"
+    }
+  ],
+  "published_fixture_count": 4,
+  "season": "2026",
+  "team": "SRH",
+  "team_name": "Sunrisers Hyderabad"
+}

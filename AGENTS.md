@@ -22,6 +22,8 @@ Run the pipeline in this order:
 python3 build_registry_csv.py
 python3 populate_official_ids.py
 python3 fetch_player_data.py
+python3 enrich_non_stats.py
+python3 repair_availability.py
 python3 verification/verify.py
 python3 run_predictions.py
 ```
@@ -34,14 +36,17 @@ python3 run_predictions.py
 | `build_registry_csv.py` | Bootstrap builder for `player_registry.csv` |
 | `populate_official_ids.py` | Refreshes official IPL player IDs and URLs from squad pages |
 | `fetch_player_data.py` | Fetches official IPL batting and bowling stats into the CSV |
+| `enrich_non_stats.py` | Adds GPT-5.4 lineup/availability enrichment and audit metadata |
+| `repair_availability.py` | Repairs schedule-contaminated availability fields without touching lineup or stats |
 | `collect_data.py` | CSV-to-model adapter layer |
 | `registry_csv.py` | Canonical CSV schema and row helpers |
 | `official_ipl.py` | Official IPL draft, squad, and stats fetch helpers |
+| `grounded_research.py` | Shared OpenAI Responses client, schemas, validation, and raw exchange persistence |
 | `model.py` | Prediction engine |
 | `run_predictions.py` | Generates final rankings |
-| `verification/verify.py` | 4-suite verification against the CSV pipeline |
+| `verification/verify.py` | Verification against schema, audit fields, contamination checks, raw inputs, and end-to-end model execution |
 | `verification/expected_samples.json` | Known stats for spot-check players |
-| `data/raw/` | Latest raw official squad pages and player stats payloads |
+| `data/raw/` | Latest raw official fixtures, team/player research bundles, availability repairs, squad pages, and player stats payloads |
 
 ## Data Rules
 

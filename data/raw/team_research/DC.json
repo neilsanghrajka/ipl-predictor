@@ -1,0 +1,1069 @@
+{
+  "parsed": {
+    "players": [
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Only 4 of 14 fixtures were provided in the prompt, but no adverse availability news was found for the wider season; full-season estimate inferred.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No recent injury or unavailability report found; treated as fully available.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.iplt20.com/players/t-natarajan/3831"
+        ],
+        "followup_reason": "Need closer verification of current fitness/role because XI status is inferred, not officially confirmed.",
+        "full_name": "T Natarajan",
+        "needs_player_followup": true,
+        "official_player_id": "3831",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Selection pressure is role-based, not overseas-slot based.",
+        "overseas_competition_note": "Domestic player; overseas-player cap is not the constraint. Competition is with other Indian pacers for XI slots.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Frontline Indian left-arm seamer in DC squad; likely first-choice pace option, especially if Starc misses early games.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.ipl.com/cricket/print/news/ipl-2025-delhi-capitals-predicted-playing-xi/"
+        ],
+        "playing_xi_tier": "LIKELY",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Prompt includes only first 4 fixtures; season-long availability inferred from absence of adverse reports.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No recent injury or absence report found; treated as available.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.iplt20.com/players/mukesh-kumar/5622"
+        ],
+        "followup_reason": "No firm pre-season XI confirmation found; role appears matchup-dependent.",
+        "full_name": "Mukesh Kumar",
+        "needs_player_followup": true,
+        "official_player_id": "5622",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Competes on role/conditions rather than overseas-slot pressure.",
+        "overseas_competition_note": "Domestic player; overseas cap does not restrict him. Main issue is internal seam-bowling competition.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "In main pace mix but competition from Natarajan, Starc, Ngidi and Chameera makes him rotational.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.iplt20.com/news/4125/tata-ipl-2025-match-04-dc-vs-lsg-match-report"
+        ],
+        "playing_xi_tier": "ROTATION",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Published fixtures in prompt are incomplete; estimate assumes general season availability absent contrary reporting.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No current injury or tournament-clash report found; treated as available.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.iplt20.com/players/lungisani-ngidi/3746"
+        ],
+        "followup_reason": "Need confirmation on preferred overseas balance for early matches.",
+        "full_name": "Lungisani Ngidi",
+        "needs_player_followup": true,
+        "official_player_id": "3746",
+        "overseas_competition_basis": "overseas_slot_pressure",
+        "overseas_competition_comment": "Likely selected mainly when DC want extra overseas pace or if Starc is unavailable.",
+        "overseas_competition_note": "Overseas slot pressure is significant; must compete with Stubbs, Miller, Starc and Duckett for limited overseas places.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Strong overseas pace option but competing for one of four overseas slots with Stubbs, Miller, Starc and Duckett.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/"
+        ],
+        "playing_xi_tier": "ROTATION",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "confirmed_available",
+        "availability_comment": "Only 4 fixtures were supplied, but no adverse availability news was identified for the league stage.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "Official squad member with no recent unavailability report found.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.iplt20.com/players/kl-rahul/1125"
+        ],
+        "followup_reason": "",
+        "full_name": "Kl Rahul",
+        "needs_player_followup": false,
+        "official_player_id": "1125",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "No overseas-slot constraint applies.",
+        "overseas_competition_note": "Domestic player; overseas cap is irrelevant. He is a lock by role and seniority.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad"
+        ],
+        "playing_xi_basis": "confirmed_role",
+        "playing_xi_comment": "Senior retained core player and frontline wicketkeeper-batter in official squad.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/"
+        ],
+        "playing_xi_tier": "GUARANTEED",
+        "research_confidence": "High"
+      },
+      {
+        "availability_basis": "confirmed_available",
+        "availability_comment": "Prompt fixtures cover only 4 matches; full league estimate inferred from no adverse news.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No recent injury or absence report found; treated as fully available.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.iplt20.com/players/kuldeep-yadav/261"
+        ],
+        "followup_reason": "",
+        "full_name": "Kuldeep Yadav",
+        "needs_player_followup": false,
+        "official_player_id": "261",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Role security is independent of overseas-slot math.",
+        "overseas_competition_note": "Domestic player; overseas cap is not a factor. He is first-choice spin pick.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad"
+        ],
+        "playing_xi_basis": "confirmed_role",
+        "playing_xi_comment": "Retained core bowler and lead spinner in official squad.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/"
+        ],
+        "playing_xi_tier": "GUARANTEED",
+        "research_confidence": "High"
+      },
+      {
+        "availability_basis": "confirmed_available",
+        "availability_comment": "Only 4 fixtures published in prompt; no evidence of any scheduled absence across league stage.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "Captain in official team communications; no adverse availability report found.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.delhicapitals.in/news/delhi-capitals-appoint-axar-patel-as-mens-team-captain"
+        ],
+        "followup_reason": "",
+        "full_name": "Axar Patel",
+        "needs_player_followup": false,
+        "official_player_id": "1113",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "No overseas-slot pressure applies.",
+        "overseas_competition_note": "Domestic player; overseas cap is irrelevant. Captaincy further secures role.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.delhicapitals.in/news/delhi-capitals-appoint-axar-patel-as-mens-team-captain"
+        ],
+        "playing_xi_basis": "confirmed_role",
+        "playing_xi_comment": "Official DC captain; automatic XI pick.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.delhicapitals.in/news/delhi-capitals-appoint-axar-patel-as-mens-team-captain"
+        ],
+        "playing_xi_tier": "GUARANTEED",
+        "research_confidence": "High"
+      },
+      {
+        "availability_basis": "conflicting_reports",
+        "availability_comment": "Business Standard reported Starc wanted to represent DC in 2026 after missing the latter part of IPL 2025, but recent widely-circulated claims suggest he may miss the start of IPL 2026. With only 4 prompt fixtures published and no official DC confirmation located, estimated availability is reduced conservatively.",
+        "availability_expected_matches_available": 11,
+        "availability_modifier": 0.79,
+        "availability_note": "Committed to DC for IPL 2026, but recent reporting/discussion indicates possible absence for initial games; not yet firmly resolved from authoritative sources.",
+        "availability_source_urls": [
+          "https://www.business-standard.com/cricket/ipl/i-still-want-to-represent-dc-in-ipl-2026-aussie-quick-mitchell-starc-125060600869_1.html",
+          "https://www.iplt20.com/teams/delhi-capitals/squad"
+        ],
+        "followup_reason": "Need authoritative pre-match confirmation on whether he misses the opening round of fixtures.",
+        "full_name": "Mitchell Starc",
+        "needs_player_followup": true,
+        "official_player_id": "490",
+        "overseas_competition_basis": "confirmed_role",
+        "overseas_competition_comment": "Usually selected when available; overseas competition matters less for him than for backup overseas options.",
+        "overseas_competition_note": "If available he is a preferred overseas pick, but overall overseas balance with Stubbs/Miller and another overseas batter or pacer still matters.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Retained marquee overseas quick and likely first-choice when available, but early-match availability carries uncertainty.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/"
+        ],
+        "playing_xi_tier": "LIKELY",
+        "research_confidence": "Low"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Only 4 fixtures were supplied; season estimate inferred from no adverse news.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No recent unavailability report found; treated as available.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.iplt20.com/players/david-miller/187"
+        ],
+        "followup_reason": "Need confirmation of preferred overseas combination in first-choice XI.",
+        "full_name": "David Miller",
+        "needs_player_followup": true,
+        "official_player_id": "187",
+        "overseas_competition_basis": "overseas_slot_pressure",
+        "overseas_competition_comment": "Selection depends on whether DC prefer extra batting depth or an additional overseas bowler.",
+        "overseas_competition_note": "Major overseas-slot competition with Stubbs, Starc, Ngidi and Duckett. Likely favored for finishing experience but not fully locked.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Experienced overseas middle-order batter; appears a strong fit but not officially confirmed as automatic starter.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/"
+        ],
+        "playing_xi_tier": "LIKELY",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Prompt fixture list is incomplete; league-stage estimate inferred from absence of contrary news.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No adverse availability report found; treated as available.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.iplt20.com/players/vipraj-nigam/22053"
+        ],
+        "followup_reason": "Likely in best balance XI, but not officially confirmed.",
+        "full_name": "Vipraj Nigam",
+        "needs_player_followup": true,
+        "official_player_id": "22053",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Role competition is internal, not overseas related.",
+        "overseas_competition_note": "Domestic player; overseas cap is not the issue. Competition is with other Indian balance/impact options.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Indian spin/all-round option with good squad fit; likely used regularly for balance around Axar and Kuldeep.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.iplt20.com/news/4125/tata-ipl-2025-match-04-dc-vs-lsg-match-report"
+        ],
+        "playing_xi_tier": "LIKELY",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Published fixtures in prompt are only partial; full-season estimate inferred from no adverse reporting.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No recent injury or absence report found.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.iplt20.com/players/nitish-rana/2738"
+        ],
+        "followup_reason": "XI slot is plausible but not formally confirmed.",
+        "full_name": "Nitish Rana",
+        "needs_player_followup": true,
+        "official_player_id": "2738",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Selection driven by batting-order construction rather than overseas limits.",
+        "overseas_competition_note": "Domestic player; overseas cap is not the constraint. Competes with Indian batting options for position.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Traded-in Indian top/middle-order option who fits likely starting balance.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/"
+        ],
+        "playing_xi_tier": "LIKELY",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Season estimate inferred because prompt contains only 4 published fixtures and no player-specific adverse news.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No unavailability report found; treated as available.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.iplt20.com/players/auqib-dar/23005"
+        ],
+        "followup_reason": "Very limited reliable evidence on intended IPL 2026 role.",
+        "full_name": "Auqib Dar",
+        "needs_player_followup": true,
+        "official_player_id": "23005",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Domestic depth competition is the main issue.",
+        "overseas_competition_note": "Domestic player; overseas cap is not the blocker. Competition comes from several Indian bowling/all-round options.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "In official squad, but likely competing as a developing domestic option rather than locked starter.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/"
+        ],
+        "playing_xi_tier": "ROTATION",
+        "research_confidence": "Low"
+      },
+      {
+        "availability_basis": "confirmed_available",
+        "availability_comment": "Prompt includes only four fixtures; no adverse news suggests full league availability.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "Official squad player with no recent unavailability report found.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.iplt20.com/players/abishek-porel/33333"
+        ],
+        "followup_reason": "Role depends on whether DC open with Porel, Rahul or an overseas batter.",
+        "full_name": "Abishek Porel",
+        "needs_player_followup": true,
+        "official_player_id": "33333",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Team-balance competition, not overseas-slot pressure.",
+        "overseas_competition_note": "Domestic player; not constrained by overseas cap. Competes mainly with domestic/opening combinations and Rahul's wicketkeeping role.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Retained Indian wicketkeeper-batter who fits likely top-order/left-hand balance, though KL Rahul also keeps.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/"
+        ],
+        "playing_xi_tier": "LIKELY",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "confirmed_available",
+        "availability_comment": "Season availability inferred beyond the 4 prompt fixtures because no adverse news was found.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "Returned to DC in the 2026 auction; no recent absence report found.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.indiatoday.in/sports/cricket/story/ipl-2026-auction-prithvi-shaw-returns-delhi-capitals-2836952-2025-12-16/"
+        ],
+        "followup_reason": "Need evidence on whether he is ahead of Porel/Duckett/Nissanka in opening plans.",
+        "full_name": "Prithvi Shaw",
+        "needs_player_followup": true,
+        "official_player_id": "3764",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Domestic batting depth is the constraint.",
+        "overseas_competition_note": "Domestic player; overseas cap is irrelevant. Competes with Rahul, Porel and others for top-order spots.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.indiatoday.in/sports/cricket/story/ipl-2026-auction-prithvi-shaw-returns-delhi-capitals-2836952-2025-12-16/"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Back in DC squad after auction, but not an obvious first-choice pick given top-order competition.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.indiatoday.in/sports/cricket/story/ipl-2026-auction-prithvi-shaw-returns-delhi-capitals-2836952-2025-12-16/"
+        ],
+        "playing_xi_tier": "ROTATION",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "confirmed_available",
+        "availability_comment": "Only 4 fixtures are published in the prompt; nothing found suggests absence during that phase or wider league stage.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No current injury or national-team clash affecting the prompt fixtures was found.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.iplt20.com/players/tristan-stubbs/20631"
+        ],
+        "followup_reason": "",
+        "full_name": "Tristan Stubbs",
+        "needs_player_followup": false,
+        "official_player_id": "20631",
+        "overseas_competition_basis": "confirmed_role",
+        "overseas_competition_comment": "Retained core player and strong starter despite four-foreigner cap.",
+        "overseas_competition_note": "Overseas player, but effectively first-choice; overseas cap pressure is lower for him than for backup overseas options.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/"
+        ],
+        "playing_xi_basis": "confirmed_role",
+        "playing_xi_comment": "Retained core overseas batter/wicketkeeper and one of DC's clearest first-choice players.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/"
+        ],
+        "playing_xi_tier": "GUARANTEED",
+        "research_confidence": "High"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Prompt fixture list is partial; league-stage estimate inferred from no adverse news.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No recent absence report found.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.iplt20.com/players/karun-nair/276"
+        ],
+        "followup_reason": "Need confirmation whether he is preferred ahead of Shaw/Rizvi for middle-order cover.",
+        "full_name": "Karun Nair",
+        "needs_player_followup": true,
+        "official_player_id": "276",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Selection pressure is from domestic role competition.",
+        "overseas_competition_note": "Domestic player; overseas cap is not the issue. Competes within Indian batting depth.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Domestic batting cover with some chance of starts, but not a clear locked XI member.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/"
+        ],
+        "playing_xi_tier": "ROTATION",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "confirmed_available",
+        "availability_comment": "Only four fixtures are listed in prompt; absence of adverse news supports full league estimate.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No recent injury or absence report found.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.iplt20.com/players/ashutosh-sharma/20703"
+        ],
+        "followup_reason": "Likely starter but still based on inferred balance rather than official XI news.",
+        "full_name": "Ashutosh Sharma",
+        "needs_player_followup": true,
+        "official_player_id": "20703",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Domestic finisher role improves his selection case.",
+        "overseas_competition_note": "Domestic player; overseas cap is not the constraint. Competes only on batting-balance grounds.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Indian finisher/batting all-round option who strongly fits DC balance and recent match usage.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.iplt20.com/news/4125/tata-ipl-2025-match-04-dc-vs-lsg-match-report"
+        ],
+        "playing_xi_tier": "LIKELY",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "confirmed_available",
+        "availability_comment": "Prompt fixtures begin 1 April 2026, inside the availability window referenced by Nottinghamshire. No adverse IPL-side report found.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "Nottinghamshire stated he would miss the start of the English season because the 2026 IPL runs from 26 March to 31 May; no conflict with early IPL fixtures.",
+        "availability_source_urls": [
+          "https://www.trentbridge.co.uk/news/2025/december/duckett-set-for-ipl-debut.html",
+          "https://www.iplt20.com/teams/delhi-capitals/squad"
+        ],
+        "followup_reason": "Need confirmation whether DC prioritize an overseas opener or an extra overseas bowler.",
+        "full_name": "Ben Duckett",
+        "needs_player_followup": true,
+        "official_player_id": "23001",
+        "overseas_competition_basis": "overseas_slot_pressure",
+        "overseas_competition_comment": "Availability is clear; starting role is not.",
+        "overseas_competition_note": "Strong overseas-slot pressure. Must compete with Stubbs, Miller, Starc and Ngidi/Chameera for inclusion.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.trentbridge.co.uk/news/2025/december/duckett-set-for-ipl-debut.html"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Available for IPL window and offers top-order wicketkeeping cover, but faces heavy overseas-slot competition.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.trentbridge.co.uk/news/2025/december/duckett-set-for-ipl-debut.html"
+        ],
+        "playing_xi_tier": "ROTATION",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Only four fixtures were published in prompt; full-season estimate inferred from no adverse reporting.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No current injury or tournament conflict found; treated as available.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.iplt20.com/players/dushmantha-chameera/817"
+        ],
+        "followup_reason": "Need team-news confirmation if he is preferred over Ngidi as reserve overseas pacer.",
+        "full_name": "Dushmantha Chameera",
+        "needs_player_followup": true,
+        "official_player_id": "817",
+        "overseas_competition_basis": "overseas_slot_pressure",
+        "overseas_competition_comment": "Likely backup/conditions-based selection.",
+        "overseas_competition_note": "Heavy overseas-slot competition with Starc, Stubbs, Miller, Duckett and Ngidi limits starting chances.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Overseas fast-bowling backup in squad; likely used situationally rather than as first-choice every game.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/"
+        ],
+        "playing_xi_tier": "ROTATION",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Prompt fixture set is incomplete; full league estimate inferred from no adverse news.",
+        "availability_expected_matches_available": 14,
+        "availability_modifier": 1.0,
+        "availability_note": "No recent absence report found.",
+        "availability_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.iplt20.com/players/sameer-rizvi/20689"
+        ],
+        "followup_reason": "Need evidence on whether he is in the first-choice batting mix or mainly bench depth.",
+        "full_name": "Sameer Rizvi",
+        "needs_player_followup": true,
+        "official_player_id": "20689",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Domestic batting depth reduces certainty of starts.",
+        "overseas_competition_note": "Domestic player; overseas cap is not relevant. Competition is with Indian middle-order options.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Domestic batting/all-round option in squad, but not a clear first-XI lock given depth around him.",
+        "playing_xi_source_urls": [
+          "https://www.iplt20.com/teams/delhi-capitals/squad",
+          "https://www.iplt20.com/news/4125/tata-ipl-2025-match-04-dc-vs-lsg-match-report"
+        ],
+        "playing_xi_tier": "ROTATION",
+        "research_confidence": "Medium"
+      }
+    ],
+    "team": "Delhi Capitals"
+  },
+  "request": {
+    "input": [
+      {
+        "content": [
+          {
+            "text": "You are an IPL 2026 squad availability and lineup analyst.\n\nYour job is only to assess non-stats fields for one IPL squad:\n- playing_xi_tier\n- availability_modifier\n- availability_note\n- overseas_competition_note\n- research_confidence\n- source URLs for each aspect\n- whether this player still needs a player-level follow-up\n\nUse web search. Prefer evidence in this order:\n1. Official IPL / franchise / BCCI sources\n2. Reputable cricket reporting\n3. Other high-signal recent coverage only when better sources are unavailable\n\nRules:\n- Do not invent facts.\n- Be conservative. If evidence is weak or conflicting, lower research_confidence.\n- Do not fetch batting/bowling stats; those are handled elsewhere.\n- playing_xi_tier must be one of: GUARANTEED, LIKELY, ROTATION, UNLIKELY\n- playing_xi_basis must be one of: confirmed_role, inferred_from_team_context, conflicting_reports, unknown\n- availability_basis must be one of: confirmed_available, inferred_no_adverse_news, injury_report, late_joining, tournament_conflict, suspension, conflicting_reports, unknown\n- overseas_competition_basis must be one of: overseas_slot_pressure, role_depth_competition, domestic_player, confirmed_role, conflicting_reports, unknown\n- research_confidence must be one of: High, Medium, Low\n- Use actual published IPL 2026 fixtures in the prompt when estimating availability.\n- availability_expected_matches_available must be an integer from 0 to 14.\n- availability_modifier must equal availability_expected_matches_available / 14, rounded reasonably.\n- If published fixtures are incomplete, say so in availability_comment and lower research_confidence where that materially affects the answer.\n- availability_modifier = 1.0 is allowed only with an explicit basis and comment.\n- Every player must have at least one URL in each of:\n  - playing_xi_source_urls\n  - availability_source_urls\n  - overseas_competition_source_urls\n- For domestic players with no overseas-slot issue, overseas_competition_note should still explain that the overseas cap is not the constraint.\n- Keep comments short, factual, and audit-friendly.\n- Return JSON only.",
+            "type": "input_text"
+          }
+        ],
+        "role": "system"
+      },
+      {
+        "content": [
+          {
+            "text": "Assess this IPL 2026 squad and return the structured JSON.\n\n{\n  \"fixtures\": [\n    {\n      \"city\": \"Lucknow\",\n      \"is_home\": false,\n      \"match_date\": \"2026-04-01\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"19:30\",\n      \"opponent_code\": \"LSG\",\n      \"opponent_name\": \"Lucknow Super Giants\",\n      \"venue\": \"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium\"\n    },\n    {\n      \"city\": \"Delhi\",\n      \"is_home\": true,\n      \"match_date\": \"2026-04-04\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"15:30\",\n      \"opponent_code\": \"MI\",\n      \"opponent_name\": \"Mumbai Indians\",\n      \"venue\": \"Arun Jaitley Stadium\"\n    },\n    {\n      \"city\": \"Delhi\",\n      \"is_home\": true,\n      \"match_date\": \"2026-04-08\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"19:30\",\n      \"opponent_code\": \"GT\",\n      \"opponent_name\": \"Gujarat Titans\",\n      \"venue\": \"Arun Jaitley Stadium\"\n    },\n    {\n      \"city\": \"Chennai\",\n      \"is_home\": false,\n      \"match_date\": \"2026-04-11\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"19:30\",\n      \"opponent_code\": \"CSK\",\n      \"opponent_name\": \"Chennai Super Kings\",\n      \"venue\": \"MA Chidambaram Stadium\"\n    }\n  ],\n  \"league_matches_expected\": 14,\n  \"players\": [\n    {\n      \"full_name\": \"T Natarajan\",\n      \"is_overseas\": false,\n      \"nickname\": \"Natarajan\",\n      \"official_player_id\": \"3831\",\n      \"official_player_url\": \"https://www.iplt20.com/players/t-natarajan/3831\",\n      \"role\": \"BOWL\",\n      \"season_2024_matches\": \"14\",\n      \"season_2024_runs\": \"\",\n      \"season_2024_wickets\": \"19\",\n      \"season_2025_matches\": \"2\",\n      \"season_2025_runs\": \"\",\n      \"season_2025_wickets\": \"0\"\n    },\n    {\n      \"full_name\": \"Mukesh Kumar\",\n      \"is_overseas\": false,\n      \"nickname\": \"Mukesh\",\n      \"official_player_id\": \"5622\",\n      \"official_player_url\": \"https://www.iplt20.com/players/mukesh-kumar/5622\",\n      \"role\": \"BOWL\",\n      \"season_2024_matches\": \"10\",\n      \"season_2024_runs\": \"3\",\n      \"season_2024_wickets\": \"17\",\n      \"season_2025_matches\": \"12\",\n      \"season_2025_runs\": \"\",\n      \"season_2025_wickets\": \"12\"\n    },\n    {\n      \"full_name\": \"Lungisani Ngidi\",\n      \"is_overseas\": true,\n      \"nickname\": \"Ngidi\",\n      \"official_player_id\": \"3746\",\n      \"official_player_url\": \"https://www.iplt20.com/players/lungisani-ngidi/3746\",\n      \"role\": \"BOWL\",\n      \"season_2024_matches\": \"\",\n      \"season_2024_runs\": \"\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"2\",\n      \"season_2025_runs\": \"0\",\n      \"season_2025_wickets\": \"4\"\n    },\n    {\n      \"full_name\": \"Kl Rahul\",\n      \"is_overseas\": false,\n      \"nickname\": \"KLR\",\n      \"official_player_id\": \"1125\",\n      \"official_player_url\": \"https://www.iplt20.com/players/kl-rahul/1125\",\n      \"role\": \"WK\",\n      \"season_2024_matches\": \"14\",\n      \"season_2024_runs\": \"520\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"13\",\n      \"season_2025_runs\": \"539\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Kuldeep Yadav\",\n      \"is_overseas\": false,\n      \"nickname\": \"Kuldeep\",\n      \"official_player_id\": \"261\",\n      \"official_player_url\": \"https://www.iplt20.com/players/kuldeep-yadav/261\",\n      \"role\": \"BOWL\",\n      \"season_2024_matches\": \"11\",\n      \"season_2024_runs\": \"47\",\n      \"season_2024_wickets\": \"16\",\n      \"season_2025_matches\": \"14\",\n      \"season_2025_runs\": \"18\",\n      \"season_2025_wickets\": \"15\"\n    },\n    {\n      \"full_name\": \"Axar Patel\",\n      \"is_overseas\": false,\n      \"nickname\": \"Axar\",\n      \"official_player_id\": \"1113\",\n      \"official_player_url\": \"https://www.iplt20.com/players/axar-patel/1113\",\n      \"role\": \"AR\",\n      \"season_2024_matches\": \"14\",\n      \"season_2024_runs\": \"235\",\n      \"season_2024_wickets\": \"11\",\n      \"season_2025_matches\": \"12\",\n      \"season_2025_runs\": \"263\",\n      \"season_2025_wickets\": \"5\"\n    },\n    {\n      \"full_name\": \"Mitchell Starc\",\n      \"is_overseas\": true,\n      \"nickname\": \"Starc\",\n      \"official_player_id\": \"490\",\n      \"official_player_url\": \"https://www.iplt20.com/players/mitchell-starc/490\",\n      \"role\": \"BOWL\",\n      \"season_2024_matches\": \"14\",\n      \"season_2024_runs\": \"9\",\n      \"season_2024_wickets\": \"17\",\n      \"season_2025_matches\": \"11\",\n      \"season_2025_runs\": \"6\",\n      \"season_2025_wickets\": \"14\"\n    },\n    {\n      \"full_name\": \"David Miller\",\n      \"is_overseas\": true,\n      \"nickname\": \"Miller\",\n      \"official_player_id\": \"187\",\n      \"official_player_url\": \"https://www.iplt20.com/players/david-miller/187\",\n      \"role\": \"BAT\",\n      \"season_2024_matches\": \"9\",\n      \"season_2024_runs\": \"210\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"11\",\n      \"season_2025_runs\": \"153\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Vipraj Nigam\",\n      \"is_overseas\": false,\n      \"nickname\": \"Vipraj\",\n      \"official_player_id\": \"22053\",\n      \"official_player_url\": \"https://www.iplt20.com/players/vipraj-nigam/22053\",\n      \"role\": \"AR\",\n      \"season_2024_matches\": \"\",\n      \"season_2024_runs\": \"\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"14\",\n      \"season_2025_runs\": \"142\",\n      \"season_2025_wickets\": \"11\"\n    },\n    {\n      \"full_name\": \"Nitish Rana\",\n      \"is_overseas\": false,\n      \"nickname\": \"Nitish Rana\",\n      \"official_player_id\": \"2738\",\n      \"official_player_url\": \"https://www.iplt20.com/players/nitish-rana/2738\",\n      \"role\": \"BAT\",\n      \"season_2024_matches\": \"2\",\n      \"season_2024_runs\": \"42\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"11\",\n      \"season_2025_runs\": \"217\",\n      \"season_2025_wickets\": \"0\"\n    },\n    {\n      \"full_name\": \"Auqib Dar\",\n      \"is_overseas\": false,\n      \"nickname\": \"Aquib\",\n      \"official_player_id\": \"23005\",\n      \"official_player_url\": \"https://www.iplt20.com/players/auqib-dar/23005\",\n      \"role\": \"BOWL\",\n      \"season_2024_matches\": \"\",\n      \"season_2024_runs\": \"\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"\",\n      \"season_2025_runs\": \"\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Abishek Porel\",\n      \"is_overseas\": false,\n      \"nickname\": \"Porel\",\n      \"official_player_id\": \"33333\",\n      \"official_player_url\": \"https://www.iplt20.com/players/abishek-porel/33333\",\n      \"role\": \"WK\",\n      \"season_2024_matches\": \"14\",\n      \"season_2024_runs\": \"327\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"13\",\n      \"season_2025_runs\": \"301\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Prithvi Shaw\",\n      \"is_overseas\": false,\n      \"nickname\": \"Shaw\",\n      \"official_player_id\": \"3764\",\n      \"official_player_url\": \"https://www.iplt20.com/players/prithvi-shaw/3764\",\n      \"role\": \"BAT\",\n      \"season_2024_matches\": \"8\",\n      \"season_2024_runs\": \"198\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"\",\n      \"season_2025_runs\": \"\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Tristan Stubbs\",\n      \"is_overseas\": true,\n      \"nickname\": \"Stubbs\",\n      \"official_player_id\": \"20631\",\n      \"official_player_url\": \"https://www.iplt20.com/players/tristan-stubbs/20631\",\n      \"role\": \"WK\",\n      \"season_2024_matches\": \"14\",\n      \"season_2024_runs\": \"378\",\n      \"season_2024_wickets\": \"3\",\n      \"season_2025_matches\": \"14\",\n      \"season_2025_runs\": \"300\",\n      \"season_2025_wickets\": \"0\"\n    },\n    {\n      \"full_name\": \"Karun Nair\",\n      \"is_overseas\": false,\n      \"nickname\": \"Karun\",\n      \"official_player_id\": \"276\",\n      \"official_player_url\": \"https://www.iplt20.com/players/karun-nair/276\",\n      \"role\": \"BAT\",\n      \"season_2024_matches\": \"\",\n      \"season_2024_runs\": \"\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"8\",\n      \"season_2025_runs\": \"198\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Ashutosh Sharma\",\n      \"is_overseas\": false,\n      \"nickname\": \"Ashutosh\",\n      \"official_player_id\": \"20703\",\n      \"official_player_url\": \"https://www.iplt20.com/players/ashutosh-sharma/20703\",\n      \"role\": \"BAT\",\n      \"season_2024_matches\": \"11\",\n      \"season_2024_runs\": \"189\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"13\",\n      \"season_2025_runs\": \"204\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Ben Duckett\",\n      \"is_overseas\": true,\n      \"nickname\": \"Duckett\",\n      \"official_player_id\": \"23001\",\n      \"official_player_url\": \"https://www.iplt20.com/players/ben-duckett/23001\",\n      \"role\": \"BAT\",\n      \"season_2024_matches\": \"\",\n      \"season_2024_runs\": \"\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"\",\n      \"season_2025_runs\": \"\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Dushmantha Chameera\",\n      \"is_overseas\": true,\n      \"nickname\": \"Chameera\",\n      \"official_player_id\": \"817\",\n      \"official_player_url\": \"https://www.iplt20.com/players/dushmantha-chameera/817\",\n      \"role\": \"BOWL\",\n      \"season_2024_matches\": \"1\",\n      \"season_2024_runs\": \"\",\n      \"season_2024_wickets\": \"0\",\n      \"season_2025_matches\": \"6\",\n      \"season_2025_runs\": \"10\",\n      \"season_2025_wickets\": \"4\"\n    },\n    {\n      \"full_name\": \"Sameer Rizvi\",\n      \"is_overseas\": false,\n      \"nickname\": \"Rizwi\",\n      \"official_player_id\": \"20689\",\n      \"official_player_url\": \"https://www.iplt20.com/players/sameer-rizvi/20689\",\n      \"role\": \"BAT\",\n      \"season_2024_matches\": \"8\",\n      \"season_2024_runs\": \"51\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"5\",\n      \"season_2025_runs\": \"121\",\n      \"season_2025_wickets\": \"\"\n    }\n  ],\n  \"published_fixture_count\": 4,\n  \"team_code\": \"DC\",\n  \"team_name\": \"Delhi Capitals\"\n}",
+            "type": "input_text"
+          }
+        ],
+        "role": "user"
+      }
+    ],
+    "max_output_tokens": 9000,
+    "model": "gpt-5.4",
+    "text": {
+      "format": {
+        "name": "dc_team_enrichment",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "players": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "availability_basis": {
+                    "enum": [
+                      "confirmed_available",
+                      "conflicting_reports",
+                      "inferred_no_adverse_news",
+                      "injury_report",
+                      "late_joining",
+                      "suspension",
+                      "tournament_conflict",
+                      "unknown"
+                    ],
+                    "type": "string"
+                  },
+                  "availability_comment": {
+                    "type": "string"
+                  },
+                  "availability_expected_matches_available": {
+                    "type": "integer"
+                  },
+                  "availability_modifier": {
+                    "type": "number"
+                  },
+                  "availability_note": {
+                    "type": "string"
+                  },
+                  "availability_source_urls": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "followup_reason": {
+                    "type": "string"
+                  },
+                  "full_name": {
+                    "type": "string"
+                  },
+                  "needs_player_followup": {
+                    "type": "boolean"
+                  },
+                  "official_player_id": {
+                    "type": "string"
+                  },
+                  "overseas_competition_basis": {
+                    "enum": [
+                      "confirmed_role",
+                      "conflicting_reports",
+                      "domestic_player",
+                      "overseas_slot_pressure",
+                      "role_depth_competition",
+                      "unknown"
+                    ],
+                    "type": "string"
+                  },
+                  "overseas_competition_comment": {
+                    "type": "string"
+                  },
+                  "overseas_competition_note": {
+                    "type": "string"
+                  },
+                  "overseas_competition_source_urls": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "playing_xi_basis": {
+                    "enum": [
+                      "confirmed_role",
+                      "conflicting_reports",
+                      "inferred_from_team_context",
+                      "unknown"
+                    ],
+                    "type": "string"
+                  },
+                  "playing_xi_comment": {
+                    "type": "string"
+                  },
+                  "playing_xi_source_urls": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "playing_xi_tier": {
+                    "enum": [
+                      "GUARANTEED",
+                      "LIKELY",
+                      "ROTATION",
+                      "UNLIKELY"
+                    ],
+                    "type": "string"
+                  },
+                  "research_confidence": {
+                    "enum": [
+                      "High",
+                      "Low",
+                      "Medium"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "official_player_id",
+                  "full_name",
+                  "playing_xi_tier",
+                  "playing_xi_basis",
+                  "playing_xi_comment",
+                  "playing_xi_source_urls",
+                  "availability_modifier",
+                  "availability_basis",
+                  "availability_expected_matches_available",
+                  "availability_note",
+                  "availability_comment",
+                  "availability_source_urls",
+                  "overseas_competition_note",
+                  "overseas_competition_basis",
+                  "overseas_competition_comment",
+                  "overseas_competition_source_urls",
+                  "research_confidence",
+                  "needs_player_followup",
+                  "followup_reason"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "team": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "team",
+            "players"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ]
+  },
+  "request_id": "5abb57ad-53d3-4d64-b495-62cb822680a8",
+  "response": {
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1774268251,
+    "created_at": 1774268164,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "id": "resp_03cd1d8b953c814f0069c12f042188819cb430d65b7db85153",
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": 9000,
+    "max_tool_calls": null,
+    "metadata": {},
+    "model": "gpt-5.4-2026-03-05",
+    "object": "response",
+    "output": [
+      {
+        "action": {
+          "queries": [
+            "site:iplt20.com Delhi Capitals IPL 2026 squad official Axar Patel KL Rahul Mitchell Starc Tristan Stubbs T Natarajan Mukesh Kumar Kuldeep Yadav Abishek Porel Vipraj Nigam Nitish Rana Ashutosh Sharma Karun Nair Sameer Rizvi Ben Duckett David Miller Lungisani Ngidi Dushmantha Chameera Auqib Dar Prithvi Shaw",
+            "site:delhicapitals.in Delhi Capitals 2026 squad official",
+            "IPL 2026 Delhi Capitals squad official auction retained players 2026",
+            "Delhi Capitals IPL 2026 squad Cricbuzz ESPNcricinfo"
+          ],
+          "query": "site:iplt20.com Delhi Capitals IPL 2026 squad official Axar Patel KL Rahul Mitchell Starc Tristan Stubbs T Natarajan Mukesh Kumar Kuldeep Yadav Abishek Porel Vipraj Nigam Nitish Rana Ashutosh Sharma Karun Nair Sameer Rizvi Ben Duckett David Miller Lungisani Ngidi Dushmantha Chameera Auqib Dar Prithvi Shaw",
+          "type": "search"
+        },
+        "id": "ws_03cd1d8b953c814f0069c12f0495b8819cb6b26d9f2f7549fb",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "action": {
+          "queries": [
+            "ESPNcricinfo Delhi Capitals 2026 squad Ben Duckett David Miller Ngidi Chameera Starc Stubbs probable XI",
+            "Cricbuzz Delhi Capitals 2026 squad preview probable XI",
+            "KL Rahul Delhi Capitals 2026 official announced iplt20",
+            "Prithvi Shaw Delhi Capitals 2026 squad official iplt20"
+          ],
+          "query": "ESPNcricinfo Delhi Capitals 2026 squad Ben Duckett David Miller Ngidi Chameera Starc Stubbs probable XI",
+          "type": "search"
+        },
+        "id": "ws_03cd1d8b953c814f0069c12f07e714819ca0f1774d155d8512",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "action": {
+          "queries": [
+            "Mitchell Starc unavailable initial games IPL 2026 Delhi Capitals official",
+            "Mitchell Starc IPL 2026 unavailable first games Delhi Capitals ESPNcricinfo",
+            "Ben Duckett IPL 2026 Delhi Capitals availability England fixtures April 2026",
+            "Tristan Stubbs South Africa fixtures April 2026 availability IPL 2026"
+          ],
+          "query": "Mitchell Starc unavailable initial games IPL 2026 Delhi Capitals official",
+          "type": "search"
+        },
+        "id": "ws_03cd1d8b953c814f0069c12f0a2570819c87077fc2a24ebadf",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "action": {
+          "type": "open_page",
+          "url": "https://www.iplt20.com/teams/delhi-capitals/squad"
+        },
+        "id": "ws_03cd1d8b953c814f0069c12f0c551c819c8fe3d1e8f3743761",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "action": {
+          "queries": [
+            "Delhi Capitals IPL 2026 probable XI Cricbuzz Axar Rahul Porel Stubbs Miller Starc Natarajan Kuldeep",
+            "ESPNcricinfo Delhi Capitals IPL 2026 preview probable XI",
+            "Delhi Capitals preview IPL 2026 probable XII Hindustan Times March 2026",
+            "Delhi Capitals team preview IPL 2026 probable XI Times of India March 2026"
+          ],
+          "query": "Delhi Capitals IPL 2026 probable XI Cricbuzz Axar Rahul Porel Stubbs Miller Starc Natarajan Kuldeep",
+          "type": "search"
+        },
+        "id": "ws_03cd1d8b953c814f0069c12f0d1cf0819cbf74872fd943d5b5",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "action": {
+          "queries": [
+            "site:espncricinfo.com T Natarajan injury 2026 Delhi Capitals",
+            "site:espncricinfo.com Mukesh Kumar injury 2026 Delhi Capitals",
+            "site:espncricinfo.com Kuldeep Yadav injury March 2026",
+            "site:espncricinfo.com Axar Patel injury March 2026"
+          ],
+          "query": "site:espncricinfo.com T Natarajan injury 2026 Delhi Capitals",
+          "type": "search"
+        },
+        "id": "ws_03cd1d8b953c814f0069c12f0fc0a8819ca37d575ac4addc7e",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "content": [
+          {
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"team\":\"Delhi Capitals\",\"players\":[{\"official_player_id\":\"3831\",\"full_name\":\"T Natarajan\",\"playing_xi_tier\":\"LIKELY\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Frontline Indian left-arm seamer in DC squad; likely first-choice pace option, especially if Starc misses early games.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.ipl.com/cricket/print/news/ipl-2025-delhi-capitals-predicted-playing-xi/\"],\"availability_modifier\":1,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":14,\"availability_note\":\"No recent injury or unavailability report found; treated as fully available.\",\"availability_comment\":\"Only 4 of 14 fixtures were provided in the prompt, but no adverse availability news was found for the wider season; full-season estimate inferred.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.iplt20.com/players/t-natarajan/3831\"],\"overseas_competition_note\":\"Domestic player; overseas-player cap is not the constraint. Competition is with other Indian pacers for XI slots.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Selection pressure is role-based, not overseas-slot based.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"Need closer verification of current fitness/role because XI status is inferred, not officially confirmed.\"},{\"official_player_id\":\"5622\",\"full_name\":\"Mukesh Kumar\",\"playing_xi_tier\":\"ROTATION\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"In main pace mix but competition from Natarajan, Starc, Ngidi and Chameera makes him rotational.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.iplt20.com/news/4125/tata-ipl-2025-match-04-dc-vs-lsg-match-report\"],\"availability_modifier\":1,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":14,\"availability_note\":\"No recent injury or absence report found; treated as available.\",\"availability_comment\":\"Prompt includes only first 4 fixtures; season-long availability inferred from absence of adverse reports.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.iplt20.com/players/mukesh-kumar/5622\"],\"overseas_competition_note\":\"Domestic player; overseas cap does not restrict him. Main issue is internal seam-bowling competition.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Competes on role/conditions rather than overseas-slot pressure.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"No firm pre-season XI confirmation found; role appears matchup-dependent.\"},{\"official_player_id\":\"3746\",\"full_name\":\"Lungisani Ngidi\",\"playing_xi_tier\":\"ROTATION\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Strong overseas pace option but competing for one of four overseas slots with Stubbs, Miller, Starc and Duckett.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/\"],\"availability_modifier\":1,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":14,\"availability_note\":\"No current injury or tournament-clash report found; treated as available.\",\"availability_comment\":\"Published fixtures in prompt are incomplete; estimate assumes general season availability absent contrary reporting.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.iplt20.com/players/lungisani-ngidi/3746\"],\"overseas_competition_note\":\"Overseas slot pressure is significant; must compete with Stubbs, Miller, Starc and Duckett for limited overseas places.\",\"overseas_competition_basis\":\"overseas_slot_pressure\",\"overseas_competition_comment\":\"Likely selected mainly when DC want extra overseas pace or if Starc is unavailable.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"Need confirmation on preferred overseas balance for early matches.\"},{\"official_player_id\":\"1125\",\"full_name\":\"Kl Rahul\",\"playing_xi_tier\":\"GUARANTEED\",\"playing_xi_basis\":\"confirmed_role\",\"playing_xi_comment\":\"Senior retained core player and frontline wicketkeeper-batter in official squad.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/\"],\"availability_modifier\":1,\"availability_basis\":\"confirmed_available\",\"availability_expected_matches_available\":14,\"availability_note\":\"Official squad member with no recent unavailability report found.\",\"availability_comment\":\"Only 4 fixtures were supplied, but no adverse availability news was identified for the league stage.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.iplt20.com/players/kl-rahul/1125\"],\"overseas_competition_note\":\"Domestic player; overseas cap is irrelevant. He is a lock by role and seniority.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"No overseas-slot constraint applies.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\"],\"research_confidence\":\"High\",\"needs_player_followup\":false,\"followup_reason\":\"\"},{\"official_player_id\":\"261\",\"full_name\":\"Kuldeep Yadav\",\"playing_xi_tier\":\"GUARANTEED\",\"playing_xi_basis\":\"confirmed_role\",\"playing_xi_comment\":\"Retained core bowler and lead spinner in official squad.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/\"],\"availability_modifier\":1,\"availability_basis\":\"confirmed_available\",\"availability_expected_matches_available\":14,\"availability_note\":\"No recent injury or absence report found; treated as fully available.\",\"availability_comment\":\"Prompt fixtures cover only 4 matches; full league estimate inferred from no adverse news.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.iplt20.com/players/kuldeep-yadav/261\"],\"overseas_competition_note\":\"Domestic player; overseas cap is not a factor. He is first-choice spin pick.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Role security is independent of overseas-slot math.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\"],\"research_confidence\":\"High\",\"needs_player_followup\":false,\"followup_reason\":\"\"},{\"official_player_id\":\"1113\",\"full_name\":\"Axar Patel\",\"playing_xi_tier\":\"GUARANTEED\",\"playing_xi_basis\":\"confirmed_role\",\"playing_xi_comment\":\"Official DC captain; automatic XI pick.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.delhicapitals.in/news/delhi-capitals-appoint-axar-patel-as-mens-team-captain\"],\"availability_modifier\":1,\"availability_basis\":\"confirmed_available\",\"availability_expected_matches_available\":14,\"availability_note\":\"Captain in official team communications; no adverse availability report found.\",\"availability_comment\":\"Only 4 fixtures published in prompt; no evidence of any scheduled absence across league stage.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.delhicapitals.in/news/delhi-capitals-appoint-axar-patel-as-mens-team-captain\"],\"overseas_competition_note\":\"Domestic player; overseas cap is irrelevant. Captaincy further secures role.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"No overseas-slot pressure applies.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.delhicapitals.in/news/delhi-capitals-appoint-axar-patel-as-mens-team-captain\"],\"research_confidence\":\"High\",\"needs_player_followup\":false,\"followup_reason\":\"\"},{\"official_player_id\":\"490\",\"full_name\":\"Mitchell Starc\",\"playing_xi_tier\":\"LIKELY\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Retained marquee overseas quick and likely first-choice when available, but early-match availability carries uncertainty.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/\"],\"availability_modifier\":0.79,\"availability_basis\":\"conflicting_reports\",\"availability_expected_matches_available\":11,\"availability_note\":\"Committed to DC for IPL 2026, but recent reporting/discussion indicates possible absence for initial games; not yet firmly resolved from authoritative sources.\",\"availability_comment\":\"Business Standard reported Starc wanted to represent DC in 2026 after missing the latter part of IPL 2025, but recent widely-circulated claims suggest he may miss the start of IPL 2026. With only 4 prompt fixtures published and no official DC confirmation located, estimated availability is reduced conservatively.\",\"availability_source_urls\":[\"https://www.business-standard.com/cricket/ipl/i-still-want-to-represent-dc-in-ipl-2026-aussie-quick-mitchell-starc-125060600869_1.html\",\"https://www.iplt20.com/teams/delhi-capitals/squad\"],\"overseas_competition_note\":\"If available he is a preferred overseas pick, but overall overseas balance with Stubbs/Miller and another overseas batter or pacer still matters.\",\"overseas_competition_basis\":\"confirmed_role\",\"overseas_competition_comment\":\"Usually selected when available; overseas competition matters less for him than for backup overseas options.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/\"],\"research_confidence\":\"Low\",\"needs_player_followup\":true,\"followup_reason\":\"Need authoritative pre-match confirmation on whether he misses the opening round of fixtures.\"},{\"official_player_id\":\"187\",\"full_name\":\"David Miller\",\"playing_xi_tier\":\"LIKELY\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Experienced overseas middle-order batter; appears a strong fit but not officially confirmed as automatic starter.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/\"],\"availability_modifier\":1,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":14,\"availability_note\":\"No recent unavailability report found; treated as available.\",\"availability_comment\":\"Only 4 fixtures were supplied; season estimate inferred from no adverse news.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.iplt20.com/players/david-miller/187\"],\"overseas_competition_note\":\"Major overseas-slot competition with Stubbs, Starc, Ngidi and Duckett. Likely favored for finishing experience but not fully locked.\",\"overseas_competition_basis\":\"overseas_slot_pressure\",\"overseas_competition_comment\":\"Selection depends on whether DC prefer extra batting depth or an additional overseas bowler.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"Need confirmation of preferred overseas combination in first-choice XI.\"},{\"official_player_id\":\"22053\",\"full_name\":\"Vipraj Nigam\",\"playing_xi_tier\":\"LIKELY\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Indian spin/all-round option with good squad fit; likely used regularly for balance around Axar and Kuldeep.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.iplt20.com/news/4125/tata-ipl-2025-match-04-dc-vs-lsg-match-report\"],\"availability_modifier\":1,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":14,\"availability_note\":\"No adverse availability report found; treated as available.\",\"availability_comment\":\"Prompt fixture list is incomplete; league-stage estimate inferred from absence of contrary news.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.iplt20.com/players/vipraj-nigam/22053\"],\"overseas_competition_note\":\"Domestic player; overseas cap is not the issue. Competition is with other Indian balance/impact options.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Role competition is internal, not overseas related.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"Likely in best balance XI, but not officially confirmed.\"},{\"official_player_id\":\"2738\",\"full_name\":\"Nitish Rana\",\"playing_xi_tier\":\"LIKELY\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Traded-in Indian top/middle-order option who fits likely starting balance.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/\"],\"availability_modifier\":1,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":14,\"availability_note\":\"No recent injury or absence report found.\",\"availability_comment\":\"Published fixtures in prompt are only partial; full-season estimate inferred from no adverse reporting.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.iplt20.com/players/nitish-rana/2738\"],\"overseas_competition_note\":\"Domestic player; overseas cap is not the constraint. Competes with Indian batting options for position.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Selection driven by batting-order construction rather than overseas limits.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"XI slot is plausible but not formally confirmed.\"},{\"official_player_id\":\"23005\",\"full_name\":\"Auqib Dar\",\"playing_xi_tier\":\"ROTATION\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"In official squad, but likely competing as a developing domestic option rather than locked starter.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/\"],\"availability_modifier\":1,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":14,\"availability_note\":\"No unavailability report found; treated as available.\",\"availability_comment\":\"Season estimate inferred because prompt contains only 4 published fixtures and no player-specific adverse news.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.iplt20.com/players/auqib-dar/23005\"],\"overseas_competition_note\":\"Domestic player; overseas cap is not the blocker. Competition comes from several Indian bowling/all-round options.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Domestic depth competition is the main issue.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\"],\"research_confidence\":\"Low\",\"needs_player_followup\":true,\"followup_reason\":\"Very limited reliable evidence on intended IPL 2026 role.\"},{\"official_player_id\":\"33333\",\"full_name\":\"Abishek Porel\",\"playing_xi_tier\":\"LIKELY\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Retained Indian wicketkeeper-batter who fits likely top-order/left-hand balance, though KL Rahul also keeps.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/\"],\"availability_modifier\":1,\"availability_basis\":\"confirmed_available\",\"availability_expected_matches_available\":14,\"availability_note\":\"Official squad player with no recent unavailability report found.\",\"availability_comment\":\"Prompt includes only four fixtures; no adverse news suggests full league availability.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.iplt20.com/players/abishek-porel/33333\"],\"overseas_competition_note\":\"Domestic player; not constrained by overseas cap. Competes mainly with domestic/opening combinations and Rahul's wicketkeeping role.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Team-balance competition, not overseas-slot pressure.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"Role depends on whether DC open with Porel, Rahul or an overseas batter.\"},{\"official_player_id\":\"3764\",\"full_name\":\"Prithvi Shaw\",\"playing_xi_tier\":\"ROTATION\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Back in DC squad after auction, but not an obvious first-choice pick given top-order competition.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.indiatoday.in/sports/cricket/story/ipl-2026-auction-prithvi-shaw-returns-delhi-capitals-2836952-2025-12-16/\"],\"availability_modifier\":1,\"availability_basis\":\"confirmed_available\",\"availability_expected_matches_available\":14,\"availability_note\":\"Returned to DC in the 2026 auction; no recent absence report found.\",\"availability_comment\":\"Season availability inferred beyond the 4 prompt fixtures because no adverse news was found.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.indiatoday.in/sports/cricket/story/ipl-2026-auction-prithvi-shaw-returns-delhi-capitals-2836952-2025-12-16/\"],\"overseas_competition_note\":\"Domestic player; overseas cap is irrelevant. Competes with Rahul, Porel and others for top-order spots.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Domestic batting depth is the constraint.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.indiatoday.in/sports/cricket/story/ipl-2026-auction-prithvi-shaw-returns-delhi-capitals-2836952-2025-12-16/\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"Need evidence on whether he is ahead of Porel/Duckett/Nissanka in opening plans.\"},{\"official_player_id\":\"20631\",\"full_name\":\"Tristan Stubbs\",\"playing_xi_tier\":\"GUARANTEED\",\"playing_xi_basis\":\"confirmed_role\",\"playing_xi_comment\":\"Retained core overseas batter/wicketkeeper and one of DC's clearest first-choice players.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/\"],\"availability_modifier\":1,\"availability_basis\":\"confirmed_available\",\"availability_expected_matches_available\":14,\"availability_note\":\"No current injury or national-team clash affecting the prompt fixtures was found.\",\"availability_comment\":\"Only 4 fixtures are published in the prompt; nothing found suggests absence during that phase or wider league stage.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.iplt20.com/players/tristan-stubbs/20631\"],\"overseas_competition_note\":\"Overseas player, but effectively first-choice; overseas cap pressure is lower for him than for backup overseas options.\",\"overseas_competition_basis\":\"confirmed_role\",\"overseas_competition_comment\":\"Retained core player and strong starter despite four-foreigner cap.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/\"],\"research_confidence\":\"High\",\"needs_player_followup\":false,\"followup_reason\":\"\"},{\"official_player_id\":\"276\",\"full_name\":\"Karun Nair\",\"playing_xi_tier\":\"ROTATION\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Domestic batting cover with some chance of starts, but not a clear locked XI member.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/\"],\"availability_modifier\":1,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":14,\"availability_note\":\"No recent absence report found.\",\"availability_comment\":\"Prompt fixture list is partial; league-stage estimate inferred from no adverse news.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.iplt20.com/players/karun-nair/276\"],\"overseas_competition_note\":\"Domestic player; overseas cap is not the issue. Competes within Indian batting depth.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Selection pressure is from domestic role competition.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"Need confirmation whether he is preferred ahead of Shaw/Rizvi for middle-order cover.\"},{\"official_player_id\":\"20703\",\"full_name\":\"Ashutosh Sharma\",\"playing_xi_tier\":\"LIKELY\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Indian finisher/batting all-round option who strongly fits DC balance and recent match usage.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.iplt20.com/news/4125/tata-ipl-2025-match-04-dc-vs-lsg-match-report\"],\"availability_modifier\":1,\"availability_basis\":\"confirmed_available\",\"availability_expected_matches_available\":14,\"availability_note\":\"No recent injury or absence report found.\",\"availability_comment\":\"Only four fixtures are listed in prompt; absence of adverse news supports full league estimate.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.iplt20.com/players/ashutosh-sharma/20703\"],\"overseas_competition_note\":\"Domestic player; overseas cap is not the constraint. Competes only on batting-balance grounds.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Domestic finisher role improves his selection case.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"Likely starter but still based on inferred balance rather than official XI news.\"},{\"official_player_id\":\"23001\",\"full_name\":\"Ben Duckett\",\"playing_xi_tier\":\"ROTATION\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Available for IPL window and offers top-order wicketkeeping cover, but faces heavy overseas-slot competition.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.trentbridge.co.uk/news/2025/december/duckett-set-for-ipl-debut.html\"],\"availability_modifier\":1,\"availability_basis\":\"confirmed_available\",\"availability_expected_matches_available\":14,\"availability_note\":\"Nottinghamshire stated he would miss the start of the English season because the 2026 IPL runs from 26 March to 31 May; no conflict with early IPL fixtures.\",\"availability_comment\":\"Prompt fixtures begin 1 April 2026, inside the availability window referenced by Nottinghamshire. No adverse IPL-side report found.\",\"availability_source_urls\":[\"https://www.trentbridge.co.uk/news/2025/december/duckett-set-for-ipl-debut.html\",\"https://www.iplt20.com/teams/delhi-capitals/squad\"],\"overseas_competition_note\":\"Strong overseas-slot pressure. Must compete with Stubbs, Miller, Starc and Ngidi/Chameera for inclusion.\",\"overseas_competition_basis\":\"overseas_slot_pressure\",\"overseas_competition_comment\":\"Availability is clear; starting role is not.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.trentbridge.co.uk/news/2025/december/duckett-set-for-ipl-debut.html\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"Need confirmation whether DC prioritize an overseas opener or an extra overseas bowler.\"},{\"official_player_id\":\"817\",\"full_name\":\"Dushmantha Chameera\",\"playing_xi_tier\":\"ROTATION\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Overseas fast-bowling backup in squad; likely used situationally rather than as first-choice every game.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/\"],\"availability_modifier\":1,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":14,\"availability_note\":\"No current injury or tournament conflict found; treated as available.\",\"availability_comment\":\"Only four fixtures were published in prompt; full-season estimate inferred from no adverse reporting.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.iplt20.com/players/dushmantha-chameera/817\"],\"overseas_competition_note\":\"Heavy overseas-slot competition with Starc, Stubbs, Miller, Duckett and Ngidi limits starting chances.\",\"overseas_competition_basis\":\"overseas_slot_pressure\",\"overseas_competition_comment\":\"Likely backup/conditions-based selection.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.ipl.com/cricket/print/news/delhi-capitals-ipl-2026-full-squad-retained-players-auction-buys-amp-purse-remaining/\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"Need team-news confirmation if he is preferred over Ngidi as reserve overseas pacer.\"},{\"official_player_id\":\"20689\",\"full_name\":\"Sameer Rizvi\",\"playing_xi_tier\":\"ROTATION\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Domestic batting/all-round option in squad, but not a clear first-XI lock given depth around him.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.iplt20.com/news/4125/tata-ipl-2025-match-04-dc-vs-lsg-match-report\"],\"availability_modifier\":1,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":14,\"availability_note\":\"No recent absence report found.\",\"availability_comment\":\"Prompt fixture set is incomplete; full league estimate inferred from no adverse news.\",\"availability_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\",\"https://www.iplt20.com/players/sameer-rizvi/20689\"],\"overseas_competition_note\":\"Domestic player; overseas cap is not relevant. Competition is with Indian middle-order options.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Domestic batting depth reduces certainty of starts.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/teams/delhi-capitals/squad\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"Need evidence on whether he is in the first-choice batting mix or mainly bench depth.\"}]}",
+            "type": "output_text"
+          }
+        ],
+        "id": "msg_03cd1d8b953c814f0069c12f112f44819c93cf49ef11705ee0",
+        "phase": "final_answer",
+        "role": "assistant",
+        "status": "completed",
+        "type": "message"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": null,
+    "reasoning": {
+      "effort": "none",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "store": true,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "description": null,
+        "name": "dc_team_enrichment",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "players": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "availability_basis": {
+                    "enum": [
+                      "confirmed_available",
+                      "conflicting_reports",
+                      "inferred_no_adverse_news",
+                      "injury_report",
+                      "late_joining",
+                      "suspension",
+                      "tournament_conflict",
+                      "unknown"
+                    ],
+                    "type": "string"
+                  },
+                  "availability_comment": {
+                    "type": "string"
+                  },
+                  "availability_expected_matches_available": {
+                    "type": "integer"
+                  },
+                  "availability_modifier": {
+                    "type": "number"
+                  },
+                  "availability_note": {
+                    "type": "string"
+                  },
+                  "availability_source_urls": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "followup_reason": {
+                    "type": "string"
+                  },
+                  "full_name": {
+                    "type": "string"
+                  },
+                  "needs_player_followup": {
+                    "type": "boolean"
+                  },
+                  "official_player_id": {
+                    "type": "string"
+                  },
+                  "overseas_competition_basis": {
+                    "enum": [
+                      "confirmed_role",
+                      "conflicting_reports",
+                      "domestic_player",
+                      "overseas_slot_pressure",
+                      "role_depth_competition",
+                      "unknown"
+                    ],
+                    "type": "string"
+                  },
+                  "overseas_competition_comment": {
+                    "type": "string"
+                  },
+                  "overseas_competition_note": {
+                    "type": "string"
+                  },
+                  "overseas_competition_source_urls": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "playing_xi_basis": {
+                    "enum": [
+                      "confirmed_role",
+                      "conflicting_reports",
+                      "inferred_from_team_context",
+                      "unknown"
+                    ],
+                    "type": "string"
+                  },
+                  "playing_xi_comment": {
+                    "type": "string"
+                  },
+                  "playing_xi_source_urls": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "playing_xi_tier": {
+                    "enum": [
+                      "GUARANTEED",
+                      "LIKELY",
+                      "ROTATION",
+                      "UNLIKELY"
+                    ],
+                    "type": "string"
+                  },
+                  "research_confidence": {
+                    "enum": [
+                      "High",
+                      "Low",
+                      "Medium"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "official_player_id",
+                  "full_name",
+                  "playing_xi_tier",
+                  "playing_xi_basis",
+                  "playing_xi_comment",
+                  "playing_xi_source_urls",
+                  "availability_modifier",
+                  "availability_basis",
+                  "availability_expected_matches_available",
+                  "availability_note",
+                  "availability_comment",
+                  "availability_source_urls",
+                  "overseas_competition_note",
+                  "overseas_competition_basis",
+                  "overseas_competition_comment",
+                  "overseas_competition_source_urls",
+                  "research_confidence",
+                  "needs_player_followup",
+                  "followup_reason"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "team": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "team",
+            "players"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "search_context_size": "medium",
+        "type": "web_search",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 34875,
+      "input_tokens_details": {
+        "cached_tokens": 3712
+      },
+      "output_tokens": 7448,
+      "output_tokens_details": {
+        "reasoning_tokens": 677
+      },
+      "total_tokens": 42323
+    },
+    "user": null
+  },
+  "saved_at": "2026-03-23T12:17:31.932170+00:00"
+}

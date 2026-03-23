@@ -1,0 +1,73 @@
+{
+  "competition_id": "284",
+  "fixtures": [
+    {
+      "city": "Guwahati",
+      "competition_id": "284",
+      "is_home": true,
+      "match_date": "2026-03-30",
+      "match_date_display": "30 Mar 2026",
+      "match_datetime_local": "2026-03-30 19:30:00",
+      "match_id": "2419",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "CSK",
+      "opponent_name": "Chennai Super Kings",
+      "team_code": "RR",
+      "team_name": "Rajasthan Royals",
+      "venue": "ACA Stadium"
+    },
+    {
+      "city": "Ahmedabad",
+      "competition_id": "284",
+      "is_home": false,
+      "match_date": "2026-04-04",
+      "match_date_display": "4 Apr 2026",
+      "match_datetime_local": "2026-04-04 19:30:00",
+      "match_id": "2425",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "GT",
+      "opponent_name": "Gujarat Titans",
+      "team_code": "RR",
+      "team_name": "Rajasthan Royals",
+      "venue": "Narendra Modi Stadium"
+    },
+    {
+      "city": "Guwahati",
+      "competition_id": "284",
+      "is_home": true,
+      "match_date": "2026-04-07",
+      "match_date_display": "7 Apr 2026",
+      "match_datetime_local": "2026-04-07 19:30:00",
+      "match_id": "2429",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "MI",
+      "opponent_name": "Mumbai Indians",
+      "team_code": "RR",
+      "team_name": "Rajasthan Royals",
+      "venue": "ACA Stadium"
+    },
+    {
+      "city": "Guwahati",
+      "competition_id": "284",
+      "is_home": true,
+      "match_date": "2026-04-10",
+      "match_date_display": "10 Apr 2026",
+      "match_datetime_local": "2026-04-10 19:30:00",
+      "match_id": "2432",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "RCB",
+      "opponent_name": "Royal Challengers Bengaluru",
+      "team_code": "RR",
+      "team_name": "Rajasthan Royals",
+      "venue": "ACA Stadium"
+    }
+  ],
+  "published_fixture_count": 4,
+  "season": "2026",
+  "team": "RR",
+  "team_name": "Rajasthan Royals"
+}

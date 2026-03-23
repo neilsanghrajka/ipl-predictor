@@ -1,0 +1,248 @@
+{
+  "parsed": {
+    "availability_basis": "confirmed_available",
+    "availability_modifier": 1.0,
+    "availability_note": "No injury, suspension, late-arrival, or tournament-overlap evidence found; Jason Holder should be fully available for the 14-match league stage.",
+    "expected_matches_available": 14,
+    "has_real_concern": false,
+    "official_player_id": "1075",
+    "reasoning": "The raw audit context shows only positive availability signals: Holder is in West Indies' final T20 World Cup 2026 squad, appears in GT pre-season/squad materials, and no fresh injury or suspension report was identified before Gujarat Titans' opener. The prior deductions were driven by partial fixture publication and overseas-slot/playing-XI uncertainty, but those affect selection, not availability; under the stated rule, no player-specific absence evidence means full 14/14 availability.",
+    "source_urls": [
+      "https://www.icc-cricket.com/tournaments/mens-t20-world-cup-2026/news/final-squads-for-icc-men-s-t20-world-cup-2026-confirmed",
+      "https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report"
+    ]
+  },
+  "request": {
+    "input": [
+      {
+        "content": [
+          {
+            "text": "You are an IPL 2026 availability auditor fixing contaminated fantasy input data.\n\nYour only job is to decide whether a player should have reduced availability for the 14-match league stage.\n\nCore rule:\n- Every IPL team plays 14 league matches.\n- Partial fixture publication is not a player availability issue.\n- Only reduce availability for player-specific reasons such as injury, delayed joining, tournament conflict, suspension, or credible workload management.\n\nUse web search to verify evidence when needed, but keep the decision anchored to the provided raw audit context.\nReturn JSON only.",
+            "type": "input_text"
+          }
+        ],
+        "role": "system"
+      },
+      {
+        "content": [
+          {
+            "text": "You are assessing the availability of an IPL 2026 cricket player for a fantasy league prediction model.\n\n## Player Context\n- Official Player ID: 1075\n- Name: Jason Holder\n- IPL Team: GT\n- Role: AR\n- Overseas: True\n\n## Raw Data Collected\nHere is everything we found about this player's availability, injury status, and fitness:\n\n<raw_availability_data>\nCurrent CSV availability fields:\n{\n  \"availability_basis\": \"confirmed_available\",\n  \"availability_comment\": \"In West Indies' final T20 World Cup 2026 squad and no fresh injury/suspension report found before GT's March 31 opener.\",\n  \"availability_expected_matches_available\": \"12\",\n  \"availability_modifier\": \"0.8600\",\n  \"availability_note\": \"Available for IPL start; no current injury report found. Small deduction remains because full league fixture list is not yet published and overseas management can change.\",\n  \"availability_source_urls\": [\n    \"https://www.icc-cricket.com/tournaments/mens-t20-world-cup-2026/news/final-squads-for-icc-men-s-t20-world-cup-2026-confirmed\",\n    \"https://www.cricbuzz.com/cricket-match-squads/149651/pbks-vs-gt-4th-match-indian-premier-league-2026\",\n    \"https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report\"\n  ],\n  \"official_player_id\": \"1075\"\n}\n\nFixture publication context:\n{\n  \"fixtures_preview\": [\n    {\n      \"match_date\": \"2026-03-31\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"PBKS\",\n      \"venue\": \"PCA International Cricket Stadium\"\n    },\n    {\n      \"match_date\": \"2026-04-04\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"RR\",\n      \"venue\": \"Narendra Modi Stadium\"\n    },\n    {\n      \"match_date\": \"2026-04-08\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"DC\",\n      \"venue\": \"Arun Jaitley Stadium\"\n    },\n    {\n      \"match_date\": \"2026-04-12\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"LSG\",\n      \"venue\": \"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium\"\n    }\n  ],\n  \"league_matches_expected\": 14,\n  \"published_fixture_count\": 4,\n  \"season\": \"2026\",\n  \"team\": \"GT\",\n  \"team_name\": \"Gujarat Titans\"\n}\n\nTeam-level research record:\n{\n  \"availability_basis\": \"inferred_no_adverse_news\",\n  \"availability_comment\": \"No fresh injury or international-conflict report identified from searched sources.\",\n  \"availability_expected_matches_available\": 11,\n  \"availability_modifier\": 0.79,\n  \"availability_note\": \"No current adverse availability report found; estimate provisional because official fixture publication is incomplete.\",\n  \"availability_source_urls\": [\n    \"https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report\",\n    \"https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf\"\n  ],\n  \"followup_reason\": \"Need opening-combination decision between Holder and Phillips/extra bowler.\",\n  \"full_name\": \"Jason Holder\",\n  \"needs_player_followup\": true,\n  \"official_player_id\": \"1075\",\n  \"overseas_competition_basis\": \"overseas_slot_pressure\",\n  \"overseas_competition_comment\": \"Useful flexibility option but not a clear overseas lock.\",\n  \"overseas_competition_note\": \"Faces direct overseas-slot competition with Buttler, Rashid Khan, Rabada and Glenn Phillips.\",\n  \"overseas_competition_source_urls\": [\n    \"https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report\",\n    \"https://www.wisden.com/series/ipl-2026/cricket-news/ipl-2026-best-playing-xis-for-each-team-after-the-mini-auction\"\n  ],\n  \"playing_xi_basis\": \"inferred_from_team_context\",\n  \"playing_xi_comment\": \"New overseas auction buy, but best XI spot depends on whether GT prioritize Phillips or an extra quick/all-rounder.\",\n  \"playing_xi_source_urls\": [\n    \"https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report\",\n    \"https://www.wisden.com/series/ipl-2026/cricket-news/ipl-2026-best-playing-xis-for-each-team-after-the-mini-auction\"\n  ],\n  \"playing_xi_tier\": \"ROTATION\",\n  \"research_confidence\": \"Medium\"\n}\n\nPlayer follow-up research record:\n{\n  \"availability_basis\": \"confirmed_available\",\n  \"availability_comment\": \"In West Indies' final T20 World Cup 2026 squad and no fresh injury/suspension report found before GT's March 31 opener.\",\n  \"availability_expected_matches_available\": 12,\n  \"availability_modifier\": 0.86,\n  \"availability_note\": \"Available for IPL start; no current injury report found. Small deduction remains because full league fixture list is not yet published and overseas management can change.\",\n  \"availability_source_urls\": [\n    \"https://www.icc-cricket.com/tournaments/mens-t20-world-cup-2026/news/final-squads-for-icc-men-s-t20-world-cup-2026-confirmed\",\n    \"https://www.cricbuzz.com/cricket-match-squads/149651/pbks-vs-gt-4th-match-indian-premier-league-2026\",\n    \"https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report\"\n  ],\n  \"followup_reason\": \"Recent public XI projections conflict on Holder's role versus Phillips/Rabada/Banton, so final GT combination still needs toss-and-conditions confirmation.\",\n  \"full_name\": \"Jason Holder\",\n  \"needs_player_followup\": true,\n  \"official_player_id\": \"1075\",\n  \"overseas_competition_basis\": \"overseas_slot_pressure\",\n  \"overseas_competition_comment\": \"Not an overseas lock because Buttler and Rashid are near-certain picks, leaving Holder in a tactical contest mainly with Rabada/Phillips depending on balance.\",\n  \"overseas_competition_note\": \"Competes for one of four overseas spots with Buttler, Rashid Khan, Rabada, Glenn Phillips, plus Banton/Luke Wood as backup options.\",\n  \"overseas_competition_source_urls\": [\n    \"https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report\",\n    \"https://www.wisden.com/series/ipl-2026/cricket-news/ipl-2026-best-playing-xis-for-each-team-after-the-mini-auction\",\n    \"https://khelnow.com/cricket/ipl-2026-best-playing-xi-gujarat-titans-202512\",\n    \"https://sports.ndtv.com/ipl-2026/gujarat-titans-bet-on-jason-holder-is-interesting-his-six-hitting-abilities-have-improved-says-irfan-pathan-10045272\"\n  ],\n  \"playing_xi_basis\": \"conflicting_reports\",\n  \"playing_xi_comment\": \"Auction buy and squad option, but projected GT XIs differ on whether Holder or Phillips/Tom Banton gets the extra overseas slot.\",\n  \"playing_xi_source_urls\": [\n    \"https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report\",\n    \"https://www.wisden.com/series/ipl-2026/cricket-news/ipl-2026-best-playing-xis-for-each-team-after-the-mini-auction\",\n    \"https://khelnow.com/cricket/ipl-2026-best-playing-xi-gujarat-titans-202512\",\n    \"https://sports.ndtv.com/ipl-2026/ipl-2026-strongest-xis-of-all-10-franchises-with-impact-player-choice-after-mini-auction-9829797\"\n  ],\n  \"playing_xi_tier\": \"ROTATION\",\n  \"research_confidence\": \"Medium\"\n}\n\nImportant interpretation rule:\n- Every team still plays 14 league matches.\n- Published fixture count is schedule completeness only.\n- Reduce availability only when there is player-specific absence evidence.\n</raw_availability_data>\n\n## Your Task\n\nDetermine what fraction of the 14-match IPL 2026 league season this player will be AVAILABLE to be selected for (not whether they'll be picked \u2014 just whether they're fit and eligible).\n\n**CRITICAL RULES:**\n1. Every IPL team plays exactly 14 league stage matches. This is a fact. Do not reduce availability just because only some fixtures have been published/announced yet. Partial schedule publication is NOT a player availability issue.\n2. Only reduce availability for PLAYER-SPECIFIC reasons:\n   - Confirmed injury with recovery timeline\n   - International duty that overlaps with IPL dates\n   - Suspension or ban\n   - Retirement or withdrawal from IPL\n   - Known workload management plans (e.g., fast bowlers being rested periodically)\n3. If there is NO evidence of any player-specific absence, availability_modifier MUST be 1.0.\n4. \"No news\" = healthy. Absence of injury reports means the player is available.\n\n## Response Format\n\nReply with ONLY a JSON object, no other text:\n\n```json\n{\n  \"official_player_id\": \"<string>\",\n  \"availability_modifier\": <float 0.0 to 1.0>,\n  \"expected_matches_available\": <int 0 to 14>,\n  \"availability_basis\": \"<confirmed_available | inferred_no_adverse_news | injury_report | late_joining | tournament_conflict | suspension | conflicting_reports | unknown>\",\n  \"availability_note\": \"<one sentence explaining your assessment>\",\n  \"reasoning\": \"<2-3 sentences explaining WHY you chose this value, what evidence you used or didn't find>\",\n  \"has_real_concern\": <boolean \u2014 true if there's a genuine player-specific issue, false if fully available>,\n  \"source_urls\": [\"<supporting URL 1>\", \"<supporting URL 2>\"]\n}\n```\n\nExamples:\n- Fully fit player, no issues: {\"official_player_id\": \"123\", \"availability_modifier\": 1.0, \"expected_matches_available\": 14, \"availability_basis\": \"confirmed_available\", \"availability_note\": \"No injury or availability concerns found.\", \"reasoning\": \"No reports of injury, fitness issues, or scheduling conflicts. Player is expected to be available for the full season.\", \"has_real_concern\": false, \"source_urls\": [\"https://example.com/player\"]}\n- Player recovering from knee surgery, expected back by match 5: {\"official_player_id\": \"123\", \"availability_modifier\": 0.64, \"expected_matches_available\": 9, \"availability_basis\": \"injury_report\", \"availability_note\": \"Recovering from knee surgery, expected to miss first 5 matches.\", \"reasoning\": \"Reports indicate knee surgery in Jan 2026 with 3-month recovery. IPL starts March, so likely available from match 5-6 onwards. 9/14 = 0.64.\", \"has_real_concern\": true, \"source_urls\": [\"https://example.com/injury-report\"]}\n- Fast bowler with workload management: {\"official_player_id\": \"123\", \"availability_modifier\": 0.85, \"expected_matches_available\": 12, \"availability_basis\": \"conflicting_reports\", \"availability_note\": \"Likely to be rested for 2 matches as part of workload management.\", \"reasoning\": \"As an international fast bowler with a heavy schedule, team is expected to manage workload. Typically rested for 1-2 league matches.\", \"has_real_concern\": true, \"source_urls\": [\"https://example.com/workload\"]}\n- Player whose data mentions schedule: {\"official_player_id\": \"123\", \"availability_modifier\": 1.0, \"expected_matches_available\": 14, \"availability_basis\": \"inferred_no_adverse_news\", \"availability_note\": \"No injury or availability concerns found.\", \"reasoning\": \"Raw data only mentions published fixture count, which is a schedule publication issue, not a player availability issue. No evidence of any player-specific absence.\", \"has_real_concern\": false, \"source_urls\": [\"https://example.com/fixtures\"]}\n\n\nReturn the final answer using this exact JSON shape:\n{\n  \"official_player_id\": \"1075\",\n  \"availability_modifier\": <float 0.0 to 1.0>,\n  \"expected_matches_available\": <int 0 to 14>,\n  \"availability_note\": \"<one sentence>\",\n  \"reasoning\": \"<2-3 audit-friendly sentences>\",\n  \"has_real_concern\": <true or false>,\n  \"availability_basis\": \"<one of confirmed_available, inferred_no_adverse_news, injury_report, late_joining, tournament_conflict, suspension, conflicting_reports, unknown>\",\n  \"source_urls\": [\"<url1>\", \"<url2>\"]\n}\nIf there is no player-specific absence evidence, return availability_modifier=1.0, expected_matches_available=14, and has_real_concern=false.\nDo not treat partial fixture publication as a real concern.",
+            "type": "input_text"
+          }
+        ],
+        "role": "user"
+      }
+    ],
+    "max_output_tokens": 2200,
+    "model": "gpt-5.4",
+    "text": {
+      "format": {
+        "name": "availability_repair_1075",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "availability_basis": {
+              "enum": [
+                "confirmed_available",
+                "conflicting_reports",
+                "inferred_no_adverse_news",
+                "injury_report",
+                "late_joining",
+                "suspension",
+                "tournament_conflict",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "availability_modifier": {
+              "type": "number"
+            },
+            "availability_note": {
+              "type": "string"
+            },
+            "expected_matches_available": {
+              "type": "integer"
+            },
+            "has_real_concern": {
+              "type": "boolean"
+            },
+            "official_player_id": {
+              "type": "string"
+            },
+            "reasoning": {
+              "type": "string"
+            },
+            "source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "official_player_id",
+            "availability_modifier",
+            "expected_matches_available",
+            "availability_note",
+            "reasoning",
+            "has_real_concern",
+            "availability_basis",
+            "source_urls"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ]
+  },
+  "request_id": "382371c8-8816-4dc2-ab26-75bb6fa974e1",
+  "response": {
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1774275168,
+    "created_at": 1774275164,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "id": "resp_027eeca73c9331540069c14a5ca6508194beb3996c08ba10e7",
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": 2200,
+    "max_tool_calls": null,
+    "metadata": {},
+    "model": "gpt-5.4-2026-03-05",
+    "object": "response",
+    "output": [
+      {
+        "content": [
+          {
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"official_player_id\":\"1075\",\"availability_modifier\":1,\"expected_matches_available\":14,\"availability_note\":\"No injury, suspension, late-arrival, or tournament-overlap evidence found; Jason Holder should be fully available for the 14-match league stage.\",\"reasoning\":\"The raw audit context shows only positive availability signals: Holder is in West Indies' final T20 World Cup 2026 squad, appears in GT pre-season/squad materials, and no fresh injury or suspension report was identified before Gujarat Titans' opener. The prior deductions were driven by partial fixture publication and overseas-slot/playing-XI uncertainty, but those affect selection, not availability; under the stated rule, no player-specific absence evidence means full 14/14 availability.\",\"has_real_concern\":false,\"availability_basis\":\"confirmed_available\",\"source_urls\":[\"https://www.icc-cricket.com/tournaments/mens-t20-world-cup-2026/news/final-squads-for-icc-men-s-t20-world-cup-2026-confirmed\",\"https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report\"]}",
+            "type": "output_text"
+          }
+        ],
+        "id": "msg_027eeca73c9331540069c14a5d38a48194845ac077819f8641",
+        "phase": "final_answer",
+        "role": "assistant",
+        "status": "completed",
+        "type": "message"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": null,
+    "reasoning": {
+      "effort": "none",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "store": true,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "description": null,
+        "name": "availability_repair_1075",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "availability_basis": {
+              "enum": [
+                "confirmed_available",
+                "conflicting_reports",
+                "inferred_no_adverse_news",
+                "injury_report",
+                "late_joining",
+                "suspension",
+                "tournament_conflict",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "availability_modifier": {
+              "type": "number"
+            },
+            "availability_note": {
+              "type": "string"
+            },
+            "expected_matches_available": {
+              "type": "integer"
+            },
+            "has_real_concern": {
+              "type": "boolean"
+            },
+            "official_player_id": {
+              "type": "string"
+            },
+            "reasoning": {
+              "type": "string"
+            },
+            "source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "official_player_id",
+            "availability_modifier",
+            "expected_matches_available",
+            "availability_note",
+            "reasoning",
+            "has_real_concern",
+            "availability_basis",
+            "source_urls"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "search_context_size": "medium",
+        "type": "web_search",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 7598,
+      "input_tokens_details": {
+        "cached_tokens": 7552
+      },
+      "output_tokens": 248,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 7846
+    },
+    "user": null
+  },
+  "saved_at": "2026-03-23T14:12:49.164351+00:00"
+}

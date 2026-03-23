@@ -1,0 +1,248 @@
+{
+  "parsed": {
+    "availability_basis": "inferred_no_adverse_news",
+    "availability_modifier": 1.0,
+    "availability_note": "No injury or availability concerns found for Himmat Singh; partial fixture publication is not a player availability issue.",
+    "expected_matches_available": 14,
+    "has_real_concern": false,
+    "official_player_id": "5434",
+    "reasoning": "The raw audit context contains no player-specific evidence of injury, suspension, delayed joining, tournament overlap, or workload restriction for Himmat Singh. The earlier reduction was tied only to incomplete fixture publication, but every IPL team plays 14 league matches and schedule completeness does not affect an individual player's availability. Therefore he should be treated as fully available unless new player-specific absence evidence emerges.",
+    "source_urls": [
+      "https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf",
+      "https://www.lucknowsupergiants.in/"
+    ]
+  },
+  "request": {
+    "input": [
+      {
+        "content": [
+          {
+            "text": "You are an IPL 2026 availability auditor fixing contaminated fantasy input data.\n\nYour only job is to decide whether a player should have reduced availability for the 14-match league stage.\n\nCore rule:\n- Every IPL team plays 14 league matches.\n- Partial fixture publication is not a player availability issue.\n- Only reduce availability for player-specific reasons such as injury, delayed joining, tournament conflict, suspension, or credible workload management.\n\nUse web search to verify evidence when needed, but keep the decision anchored to the provided raw audit context.\nReturn JSON only.",
+            "type": "input_text"
+          }
+        ],
+        "role": "system"
+      },
+      {
+        "content": [
+          {
+            "text": "You are assessing the availability of an IPL 2026 cricket player for a fantasy league prediction model.\n\n## Player Context\n- Official Player ID: 5434\n- Name: Himmat Singh\n- IPL Team: LSG\n- Role: BAT\n- Overseas: False\n\n## Raw Data Collected\nHere is everything we found about this player's availability, injury status, and fitness:\n\n<raw_availability_data>\nCurrent CSV availability fields:\n{\n  \"availability_basis\": \"inferred_no_adverse_news\",\n  \"availability_comment\": \"The raw audit context provides no player-specific evidence of injury, suspension, late arrival, tournament clash, or workload restriction for Himmat Singh. The prior reduction to 13 matches was based only on incomplete fixture publication, but every IPL team plays 14 league matches and schedule completeness does not reduce an individual player's availability.\",\n  \"availability_expected_matches_available\": \"14\",\n  \"availability_modifier\": \"1.0000\",\n  \"availability_note\": \"No injury or availability concerns found for Himmat Singh; partial fixture publication is not a player availability issue.\",\n  \"availability_source_urls\": [\n    \"https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf\",\n    \"https://www.lucknowsupergiants.in/\"\n  ],\n  \"official_player_id\": \"5434\"\n}\n\nFixture publication context:\n{\n  \"fixtures_preview\": [\n    {\n      \"match_date\": \"2026-04-01\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"DC\",\n      \"venue\": \"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium\"\n    },\n    {\n      \"match_date\": \"2026-04-05\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"SRH\",\n      \"venue\": \"Rajiv Gandhi International Stadium\"\n    },\n    {\n      \"match_date\": \"2026-04-09\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"KKR\",\n      \"venue\": \"Eden Gardens\"\n    },\n    {\n      \"match_date\": \"2026-04-12\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"GT\",\n      \"venue\": \"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium\"\n    }\n  ],\n  \"league_matches_expected\": 14,\n  \"published_fixture_count\": 4,\n  \"season\": \"2026\",\n  \"team\": \"LSG\",\n  \"team_name\": \"Lucknow Super Giants\"\n}\n\nTeam-level research record:\n{\n  \"availability_basis\": \"inferred_no_adverse_news\",\n  \"availability_comment\": \"Only 4 fixtures are published in prompt; estimate is conservative.\",\n  \"availability_expected_matches_available\": 13,\n  \"availability_modifier\": 0.93,\n  \"availability_note\": \"No adverse availability report found.\",\n  \"availability_source_urls\": [\n    \"https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf\",\n    \"https://www.lucknowsupergiants.in/\"\n  ],\n  \"followup_reason\": \"\",\n  \"full_name\": \"Himmat Singh\",\n  \"needs_player_followup\": false,\n  \"official_player_id\": \"5434\",\n  \"overseas_competition_basis\": \"domestic_player\",\n  \"overseas_competition_comment\": \"Selection challenge is internal batting order competition, not overseas slots.\",\n  \"overseas_competition_note\": \"Domestic player; overseas cap is not the constraint. Blocked by domestic batting depth ahead of him.\",\n  \"overseas_competition_source_urls\": [\n    \"https://www.lucknowsupergiants.in/news/lucknow-super-giants-lsg-retained-players-list-ahead-of-ipl-2026-auction\",\n    \"https://www.ipl.com/cricket/news/ipl-2026-mayank-yadavs-recovery-boosts-lsg-after-11-crore-retention-gamble/\"\n  ],\n  \"playing_xi_basis\": \"inferred_from_team_context\",\n  \"playing_xi_comment\": \"Retained squad batter but sits outside strongest-XI discussions and behind established middle-order names.\",\n  \"playing_xi_source_urls\": [\n    \"https://www.lucknowsupergiants.in/news/lucknow-super-giants-lsg-retained-players-list-ahead-of-ipl-2026-auction\",\n    \"https://www.ipl.com/cricket/news/ipl-2026-mayank-yadavs-recovery-boosts-lsg-after-11-crore-retention-gamble/\"\n  ],\n  \"playing_xi_tier\": \"UNLIKELY\",\n  \"research_confidence\": \"Medium\"\n}\n\nPlayer follow-up research record:\nnull\n\nImportant interpretation rule:\n- Every team still plays 14 league matches.\n- Published fixture count is schedule completeness only.\n- Reduce availability only when there is player-specific absence evidence.\n</raw_availability_data>\n\n## Your Task\n\nDetermine what fraction of the 14-match IPL 2026 league season this player will be AVAILABLE to be selected for (not whether they'll be picked \u2014 just whether they're fit and eligible).\n\n**CRITICAL RULES:**\n1. Every IPL team plays exactly 14 league stage matches. This is a fact. Do not reduce availability just because only some fixtures have been published/announced yet. Partial schedule publication is NOT a player availability issue.\n2. Only reduce availability for PLAYER-SPECIFIC reasons:\n   - Confirmed injury with recovery timeline\n   - International duty that overlaps with IPL dates\n   - Suspension or ban\n   - Retirement or withdrawal from IPL\n   - Known workload management plans (e.g., fast bowlers being rested periodically)\n3. If there is NO evidence of any player-specific absence, availability_modifier MUST be 1.0.\n4. \"No news\" = healthy. Absence of injury reports means the player is available.\n\n## Response Format\n\nReply with ONLY a JSON object, no other text:\n\n```json\n{\n  \"official_player_id\": \"<string>\",\n  \"availability_modifier\": <float 0.0 to 1.0>,\n  \"expected_matches_available\": <int 0 to 14>,\n  \"availability_basis\": \"<confirmed_available | inferred_no_adverse_news | injury_report | late_joining | tournament_conflict | suspension | conflicting_reports | unknown>\",\n  \"availability_note\": \"<one sentence explaining your assessment>\",\n  \"reasoning\": \"<2-3 sentences explaining WHY you chose this value, what evidence you used or didn't find>\",\n  \"has_real_concern\": <boolean \u2014 true if there's a genuine player-specific issue, false if fully available>,\n  \"source_urls\": [\"<supporting URL 1>\", \"<supporting URL 2>\"]\n}\n```\n\nExamples:\n- Fully fit player, no issues: {\"official_player_id\": \"123\", \"availability_modifier\": 1.0, \"expected_matches_available\": 14, \"availability_basis\": \"confirmed_available\", \"availability_note\": \"No injury or availability concerns found.\", \"reasoning\": \"No reports of injury, fitness issues, or scheduling conflicts. Player is expected to be available for the full season.\", \"has_real_concern\": false, \"source_urls\": [\"https://example.com/player\"]}\n- Player recovering from knee surgery, expected back by match 5: {\"official_player_id\": \"123\", \"availability_modifier\": 0.64, \"expected_matches_available\": 9, \"availability_basis\": \"injury_report\", \"availability_note\": \"Recovering from knee surgery, expected to miss first 5 matches.\", \"reasoning\": \"Reports indicate knee surgery in Jan 2026 with 3-month recovery. IPL starts March, so likely available from match 5-6 onwards. 9/14 = 0.64.\", \"has_real_concern\": true, \"source_urls\": [\"https://example.com/injury-report\"]}\n- Fast bowler with workload management: {\"official_player_id\": \"123\", \"availability_modifier\": 0.85, \"expected_matches_available\": 12, \"availability_basis\": \"conflicting_reports\", \"availability_note\": \"Likely to be rested for 2 matches as part of workload management.\", \"reasoning\": \"As an international fast bowler with a heavy schedule, team is expected to manage workload. Typically rested for 1-2 league matches.\", \"has_real_concern\": true, \"source_urls\": [\"https://example.com/workload\"]}\n- Player whose data mentions schedule: {\"official_player_id\": \"123\", \"availability_modifier\": 1.0, \"expected_matches_available\": 14, \"availability_basis\": \"inferred_no_adverse_news\", \"availability_note\": \"No injury or availability concerns found.\", \"reasoning\": \"Raw data only mentions published fixture count, which is a schedule publication issue, not a player availability issue. No evidence of any player-specific absence.\", \"has_real_concern\": false, \"source_urls\": [\"https://example.com/fixtures\"]}\n\n\nReturn the final answer using this exact JSON shape:\n{\n  \"official_player_id\": \"5434\",\n  \"availability_modifier\": <float 0.0 to 1.0>,\n  \"expected_matches_available\": <int 0 to 14>,\n  \"availability_note\": \"<one sentence>\",\n  \"reasoning\": \"<2-3 audit-friendly sentences>\",\n  \"has_real_concern\": <true or false>,\n  \"availability_basis\": \"<one of confirmed_available, inferred_no_adverse_news, injury_report, late_joining, tournament_conflict, suspension, conflicting_reports, unknown>\",\n  \"source_urls\": [\"<url1>\", \"<url2>\"]\n}\nIf there is no player-specific absence evidence, return availability_modifier=1.0, expected_matches_available=14, and has_real_concern=false.\nDo not treat partial fixture publication as a real concern.",
+            "type": "input_text"
+          }
+        ],
+        "role": "user"
+      }
+    ],
+    "max_output_tokens": 2200,
+    "model": "gpt-5.4",
+    "text": {
+      "format": {
+        "name": "availability_repair_5434",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "availability_basis": {
+              "enum": [
+                "confirmed_available",
+                "conflicting_reports",
+                "inferred_no_adverse_news",
+                "injury_report",
+                "late_joining",
+                "suspension",
+                "tournament_conflict",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "availability_modifier": {
+              "type": "number"
+            },
+            "availability_note": {
+              "type": "string"
+            },
+            "expected_matches_available": {
+              "type": "integer"
+            },
+            "has_real_concern": {
+              "type": "boolean"
+            },
+            "official_player_id": {
+              "type": "string"
+            },
+            "reasoning": {
+              "type": "string"
+            },
+            "source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "official_player_id",
+            "availability_modifier",
+            "expected_matches_available",
+            "availability_note",
+            "reasoning",
+            "has_real_concern",
+            "availability_basis",
+            "source_urls"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ]
+  },
+  "request_id": "1395f7b3-b492-4060-adab-710204d785ca",
+  "response": {
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1774275161,
+    "created_at": 1774275157,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "id": "resp_06320c0726177b620069c14a55efbc8194a5ce813d20430557",
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": 2200,
+    "max_tool_calls": null,
+    "metadata": {},
+    "model": "gpt-5.4-2026-03-05",
+    "object": "response",
+    "output": [
+      {
+        "content": [
+          {
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"official_player_id\":\"5434\",\"availability_modifier\":1,\"expected_matches_available\":14,\"availability_note\":\"No injury or availability concerns found for Himmat Singh; partial fixture publication is not a player availability issue.\",\"reasoning\":\"The raw audit context contains no player-specific evidence of injury, suspension, delayed joining, tournament overlap, or workload restriction for Himmat Singh. The earlier reduction was tied only to incomplete fixture publication, but every IPL team plays 14 league matches and schedule completeness does not affect an individual player's availability. Therefore he should be treated as fully available unless new player-specific absence evidence emerges.\",\"has_real_concern\":false,\"availability_basis\":\"inferred_no_adverse_news\",\"source_urls\":[\"https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf\",\"https://www.lucknowsupergiants.in/\"]}",
+            "type": "output_text"
+          }
+        ],
+        "id": "msg_06320c0726177b620069c14a56826c8194926c0bd5fba6548e",
+        "phase": "final_answer",
+        "role": "assistant",
+        "status": "completed",
+        "type": "message"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": null,
+    "reasoning": {
+      "effort": "none",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "store": true,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "description": null,
+        "name": "availability_repair_5434",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "availability_basis": {
+              "enum": [
+                "confirmed_available",
+                "conflicting_reports",
+                "inferred_no_adverse_news",
+                "injury_report",
+                "late_joining",
+                "suspension",
+                "tournament_conflict",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "availability_modifier": {
+              "type": "number"
+            },
+            "availability_note": {
+              "type": "string"
+            },
+            "expected_matches_available": {
+              "type": "integer"
+            },
+            "has_real_concern": {
+              "type": "boolean"
+            },
+            "official_player_id": {
+              "type": "string"
+            },
+            "reasoning": {
+              "type": "string"
+            },
+            "source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "official_player_id",
+            "availability_modifier",
+            "expected_matches_available",
+            "availability_note",
+            "reasoning",
+            "has_real_concern",
+            "availability_basis",
+            "source_urls"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "search_context_size": "medium",
+        "type": "web_search",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 6784,
+      "input_tokens_details": {
+        "cached_tokens": 4736
+      },
+      "output_tokens": 201,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 6985
+    },
+    "user": null
+  },
+  "saved_at": "2026-03-23T14:12:41.643646+00:00"
+}

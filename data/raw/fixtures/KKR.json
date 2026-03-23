@@ -1,0 +1,73 @@
+{
+  "competition_id": "284",
+  "fixtures": [
+    {
+      "city": "Mumbai",
+      "competition_id": "284",
+      "is_home": false,
+      "match_date": "2026-03-29",
+      "match_date_display": "29 Mar 2026",
+      "match_datetime_local": "2026-03-29 19:30:00",
+      "match_id": "2418",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "MI",
+      "opponent_name": "Mumbai Indians",
+      "team_code": "KKR",
+      "team_name": "Kolkata Knight Riders",
+      "venue": "Wankhede Stadium"
+    },
+    {
+      "city": "Kolkata",
+      "competition_id": "284",
+      "is_home": true,
+      "match_date": "2026-04-02",
+      "match_date_display": "2 Apr 2026",
+      "match_datetime_local": "2026-04-02 19:30:00",
+      "match_id": "2422",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "SRH",
+      "opponent_name": "Sunrisers Hyderabad",
+      "team_code": "KKR",
+      "team_name": "Kolkata Knight Riders",
+      "venue": "Eden Gardens"
+    },
+    {
+      "city": "Kolkata",
+      "competition_id": "284",
+      "is_home": true,
+      "match_date": "2026-04-06",
+      "match_date_display": "6 Apr 2026",
+      "match_datetime_local": "2026-04-06 19:30:00",
+      "match_id": "2428",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "PBKS",
+      "opponent_name": "Punjab Kings",
+      "team_code": "KKR",
+      "team_name": "Kolkata Knight Riders",
+      "venue": "Eden Gardens"
+    },
+    {
+      "city": "Kolkata",
+      "competition_id": "284",
+      "is_home": true,
+      "match_date": "2026-04-09",
+      "match_date_display": "9 Apr 2026",
+      "match_datetime_local": "2026-04-09 19:30:00",
+      "match_id": "2431",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "LSG",
+      "opponent_name": "Lucknow Super Giants",
+      "team_code": "KKR",
+      "team_name": "Kolkata Knight Riders",
+      "venue": "Eden Gardens"
+    }
+  ],
+  "published_fixture_count": 4,
+  "season": "2026",
+  "team": "KKR",
+  "team_name": "Kolkata Knight Riders"
+}

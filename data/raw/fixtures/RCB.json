@@ -1,0 +1,73 @@
+{
+  "competition_id": "284",
+  "fixtures": [
+    {
+      "city": "Bengaluru",
+      "competition_id": "284",
+      "is_home": true,
+      "match_date": "2026-03-28",
+      "match_date_display": "28 Mar 2026",
+      "match_datetime_local": "2026-03-28 19:30:00",
+      "match_id": "2417",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "SRH",
+      "opponent_name": "Sunrisers Hyderabad",
+      "team_code": "RCB",
+      "team_name": "Royal Challengers Bengaluru",
+      "venue": "M Chinnaswamy Stadium"
+    },
+    {
+      "city": "Bengaluru",
+      "competition_id": "284",
+      "is_home": true,
+      "match_date": "2026-04-05",
+      "match_date_display": "5 Apr 2026",
+      "match_datetime_local": "2026-04-05 19:30:00",
+      "match_id": "2427",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "CSK",
+      "opponent_name": "Chennai Super Kings",
+      "team_code": "RCB",
+      "team_name": "Royal Challengers Bengaluru",
+      "venue": "M Chinnaswamy Stadium"
+    },
+    {
+      "city": "Guwahati",
+      "competition_id": "284",
+      "is_home": false,
+      "match_date": "2026-04-10",
+      "match_date_display": "10 Apr 2026",
+      "match_datetime_local": "2026-04-10 19:30:00",
+      "match_id": "2432",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "RR",
+      "opponent_name": "Rajasthan Royals",
+      "team_code": "RCB",
+      "team_name": "Royal Challengers Bengaluru",
+      "venue": "ACA Stadium"
+    },
+    {
+      "city": "Mumbai",
+      "competition_id": "284",
+      "is_home": false,
+      "match_date": "2026-04-12",
+      "match_date_display": "12 Apr 2026",
+      "match_datetime_local": "2026-04-12 19:30:00",
+      "match_id": "2436",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "MI",
+      "opponent_name": "Mumbai Indians",
+      "team_code": "RCB",
+      "team_name": "Royal Challengers Bengaluru",
+      "venue": "Wankhede Stadium"
+    }
+  ],
+  "published_fixture_count": 4,
+  "season": "2026",
+  "team": "RCB",
+  "team_name": "Royal Challengers Bengaluru"
+}

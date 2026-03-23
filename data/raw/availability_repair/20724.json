@@ -1,0 +1,248 @@
+{
+  "parsed": {
+    "availability_basis": "confirmed_available",
+    "availability_modifier": 1.0,
+    "availability_note": "No player-specific injury, suspension, or overlapping tournament absence is evidenced; he is expected to be available for the full 14-match league stage.",
+    "expected_matches_available": 14,
+    "has_real_concern": false,
+    "official_player_id": "20724",
+    "reasoning": "The raw audit context consistently states that no current injury or suspension report was found for Kwena Maphaka, and that his South Africa T20 World Cup duty ended before Rajasthan Royals' IPL 2026 opener on March 30, 2026. The only uncertainty mentioned is overseas-slot competition and playing-XI pecking order, which affects selection chances, not availability. Partial publication of RR fixtures is a schedule issue and does not justify any reduction from 14 available league matches.",
+    "source_urls": [
+      "https://www.rajasthanroyals.com/news/kwena-maphaka-donovan-ferreira-south-africa-squad-t20-world-cup-2026",
+      "https://www.rajasthanroyals.com/latest-news/rajasthan-royals-ipl-2026-schedule-match-time"
+    ]
+  },
+  "request": {
+    "input": [
+      {
+        "content": [
+          {
+            "text": "You are an IPL 2026 availability auditor fixing contaminated fantasy input data.\n\nYour only job is to decide whether a player should have reduced availability for the 14-match league stage.\n\nCore rule:\n- Every IPL team plays 14 league matches.\n- Partial fixture publication is not a player availability issue.\n- Only reduce availability for player-specific reasons such as injury, delayed joining, tournament conflict, suspension, or credible workload management.\n\nUse web search to verify evidence when needed, but keep the decision anchored to the provided raw audit context.\nReturn JSON only.",
+            "type": "input_text"
+          }
+        ],
+        "role": "system"
+      },
+      {
+        "content": [
+          {
+            "text": "You are assessing the availability of an IPL 2026 cricket player for a fantasy league prediction model.\n\n## Player Context\n- Official Player ID: 20724\n- Name: Kwena Maphaka\n- IPL Team: RR\n- Role: BOWL\n- Overseas: True\n\n## Raw Data Collected\nHere is everything we found about this player's availability, injury status, and fitness:\n\n<raw_availability_data>\nCurrent CSV availability fields:\n{\n  \"availability_basis\": \"confirmed_available\",\n  \"availability_comment\": \"Available for selection across the published RR fixtures; full-season estimate assumes no later adverse news.\",\n  \"availability_expected_matches_available\": \"14\",\n  \"availability_modifier\": \"1.0000\",\n  \"availability_note\": \"No current injury/suspension report found; T20 World Cup 2026 duty preceded RR's March 30, 2026 opener.\",\n  \"availability_source_urls\": [\n    \"https://www.rajasthanroyals.com/news/kwena-maphaka-donovan-ferreira-south-africa-squad-t20-world-cup-2026\",\n    \"https://www.rajasthanroyals.com/latest-news/rajasthan-royals-ipl-2026-schedule-match-time\"\n  ],\n  \"official_player_id\": \"20724\"\n}\n\nFixture publication context:\n{\n  \"fixtures_preview\": [\n    {\n      \"match_date\": \"2026-03-30\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"CSK\",\n      \"venue\": \"ACA Stadium\"\n    },\n    {\n      \"match_date\": \"2026-04-04\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"GT\",\n      \"venue\": \"Narendra Modi Stadium\"\n    },\n    {\n      \"match_date\": \"2026-04-07\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"MI\",\n      \"venue\": \"ACA Stadium\"\n    },\n    {\n      \"match_date\": \"2026-04-10\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"RCB\",\n      \"venue\": \"ACA Stadium\"\n    }\n  ],\n  \"league_matches_expected\": 14,\n  \"published_fixture_count\": 4,\n  \"season\": \"2026\",\n  \"team\": \"RR\",\n  \"team_name\": \"Rajasthan Royals\"\n}\n\nTeam-level research record:\n{\n  \"availability_basis\": \"confirmed_available\",\n  \"availability_comment\": \"Available for all published RR fixtures. Only 4 of 14 league fixtures are currently published, so full-season estimate assumes no later adverse news.\",\n  \"availability_expected_matches_available\": 14,\n  \"availability_modifier\": 1.0,\n  \"availability_note\": \"No reported IPL 2026 unavailability; T20 World Cup duty ended before RR's March 30 opener.\",\n  \"availability_source_urls\": [\n    \"https://www.rajasthanroyals.com/news/kwena-maphaka-donovan-ferreira-south-africa-squad-t20-world-cup-2026\",\n    \"https://www.rajasthanroyals.com/latest-news/rajasthan-royals-ipl-2026-schedule-match-time\"\n  ],\n  \"followup_reason\": \"Need closer confirmation of pecking order among RR overseas pacers after full squad/first XI is revealed.\",\n  \"full_name\": \"Kwena Maphaka\",\n  \"needs_player_followup\": true,\n  \"official_player_id\": \"20724\",\n  \"overseas_competition_basis\": \"overseas_slot_pressure\",\n  \"overseas_competition_comment\": \"Overseas cap, not fitness, is the main limiter.\",\n  \"overseas_competition_note\": \"Competing with Archer, Hetmyer, Burger, Ferreira and other overseas options for four slots.\",\n  \"overseas_competition_source_urls\": [\n    \"https://www.rajasthanroyals.com/news/ipl-2026-rr-players-retention-list\",\n    \"https://www.rajasthanroyals.com/latest-news/ipl-2026-auction-rajasthan-royals-squad-full-players-list\"\n  ],\n  \"playing_xi_basis\": \"inferred_from_team_context\",\n  \"playing_xi_comment\": \"Overseas quick in a crowded pace group; not clearly first-choice in the XI.\",\n  \"playing_xi_source_urls\": [\n    \"https://www.rajasthanroyals.com/news/ipl-2026-rr-players-retention-list\",\n    \"https://www.rajasthanroyals.com/news/indian-premier-league-ipl-2026-auction-date\"\n  ],\n  \"playing_xi_tier\": \"ROTATION\",\n  \"research_confidence\": \"Medium\"\n}\n\nPlayer follow-up research record:\n{\n  \"availability_basis\": \"confirmed_available\",\n  \"availability_comment\": \"Available for selection across the published RR fixtures; full-season estimate assumes no later adverse news.\",\n  \"availability_expected_matches_available\": 14,\n  \"availability_modifier\": 1.0,\n  \"availability_note\": \"No current injury/suspension report found; T20 World Cup 2026 duty preceded RR's March 30, 2026 opener.\",\n  \"availability_source_urls\": [\n    \"https://www.rajasthanroyals.com/news/kwena-maphaka-donovan-ferreira-south-africa-squad-t20-world-cup-2026\",\n    \"https://www.rajasthanroyals.com/latest-news/rajasthan-royals-ipl-2026-schedule-match-time\"\n  ],\n  \"followup_reason\": \"Need first-match XI/team-sheet evidence to separate Maphaka from Burger/Curran in RR's overseas pecking order.\",\n  \"full_name\": \"Kwena Maphaka\",\n  \"needs_player_followup\": true,\n  \"official_player_id\": \"20724\",\n  \"overseas_competition_basis\": \"overseas_slot_pressure\",\n  \"overseas_competition_comment\": \"Primary barrier is combination fit, not availability.\",\n  \"overseas_competition_note\": \"Strong overseas-slot squeeze: Archer, Burger, Hetmyer, Curran, Ferreira and Pretorius all compete for four spots.\",\n  \"overseas_competition_source_urls\": [\n    \"https://www.rajasthanroyals.com/news/indian-premier-league-ipl-2026-auction-date\",\n    \"https://www.rajasthanroyals.com/latest-news/ipl-2026-auction-rajasthan-royals-squad-full-players-list\",\n    \"https://www.rajasthanroyals.com/news/ipl-2026-rr-players-retention-list\"\n  ],\n  \"playing_xi_basis\": \"inferred_from_team_context\",\n  \"playing_xi_comment\": \"Available squad member but behind multiple established overseas options, especially Archer and Burger in the pace mix.\",\n  \"playing_xi_source_urls\": [\n    \"https://www.rajasthanroyals.com/news/ipl-2026-rr-players-retention-list\",\n    \"https://www.rajasthanroyals.com/news/indian-premier-league-ipl-2026-auction-date\",\n    \"https://www.iplt20.com/teams/rajasthan-royals/squad-details/20716\"\n  ],\n  \"playing_xi_tier\": \"ROTATION\",\n  \"research_confidence\": \"Medium\"\n}\n\nImportant interpretation rule:\n- Every team still plays 14 league matches.\n- Published fixture count is schedule completeness only.\n- Reduce availability only when there is player-specific absence evidence.\n</raw_availability_data>\n\n## Your Task\n\nDetermine what fraction of the 14-match IPL 2026 league season this player will be AVAILABLE to be selected for (not whether they'll be picked \u2014 just whether they're fit and eligible).\n\n**CRITICAL RULES:**\n1. Every IPL team plays exactly 14 league stage matches. This is a fact. Do not reduce availability just because only some fixtures have been published/announced yet. Partial schedule publication is NOT a player availability issue.\n2. Only reduce availability for PLAYER-SPECIFIC reasons:\n   - Confirmed injury with recovery timeline\n   - International duty that overlaps with IPL dates\n   - Suspension or ban\n   - Retirement or withdrawal from IPL\n   - Known workload management plans (e.g., fast bowlers being rested periodically)\n3. If there is NO evidence of any player-specific absence, availability_modifier MUST be 1.0.\n4. \"No news\" = healthy. Absence of injury reports means the player is available.\n\n## Response Format\n\nReply with ONLY a JSON object, no other text:\n\n```json\n{\n  \"official_player_id\": \"<string>\",\n  \"availability_modifier\": <float 0.0 to 1.0>,\n  \"expected_matches_available\": <int 0 to 14>,\n  \"availability_basis\": \"<confirmed_available | inferred_no_adverse_news | injury_report | late_joining | tournament_conflict | suspension | conflicting_reports | unknown>\",\n  \"availability_note\": \"<one sentence explaining your assessment>\",\n  \"reasoning\": \"<2-3 sentences explaining WHY you chose this value, what evidence you used or didn't find>\",\n  \"has_real_concern\": <boolean \u2014 true if there's a genuine player-specific issue, false if fully available>,\n  \"source_urls\": [\"<supporting URL 1>\", \"<supporting URL 2>\"]\n}\n```\n\nExamples:\n- Fully fit player, no issues: {\"official_player_id\": \"123\", \"availability_modifier\": 1.0, \"expected_matches_available\": 14, \"availability_basis\": \"confirmed_available\", \"availability_note\": \"No injury or availability concerns found.\", \"reasoning\": \"No reports of injury, fitness issues, or scheduling conflicts. Player is expected to be available for the full season.\", \"has_real_concern\": false, \"source_urls\": [\"https://example.com/player\"]}\n- Player recovering from knee surgery, expected back by match 5: {\"official_player_id\": \"123\", \"availability_modifier\": 0.64, \"expected_matches_available\": 9, \"availability_basis\": \"injury_report\", \"availability_note\": \"Recovering from knee surgery, expected to miss first 5 matches.\", \"reasoning\": \"Reports indicate knee surgery in Jan 2026 with 3-month recovery. IPL starts March, so likely available from match 5-6 onwards. 9/14 = 0.64.\", \"has_real_concern\": true, \"source_urls\": [\"https://example.com/injury-report\"]}\n- Fast bowler with workload management: {\"official_player_id\": \"123\", \"availability_modifier\": 0.85, \"expected_matches_available\": 12, \"availability_basis\": \"conflicting_reports\", \"availability_note\": \"Likely to be rested for 2 matches as part of workload management.\", \"reasoning\": \"As an international fast bowler with a heavy schedule, team is expected to manage workload. Typically rested for 1-2 league matches.\", \"has_real_concern\": true, \"source_urls\": [\"https://example.com/workload\"]}\n- Player whose data mentions schedule: {\"official_player_id\": \"123\", \"availability_modifier\": 1.0, \"expected_matches_available\": 14, \"availability_basis\": \"inferred_no_adverse_news\", \"availability_note\": \"No injury or availability concerns found.\", \"reasoning\": \"Raw data only mentions published fixture count, which is a schedule publication issue, not a player availability issue. No evidence of any player-specific absence.\", \"has_real_concern\": false, \"source_urls\": [\"https://example.com/fixtures\"]}\n\n\nReturn the final answer using this exact JSON shape:\n{\n  \"official_player_id\": \"20724\",\n  \"availability_modifier\": <float 0.0 to 1.0>,\n  \"expected_matches_available\": <int 0 to 14>,\n  \"availability_note\": \"<one sentence>\",\n  \"reasoning\": \"<2-3 audit-friendly sentences>\",\n  \"has_real_concern\": <true or false>,\n  \"availability_basis\": \"<one of confirmed_available, inferred_no_adverse_news, injury_report, late_joining, tournament_conflict, suspension, conflicting_reports, unknown>\",\n  \"source_urls\": [\"<url1>\", \"<url2>\"]\n}\nIf there is no player-specific absence evidence, return availability_modifier=1.0, expected_matches_available=14, and has_real_concern=false.\nDo not treat partial fixture publication as a real concern.",
+            "type": "input_text"
+          }
+        ],
+        "role": "user"
+      }
+    ],
+    "max_output_tokens": 2200,
+    "model": "gpt-5.4",
+    "text": {
+      "format": {
+        "name": "availability_repair_20724",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "availability_basis": {
+              "enum": [
+                "confirmed_available",
+                "conflicting_reports",
+                "inferred_no_adverse_news",
+                "injury_report",
+                "late_joining",
+                "suspension",
+                "tournament_conflict",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "availability_modifier": {
+              "type": "number"
+            },
+            "availability_note": {
+              "type": "string"
+            },
+            "expected_matches_available": {
+              "type": "integer"
+            },
+            "has_real_concern": {
+              "type": "boolean"
+            },
+            "official_player_id": {
+              "type": "string"
+            },
+            "reasoning": {
+              "type": "string"
+            },
+            "source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "official_player_id",
+            "availability_modifier",
+            "expected_matches_available",
+            "availability_note",
+            "reasoning",
+            "has_real_concern",
+            "availability_basis",
+            "source_urls"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ]
+  },
+  "request_id": "62f03af2-5fe9-43f6-8999-1eecf1cea699",
+  "response": {
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1774275089,
+    "created_at": 1774275085,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "id": "resp_0707644bbaafec3b0069c14a0deb1081a0b9cdbf47dc2b988a",
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": 2200,
+    "max_tool_calls": null,
+    "metadata": {},
+    "model": "gpt-5.4-2026-03-05",
+    "object": "response",
+    "output": [
+      {
+        "content": [
+          {
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"official_player_id\":\"20724\",\"availability_modifier\":1,\"expected_matches_available\":14,\"availability_note\":\"No player-specific injury, suspension, or overlapping tournament absence is evidenced; he is expected to be available for the full 14-match league stage.\",\"reasoning\":\"The raw audit context consistently states that no current injury or suspension report was found for Kwena Maphaka, and that his South Africa T20 World Cup duty ended before Rajasthan Royals' IPL 2026 opener on March 30, 2026. The only uncertainty mentioned is overseas-slot competition and playing-XI pecking order, which affects selection chances, not availability. Partial publication of RR fixtures is a schedule issue and does not justify any reduction from 14 available league matches.\",\"has_real_concern\":false,\"availability_basis\":\"confirmed_available\",\"source_urls\":[\"https://www.rajasthanroyals.com/news/kwena-maphaka-donovan-ferreira-south-africa-squad-t20-world-cup-2026\",\"https://www.rajasthanroyals.com/latest-news/rajasthan-royals-ipl-2026-schedule-match-time\"]}",
+            "type": "output_text"
+          }
+        ],
+        "id": "msg_0707644bbaafec3b0069c14a0e69d081a08e6018cd68a209c2",
+        "phase": "final_answer",
+        "role": "assistant",
+        "status": "completed",
+        "type": "message"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": null,
+    "reasoning": {
+      "effort": "none",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "store": true,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "description": null,
+        "name": "availability_repair_20724",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "availability_basis": {
+              "enum": [
+                "confirmed_available",
+                "conflicting_reports",
+                "inferred_no_adverse_news",
+                "injury_report",
+                "late_joining",
+                "suspension",
+                "tournament_conflict",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "availability_modifier": {
+              "type": "number"
+            },
+            "availability_note": {
+              "type": "string"
+            },
+            "expected_matches_available": {
+              "type": "integer"
+            },
+            "has_real_concern": {
+              "type": "boolean"
+            },
+            "official_player_id": {
+              "type": "string"
+            },
+            "reasoning": {
+              "type": "string"
+            },
+            "source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "official_player_id",
+            "availability_modifier",
+            "expected_matches_available",
+            "availability_note",
+            "reasoning",
+            "has_real_concern",
+            "availability_basis",
+            "source_urls"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "search_context_size": "medium",
+        "type": "web_search",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 7309,
+      "input_tokens_details": {
+        "cached_tokens": 7168
+      },
+      "output_tokens": 245,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 7554
+    },
+    "user": null
+  },
+  "saved_at": "2026-03-23T14:11:30.048247+00:00"
+}

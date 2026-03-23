@@ -1,0 +1,460 @@
+{
+  "parsed": {
+    "availability_basis": "confirmed_available",
+    "availability_comment": "NZC confirmed recovery from abdominal surgery in October 2025, and MI list him in the 2026 squad with no current restriction reported.",
+    "availability_expected_matches_available": 14,
+    "availability_modifier": 1.0,
+    "availability_note": "Recovered from 2025 surgery; no fresh issue found before IPL 2026.",
+    "availability_source_urls": [
+      "https://www.nzc.nz/news-items/o-rourke-phillips-allen-ruled-out-of-australia-series-santner-set-for-surgery/",
+      "https://www.nzc.nz/news-items/archive/santner-ravindra-return-for-england-williamson-targets-odi-series/",
+      "https://www.mumbaiindians.com/news/mumbai-indians-ipl-2026-retentions"
+    ],
+    "followup_reason": "No active availability concern found; only normal selection-combination uncertainty remains.",
+    "full_name": "Mitchell Santner",
+    "needs_player_followup": false,
+    "official_player_id": "1903",
+    "overseas_competition_basis": "overseas_slot_pressure",
+    "overseas_competition_comment": "Good balance option, but MI have several viable overseas combinations so he is not fully locked.",
+    "overseas_competition_note": "Competes for four overseas spots against Boult, Jacks, Rickelton/de Kock, Bosch, Rutherford and Ghazanfar.",
+    "overseas_competition_source_urls": [
+      "https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket",
+      "https://www.mumbaiindians.com/news/mumbai-indians-ipl-2026-retentions",
+      "https://www.cricbuzz.com/cricket-news/136925/ipl-2026-auction-how-the-teams-fared-part-ii/"
+    ],
+    "playing_xi_basis": "inferred_from_team_context",
+    "playing_xi_comment": "Retained core overseas all-rounder; likely starter but combo can shift with MI's other overseas options.",
+    "playing_xi_source_urls": [
+      "https://www.mumbaiindians.com/news/mumbai-indians-ipl-2026-retentions",
+      "https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket",
+      "https://www.cricbuzz.com/cricket-news/136925/ipl-2026-auction-how-the-teams-fared-part-ii/"
+    ],
+    "playing_xi_tier": "LIKELY",
+    "research_confidence": "Medium"
+  },
+  "request": {
+    "input": [
+      {
+        "content": [
+          {
+            "text": "You are doing a focused IPL 2026 player availability and lineup audit.\n\nYou are refining one player's non-stats fields after an initial team-level pass.\nUse web search. Prefer official IPL / franchise / BCCI sources, then reputable cricket reporting.\n\nRules:\n- Return JSON only.\n- Keep the same schema as the team-level player object.\n- Resolve ambiguity where possible using recent evidence.\n- Keep comments short and audit-friendly.\n- If evidence remains conflicting, say so explicitly and keep needs_player_followup=true.\n- Every source URL array must contain at least one URL.",
+            "type": "input_text"
+          }
+        ],
+        "role": "system"
+      },
+      {
+        "content": [
+          {
+            "text": "Refine this single-player non-stats assessment and return the structured JSON.\n\n{\n  \"fixtures\": [\n    {\n      \"city\": \"Mumbai\",\n      \"is_home\": true,\n      \"match_date\": \"2026-03-29\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"19:30\",\n      \"opponent_code\": \"KKR\",\n      \"opponent_name\": \"Kolkata Knight Riders\",\n      \"venue\": \"Wankhede Stadium\"\n    },\n    {\n      \"city\": \"Delhi\",\n      \"is_home\": false,\n      \"match_date\": \"2026-04-04\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"15:30\",\n      \"opponent_code\": \"DC\",\n      \"opponent_name\": \"Delhi Capitals\",\n      \"venue\": \"Arun Jaitley Stadium\"\n    },\n    {\n      \"city\": \"Guwahati\",\n      \"is_home\": false,\n      \"match_date\": \"2026-04-07\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"19:30\",\n      \"opponent_code\": \"RR\",\n      \"opponent_name\": \"Rajasthan Royals\",\n      \"venue\": \"ACA Stadium\"\n    },\n    {\n      \"city\": \"Mumbai\",\n      \"is_home\": true,\n      \"match_date\": \"2026-04-12\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"19:30\",\n      \"opponent_code\": \"RCB\",\n      \"opponent_name\": \"Royal Challengers Bengaluru\",\n      \"venue\": \"Wankhede Stadium\"\n    }\n  ],\n  \"league_matches_expected\": 14,\n  \"player\": {\n    \"full_name\": \"Mitchell Santner\",\n    \"is_overseas\": true,\n    \"nickname\": \"Santner\",\n    \"official_player_id\": \"1903\",\n    \"official_player_url\": \"https://www.iplt20.com/players/mitchell-santner/1903\",\n    \"role\": \"AR\",\n    \"season_2024_matches\": \"3\",\n    \"season_2024_runs\": \"14\",\n    \"season_2024_wickets\": \"2\",\n    \"season_2025_matches\": \"13\",\n    \"season_2025_runs\": \"40\",\n    \"season_2025_wickets\": \"10\"\n  },\n  \"published_fixture_count\": 4,\n  \"team_code\": \"MI\",\n  \"team_level_baseline\": {\n    \"availability_basis\": \"inferred_no_adverse_news\",\n    \"availability_comment\": \"No injury or national-duty conflict found for early IPL window; prompt schedule is partial.\",\n    \"availability_expected_matches_available\": 14,\n    \"availability_modifier\": 1.0,\n    \"availability_note\": \"No recent availability issue found.\",\n    \"availability_source_urls\": [\n      \"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\n      \"https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket\"\n    ],\n    \"followup_reason\": \"Selection may hinge on venue-specific spin demand and which keeper-opener MI choose.\",\n    \"full_name\": \"Mitchell Santner\",\n    \"needs_player_followup\": true,\n    \"official_player_id\": \"1903\",\n    \"overseas_competition_basis\": \"overseas_slot_pressure\",\n    \"overseas_competition_comment\": \"Useful balance piece, though not fully immune from combination changes.\",\n    \"overseas_competition_note\": \"Competes for four overseas spots but has a credible path because MI may want a frontline overseas spinner/all-rounder.\",\n    \"overseas_competition_source_urls\": [\n      \"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\n      \"https://www.cricbuzz.com/cricket-news/132545/ipl-2025-auction-how-the-teams-stack-up-cricbuzzcom\"\n    ],\n    \"playing_xi_basis\": \"inferred_from_team_context\",\n    \"playing_xi_comment\": \"Strong overseas spin-all-round option, especially if MI want balance and control.\",\n    \"playing_xi_source_urls\": [\n      \"https://www.iplt20.com/teams/mumbai-indians/squad/2026\",\n      \"https://www.cricbuzz.com/cricket-news/132545/ipl-2025-auction-how-the-teams-stack-up-cricbuzzcom\"\n    ],\n    \"playing_xi_tier\": \"LIKELY\",\n    \"research_confidence\": \"Medium\"\n  },\n  \"team_name\": \"Mumbai Indians\"\n}",
+            "type": "input_text"
+          }
+        ],
+        "role": "user"
+      }
+    ],
+    "max_output_tokens": 2500,
+    "model": "gpt-5.4",
+    "text": {
+      "format": {
+        "name": "mi_1903_followup",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "availability_basis": {
+              "enum": [
+                "confirmed_available",
+                "conflicting_reports",
+                "inferred_no_adverse_news",
+                "injury_report",
+                "late_joining",
+                "suspension",
+                "tournament_conflict",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "availability_comment": {
+              "type": "string"
+            },
+            "availability_expected_matches_available": {
+              "type": "integer"
+            },
+            "availability_modifier": {
+              "type": "number"
+            },
+            "availability_note": {
+              "type": "string"
+            },
+            "availability_source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "followup_reason": {
+              "type": "string"
+            },
+            "full_name": {
+              "type": "string"
+            },
+            "needs_player_followup": {
+              "type": "boolean"
+            },
+            "official_player_id": {
+              "type": "string"
+            },
+            "overseas_competition_basis": {
+              "enum": [
+                "confirmed_role",
+                "conflicting_reports",
+                "domestic_player",
+                "overseas_slot_pressure",
+                "role_depth_competition",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "overseas_competition_comment": {
+              "type": "string"
+            },
+            "overseas_competition_note": {
+              "type": "string"
+            },
+            "overseas_competition_source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "playing_xi_basis": {
+              "enum": [
+                "confirmed_role",
+                "conflicting_reports",
+                "inferred_from_team_context",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "playing_xi_comment": {
+              "type": "string"
+            },
+            "playing_xi_source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "playing_xi_tier": {
+              "enum": [
+                "GUARANTEED",
+                "LIKELY",
+                "ROTATION",
+                "UNLIKELY"
+              ],
+              "type": "string"
+            },
+            "research_confidence": {
+              "enum": [
+                "High",
+                "Low",
+                "Medium"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "official_player_id",
+            "full_name",
+            "playing_xi_tier",
+            "playing_xi_basis",
+            "playing_xi_comment",
+            "playing_xi_source_urls",
+            "availability_modifier",
+            "availability_basis",
+            "availability_expected_matches_available",
+            "availability_note",
+            "availability_comment",
+            "availability_source_urls",
+            "overseas_competition_note",
+            "overseas_competition_basis",
+            "overseas_competition_comment",
+            "overseas_competition_source_urls",
+            "research_confidence",
+            "needs_player_followup",
+            "followup_reason"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ]
+  },
+  "request_id": "510b15c1-29e0-42b5-88d8-45487e803263",
+  "response": {
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1774270687,
+    "created_at": 1774270676,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "id": "resp_00c1dd76d09e21b50069c138d424a8819ca7d3f529f2f19a91",
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": 2500,
+    "max_tool_calls": null,
+    "metadata": {},
+    "model": "gpt-5.4-2026-03-05",
+    "object": "response",
+    "output": [
+      {
+        "action": {
+          "queries": [
+            "site:iplt20.com Mumbai Indians squad 2026 Mitchell Santner",
+            "site:mumbaiindians.com Mitchell Santner Mumbai Indians 2026 squad",
+            "site:bcci.tv Mitchell Santner IPL 2026 Mumbai Indians",
+            "Mitchell Santner Mumbai Indians 2026 playing XI injury availability March 2026"
+          ],
+          "query": "site:iplt20.com Mumbai Indians squad 2026 Mitchell Santner",
+          "type": "search"
+        },
+        "id": "ws_00c1dd76d09e21b50069c138d4abc8819c8f63ee981e524547",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "action": {
+          "type": "open_page",
+          "url": "https://www.mumbaiindians.com/news/mumbai-indians-ipl-2026-retentions"
+        },
+        "id": "ws_00c1dd76d09e21b50069c138d69b28819cb995a6075ee83c0e",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "action": {
+          "queries": [
+            "Mitchell Santner injury update March 2026 New Zealand cricket",
+            "Mitchell Santner March 2026 available IPL 2026 Mumbai Indians",
+            "site:nzc.nz Mitchell Santner March 2026"
+          ],
+          "query": "Mitchell Santner injury update March 2026 New Zealand cricket",
+          "type": "search"
+        },
+        "id": "ws_00c1dd76d09e21b50069c138d7b724819c9dea740fbbad93ea",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "content": [
+          {
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"official_player_id\":\"1903\",\"full_name\":\"Mitchell Santner\",\"playing_xi_tier\":\"LIKELY\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Retained core overseas all-rounder; likely starter but combo can shift with MI's other overseas options.\",\"playing_xi_source_urls\":[\"https://www.mumbaiindians.com/news/mumbai-indians-ipl-2026-retentions\",\"https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket\",\"https://www.cricbuzz.com/cricket-news/136925/ipl-2026-auction-how-the-teams-fared-part-ii/\"],\"availability_modifier\":1,\"availability_basis\":\"confirmed_available\",\"availability_expected_matches_available\":14,\"availability_note\":\"Recovered from 2025 surgery; no fresh issue found before IPL 2026.\",\"availability_comment\":\"NZC confirmed recovery from abdominal surgery in October 2025, and MI list him in the 2026 squad with no current restriction reported.\",\"availability_source_urls\":[\"https://www.nzc.nz/news-items/o-rourke-phillips-allen-ruled-out-of-australia-series-santner-set-for-surgery/\",\"https://www.nzc.nz/news-items/archive/santner-ravindra-return-for-england-williamson-targets-odi-series/\",\"https://www.mumbaiindians.com/news/mumbai-indians-ipl-2026-retentions\"],\"overseas_competition_note\":\"Competes for four overseas spots against Boult, Jacks, Rickelton/de Kock, Bosch, Rutherford and Ghazanfar.\",\"overseas_competition_basis\":\"overseas_slot_pressure\",\"overseas_competition_comment\":\"Good balance option, but MI have several viable overseas combinations so he is not fully locked.\",\"overseas_competition_source_urls\":[\"https://www.mumbaiindians.com/news/squad-of-2026-assembled-mumbai-indians-cricket\",\"https://www.mumbaiindians.com/news/mumbai-indians-ipl-2026-retentions\",\"https://www.cricbuzz.com/cricket-news/136925/ipl-2026-auction-how-the-teams-fared-part-ii/\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":false,\"followup_reason\":\"No active availability concern found; only normal selection-combination uncertainty remains.\"}",
+            "type": "output_text"
+          }
+        ],
+        "id": "msg_00c1dd76d09e21b50069c138da1ce0819cb4998f07fbb3a0c8",
+        "phase": "final_answer",
+        "role": "assistant",
+        "status": "completed",
+        "type": "message"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": null,
+    "reasoning": {
+      "effort": "none",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "store": true,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "description": null,
+        "name": "mi_1903_followup",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "availability_basis": {
+              "enum": [
+                "confirmed_available",
+                "conflicting_reports",
+                "inferred_no_adverse_news",
+                "injury_report",
+                "late_joining",
+                "suspension",
+                "tournament_conflict",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "availability_comment": {
+              "type": "string"
+            },
+            "availability_expected_matches_available": {
+              "type": "integer"
+            },
+            "availability_modifier": {
+              "type": "number"
+            },
+            "availability_note": {
+              "type": "string"
+            },
+            "availability_source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "followup_reason": {
+              "type": "string"
+            },
+            "full_name": {
+              "type": "string"
+            },
+            "needs_player_followup": {
+              "type": "boolean"
+            },
+            "official_player_id": {
+              "type": "string"
+            },
+            "overseas_competition_basis": {
+              "enum": [
+                "confirmed_role",
+                "conflicting_reports",
+                "domestic_player",
+                "overseas_slot_pressure",
+                "role_depth_competition",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "overseas_competition_comment": {
+              "type": "string"
+            },
+            "overseas_competition_note": {
+              "type": "string"
+            },
+            "overseas_competition_source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "playing_xi_basis": {
+              "enum": [
+                "confirmed_role",
+                "conflicting_reports",
+                "inferred_from_team_context",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "playing_xi_comment": {
+              "type": "string"
+            },
+            "playing_xi_source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "playing_xi_tier": {
+              "enum": [
+                "GUARANTEED",
+                "LIKELY",
+                "ROTATION",
+                "UNLIKELY"
+              ],
+              "type": "string"
+            },
+            "research_confidence": {
+              "enum": [
+                "High",
+                "Low",
+                "Medium"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "official_player_id",
+            "full_name",
+            "playing_xi_tier",
+            "playing_xi_basis",
+            "playing_xi_comment",
+            "playing_xi_source_urls",
+            "availability_modifier",
+            "availability_basis",
+            "availability_expected_matches_available",
+            "availability_note",
+            "availability_comment",
+            "availability_source_urls",
+            "overseas_competition_note",
+            "overseas_competition_basis",
+            "overseas_competition_comment",
+            "overseas_competition_source_urls",
+            "research_confidence",
+            "needs_player_followup",
+            "followup_reason"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "search_context_size": "medium",
+        "type": "web_search",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 17985,
+      "input_tokens_details": {
+        "cached_tokens": 3712
+      },
+      "output_tokens": 805,
+      "output_tokens_details": {
+        "reasoning_tokens": 288
+      },
+      "total_tokens": 18790
+    },
+    "user": null
+  },
+  "saved_at": "2026-03-23T12:58:08.394653+00:00"
+}

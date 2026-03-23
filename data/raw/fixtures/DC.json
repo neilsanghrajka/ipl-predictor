@@ -1,0 +1,73 @@
+{
+  "competition_id": "284",
+  "fixtures": [
+    {
+      "city": "Lucknow",
+      "competition_id": "284",
+      "is_home": false,
+      "match_date": "2026-04-01",
+      "match_date_display": "1 Apr 2026",
+      "match_datetime_local": "2026-04-01 19:30:00",
+      "match_id": "2421",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "LSG",
+      "opponent_name": "Lucknow Super Giants",
+      "team_code": "DC",
+      "team_name": "Delhi Capitals",
+      "venue": "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium"
+    },
+    {
+      "city": "Delhi",
+      "competition_id": "284",
+      "is_home": true,
+      "match_date": "2026-04-04",
+      "match_date_display": "4 Apr 2026",
+      "match_datetime_local": "2026-04-04 15:30:00",
+      "match_id": "2424",
+      "match_status": "UpComing",
+      "match_time_local": "15:30",
+      "opponent_code": "MI",
+      "opponent_name": "Mumbai Indians",
+      "team_code": "DC",
+      "team_name": "Delhi Capitals",
+      "venue": "Arun Jaitley Stadium"
+    },
+    {
+      "city": "Delhi",
+      "competition_id": "284",
+      "is_home": true,
+      "match_date": "2026-04-08",
+      "match_date_display": "8 Apr 2026",
+      "match_datetime_local": "2026-04-08 19:30:00",
+      "match_id": "2430",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "GT",
+      "opponent_name": "Gujarat Titans",
+      "team_code": "DC",
+      "team_name": "Delhi Capitals",
+      "venue": "Arun Jaitley Stadium"
+    },
+    {
+      "city": "Chennai",
+      "competition_id": "284",
+      "is_home": false,
+      "match_date": "2026-04-11",
+      "match_date_display": "11 Apr 2026",
+      "match_datetime_local": "2026-04-11 19:30:00",
+      "match_id": "2434",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "CSK",
+      "opponent_name": "Chennai Super Kings",
+      "team_code": "DC",
+      "team_name": "Delhi Capitals",
+      "venue": "MA Chidambaram Stadium"
+    }
+  ],
+  "published_fixture_count": 4,
+  "season": "2026",
+  "team": "DC",
+  "team_name": "Delhi Capitals"
+}

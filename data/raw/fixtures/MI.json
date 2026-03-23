@@ -1,0 +1,73 @@
+{
+  "competition_id": "284",
+  "fixtures": [
+    {
+      "city": "Mumbai",
+      "competition_id": "284",
+      "is_home": true,
+      "match_date": "2026-03-29",
+      "match_date_display": "29 Mar 2026",
+      "match_datetime_local": "2026-03-29 19:30:00",
+      "match_id": "2418",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "KKR",
+      "opponent_name": "Kolkata Knight Riders",
+      "team_code": "MI",
+      "team_name": "Mumbai Indians",
+      "venue": "Wankhede Stadium"
+    },
+    {
+      "city": "Delhi",
+      "competition_id": "284",
+      "is_home": false,
+      "match_date": "2026-04-04",
+      "match_date_display": "4 Apr 2026",
+      "match_datetime_local": "2026-04-04 15:30:00",
+      "match_id": "2424",
+      "match_status": "UpComing",
+      "match_time_local": "15:30",
+      "opponent_code": "DC",
+      "opponent_name": "Delhi Capitals",
+      "team_code": "MI",
+      "team_name": "Mumbai Indians",
+      "venue": "Arun Jaitley Stadium"
+    },
+    {
+      "city": "Guwahati",
+      "competition_id": "284",
+      "is_home": false,
+      "match_date": "2026-04-07",
+      "match_date_display": "7 Apr 2026",
+      "match_datetime_local": "2026-04-07 19:30:00",
+      "match_id": "2429",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "RR",
+      "opponent_name": "Rajasthan Royals",
+      "team_code": "MI",
+      "team_name": "Mumbai Indians",
+      "venue": "ACA Stadium"
+    },
+    {
+      "city": "Mumbai",
+      "competition_id": "284",
+      "is_home": true,
+      "match_date": "2026-04-12",
+      "match_date_display": "12 Apr 2026",
+      "match_datetime_local": "2026-04-12 19:30:00",
+      "match_id": "2436",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "RCB",
+      "opponent_name": "Royal Challengers Bengaluru",
+      "team_code": "MI",
+      "team_name": "Mumbai Indians",
+      "venue": "Wankhede Stadium"
+    }
+  ],
+  "published_fixture_count": 4,
+  "season": "2026",
+  "team": "MI",
+  "team_name": "Mumbai Indians"
+}

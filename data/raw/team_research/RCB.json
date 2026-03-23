@@ -1,0 +1,1020 @@
+{
+  "parsed": {
+    "players": [
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Part-1 schedule is published through April 12, 2026 only; full 14-match league schedule not visible here, so season-long availability is estimated conservatively.",
+        "availability_expected_matches_available": 12,
+        "availability_modifier": 0.86,
+        "availability_note": "No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.",
+        "availability_source_urls": [
+          "https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf",
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/"
+        ],
+        "followup_reason": "",
+        "full_name": "Krunal Pandya",
+        "needs_player_followup": false,
+        "official_player_id": "3183",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Competes on role balance, not overseas slots.",
+        "overseas_competition_note": "Domestic player; overseas-player cap is not the constraint for selection.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/players/krunal-pandya/3183",
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Core Indian all-rounder retained from title-winning group; widely projected in settled first-choice balance.",
+        "playing_xi_source_urls": [
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/",
+          "https://www.cricbuzz.com/cricket-news/134433/rcb-hope-to-keep-top-two-ambitions-on-track-after-long-break"
+        ],
+        "playing_xi_tier": "GUARANTEED",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Part-1 schedule only is visible, so 14-match estimate cannot be confirmed fixture-by-fixture.",
+        "availability_expected_matches_available": 12,
+        "availability_modifier": 0.86,
+        "availability_note": "No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.",
+        "availability_source_urls": [
+          "https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf",
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/"
+        ],
+        "followup_reason": "",
+        "full_name": "Jitesh Sharma",
+        "needs_player_followup": false,
+        "official_player_id": "3185",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Selection depends on batting/keeper combination rather than overseas slots.",
+        "overseas_competition_note": "Domestic player; overseas cap does not block him, though keeper-batter mix with Phil Salt affects role fit.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/players/jitesh-sharma/3185",
+          "https://www.cricbuzz.com/cricket-news/134433/rcb-hope-to-keep-top-two-ambitions-on-track-after-long-break"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Retained wicketkeeper-batter and commonly included in projected RCB XI, but one overseas keeper option exists.",
+        "playing_xi_source_urls": [
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/",
+          "https://www.cricbuzz.com/cricket-news/134433/rcb-hope-to-keep-top-two-ambitions-on-track-after-long-break"
+        ],
+        "playing_xi_tier": "LIKELY",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Published fixture visibility is incomplete beyond April 12, 2026, so full-season estimate is not exact.",
+        "availability_expected_matches_available": 12,
+        "availability_modifier": 0.86,
+        "availability_note": "No March 2026 unavailability report found; estimate conservative because only early fixtures are published.",
+        "availability_source_urls": [
+          "https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf",
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/"
+        ],
+        "followup_reason": "",
+        "full_name": "Phil Salt",
+        "needs_player_followup": false,
+        "official_player_id": "5606",
+        "overseas_competition_basis": "confirmed_role",
+        "overseas_competition_comment": "Usually occupies one of the four overseas slots when available.",
+        "overseas_competition_note": "Strong first-choice overseas slot candidate at the top; competition exists but role fit is favorable.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/players/phil-salt/5606",
+          "https://www.cricbuzz.com/cricket-news/134081/inspired-pbks-bring-form-and-fire-to-target-rcbs-home-hex"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Frontline retained overseas opener-wicketkeeper and regular feature in RCB probable XIs.",
+        "playing_xi_source_urls": [
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/",
+          "https://www.cricbuzz.com/cricket-news/134081/inspired-pbks-bring-form-and-fire-to-target-rcbs-home-hex"
+        ],
+        "playing_xi_tier": "GUARANTEED",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Only Part-1 schedule is currently visible, limiting precision on a 14-match estimate.",
+        "availability_expected_matches_available": 12,
+        "availability_modifier": 0.86,
+        "availability_note": "No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.",
+        "availability_source_urls": [
+          "https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf",
+          "https://www.etnownews.com/sports/ipl-2026-royal-challengers-bengaluru-rcb-squad-for-indian-premier-league-updates-check-rcb-full-team-list-players-names-playing-xi-captain-rajat-patidar-article-153294997/amp"
+        ],
+        "followup_reason": "",
+        "full_name": "Rajat Patidar",
+        "needs_player_followup": false,
+        "official_player_id": "5471",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Selection driven by leadership/top-order role, not overseas slots.",
+        "overseas_competition_note": "Domestic player; overseas cap is irrelevant to his place.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/players/rajat-patidar/5471",
+          "https://www.etnownews.com/sports/ipl-2026-royal-challengers-bengaluru-rcb-squad-for-indian-premier-league-updates-check-rcb-full-team-list-players-names-playing-xi-captain-rajat-patidar-article-153294997/amp"
+        ],
+        "playing_xi_basis": "confirmed_role",
+        "playing_xi_comment": "Captain and retained batting mainstay; first-choice XI lock.",
+        "playing_xi_source_urls": [
+          "https://www.etnownews.com/sports/ipl-2026-royal-challengers-bengaluru-rcb-squad-for-indian-premier-league-updates-check-rcb-full-team-list-players-names-playing-xi-captain-rajat-patidar-article-153294997/amp",
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/"
+        ],
+        "playing_xi_tier": "GUARANTEED",
+        "research_confidence": "High"
+      },
+      {
+        "availability_basis": "injury_report",
+        "availability_comment": "Availability remains an informed estimate, not a franchise confirmation; schedule visibility is also incomplete beyond April 12, 2026.",
+        "availability_expected_matches_available": 11,
+        "availability_modifier": 0.79,
+        "availability_note": "Recent hamstring issue was reported earlier in the winter; later coverage suggests likely fitness for IPL start, but not fully official.",
+        "availability_source_urls": [
+          "https://www.indiatoday.in/sports/cricket/story/tim-david-injury-rcb-ipl-2025-playoffs-setback-2729715-2025-05-24",
+          "https://www.mykhel.com/cricket/will-tim-david-play-for-rcb-in-ipl-2026-after-hamstring-injury-rules-him-out-of-bbl-403926.html"
+        ],
+        "followup_reason": "Recent injury recovery status before March 28, 2026 opener is not confirmed by a primary source.",
+        "full_name": "Tim David",
+        "needs_player_followup": true,
+        "official_player_id": "4524",
+        "overseas_competition_basis": "overseas_slot_pressure",
+        "overseas_competition_comment": "Finisher role is valuable but not automatically above all overseas alternatives.",
+        "overseas_competition_note": "Competes directly with Salt, Hazlewood, Bethell, Shepherd and Duffy for four overseas slots.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/players/tim-david/4524",
+          "https://www.cricbuzz.com/cricket-news/134433/rcb-hope-to-keep-top-two-ambitions-on-track-after-long-break"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Retained overseas finisher and frequent probable-XI pick, but overseas-slot squeeze could alter combination.",
+        "playing_xi_source_urls": [
+          "https://www.cricbuzz.com/cricket-news/134433/rcb-hope-to-keep-top-two-ambitions-on-track-after-long-break",
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/"
+        ],
+        "playing_xi_tier": "LIKELY",
+        "research_confidence": "Low"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Part-1 fixture publication limits certainty over all 14 league matches.",
+        "availability_expected_matches_available": 12,
+        "availability_modifier": 0.86,
+        "availability_note": "No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.",
+        "availability_source_urls": [
+          "https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf",
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/"
+        ],
+        "followup_reason": "",
+        "full_name": "Virat Kohli",
+        "needs_player_followup": false,
+        "official_player_id": "164",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Undisputed Indian batting core member.",
+        "overseas_competition_note": "Domestic player; overseas cap is not relevant.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/players/virat-kohli/164",
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/"
+        ],
+        "playing_xi_basis": "confirmed_role",
+        "playing_xi_comment": "Franchise icon and automatic starter.",
+        "playing_xi_source_urls": [
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/",
+          "https://www.etnownews.com/sports/ipl-2026-royal-challengers-bengaluru-rcb-squad-for-indian-premier-league-updates-check-rcb-full-team-list-players-names-playing-xi-captain-rajat-patidar-article-153294997/amp"
+        ],
+        "playing_xi_tier": "GUARANTEED",
+        "research_confidence": "High"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Only early-season schedule is published in available official material.",
+        "availability_expected_matches_available": 12,
+        "availability_modifier": 0.86,
+        "availability_note": "No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.",
+        "availability_source_urls": [
+          "https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf",
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/"
+        ],
+        "followup_reason": "",
+        "full_name": "Devdutt Padikkal",
+        "needs_player_followup": false,
+        "official_player_id": "5430",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Competes with domestic batting options, not overseas slots.",
+        "overseas_competition_note": "Domestic player; overseas cap does not constrain selection, though top-order role competition remains.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/players/devdutt-padikkal/5430",
+          "https://www.cricbuzz.com/cricket-news/134081/inspired-pbks-bring-form-and-fire-to-target-rcbs-home-hex"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Retained domestic top-order left-hander; often used in RCB combinations but not as immovable as the core locks.",
+        "playing_xi_source_urls": [
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/",
+          "https://www.cricbuzz.com/cricket-news/134081/inspired-pbks-bring-form-and-fire-to-target-rcbs-home-hex"
+        ],
+        "playing_xi_tier": "LIKELY",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "injury_report",
+        "availability_comment": "This is the key unresolved player-level availability issue. Only Part-1 fixtures are published, and pre-season fitness clearance was still uncertain in recent reports.",
+        "availability_expected_matches_available": 9,
+        "availability_modifier": 0.64,
+        "availability_note": "Fitness for IPL 2026 start is in doubt because of a recent hamstring issue; likely to miss at least the opening phase unless cleared.",
+        "availability_source_urls": [
+          "https://www.moneycontrol.com/sports/cricket/ipl-2026-josh-hazlewood-s-participation-in-doubt-rcb-await-fitness-clearance-article-13859120.html/amp",
+          "https://www.ipl.com/cricket/news/ipl-2026-josh-hazlewoods-availability-in-doubt-as-indian-players-join-training-camp-march-16/"
+        ],
+        "followup_reason": "Pre-opener medical clearance and exact matches missed remain unresolved.",
+        "full_name": "Josh Hazlewood",
+        "needs_player_followup": true,
+        "official_player_id": "857",
+        "overseas_competition_basis": "confirmed_role",
+        "overseas_competition_comment": "Preferred overseas seamer when available.",
+        "overseas_competition_note": "If fit he is a first-choice overseas pick, but any delayed clearance opens the door for Duffy/Shepherd/Bethell balance decisions.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/players/josh-hazlewood/857",
+          "https://www.cricbuzz.com/cricket-news/134081/inspired-pbks-bring-form-and-fire-to-target-rcbs-home-hex"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "First-choice overseas strike pacer when fit; central to RCB's preferred attack.",
+        "playing_xi_source_urls": [
+          "https://www.cricbuzz.com/cricket-news/134081/inspired-pbks-bring-form-and-fire-to-target-rcbs-home-hex",
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/"
+        ],
+        "playing_xi_tier": "GUARANTEED",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Early-schedule publication only; season-long estimate is conservative.",
+        "availability_expected_matches_available": 12,
+        "availability_modifier": 0.86,
+        "availability_note": "No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.",
+        "availability_source_urls": [
+          "https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf",
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/"
+        ],
+        "followup_reason": "",
+        "full_name": "Rasikh Dar",
+        "needs_player_followup": false,
+        "official_player_id": "20577",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Competes within Indian pace depth.",
+        "overseas_competition_note": "Domestic player; overseas cap is not the constraint. Opportunity may rise if overseas fast bowler availability is hit.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/players/rasikh-dar/20577",
+          "https://www.cricbuzz.com/cricket-news/134433/rcb-hope-to-keep-top-two-ambitions-on-track-after-long-break"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Depth Indian seamer; more likely to cover or rotate than start every game in a full-strength pace attack.",
+        "playing_xi_source_urls": [
+          "https://www.cricbuzz.com/cricket-news/134433/rcb-hope-to-keep-top-two-ambitions-on-track-after-long-break",
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/"
+        ],
+        "playing_xi_tier": "ROTATION",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Schedule publication is incomplete beyond April 12, 2026.",
+        "availability_expected_matches_available": 12,
+        "availability_modifier": 0.86,
+        "availability_note": "No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.",
+        "availability_source_urls": [
+          "https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf",
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/"
+        ],
+        "followup_reason": "",
+        "full_name": "Romario Shepherd",
+        "needs_player_followup": false,
+        "official_player_id": "20609",
+        "overseas_competition_basis": "overseas_slot_pressure",
+        "overseas_competition_comment": "Useful backup/condition-specific overseas option rather than a universal lock.",
+        "overseas_competition_note": "Faces direct four-slot competition from Salt, Hazlewood, David, Bethell and Duffy.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/players/romario-shepherd/20609",
+          "https://www.cricbuzz.com/cricket-news/134433/rcb-hope-to-keep-top-two-ambitions-on-track-after-long-break"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Retained overseas pace-bowling all-rounder, but usually combination-dependent because of four-overseas limit.",
+        "playing_xi_source_urls": [
+          "https://www.cricbuzz.com/cricket-news/134433/rcb-hope-to-keep-top-two-ambitions-on-track-after-long-break",
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/"
+        ],
+        "playing_xi_tier": "ROTATION",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Only early fixtures are officially visible in available schedule PDF.",
+        "availability_expected_matches_available": 12,
+        "availability_modifier": 0.86,
+        "availability_note": "No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.",
+        "availability_source_urls": [
+          "https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf",
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/"
+        ],
+        "followup_reason": "",
+        "full_name": "Yash Dayal",
+        "needs_player_followup": false,
+        "official_player_id": "20591",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "First-choice Indian seamer independent of overseas-slot arithmetic.",
+        "overseas_competition_note": "Domestic player; overseas cap is not relevant to selection.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/players/yash-dayal/20591",
+          "https://www.cricbuzz.com/cricket-news/134081/inspired-pbks-bring-form-and-fire-to-target-rcbs-home-hex"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Settled Indian left-arm seamer in RCB's strongest attack.",
+        "playing_xi_source_urls": [
+          "https://www.cricbuzz.com/cricket-news/134081/inspired-pbks-bring-form-and-fire-to-target-rcbs-home-hex",
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/"
+        ],
+        "playing_xi_tier": "GUARANTEED",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Only Part-1 fixtures are presently visible.",
+        "availability_expected_matches_available": 12,
+        "availability_modifier": 0.86,
+        "availability_note": "No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.",
+        "availability_source_urls": [
+          "https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf",
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/"
+        ],
+        "followup_reason": "",
+        "full_name": "Suyash Sharma",
+        "needs_player_followup": false,
+        "official_player_id": "5668",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Role competition is within spin options, not overseas slots.",
+        "overseas_competition_note": "Domestic player; overseas cap is not the constraint.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/players/suyash-sharma/5668",
+          "https://www.cricbuzz.com/cricket-news/134081/inspired-pbks-bring-form-and-fire-to-target-rcbs-home-hex"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Retained Indian spinner and common inclusion in RCB's balanced XI.",
+        "playing_xi_source_urls": [
+          "https://www.cricbuzz.com/cricket-news/134081/inspired-pbks-bring-form-and-fire-to-target-rcbs-home-hex",
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/"
+        ],
+        "playing_xi_tier": "LIKELY",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Only early fixtures are in the published schedule segment used here.",
+        "availability_expected_matches_available": 12,
+        "availability_modifier": 0.86,
+        "availability_note": "No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.",
+        "availability_source_urls": [
+          "https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf",
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/"
+        ],
+        "followup_reason": "",
+        "full_name": "Bhuvneshwar Kumar",
+        "needs_player_followup": false,
+        "official_player_id": "116",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Core Indian seam option.",
+        "overseas_competition_note": "Domestic player; overseas cap is irrelevant.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/players/bhuvneshwar-kumar/116",
+          "https://www.cricbuzz.com/cricket-news/134081/inspired-pbks-bring-form-and-fire-to-target-rcbs-home-hex"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Experienced Indian seamer retained in core attack and regularly present in probable XIs.",
+        "playing_xi_source_urls": [
+          "https://www.cricbuzz.com/cricket-news/134081/inspired-pbks-bring-form-and-fire-to-target-rcbs-home-hex",
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/"
+        ],
+        "playing_xi_tier": "GUARANTEED",
+        "research_confidence": "Medium"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Published schedule is incomplete, so full-season estimate is conservative.",
+        "availability_expected_matches_available": 12,
+        "availability_modifier": 0.86,
+        "availability_note": "No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.",
+        "availability_source_urls": [
+          "https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf",
+          "https://www.etnownews.com/sports/ipl-2026-royal-challengers-bengaluru-rcb-squad-for-indian-premier-league-updates-check-rcb-full-team-list-players-names-playing-xi-captain-rajat-patidar-article-153294997/amp"
+        ],
+        "followup_reason": "Role in first-choice XI is debated after auction and not yet settled by team-sheet evidence.",
+        "full_name": "Venkatesh Iyer",
+        "needs_player_followup": true,
+        "official_player_id": "8540",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Role competition is domestic batting/all-round balance.",
+        "overseas_competition_note": "Domestic player; overseas cap is not the issue. Selection depends on whether RCB prioritise settled title-winning balance.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/players/venkatesh-iyer/8540",
+          "https://www.hindustantimes.com/cricket/anil-kumble-flags-selection-call-on-venkatesh-iyer-in-rcb-s-ipl-2026-plans-he-will-not-be-in-the-playing-xi-101766753059499.html/"
+        ],
+        "playing_xi_basis": "conflicting_reports",
+        "playing_xi_comment": "Headline 2026 buy, but at least one prominent preview argued he may not start immediately in a settled XI.",
+        "playing_xi_source_urls": [
+          "https://www.etnownews.com/sports/ipl-2026-royal-challengers-bengaluru-rcb-squad-for-indian-premier-league-updates-check-rcb-full-team-list-players-names-playing-xi-captain-rajat-patidar-article-153294997/amp",
+          "https://www.hindustantimes.com/cricket/anil-kumble-flags-selection-call-on-venkatesh-iyer-in-rcb-s-ipl-2026-plans-he-will-not-be-in-the-playing-xi-101766753059499.html/"
+        ],
+        "playing_xi_tier": "ROTATION",
+        "research_confidence": "Low"
+      },
+      {
+        "availability_basis": "tournament_conflict",
+        "availability_comment": "Exact overlap with IPL league dates cannot be fully mapped because only Part-1 fixtures are published in the prompt; estimated availability is therefore conservative.",
+        "availability_expected_matches_available": 10,
+        "availability_modifier": 0.71,
+        "availability_note": "England commitments are a live risk; he was in England's 2026 T20 World Cup setup and had prior IPL release history for England duty.",
+        "availability_source_urls": [
+          "https://www.ipl.com/cricket/news/jacob-bethell-named-birmingham-phoenix-captain-for-the-hundred-2026/",
+          "https://www.outlookindia.com/sports/cricket/ipl-2025-royal-challengers-bengaluru-rope-in-tim-seifert-as-jacob-bethell-departs-for-england-duty"
+        ],
+        "followup_reason": "Need confirmation on England release/NOC status and exact joining/exit window for IPL 2026.",
+        "full_name": "Jacob Bethell",
+        "needs_player_followup": true,
+        "official_player_id": "22074",
+        "overseas_competition_basis": "overseas_slot_pressure",
+        "overseas_competition_comment": "Valuable flexibility piece but squeezed by incumbent overseas starters.",
+        "overseas_competition_note": "Directly competes with Salt, Hazlewood, David, Shepherd and Duffy for overseas slots.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/players/jacob-bethell/22074",
+          "https://www.cricbuzz.com/cricket-news/134433/rcb-hope-to-keep-top-two-ambitions-on-track-after-long-break"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "High-upside retained overseas all-rounder, but not a universal lock because RCB have several competing overseas incumbents.",
+        "playing_xi_source_urls": [
+          "https://www.cricbuzz.com/cricket-news/134433/rcb-hope-to-keep-top-two-ambitions-on-track-after-long-break",
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/"
+        ],
+        "playing_xi_tier": "ROTATION",
+        "research_confidence": "Low"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Full fixture list is not fully published in the evidence used here.",
+        "availability_expected_matches_available": 12,
+        "availability_modifier": 0.86,
+        "availability_note": "No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.",
+        "availability_source_urls": [
+          "https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf",
+          "https://www.etnownews.com/sports/ipl-2026-royal-challengers-bengaluru-rcb-squad-for-indian-premier-league-updates-check-rcb-full-team-list-players-names-playing-xi-captain-rajat-patidar-article-153294997/amp"
+        ],
+        "followup_reason": "Very limited role-specific evidence for initial 2026 usage.",
+        "full_name": "Mangesh Yadav",
+        "needs_player_followup": true,
+        "official_player_id": "23040",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Competes within Indian seam reserves.",
+        "overseas_competition_note": "Domestic player; overseas cap is not the issue.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/players/mangesh-yadav/23040",
+          "https://www.hindustantimes.com/cricket/anil-kumble-flags-selection-call-on-venkatesh-iyer-in-rcb-s-ipl-2026-plans-he-will-not-be-in-the-playing-xi-101766753059499.html/"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "New depth Indian pace option; external analysis mentions him as support cover rather than current first XI.",
+        "playing_xi_source_urls": [
+          "https://www.etnownews.com/sports/ipl-2026-royal-challengers-bengaluru-rcb-squad-for-indian-premier-league-updates-check-rcb-full-team-list-players-names-playing-xi-captain-rajat-patidar-article-153294997/amp",
+          "https://www.hindustantimes.com/cricket/anil-kumble-flags-selection-call-on-venkatesh-iyer-in-rcb-s-ipl-2026-plans-he-will-not-be-in-the-playing-xi-101766753059499.html/"
+        ],
+        "playing_xi_tier": "UNLIKELY",
+        "research_confidence": "Low"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Season-long precision limited by partial published fixture set.",
+        "availability_expected_matches_available": 12,
+        "availability_modifier": 0.86,
+        "availability_note": "No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.",
+        "availability_source_urls": [
+          "https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf",
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/"
+        ],
+        "followup_reason": "Little recent evidence on pecking-order position in 2026.",
+        "full_name": "Swapnil Singh",
+        "needs_player_followup": true,
+        "official_player_id": "3180",
+        "overseas_competition_basis": "domestic_player",
+        "overseas_competition_comment": "Competes on balance and conditions only.",
+        "overseas_competition_note": "Domestic player; overseas cap is not the constraint.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/players/swapnil-singh/3180",
+          "https://www.cricbuzz.com/cricket-match-squads/149768/rr-vs-rcb-16th-match-indian-premier-league-2026"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "Retained domestic spin-bowling all-round backup; likely matchup/bench option in full-strength squad.",
+        "playing_xi_source_urls": [
+          "https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/",
+          "https://www.cricbuzz.com/cricket-match-squads/149768/rr-vs-rcb-16th-match-indian-premier-league-2026"
+        ],
+        "playing_xi_tier": "ROTATION",
+        "research_confidence": "Low"
+      },
+      {
+        "availability_basis": "inferred_no_adverse_news",
+        "availability_comment": "Only early official fixtures are visible; full-season estimate remains conservative.",
+        "availability_expected_matches_available": 12,
+        "availability_modifier": 0.86,
+        "availability_note": "No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.",
+        "availability_source_urls": [
+          "https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf",
+          "https://www.etnownews.com/sports/ipl-2026-royal-challengers-bengaluru-rcb-squad-for-indian-premier-league-updates-check-rcb-full-team-list-players-names-playing-xi-captain-rajat-patidar-article-153294997/amp"
+        ],
+        "followup_reason": "Selection depends heavily on Hazlewood fitness and first-match combinations.",
+        "full_name": "Jacob Duffy",
+        "needs_player_followup": true,
+        "official_player_id": "23003",
+        "overseas_competition_basis": "overseas_slot_pressure",
+        "overseas_competition_comment": "Backup overseas seamer unless injury/conditions force selection.",
+        "overseas_competition_note": "Strong overseas-slot pressure; his clearest path is as Hazlewood cover or venue-specific seam option.",
+        "overseas_competition_source_urls": [
+          "https://www.iplt20.com/players/jacob-duffy/23003",
+          "https://www.hindustantimes.com/cricket/ravichandran-ashwin-tips-his-hat-to-rcb-for-pulling-off-sensational-coup-by-bringing-new-zealand-pacer-on-board-101766392532728.html"
+        ],
+        "playing_xi_basis": "inferred_from_team_context",
+        "playing_xi_comment": "2026 overseas pace addition mainly framed as backup/cover, especially if Hazlewood is unavailable.",
+        "playing_xi_source_urls": [
+          "https://www.etnownews.com/sports/ipl-2026-royal-challengers-bengaluru-rcb-squad-for-indian-premier-league-updates-check-rcb-full-team-list-players-names-playing-xi-captain-rajat-patidar-article-153294997/amp",
+          "https://www.hindustantimes.com/cricket/anil-kumble-flags-selection-call-on-venkatesh-iyer-in-rcb-s-ipl-2026-plans-he-will-not-be-in-the-playing-xi-101766753059499.html/"
+        ],
+        "playing_xi_tier": "ROTATION",
+        "research_confidence": "Low"
+      }
+    ],
+    "team": "Royal Challengers Bengaluru"
+  },
+  "request": {
+    "input": [
+      {
+        "content": [
+          {
+            "text": "You are an IPL 2026 squad availability and lineup analyst.\n\nYour job is only to assess non-stats fields for one IPL squad:\n- playing_xi_tier\n- availability_modifier\n- availability_note\n- overseas_competition_note\n- research_confidence\n- source URLs for each aspect\n- whether this player still needs a player-level follow-up\n\nUse web search. Prefer evidence in this order:\n1. Official IPL / franchise / BCCI sources\n2. Reputable cricket reporting\n3. Other high-signal recent coverage only when better sources are unavailable\n\nRules:\n- Do not invent facts.\n- Be conservative. If evidence is weak or conflicting, lower research_confidence.\n- Do not fetch batting/bowling stats; those are handled elsewhere.\n- playing_xi_tier must be one of: GUARANTEED, LIKELY, ROTATION, UNLIKELY\n- playing_xi_basis must be one of: confirmed_role, inferred_from_team_context, conflicting_reports, unknown\n- availability_basis must be one of: confirmed_available, inferred_no_adverse_news, injury_report, late_joining, tournament_conflict, suspension, conflicting_reports, unknown\n- overseas_competition_basis must be one of: overseas_slot_pressure, role_depth_competition, domestic_player, confirmed_role, conflicting_reports, unknown\n- research_confidence must be one of: High, Medium, Low\n- Use actual published IPL 2026 fixtures in the prompt when estimating availability.\n- availability_expected_matches_available must be an integer from 0 to 14.\n- availability_modifier must equal availability_expected_matches_available / 14, rounded reasonably.\n- If published fixtures are incomplete, say so in availability_comment and lower research_confidence where that materially affects the answer.\n- availability_modifier = 1.0 is allowed only with an explicit basis and comment.\n- Every player must have at least one URL in each of:\n  - playing_xi_source_urls\n  - availability_source_urls\n  - overseas_competition_source_urls\n- For domestic players with no overseas-slot issue, overseas_competition_note should still explain that the overseas cap is not the constraint.\n- Keep comments short, factual, and audit-friendly.\n- Return JSON only.",
+            "type": "input_text"
+          }
+        ],
+        "role": "system"
+      },
+      {
+        "content": [
+          {
+            "text": "Assess this IPL 2026 squad and return the structured JSON.\n\n{\n  \"fixtures\": [\n    {\n      \"city\": \"Bengaluru\",\n      \"is_home\": true,\n      \"match_date\": \"2026-03-28\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"19:30\",\n      \"opponent_code\": \"SRH\",\n      \"opponent_name\": \"Sunrisers Hyderabad\",\n      \"venue\": \"M Chinnaswamy Stadium\"\n    },\n    {\n      \"city\": \"Bengaluru\",\n      \"is_home\": true,\n      \"match_date\": \"2026-04-05\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"19:30\",\n      \"opponent_code\": \"CSK\",\n      \"opponent_name\": \"Chennai Super Kings\",\n      \"venue\": \"M Chinnaswamy Stadium\"\n    },\n    {\n      \"city\": \"Guwahati\",\n      \"is_home\": false,\n      \"match_date\": \"2026-04-10\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"19:30\",\n      \"opponent_code\": \"RR\",\n      \"opponent_name\": \"Rajasthan Royals\",\n      \"venue\": \"ACA Stadium\"\n    },\n    {\n      \"city\": \"Mumbai\",\n      \"is_home\": false,\n      \"match_date\": \"2026-04-12\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"19:30\",\n      \"opponent_code\": \"MI\",\n      \"opponent_name\": \"Mumbai Indians\",\n      \"venue\": \"Wankhede Stadium\"\n    }\n  ],\n  \"league_matches_expected\": 14,\n  \"players\": [\n    {\n      \"full_name\": \"Krunal Pandya\",\n      \"is_overseas\": false,\n      \"nickname\": \"Krunal\",\n      \"official_player_id\": \"3183\",\n      \"official_player_url\": \"https://www.iplt20.com/players/krunal-pandya/3183\",\n      \"role\": \"AR\",\n      \"season_2024_matches\": \"14\",\n      \"season_2024_runs\": \"133\",\n      \"season_2024_wickets\": \"6\",\n      \"season_2025_matches\": \"15\",\n      \"season_2025_runs\": \"109\",\n      \"season_2025_wickets\": \"17\"\n    },\n    {\n      \"full_name\": \"Jitesh Sharma\",\n      \"is_overseas\": false,\n      \"nickname\": \"Jitesh\",\n      \"official_player_id\": \"3185\",\n      \"official_player_url\": \"https://www.iplt20.com/players/jitesh-sharma/3185\",\n      \"role\": \"WK\",\n      \"season_2024_matches\": \"14\",\n      \"season_2024_runs\": \"187\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"15\",\n      \"season_2025_runs\": \"261\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Phil Salt\",\n      \"is_overseas\": true,\n      \"nickname\": \"Salt\",\n      \"official_player_id\": \"5606\",\n      \"official_player_url\": \"https://www.iplt20.com/players/phil-salt/5606\",\n      \"role\": \"WK\",\n      \"season_2024_matches\": \"12\",\n      \"season_2024_runs\": \"435\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"13\",\n      \"season_2025_runs\": \"403\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Rajat Patidar\",\n      \"is_overseas\": false,\n      \"nickname\": \"Patidar\",\n      \"official_player_id\": \"5471\",\n      \"official_player_url\": \"https://www.iplt20.com/players/rajat-patidar/5471\",\n      \"role\": \"BAT\",\n      \"season_2024_matches\": \"15\",\n      \"season_2024_runs\": \"395\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"15\",\n      \"season_2025_runs\": \"312\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Tim David\",\n      \"is_overseas\": true,\n      \"nickname\": \"David\",\n      \"official_player_id\": \"4524\",\n      \"official_player_url\": \"https://www.iplt20.com/players/tim-david/4524\",\n      \"role\": \"BAT\",\n      \"season_2024_matches\": \"13\",\n      \"season_2024_runs\": \"241\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"12\",\n      \"season_2025_runs\": \"187\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Virat Kohli\",\n      \"is_overseas\": false,\n      \"nickname\": \"VK\",\n      \"official_player_id\": \"164\",\n      \"official_player_url\": \"https://www.iplt20.com/players/virat-kohli/164\",\n      \"role\": \"BAT\",\n      \"season_2024_matches\": \"15\",\n      \"season_2024_runs\": \"741\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"15\",\n      \"season_2025_runs\": \"657\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Devdutt Padikkal\",\n      \"is_overseas\": false,\n      \"nickname\": \"DDP\",\n      \"official_player_id\": \"5430\",\n      \"official_player_url\": \"https://www.iplt20.com/players/devdutt-padikkal/5430\",\n      \"role\": \"BAT\",\n      \"season_2024_matches\": \"7\",\n      \"season_2024_runs\": \"38\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"10\",\n      \"season_2025_runs\": \"247\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Josh Hazlewood\",\n      \"is_overseas\": true,\n      \"nickname\": \"Hazelwood\",\n      \"official_player_id\": \"857\",\n      \"official_player_url\": \"https://www.iplt20.com/players/josh-hazlewood/857\",\n      \"role\": \"BOWL\",\n      \"season_2024_matches\": \"\",\n      \"season_2024_runs\": \"\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"12\",\n      \"season_2025_runs\": \"0\",\n      \"season_2025_wickets\": \"22\"\n    },\n    {\n      \"full_name\": \"Rasikh Dar\",\n      \"is_overseas\": false,\n      \"nickname\": \"Rasikh\",\n      \"official_player_id\": \"20577\",\n      \"official_player_url\": \"https://www.iplt20.com/players/rasikh-dar/20577\",\n      \"role\": \"BOWL\",\n      \"season_2024_matches\": \"8\",\n      \"season_2024_runs\": \"28\",\n      \"season_2024_wickets\": \"9\",\n      \"season_2025_matches\": \"2\",\n      \"season_2025_runs\": \"\",\n      \"season_2025_wickets\": \"1\"\n    },\n    {\n      \"full_name\": \"Romario Shepherd\",\n      \"is_overseas\": true,\n      \"nickname\": \"Romario\",\n      \"official_player_id\": \"20609\",\n      \"official_player_url\": \"https://www.iplt20.com/players/romario-shepherd/20609\",\n      \"role\": \"AR\",\n      \"season_2024_matches\": \"6\",\n      \"season_2024_runs\": \"57\",\n      \"season_2024_wickets\": \"1\",\n      \"season_2025_matches\": \"8\",\n      \"season_2025_runs\": \"70\",\n      \"season_2025_wickets\": \"6\"\n    },\n    {\n      \"full_name\": \"Yash Dayal\",\n      \"is_overseas\": false,\n      \"nickname\": \"Dayal\",\n      \"official_player_id\": \"20591\",\n      \"official_player_url\": \"https://www.iplt20.com/players/yash-dayal/20591\",\n      \"role\": \"BOWL\",\n      \"season_2024_matches\": \"14\",\n      \"season_2024_runs\": \"\",\n      \"season_2024_wickets\": \"15\",\n      \"season_2025_matches\": \"15\",\n      \"season_2025_runs\": \"4\",\n      \"season_2025_wickets\": \"13\"\n    },\n    {\n      \"full_name\": \"Suyash Sharma\",\n      \"is_overseas\": false,\n      \"nickname\": \"Suyash\",\n      \"official_player_id\": \"5668\",\n      \"official_player_url\": \"https://www.iplt20.com/players/suyash-sharma/5668\",\n      \"role\": \"BOWL\",\n      \"season_2024_matches\": \"2\",\n      \"season_2024_runs\": \"\",\n      \"season_2024_wickets\": \"0\",\n      \"season_2025_matches\": \"14\",\n      \"season_2025_runs\": \"\",\n      \"season_2025_wickets\": \"8\"\n    },\n    {\n      \"full_name\": \"Bhuvneshwar Kumar\",\n      \"is_overseas\": false,\n      \"nickname\": \"Bhuvi\",\n      \"official_player_id\": \"116\",\n      \"official_player_url\": \"https://www.iplt20.com/players/bhuvneshwar-kumar/116\",\n      \"role\": \"BOWL\",\n      \"season_2024_matches\": \"16\",\n      \"season_2024_runs\": \"23\",\n      \"season_2024_wickets\": \"11\",\n      \"season_2025_matches\": \"14\",\n      \"season_2025_runs\": \"14\",\n      \"season_2025_wickets\": \"17\"\n    },\n    {\n      \"full_name\": \"Venkatesh Iyer\",\n      \"is_overseas\": false,\n      \"nickname\": \"Venky\",\n      \"official_player_id\": \"8540\",\n      \"official_player_url\": \"https://www.iplt20.com/players/venkatesh-iyer/8540\",\n      \"role\": \"AR\",\n      \"season_2024_matches\": \"15\",\n      \"season_2024_runs\": \"370\",\n      \"season_2024_wickets\": \"0\",\n      \"season_2025_matches\": \"11\",\n      \"season_2025_runs\": \"142\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Jacob Bethell\",\n      \"is_overseas\": true,\n      \"nickname\": \"Bethell\",\n      \"official_player_id\": \"22074\",\n      \"official_player_url\": \"https://www.iplt20.com/players/jacob-bethell/22074\",\n      \"role\": \"AR\",\n      \"season_2024_matches\": \"\",\n      \"season_2024_runs\": \"\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"2\",\n      \"season_2025_runs\": \"67\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Mangesh Yadav\",\n      \"is_overseas\": false,\n      \"nickname\": \"Mangesh\",\n      \"official_player_id\": \"23040\",\n      \"official_player_url\": \"https://www.iplt20.com/players/mangesh-yadav/23040\",\n      \"role\": \"BOWL\",\n      \"season_2024_matches\": \"\",\n      \"season_2024_runs\": \"\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"\",\n      \"season_2025_runs\": \"\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Swapnil Singh\",\n      \"is_overseas\": false,\n      \"nickname\": \"Swapnil\",\n      \"official_player_id\": \"3180\",\n      \"official_player_url\": \"https://www.iplt20.com/players/swapnil-singh/3180\",\n      \"role\": \"AR\",\n      \"season_2024_matches\": \"7\",\n      \"season_2024_runs\": \"37\",\n      \"season_2024_wickets\": \"6\",\n      \"season_2025_matches\": \"\",\n      \"season_2025_runs\": \"\",\n      \"season_2025_wickets\": \"\"\n    },\n    {\n      \"full_name\": \"Jacob Duffy\",\n      \"is_overseas\": true,\n      \"nickname\": \"Duffy\",\n      \"official_player_id\": \"23003\",\n      \"official_player_url\": \"https://www.iplt20.com/players/jacob-duffy/23003\",\n      \"role\": \"BOWL\",\n      \"season_2024_matches\": \"\",\n      \"season_2024_runs\": \"\",\n      \"season_2024_wickets\": \"\",\n      \"season_2025_matches\": \"\",\n      \"season_2025_runs\": \"\",\n      \"season_2025_wickets\": \"\"\n    }\n  ],\n  \"published_fixture_count\": 4,\n  \"team_code\": \"RCB\",\n  \"team_name\": \"Royal Challengers Bengaluru\"\n}",
+            "type": "input_text"
+          }
+        ],
+        "role": "user"
+      }
+    ],
+    "max_output_tokens": 9000,
+    "model": "gpt-5.4",
+    "text": {
+      "format": {
+        "name": "rcb_team_enrichment",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "players": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "availability_basis": {
+                    "enum": [
+                      "confirmed_available",
+                      "conflicting_reports",
+                      "inferred_no_adverse_news",
+                      "injury_report",
+                      "late_joining",
+                      "suspension",
+                      "tournament_conflict",
+                      "unknown"
+                    ],
+                    "type": "string"
+                  },
+                  "availability_comment": {
+                    "type": "string"
+                  },
+                  "availability_expected_matches_available": {
+                    "type": "integer"
+                  },
+                  "availability_modifier": {
+                    "type": "number"
+                  },
+                  "availability_note": {
+                    "type": "string"
+                  },
+                  "availability_source_urls": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "followup_reason": {
+                    "type": "string"
+                  },
+                  "full_name": {
+                    "type": "string"
+                  },
+                  "needs_player_followup": {
+                    "type": "boolean"
+                  },
+                  "official_player_id": {
+                    "type": "string"
+                  },
+                  "overseas_competition_basis": {
+                    "enum": [
+                      "confirmed_role",
+                      "conflicting_reports",
+                      "domestic_player",
+                      "overseas_slot_pressure",
+                      "role_depth_competition",
+                      "unknown"
+                    ],
+                    "type": "string"
+                  },
+                  "overseas_competition_comment": {
+                    "type": "string"
+                  },
+                  "overseas_competition_note": {
+                    "type": "string"
+                  },
+                  "overseas_competition_source_urls": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "playing_xi_basis": {
+                    "enum": [
+                      "confirmed_role",
+                      "conflicting_reports",
+                      "inferred_from_team_context",
+                      "unknown"
+                    ],
+                    "type": "string"
+                  },
+                  "playing_xi_comment": {
+                    "type": "string"
+                  },
+                  "playing_xi_source_urls": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "playing_xi_tier": {
+                    "enum": [
+                      "GUARANTEED",
+                      "LIKELY",
+                      "ROTATION",
+                      "UNLIKELY"
+                    ],
+                    "type": "string"
+                  },
+                  "research_confidence": {
+                    "enum": [
+                      "High",
+                      "Low",
+                      "Medium"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "official_player_id",
+                  "full_name",
+                  "playing_xi_tier",
+                  "playing_xi_basis",
+                  "playing_xi_comment",
+                  "playing_xi_source_urls",
+                  "availability_modifier",
+                  "availability_basis",
+                  "availability_expected_matches_available",
+                  "availability_note",
+                  "availability_comment",
+                  "availability_source_urls",
+                  "overseas_competition_note",
+                  "overseas_competition_basis",
+                  "overseas_competition_comment",
+                  "overseas_competition_source_urls",
+                  "research_confidence",
+                  "needs_player_followup",
+                  "followup_reason"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "team": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "team",
+            "players"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ]
+  },
+  "request_id": "4f6fe3fb-d02b-41ae-9fe2-00c9fcddf56d",
+  "response": {
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1774267554,
+    "created_at": 1774267461,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "id": "resp_0794ff6b6a754a550069c12c45af54819c94f8b1a349ee715e",
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": 9000,
+    "max_tool_calls": null,
+    "metadata": {},
+    "model": "gpt-5.4-2026-03-05",
+    "object": "response",
+    "output": [
+      {
+        "action": {
+          "queries": [
+            "site:iplt20.com Royal Challengers Bengaluru squad 2026 IPL fixtures 2026 RCB",
+            "site:royalchallengers.com RCB 2026 squad official",
+            "site:bcci.tv IPL 2026 schedule Royal Challengers Bengaluru",
+            "RCB 2026 squad Phil Salt Josh Hazlewood Tim David Jacob Bethell Jacob Duffy official auction retained released"
+          ],
+          "query": "site:iplt20.com Royal Challengers Bengaluru squad 2026 IPL fixtures 2026 RCB",
+          "type": "search"
+        },
+        "id": "ws_0794ff6b6a754a550069c12c46939c819c826307c540442fa1",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "action": {
+          "type": "open_page",
+          "url": "https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf"
+        },
+        "id": "ws_0794ff6b6a754a550069c12c48e7bc819c8e375599d8e29ad2",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "action": {
+          "queries": [
+            "site:espncricinfo.com RCB predicted XI 2026 Phil Salt Virat Kohli Rajat Patidar Jitesh Sharma Tim David Josh Hazlewood",
+            "site:cricbuzz.com RCB likely playing XI IPL 2026 Phil Salt Virat Kohli Rajat Patidar",
+            "site:hindustantimes.com RCB playing XI IPL 2026 Venkatesh Iyer Jacob Duffy",
+            "site:sportstar.thehindu.com RCB IPL 2026 squad analysis playing XI"
+          ],
+          "query": "site:espncricinfo.com RCB predicted XI 2026 Phil Salt Virat Kohli Rajat Patidar Jitesh Sharma Tim David Josh Hazlewood",
+          "type": "search"
+        },
+        "id": "ws_0794ff6b6a754a550069c12c49f28c819c9677b4e81dfc2d32",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "action": {
+          "queries": [
+            "Josh Hazlewood injury 2026 IPL RCB March 2026 official",
+            "Phil Salt injury illness March 2026 RCB official",
+            "Tim David injury March 2026 RCB",
+            "Jacob Bethell international duty England March 2026 IPL"
+          ],
+          "query": "Josh Hazlewood injury 2026 IPL RCB March 2026 official",
+          "type": "search"
+        },
+        "id": "ws_0794ff6b6a754a550069c12c4c78d8819caa9f38ab5bf4ced0",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "content": [
+          {
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"team\":\"Royal Challengers Bengaluru\",\"players\":[{\"official_player_id\":\"3183\",\"full_name\":\"Krunal Pandya\",\"playing_xi_tier\":\"GUARANTEED\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Core Indian all-rounder retained from title-winning group; widely projected in settled first-choice balance.\",\"playing_xi_source_urls\":[\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\",\"https://www.cricbuzz.com/cricket-news/134433/rcb-hope-to-keep-top-two-ambitions-on-track-after-long-break\"],\"availability_modifier\":0.86,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":12,\"availability_note\":\"No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.\",\"availability_comment\":\"Part-1 schedule is published through April 12, 2026 only; full 14-match league schedule not visible here, so season-long availability is estimated conservatively.\",\"availability_source_urls\":[\"https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf\",\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\"],\"overseas_competition_note\":\"Domestic player; overseas-player cap is not the constraint for selection.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Competes on role balance, not overseas slots.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/players/krunal-pandya/3183\",\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":false,\"followup_reason\":\"\"},{\"official_player_id\":\"3185\",\"full_name\":\"Jitesh Sharma\",\"playing_xi_tier\":\"LIKELY\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Retained wicketkeeper-batter and commonly included in projected RCB XI, but one overseas keeper option exists.\",\"playing_xi_source_urls\":[\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\",\"https://www.cricbuzz.com/cricket-news/134433/rcb-hope-to-keep-top-two-ambitions-on-track-after-long-break\"],\"availability_modifier\":0.86,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":12,\"availability_note\":\"No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.\",\"availability_comment\":\"Part-1 schedule only is visible, so 14-match estimate cannot be confirmed fixture-by-fixture.\",\"availability_source_urls\":[\"https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf\",\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\"],\"overseas_competition_note\":\"Domestic player; overseas cap does not block him, though keeper-batter mix with Phil Salt affects role fit.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Selection depends on batting/keeper combination rather than overseas slots.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/players/jitesh-sharma/3185\",\"https://www.cricbuzz.com/cricket-news/134433/rcb-hope-to-keep-top-two-ambitions-on-track-after-long-break\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":false,\"followup_reason\":\"\"},{\"official_player_id\":\"5606\",\"full_name\":\"Phil Salt\",\"playing_xi_tier\":\"GUARANTEED\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Frontline retained overseas opener-wicketkeeper and regular feature in RCB probable XIs.\",\"playing_xi_source_urls\":[\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\",\"https://www.cricbuzz.com/cricket-news/134081/inspired-pbks-bring-form-and-fire-to-target-rcbs-home-hex\"],\"availability_modifier\":0.86,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":12,\"availability_note\":\"No March 2026 unavailability report found; estimate conservative because only early fixtures are published.\",\"availability_comment\":\"Published fixture visibility is incomplete beyond April 12, 2026, so full-season estimate is not exact.\",\"availability_source_urls\":[\"https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf\",\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\"],\"overseas_competition_note\":\"Strong first-choice overseas slot candidate at the top; competition exists but role fit is favorable.\",\"overseas_competition_basis\":\"confirmed_role\",\"overseas_competition_comment\":\"Usually occupies one of the four overseas slots when available.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/players/phil-salt/5606\",\"https://www.cricbuzz.com/cricket-news/134081/inspired-pbks-bring-form-and-fire-to-target-rcbs-home-hex\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":false,\"followup_reason\":\"\"},{\"official_player_id\":\"5471\",\"full_name\":\"Rajat Patidar\",\"playing_xi_tier\":\"GUARANTEED\",\"playing_xi_basis\":\"confirmed_role\",\"playing_xi_comment\":\"Captain and retained batting mainstay; first-choice XI lock.\",\"playing_xi_source_urls\":[\"https://www.etnownews.com/sports/ipl-2026-royal-challengers-bengaluru-rcb-squad-for-indian-premier-league-updates-check-rcb-full-team-list-players-names-playing-xi-captain-rajat-patidar-article-153294997/amp\",\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\"],\"availability_modifier\":0.86,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":12,\"availability_note\":\"No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.\",\"availability_comment\":\"Only Part-1 schedule is currently visible, limiting precision on a 14-match estimate.\",\"availability_source_urls\":[\"https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf\",\"https://www.etnownews.com/sports/ipl-2026-royal-challengers-bengaluru-rcb-squad-for-indian-premier-league-updates-check-rcb-full-team-list-players-names-playing-xi-captain-rajat-patidar-article-153294997/amp\"],\"overseas_competition_note\":\"Domestic player; overseas cap is irrelevant to his place.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Selection driven by leadership/top-order role, not overseas slots.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/players/rajat-patidar/5471\",\"https://www.etnownews.com/sports/ipl-2026-royal-challengers-bengaluru-rcb-squad-for-indian-premier-league-updates-check-rcb-full-team-list-players-names-playing-xi-captain-rajat-patidar-article-153294997/amp\"],\"research_confidence\":\"High\",\"needs_player_followup\":false,\"followup_reason\":\"\"},{\"official_player_id\":\"4524\",\"full_name\":\"Tim David\",\"playing_xi_tier\":\"LIKELY\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Retained overseas finisher and frequent probable-XI pick, but overseas-slot squeeze could alter combination.\",\"playing_xi_source_urls\":[\"https://www.cricbuzz.com/cricket-news/134433/rcb-hope-to-keep-top-two-ambitions-on-track-after-long-break\",\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\"],\"availability_modifier\":0.79,\"availability_basis\":\"injury_report\",\"availability_expected_matches_available\":11,\"availability_note\":\"Recent hamstring issue was reported earlier in the winter; later coverage suggests likely fitness for IPL start, but not fully official.\",\"availability_comment\":\"Availability remains an informed estimate, not a franchise confirmation; schedule visibility is also incomplete beyond April 12, 2026.\",\"availability_source_urls\":[\"https://www.indiatoday.in/sports/cricket/story/tim-david-injury-rcb-ipl-2025-playoffs-setback-2729715-2025-05-24\",\"https://www.mykhel.com/cricket/will-tim-david-play-for-rcb-in-ipl-2026-after-hamstring-injury-rules-him-out-of-bbl-403926.html\"],\"overseas_competition_note\":\"Competes directly with Salt, Hazlewood, Bethell, Shepherd and Duffy for four overseas slots.\",\"overseas_competition_basis\":\"overseas_slot_pressure\",\"overseas_competition_comment\":\"Finisher role is valuable but not automatically above all overseas alternatives.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/players/tim-david/4524\",\"https://www.cricbuzz.com/cricket-news/134433/rcb-hope-to-keep-top-two-ambitions-on-track-after-long-break\"],\"research_confidence\":\"Low\",\"needs_player_followup\":true,\"followup_reason\":\"Recent injury recovery status before March 28, 2026 opener is not confirmed by a primary source.\"},{\"official_player_id\":\"164\",\"full_name\":\"Virat Kohli\",\"playing_xi_tier\":\"GUARANTEED\",\"playing_xi_basis\":\"confirmed_role\",\"playing_xi_comment\":\"Franchise icon and automatic starter.\",\"playing_xi_source_urls\":[\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\",\"https://www.etnownews.com/sports/ipl-2026-royal-challengers-bengaluru-rcb-squad-for-indian-premier-league-updates-check-rcb-full-team-list-players-names-playing-xi-captain-rajat-patidar-article-153294997/amp\"],\"availability_modifier\":0.86,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":12,\"availability_note\":\"No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.\",\"availability_comment\":\"Part-1 fixture publication limits certainty over all 14 league matches.\",\"availability_source_urls\":[\"https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf\",\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\"],\"overseas_competition_note\":\"Domestic player; overseas cap is not relevant.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Undisputed Indian batting core member.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/players/virat-kohli/164\",\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\"],\"research_confidence\":\"High\",\"needs_player_followup\":false,\"followup_reason\":\"\"},{\"official_player_id\":\"5430\",\"full_name\":\"Devdutt Padikkal\",\"playing_xi_tier\":\"LIKELY\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Retained domestic top-order left-hander; often used in RCB combinations but not as immovable as the core locks.\",\"playing_xi_source_urls\":[\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\",\"https://www.cricbuzz.com/cricket-news/134081/inspired-pbks-bring-form-and-fire-to-target-rcbs-home-hex\"],\"availability_modifier\":0.86,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":12,\"availability_note\":\"No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.\",\"availability_comment\":\"Only early-season schedule is published in available official material.\",\"availability_source_urls\":[\"https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf\",\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\"],\"overseas_competition_note\":\"Domestic player; overseas cap does not constrain selection, though top-order role competition remains.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Competes with domestic batting options, not overseas slots.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/players/devdutt-padikkal/5430\",\"https://www.cricbuzz.com/cricket-news/134081/inspired-pbks-bring-form-and-fire-to-target-rcbs-home-hex\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":false,\"followup_reason\":\"\"},{\"official_player_id\":\"857\",\"full_name\":\"Josh Hazlewood\",\"playing_xi_tier\":\"GUARANTEED\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"First-choice overseas strike pacer when fit; central to RCB's preferred attack.\",\"playing_xi_source_urls\":[\"https://www.cricbuzz.com/cricket-news/134081/inspired-pbks-bring-form-and-fire-to-target-rcbs-home-hex\",\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\"],\"availability_modifier\":0.64,\"availability_basis\":\"injury_report\",\"availability_expected_matches_available\":9,\"availability_note\":\"Fitness for IPL 2026 start is in doubt because of a recent hamstring issue; likely to miss at least the opening phase unless cleared.\",\"availability_comment\":\"This is the key unresolved player-level availability issue. Only Part-1 fixtures are published, and pre-season fitness clearance was still uncertain in recent reports.\",\"availability_source_urls\":[\"https://www.moneycontrol.com/sports/cricket/ipl-2026-josh-hazlewood-s-participation-in-doubt-rcb-await-fitness-clearance-article-13859120.html/amp\",\"https://www.ipl.com/cricket/news/ipl-2026-josh-hazlewoods-availability-in-doubt-as-indian-players-join-training-camp-march-16/\"],\"overseas_competition_note\":\"If fit he is a first-choice overseas pick, but any delayed clearance opens the door for Duffy/Shepherd/Bethell balance decisions.\",\"overseas_competition_basis\":\"confirmed_role\",\"overseas_competition_comment\":\"Preferred overseas seamer when available.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/players/josh-hazlewood/857\",\"https://www.cricbuzz.com/cricket-news/134081/inspired-pbks-bring-form-and-fire-to-target-rcbs-home-hex\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"Pre-opener medical clearance and exact matches missed remain unresolved.\"},{\"official_player_id\":\"20577\",\"full_name\":\"Rasikh Dar\",\"playing_xi_tier\":\"ROTATION\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Depth Indian seamer; more likely to cover or rotate than start every game in a full-strength pace attack.\",\"playing_xi_source_urls\":[\"https://www.cricbuzz.com/cricket-news/134433/rcb-hope-to-keep-top-two-ambitions-on-track-after-long-break\",\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\"],\"availability_modifier\":0.86,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":12,\"availability_note\":\"No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.\",\"availability_comment\":\"Early-schedule publication only; season-long estimate is conservative.\",\"availability_source_urls\":[\"https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf\",\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\"],\"overseas_competition_note\":\"Domestic player; overseas cap is not the constraint. Opportunity may rise if overseas fast bowler availability is hit.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Competes within Indian pace depth.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/players/rasikh-dar/20577\",\"https://www.cricbuzz.com/cricket-news/134433/rcb-hope-to-keep-top-two-ambitions-on-track-after-long-break\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":false,\"followup_reason\":\"\"},{\"official_player_id\":\"20609\",\"full_name\":\"Romario Shepherd\",\"playing_xi_tier\":\"ROTATION\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Retained overseas pace-bowling all-rounder, but usually combination-dependent because of four-overseas limit.\",\"playing_xi_source_urls\":[\"https://www.cricbuzz.com/cricket-news/134433/rcb-hope-to-keep-top-two-ambitions-on-track-after-long-break\",\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\"],\"availability_modifier\":0.86,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":12,\"availability_note\":\"No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.\",\"availability_comment\":\"Schedule publication is incomplete beyond April 12, 2026.\",\"availability_source_urls\":[\"https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf\",\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\"],\"overseas_competition_note\":\"Faces direct four-slot competition from Salt, Hazlewood, David, Bethell and Duffy.\",\"overseas_competition_basis\":\"overseas_slot_pressure\",\"overseas_competition_comment\":\"Useful backup/condition-specific overseas option rather than a universal lock.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/players/romario-shepherd/20609\",\"https://www.cricbuzz.com/cricket-news/134433/rcb-hope-to-keep-top-two-ambitions-on-track-after-long-break\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":false,\"followup_reason\":\"\"},{\"official_player_id\":\"20591\",\"full_name\":\"Yash Dayal\",\"playing_xi_tier\":\"GUARANTEED\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Settled Indian left-arm seamer in RCB's strongest attack.\",\"playing_xi_source_urls\":[\"https://www.cricbuzz.com/cricket-news/134081/inspired-pbks-bring-form-and-fire-to-target-rcbs-home-hex\",\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\"],\"availability_modifier\":0.86,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":12,\"availability_note\":\"No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.\",\"availability_comment\":\"Only early fixtures are officially visible in available schedule PDF.\",\"availability_source_urls\":[\"https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf\",\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\"],\"overseas_competition_note\":\"Domestic player; overseas cap is not relevant to selection.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"First-choice Indian seamer independent of overseas-slot arithmetic.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/players/yash-dayal/20591\",\"https://www.cricbuzz.com/cricket-news/134081/inspired-pbks-bring-form-and-fire-to-target-rcbs-home-hex\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":false,\"followup_reason\":\"\"},{\"official_player_id\":\"5668\",\"full_name\":\"Suyash Sharma\",\"playing_xi_tier\":\"LIKELY\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Retained Indian spinner and common inclusion in RCB's balanced XI.\",\"playing_xi_source_urls\":[\"https://www.cricbuzz.com/cricket-news/134081/inspired-pbks-bring-form-and-fire-to-target-rcbs-home-hex\",\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\"],\"availability_modifier\":0.86,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":12,\"availability_note\":\"No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.\",\"availability_comment\":\"Only Part-1 fixtures are presently visible.\",\"availability_source_urls\":[\"https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf\",\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\"],\"overseas_competition_note\":\"Domestic player; overseas cap is not the constraint.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Role competition is within spin options, not overseas slots.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/players/suyash-sharma/5668\",\"https://www.cricbuzz.com/cricket-news/134081/inspired-pbks-bring-form-and-fire-to-target-rcbs-home-hex\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":false,\"followup_reason\":\"\"},{\"official_player_id\":\"116\",\"full_name\":\"Bhuvneshwar Kumar\",\"playing_xi_tier\":\"GUARANTEED\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Experienced Indian seamer retained in core attack and regularly present in probable XIs.\",\"playing_xi_source_urls\":[\"https://www.cricbuzz.com/cricket-news/134081/inspired-pbks-bring-form-and-fire-to-target-rcbs-home-hex\",\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\"],\"availability_modifier\":0.86,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":12,\"availability_note\":\"No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.\",\"availability_comment\":\"Only early fixtures are in the published schedule segment used here.\",\"availability_source_urls\":[\"https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf\",\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\"],\"overseas_competition_note\":\"Domestic player; overseas cap is irrelevant.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Core Indian seam option.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/players/bhuvneshwar-kumar/116\",\"https://www.cricbuzz.com/cricket-news/134081/inspired-pbks-bring-form-and-fire-to-target-rcbs-home-hex\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":false,\"followup_reason\":\"\"},{\"official_player_id\":\"8540\",\"full_name\":\"Venkatesh Iyer\",\"playing_xi_tier\":\"ROTATION\",\"playing_xi_basis\":\"conflicting_reports\",\"playing_xi_comment\":\"Headline 2026 buy, but at least one prominent preview argued he may not start immediately in a settled XI.\",\"playing_xi_source_urls\":[\"https://www.etnownews.com/sports/ipl-2026-royal-challengers-bengaluru-rcb-squad-for-indian-premier-league-updates-check-rcb-full-team-list-players-names-playing-xi-captain-rajat-patidar-article-153294997/amp\",\"https://www.hindustantimes.com/cricket/anil-kumble-flags-selection-call-on-venkatesh-iyer-in-rcb-s-ipl-2026-plans-he-will-not-be-in-the-playing-xi-101766753059499.html/\"],\"availability_modifier\":0.86,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":12,\"availability_note\":\"No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.\",\"availability_comment\":\"Published schedule is incomplete, so full-season estimate is conservative.\",\"availability_source_urls\":[\"https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf\",\"https://www.etnownews.com/sports/ipl-2026-royal-challengers-bengaluru-rcb-squad-for-indian-premier-league-updates-check-rcb-full-team-list-players-names-playing-xi-captain-rajat-patidar-article-153294997/amp\"],\"overseas_competition_note\":\"Domestic player; overseas cap is not the issue. Selection depends on whether RCB prioritise settled title-winning balance.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Role competition is domestic batting/all-round balance.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/players/venkatesh-iyer/8540\",\"https://www.hindustantimes.com/cricket/anil-kumble-flags-selection-call-on-venkatesh-iyer-in-rcb-s-ipl-2026-plans-he-will-not-be-in-the-playing-xi-101766753059499.html/\"],\"research_confidence\":\"Low\",\"needs_player_followup\":true,\"followup_reason\":\"Role in first-choice XI is debated after auction and not yet settled by team-sheet evidence.\"},{\"official_player_id\":\"22074\",\"full_name\":\"Jacob Bethell\",\"playing_xi_tier\":\"ROTATION\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"High-upside retained overseas all-rounder, but not a universal lock because RCB have several competing overseas incumbents.\",\"playing_xi_source_urls\":[\"https://www.cricbuzz.com/cricket-news/134433/rcb-hope-to-keep-top-two-ambitions-on-track-after-long-break\",\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\"],\"availability_modifier\":0.71,\"availability_basis\":\"tournament_conflict\",\"availability_expected_matches_available\":10,\"availability_note\":\"England commitments are a live risk; he was in England's 2026 T20 World Cup setup and had prior IPL release history for England duty.\",\"availability_comment\":\"Exact overlap with IPL league dates cannot be fully mapped because only Part-1 fixtures are published in the prompt; estimated availability is therefore conservative.\",\"availability_source_urls\":[\"https://www.ipl.com/cricket/news/jacob-bethell-named-birmingham-phoenix-captain-for-the-hundred-2026/\",\"https://www.outlookindia.com/sports/cricket/ipl-2025-royal-challengers-bengaluru-rope-in-tim-seifert-as-jacob-bethell-departs-for-england-duty\"],\"overseas_competition_note\":\"Directly competes with Salt, Hazlewood, David, Shepherd and Duffy for overseas slots.\",\"overseas_competition_basis\":\"overseas_slot_pressure\",\"overseas_competition_comment\":\"Valuable flexibility piece but squeezed by incumbent overseas starters.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/players/jacob-bethell/22074\",\"https://www.cricbuzz.com/cricket-news/134433/rcb-hope-to-keep-top-two-ambitions-on-track-after-long-break\"],\"research_confidence\":\"Low\",\"needs_player_followup\":true,\"followup_reason\":\"Need confirmation on England release/NOC status and exact joining/exit window for IPL 2026.\"},{\"official_player_id\":\"23040\",\"full_name\":\"Mangesh Yadav\",\"playing_xi_tier\":\"UNLIKELY\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"New depth Indian pace option; external analysis mentions him as support cover rather than current first XI.\",\"playing_xi_source_urls\":[\"https://www.etnownews.com/sports/ipl-2026-royal-challengers-bengaluru-rcb-squad-for-indian-premier-league-updates-check-rcb-full-team-list-players-names-playing-xi-captain-rajat-patidar-article-153294997/amp\",\"https://www.hindustantimes.com/cricket/anil-kumble-flags-selection-call-on-venkatesh-iyer-in-rcb-s-ipl-2026-plans-he-will-not-be-in-the-playing-xi-101766753059499.html/\"],\"availability_modifier\":0.86,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":12,\"availability_note\":\"No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.\",\"availability_comment\":\"Full fixture list is not fully published in the evidence used here.\",\"availability_source_urls\":[\"https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf\",\"https://www.etnownews.com/sports/ipl-2026-royal-challengers-bengaluru-rcb-squad-for-indian-premier-league-updates-check-rcb-full-team-list-players-names-playing-xi-captain-rajat-patidar-article-153294997/amp\"],\"overseas_competition_note\":\"Domestic player; overseas cap is not the issue.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Competes within Indian seam reserves.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/players/mangesh-yadav/23040\",\"https://www.hindustantimes.com/cricket/anil-kumble-flags-selection-call-on-venkatesh-iyer-in-rcb-s-ipl-2026-plans-he-will-not-be-in-the-playing-xi-101766753059499.html/\"],\"research_confidence\":\"Low\",\"needs_player_followup\":true,\"followup_reason\":\"Very limited role-specific evidence for initial 2026 usage.\"},{\"official_player_id\":\"3180\",\"full_name\":\"Swapnil Singh\",\"playing_xi_tier\":\"ROTATION\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"Retained domestic spin-bowling all-round backup; likely matchup/bench option in full-strength squad.\",\"playing_xi_source_urls\":[\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\",\"https://www.cricbuzz.com/cricket-match-squads/149768/rr-vs-rcb-16th-match-indian-premier-league-2026\"],\"availability_modifier\":0.86,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":12,\"availability_note\":\"No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.\",\"availability_comment\":\"Season-long precision limited by partial published fixture set.\",\"availability_source_urls\":[\"https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf\",\"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\"],\"overseas_competition_note\":\"Domestic player; overseas cap is not the constraint.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Competes on balance and conditions only.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/players/swapnil-singh/3180\",\"https://www.cricbuzz.com/cricket-match-squads/149768/rr-vs-rcb-16th-match-indian-premier-league-2026\"],\"research_confidence\":\"Low\",\"needs_player_followup\":true,\"followup_reason\":\"Little recent evidence on pecking-order position in 2026.\"},{\"official_player_id\":\"23003\",\"full_name\":\"Jacob Duffy\",\"playing_xi_tier\":\"ROTATION\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"2026 overseas pace addition mainly framed as backup/cover, especially if Hazlewood is unavailable.\",\"playing_xi_source_urls\":[\"https://www.etnownews.com/sports/ipl-2026-royal-challengers-bengaluru-rcb-squad-for-indian-premier-league-updates-check-rcb-full-team-list-players-names-playing-xi-captain-rajat-patidar-article-153294997/amp\",\"https://www.hindustantimes.com/cricket/anil-kumble-flags-selection-call-on-venkatesh-iyer-in-rcb-s-ipl-2026-plans-he-will-not-be-in-the-playing-xi-101766753059499.html/\"],\"availability_modifier\":0.86,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":12,\"availability_note\":\"No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.\",\"availability_comment\":\"Only early official fixtures are visible; full-season estimate remains conservative.\",\"availability_source_urls\":[\"https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf\",\"https://www.etnownews.com/sports/ipl-2026-royal-challengers-bengaluru-rcb-squad-for-indian-premier-league-updates-check-rcb-full-team-list-players-names-playing-xi-captain-rajat-patidar-article-153294997/amp\"],\"overseas_competition_note\":\"Strong overseas-slot pressure; his clearest path is as Hazlewood cover or venue-specific seam option.\",\"overseas_competition_basis\":\"overseas_slot_pressure\",\"overseas_competition_comment\":\"Backup overseas seamer unless injury/conditions force selection.\",\"overseas_competition_source_urls\":[\"https://www.iplt20.com/players/jacob-duffy/23003\",\"https://www.hindustantimes.com/cricket/ravichandran-ashwin-tips-his-hat-to-rcb-for-pulling-off-sensational-coup-by-bringing-new-zealand-pacer-on-board-101766392532728.html\"],\"research_confidence\":\"Low\",\"needs_player_followup\":true,\"followup_reason\":\"Selection depends heavily on Hazlewood fitness and first-match combinations.\"}]}",
+            "type": "output_text"
+          }
+        ],
+        "id": "msg_0794ff6b6a754a550069c12c4e708c819caebcbc17e97b44b0",
+        "phase": "final_answer",
+        "role": "assistant",
+        "status": "completed",
+        "type": "message"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": null,
+    "reasoning": {
+      "effort": "none",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "store": true,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "description": null,
+        "name": "rcb_team_enrichment",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "players": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "availability_basis": {
+                    "enum": [
+                      "confirmed_available",
+                      "conflicting_reports",
+                      "inferred_no_adverse_news",
+                      "injury_report",
+                      "late_joining",
+                      "suspension",
+                      "tournament_conflict",
+                      "unknown"
+                    ],
+                    "type": "string"
+                  },
+                  "availability_comment": {
+                    "type": "string"
+                  },
+                  "availability_expected_matches_available": {
+                    "type": "integer"
+                  },
+                  "availability_modifier": {
+                    "type": "number"
+                  },
+                  "availability_note": {
+                    "type": "string"
+                  },
+                  "availability_source_urls": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "followup_reason": {
+                    "type": "string"
+                  },
+                  "full_name": {
+                    "type": "string"
+                  },
+                  "needs_player_followup": {
+                    "type": "boolean"
+                  },
+                  "official_player_id": {
+                    "type": "string"
+                  },
+                  "overseas_competition_basis": {
+                    "enum": [
+                      "confirmed_role",
+                      "conflicting_reports",
+                      "domestic_player",
+                      "overseas_slot_pressure",
+                      "role_depth_competition",
+                      "unknown"
+                    ],
+                    "type": "string"
+                  },
+                  "overseas_competition_comment": {
+                    "type": "string"
+                  },
+                  "overseas_competition_note": {
+                    "type": "string"
+                  },
+                  "overseas_competition_source_urls": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "playing_xi_basis": {
+                    "enum": [
+                      "confirmed_role",
+                      "conflicting_reports",
+                      "inferred_from_team_context",
+                      "unknown"
+                    ],
+                    "type": "string"
+                  },
+                  "playing_xi_comment": {
+                    "type": "string"
+                  },
+                  "playing_xi_source_urls": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "minItems": 1,
+                    "type": "array"
+                  },
+                  "playing_xi_tier": {
+                    "enum": [
+                      "GUARANTEED",
+                      "LIKELY",
+                      "ROTATION",
+                      "UNLIKELY"
+                    ],
+                    "type": "string"
+                  },
+                  "research_confidence": {
+                    "enum": [
+                      "High",
+                      "Low",
+                      "Medium"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "official_player_id",
+                  "full_name",
+                  "playing_xi_tier",
+                  "playing_xi_basis",
+                  "playing_xi_comment",
+                  "playing_xi_source_urls",
+                  "availability_modifier",
+                  "availability_basis",
+                  "availability_expected_matches_available",
+                  "availability_note",
+                  "availability_comment",
+                  "availability_source_urls",
+                  "overseas_competition_note",
+                  "overseas_competition_basis",
+                  "overseas_competition_comment",
+                  "overseas_competition_source_urls",
+                  "research_confidence",
+                  "needs_player_followup",
+                  "followup_reason"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "team": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "team",
+            "players"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "search_context_size": "medium",
+        "type": "web_search",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 24176,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens": 8702,
+      "output_tokens_details": {
+        "reasoning_tokens": 392
+      },
+      "total_tokens": 32878
+    },
+    "user": null
+  },
+  "saved_at": "2026-03-23T12:05:54.952715+00:00"
+}

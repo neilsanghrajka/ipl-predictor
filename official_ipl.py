@@ -24,10 +24,25 @@ TEAM_SLUGS = {
     "GT": "gujarat-titans",
 }
 
+TEAM_NAMES = {
+    "CSK": "Chennai Super Kings",
+    "MI": "Mumbai Indians",
+    "SRH": "Sunrisers Hyderabad",
+    "RCB": "Royal Challengers Bengaluru",
+    "PBKS": "Punjab Kings",
+    "RR": "Rajasthan Royals",
+    "DC": "Delhi Capitals",
+    "KKR": "Kolkata Knight Riders",
+    "LSG": "Lucknow Super Giants",
+    "GT": "Gujarat Titans",
+}
+
 STATS_FEED_TEMPLATE = (
     "https://ipl-stats-sports-mechanic.s3.ap-south-1.amazonaws.com/"
     "ipl/feeds/stats/player/{player_id}-playerstats.js"
 )
+COMPETITION_FEED_URL = "https://scores.iplt20.com/ipl/mc/competition.js"
+DEFAULT_FIXTURE_SEASON = "2026"
 
 # Accepted final team-scoped mappings for nickname drift and duplicate nicknames.
 OFFICIAL_NAME_OVERRIDES: dict[tuple[str, str], str] = {
@@ -117,6 +132,12 @@ def save_snapshot(path: str | Path, content: str) -> None:
     snapshot_path = Path(path)
     snapshot_path.parent.mkdir(parents=True, exist_ok=True)
     snapshot_path.write_text(content, encoding="utf-8")
+
+
+def save_json_snapshot(path: str | Path, payload: object) -> None:
+    snapshot_path = Path(path)
+    snapshot_path.parent.mkdir(parents=True, exist_ok=True)
+    snapshot_path.write_text(json.dumps(payload, indent=2, sort_keys=True), encoding="utf-8")
 
 
 def load_draft_entries(xlsx_path: Path) -> list[DraftEntry]:
@@ -220,6 +241,135 @@ def fetch_team_roster(team_code: str, raw_dir: str | Path | None = None) -> list
         )
 
     return players
+
+
+def parse_jsonp_payload(raw_payload: str) -> object:
+    cleaned = raw_payload.strip().lstrip("\ufeff")
+    match = CALLBACK_RE.match(cleaned)
+    if match:
+        return json.loads(match.group(1))
+    return json.loads(cleaned)
+
+
+def fetch_competitions(raw_dir: str | Path | None = None) -> list[dict[str, object]]:
+    raw_payload = fetch_url(COMPETITION_FEED_URL)
+    if raw_dir is not None:
+        save_snapshot(Path(raw_dir) / "competition.js", raw_payload)
+    payload = parse_jsonp_payload(raw_payload)
+    competitions = payload.get("competition")
+    if not isinstance(competitions, list):
+        raise ValueError("Unexpected competition feed payload")
+    return competitions
+
+
+def find_ipl_competition(
+    season_name: str = DEFAULT_FIXTURE_SEASON,
+    raw_dir: str | Path | None = None,
+) -> dict[str, object]:
+    target = str(season_name)
+    for competition in fetch_competitions(raw_dir=raw_dir):
+        name = str(competition.get("CompetitionName", ""))
+        if name.endswith(target) and str(competition.get("DivisionName", "")) == "IPL":
+            return competition
+    raise ValueError(f"Could not find official IPL competition for season {season_name}")
+
+
+def fetch_match_schedule(
+    *,
+    season_name: str = DEFAULT_FIXTURE_SEASON,
+    raw_dir: str | Path | None = None,
+) -> tuple[dict[str, object], list[dict[str, object]]]:
+    competition = find_ipl_competition(season_name=season_name, raw_dir=raw_dir)
+    competition_id = str(competition["CompetitionID"])
+    feed_source = str(competition.get("feedsource") or "").rstrip("/")
+    if not feed_source:
+        raise ValueError(f"Competition {competition_id} has no feedsource")
+
+    url = f"{feed_source}/{competition_id}-matchschedule.js"
+    raw_payload = fetch_url(url)
+    if raw_dir is not None:
+        save_snapshot(Path(raw_dir) / f"{competition_id}-matchschedule.js", raw_payload)
+
+    payload = parse_jsonp_payload(raw_payload)
+    matches = payload.get("Matchsummary")
+    if not isinstance(matches, list):
+        raise ValueError("Unexpected schedule feed payload")
+    return competition, matches
+
+
+def normalize_team_fixture(team_code: str, match: dict[str, object]) -> dict[str, object]:
+    team_name = TEAM_NAMES[team_code]
+    first_code = str(match.get("FirstBattingTeamCode") or "").upper()
+    second_code = str(match.get("SecondBattingTeamCode") or "").upper()
+    if team_code == first_code:
+        opponent_code = second_code
+        opponent_name = str(match.get("SecondBattingTeamName") or "")
+    else:
+        opponent_code = first_code
+        opponent_name = str(match.get("FirstBattingTeamName") or "")
+
+    home_name = normalize_name(str(match.get("HomeTeamName") or ""))
+    is_home = home_name == normalize_name(team_name)
+
+    return {
+        "match_id": str(match.get("MatchID") or ""),
+        "competition_id": str(match.get("CompetitionID") or ""),
+        "team_code": team_code,
+        "team_name": team_name,
+        "opponent_code": opponent_code,
+        "opponent_name": opponent_name,
+        "match_date": str(match.get("MatchDate") or ""),
+        "match_date_display": str(match.get("MatchDateNew") or ""),
+        "match_time_local": str(match.get("MatchTime") or ""),
+        "match_datetime_local": str(match.get("MATCH_COMMENCE_START_DATE") or ""),
+        "match_status": str(match.get("MatchStatus") or ""),
+        "venue": str(match.get("GroundName") or ""),
+        "city": str(match.get("city") or ""),
+        "is_home": is_home,
+    }
+
+
+def build_team_fixtures(matches: list[dict[str, object]]) -> dict[str, list[dict[str, object]]]:
+    fixtures = {team_code: [] for team_code in TEAM_SLUGS}
+    for match in matches:
+        team_codes = {
+            str(match.get("FirstBattingTeamCode") or "").upper(),
+            str(match.get("SecondBattingTeamCode") or "").upper(),
+        }
+        for team_code in TEAM_SLUGS:
+            if team_code in team_codes:
+                fixtures[team_code].append(normalize_team_fixture(team_code, match))
+
+    for team_code in fixtures:
+        fixtures[team_code].sort(key=lambda item: (str(item["match_date"]), str(item["match_time_local"])))
+    return fixtures
+
+
+def fetch_all_team_fixtures(
+    *,
+    season_name: str = DEFAULT_FIXTURE_SEASON,
+    raw_dir: str | Path | None = None,
+) -> dict[str, list[dict[str, object]]]:
+    raw_root = Path(raw_dir) if raw_dir is not None else None
+    competition, matches = fetch_match_schedule(
+        season_name=season_name,
+        raw_dir=raw_root,
+    )
+    fixtures = build_team_fixtures(matches)
+    if raw_root is not None:
+        for team_code, team_fixtures in fixtures.items():
+            save_json_snapshot(
+                raw_root / f"{team_code}.json",
+                {
+                    "team": team_code,
+                    "team_name": TEAM_NAMES[team_code],
+                    "season": season_name,
+                    "competition_id": str(competition["CompetitionID"]),
+                    "published_fixture_count": len(team_fixtures),
+                    "fixtures": team_fixtures,
+                },
+            )
+    return fixtures
 
 
 def stats_feed_available(stats_feed_url: str) -> bool:

@@ -1,0 +1,484 @@
+{
+  "parsed": {
+    "availability_basis": "inferred_no_adverse_news",
+    "availability_comment": "Available unless late tactical omission.",
+    "availability_expected_matches_available": 14,
+    "availability_modifier": 1.0,
+    "availability_note": "No credible March 2026 injury, suspension, or national-team unavailability found.",
+    "availability_source_urls": [
+      "https://www.iplt20.com/players/mukesh-kumar/5622",
+      "https://www.iplt20.com/teams/delhi-capitals/squad-details/5622",
+      "https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf"
+    ],
+    "followup_reason": "No official pre-season XI confirmation for Mukesh; early-match usage remains conditions and combination dependent.",
+    "full_name": "Mukesh Kumar",
+    "needs_player_followup": true,
+    "official_player_id": "5622",
+    "overseas_competition_basis": "domestic_player",
+    "overseas_competition_comment": "Pressure is role-based from Starc, Ngidi, Chameera, Jamieson and fellow Indian quick Natarajan.",
+    "overseas_competition_note": "Domestic player; no overseas-slot restriction. Selection depends on seam balance and conditions.",
+    "overseas_competition_source_urls": [
+      "https://documents.iplt20.com/bcci/documents/1763209725967_TATA%20IPL%202026%20-%20Playing%20Squad%20-%2015.11.2025%20%281%29.pdf",
+      "https://www.iplt20.com/players/mukesh-kumar/5622"
+    ],
+    "playing_xi_basis": "inferred_from_team_context",
+    "playing_xi_comment": "In DC's seam pool but not clearly first-choice; domestic seamer competing with Natarajan and multiple overseas quicks.",
+    "playing_xi_source_urls": [
+      "https://www.iplt20.com/players/mukesh-kumar/5622",
+      "https://documents.iplt20.com/bcci/documents/1763209725967_TATA%20IPL%202026%20-%20Playing%20Squad%20-%2015.11.2025%20%281%29.pdf",
+      "https://www.cricbuzz.com/cricket-match-facts/149695/dc-vs-mi-8th-match-indian-premier-league-2026"
+    ],
+    "playing_xi_tier": "ROTATION",
+    "research_confidence": "Medium"
+  },
+  "request": {
+    "input": [
+      {
+        "content": [
+          {
+            "text": "You are doing a focused IPL 2026 player availability and lineup audit.\n\nYou are refining one player's non-stats fields after an initial team-level pass.\nUse web search. Prefer official IPL / franchise / BCCI sources, then reputable cricket reporting.\n\nRules:\n- Return JSON only.\n- Keep the same schema as the team-level player object.\n- Resolve ambiguity where possible using recent evidence.\n- Keep comments short and audit-friendly.\n- If evidence remains conflicting, say so explicitly and keep needs_player_followup=true.\n- Every source URL array must contain at least one URL.",
+            "type": "input_text"
+          }
+        ],
+        "role": "system"
+      },
+      {
+        "content": [
+          {
+            "text": "Refine this single-player non-stats assessment and return the structured JSON.\n\n{\n  \"fixtures\": [\n    {\n      \"city\": \"Lucknow\",\n      \"is_home\": false,\n      \"match_date\": \"2026-04-01\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"19:30\",\n      \"opponent_code\": \"LSG\",\n      \"opponent_name\": \"Lucknow Super Giants\",\n      \"venue\": \"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium\"\n    },\n    {\n      \"city\": \"Delhi\",\n      \"is_home\": true,\n      \"match_date\": \"2026-04-04\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"15:30\",\n      \"opponent_code\": \"MI\",\n      \"opponent_name\": \"Mumbai Indians\",\n      \"venue\": \"Arun Jaitley Stadium\"\n    },\n    {\n      \"city\": \"Delhi\",\n      \"is_home\": true,\n      \"match_date\": \"2026-04-08\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"19:30\",\n      \"opponent_code\": \"GT\",\n      \"opponent_name\": \"Gujarat Titans\",\n      \"venue\": \"Arun Jaitley Stadium\"\n    },\n    {\n      \"city\": \"Chennai\",\n      \"is_home\": false,\n      \"match_date\": \"2026-04-11\",\n      \"match_status\": \"UpComing\",\n      \"match_time_local\": \"19:30\",\n      \"opponent_code\": \"CSK\",\n      \"opponent_name\": \"Chennai Super Kings\",\n      \"venue\": \"MA Chidambaram Stadium\"\n    }\n  ],\n  \"league_matches_expected\": 14,\n  \"player\": {\n    \"full_name\": \"Mukesh Kumar\",\n    \"is_overseas\": false,\n    \"nickname\": \"Mukesh\",\n    \"official_player_id\": \"5622\",\n    \"official_player_url\": \"https://www.iplt20.com/players/mukesh-kumar/5622\",\n    \"role\": \"BOWL\",\n    \"season_2024_matches\": \"10\",\n    \"season_2024_runs\": \"3\",\n    \"season_2024_wickets\": \"17\",\n    \"season_2025_matches\": \"12\",\n    \"season_2025_runs\": \"\",\n    \"season_2025_wickets\": \"12\"\n  },\n  \"published_fixture_count\": 4,\n  \"team_code\": \"DC\",\n  \"team_level_baseline\": {\n    \"availability_basis\": \"inferred_no_adverse_news\",\n    \"availability_comment\": \"Prompt includes only first 4 fixtures; season-long availability inferred from absence of adverse reports.\",\n    \"availability_expected_matches_available\": 14,\n    \"availability_modifier\": 1.0,\n    \"availability_note\": \"No recent injury or absence report found; treated as available.\",\n    \"availability_source_urls\": [\n      \"https://www.iplt20.com/teams/delhi-capitals/squad\",\n      \"https://www.iplt20.com/players/mukesh-kumar/5622\"\n    ],\n    \"followup_reason\": \"No firm pre-season XI confirmation found; role appears matchup-dependent.\",\n    \"full_name\": \"Mukesh Kumar\",\n    \"needs_player_followup\": true,\n    \"official_player_id\": \"5622\",\n    \"overseas_competition_basis\": \"domestic_player\",\n    \"overseas_competition_comment\": \"Competes on role/conditions rather than overseas-slot pressure.\",\n    \"overseas_competition_note\": \"Domestic player; overseas cap does not restrict him. Main issue is internal seam-bowling competition.\",\n    \"overseas_competition_source_urls\": [\n      \"https://www.iplt20.com/teams/delhi-capitals/squad\"\n    ],\n    \"playing_xi_basis\": \"inferred_from_team_context\",\n    \"playing_xi_comment\": \"In main pace mix but competition from Natarajan, Starc, Ngidi and Chameera makes him rotational.\",\n    \"playing_xi_source_urls\": [\n      \"https://www.iplt20.com/teams/delhi-capitals/squad\",\n      \"https://www.iplt20.com/news/4125/tata-ipl-2025-match-04-dc-vs-lsg-match-report\"\n    ],\n    \"playing_xi_tier\": \"ROTATION\",\n    \"research_confidence\": \"Medium\"\n  },\n  \"team_name\": \"Delhi Capitals\"\n}",
+            "type": "input_text"
+          }
+        ],
+        "role": "user"
+      }
+    ],
+    "max_output_tokens": 2500,
+    "model": "gpt-5.4",
+    "text": {
+      "format": {
+        "name": "dc_5622_followup",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "availability_basis": {
+              "enum": [
+                "confirmed_available",
+                "conflicting_reports",
+                "inferred_no_adverse_news",
+                "injury_report",
+                "late_joining",
+                "suspension",
+                "tournament_conflict",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "availability_comment": {
+              "type": "string"
+            },
+            "availability_expected_matches_available": {
+              "type": "integer"
+            },
+            "availability_modifier": {
+              "type": "number"
+            },
+            "availability_note": {
+              "type": "string"
+            },
+            "availability_source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "followup_reason": {
+              "type": "string"
+            },
+            "full_name": {
+              "type": "string"
+            },
+            "needs_player_followup": {
+              "type": "boolean"
+            },
+            "official_player_id": {
+              "type": "string"
+            },
+            "overseas_competition_basis": {
+              "enum": [
+                "confirmed_role",
+                "conflicting_reports",
+                "domestic_player",
+                "overseas_slot_pressure",
+                "role_depth_competition",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "overseas_competition_comment": {
+              "type": "string"
+            },
+            "overseas_competition_note": {
+              "type": "string"
+            },
+            "overseas_competition_source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "playing_xi_basis": {
+              "enum": [
+                "confirmed_role",
+                "conflicting_reports",
+                "inferred_from_team_context",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "playing_xi_comment": {
+              "type": "string"
+            },
+            "playing_xi_source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "playing_xi_tier": {
+              "enum": [
+                "GUARANTEED",
+                "LIKELY",
+                "ROTATION",
+                "UNLIKELY"
+              ],
+              "type": "string"
+            },
+            "research_confidence": {
+              "enum": [
+                "High",
+                "Low",
+                "Medium"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "official_player_id",
+            "full_name",
+            "playing_xi_tier",
+            "playing_xi_basis",
+            "playing_xi_comment",
+            "playing_xi_source_urls",
+            "availability_modifier",
+            "availability_basis",
+            "availability_expected_matches_available",
+            "availability_note",
+            "availability_comment",
+            "availability_source_urls",
+            "overseas_competition_note",
+            "overseas_competition_basis",
+            "overseas_competition_comment",
+            "overseas_competition_source_urls",
+            "research_confidence",
+            "needs_player_followup",
+            "followup_reason"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ]
+  },
+  "request_id": "c21088aa-617d-4362-8a0d-8abb11080dc3",
+  "response": {
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1774269232,
+    "created_at": 1774269208,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "id": "resp_01a125ee490dff080069c13318f7e08192bfa784e356b98bfd",
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": 2500,
+    "max_tool_calls": null,
+    "metadata": {},
+    "model": "gpt-5.4-2026-03-05",
+    "object": "response",
+    "output": [
+      {
+        "action": {
+          "queries": [
+            "site:iplt20.com Delhi Capitals squad Mukesh Kumar IPL 2026",
+            "site:delhicapitals.in Mukesh Kumar Delhi Capitals 2026",
+            "site:bcci.tv Mukesh Kumar injury Delhi Capitals March 2026",
+            "Mukesh Kumar Delhi Capitals playing XI 2026 pace attack Natarajan Starc Ngidi Chameera March 2026"
+          ],
+          "query": "site:iplt20.com Delhi Capitals squad Mukesh Kumar IPL 2026",
+          "type": "search"
+        },
+        "id": "ws_01a125ee490dff080069c1331966508192b04bb1604f5ffbc4",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "action": {
+          "type": "open_page",
+          "url": "https://www.iplt20.com/teams/delhi-capitals/squad-details/5622"
+        },
+        "id": "ws_01a125ee490dff080069c1331d996c8192a6c65c70c6d0be55",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "action": {
+          "queries": [
+            "site:iplt20.com Delhi Capitals squad 2026 Mukesh Kumar March 2026 injury",
+            "site:espncricinfo.com Mukesh Kumar Delhi Capitals March 2026 injury",
+            "site:cricbuzz.com Mukesh Kumar Delhi Capitals March 2026 injury",
+            "site:bcci.tv Mukesh Kumar March 2026 injury"
+          ],
+          "query": "site:iplt20.com Delhi Capitals squad 2026 Mukesh Kumar March 2026 injury",
+          "type": "search"
+        },
+        "id": "ws_01a125ee490dff080069c13321a3008192a4fb6063b9ecf03a",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "action": {
+          "type": "open_page",
+          "url": "https://documents.iplt20.com/bcci/documents/1763209725967_TATA%20IPL%202026%20-%20Playing%20Squad%20-%2015.11.2025%20%281%29.pdf"
+        },
+        "id": "ws_01a125ee490dff080069c13324b0cc81928c1d58205de206a6",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "action": {
+          "queries": [
+            "site:delhicapitals.in Mitchell Starc unavailable early IPL 2026 Delhi Capitals",
+            "site:iplt20.com Mitchell Starc unavailable early IPL 2026 Delhi Capitals",
+            "site:cricbuzz.com Mitchell Starc unavailable early IPL 2026 Delhi Capitals",
+            "site:espncricinfo.com Mitchell Starc unavailable early IPL 2026 Delhi Capitals"
+          ],
+          "query": "site:delhicapitals.in Mitchell Starc unavailable early IPL 2026 Delhi Capitals",
+          "type": "search"
+        },
+        "id": "ws_01a125ee490dff080069c133288234819288e92966eacb0a21",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "content": [
+          {
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"official_player_id\":\"5622\",\"full_name\":\"Mukesh Kumar\",\"playing_xi_tier\":\"ROTATION\",\"playing_xi_basis\":\"inferred_from_team_context\",\"playing_xi_comment\":\"In DC's seam pool but not clearly first-choice; domestic seamer competing with Natarajan and multiple overseas quicks.\",\"playing_xi_source_urls\":[\"https://www.iplt20.com/players/mukesh-kumar/5622\",\"https://documents.iplt20.com/bcci/documents/1763209725967_TATA%20IPL%202026%20-%20Playing%20Squad%20-%2015.11.2025%20%281%29.pdf\",\"https://www.cricbuzz.com/cricket-match-facts/149695/dc-vs-mi-8th-match-indian-premier-league-2026\"],\"availability_modifier\":1,\"availability_basis\":\"inferred_no_adverse_news\",\"availability_expected_matches_available\":14,\"availability_note\":\"No credible March 2026 injury, suspension, or national-team unavailability found.\",\"availability_comment\":\"Available unless late tactical omission.\",\"availability_source_urls\":[\"https://www.iplt20.com/players/mukesh-kumar/5622\",\"https://www.iplt20.com/teams/delhi-capitals/squad-details/5622\",\"https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf\"],\"overseas_competition_note\":\"Domestic player; no overseas-slot restriction. Selection depends on seam balance and conditions.\",\"overseas_competition_basis\":\"domestic_player\",\"overseas_competition_comment\":\"Pressure is role-based from Starc, Ngidi, Chameera, Jamieson and fellow Indian quick Natarajan.\",\"overseas_competition_source_urls\":[\"https://documents.iplt20.com/bcci/documents/1763209725967_TATA%20IPL%202026%20-%20Playing%20Squad%20-%2015.11.2025%20%281%29.pdf\",\"https://www.iplt20.com/players/mukesh-kumar/5622\"],\"research_confidence\":\"Medium\",\"needs_player_followup\":true,\"followup_reason\":\"No official pre-season XI confirmation for Mukesh; early-match usage remains conditions and combination dependent.\"}",
+            "type": "output_text"
+          }
+        ],
+        "id": "msg_01a125ee490dff080069c1332afae48192bfb93741ed03a1b7",
+        "phase": "final_answer",
+        "role": "assistant",
+        "status": "completed",
+        "type": "message"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": null,
+    "reasoning": {
+      "effort": "none",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "store": true,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "description": null,
+        "name": "dc_5622_followup",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "availability_basis": {
+              "enum": [
+                "confirmed_available",
+                "conflicting_reports",
+                "inferred_no_adverse_news",
+                "injury_report",
+                "late_joining",
+                "suspension",
+                "tournament_conflict",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "availability_comment": {
+              "type": "string"
+            },
+            "availability_expected_matches_available": {
+              "type": "integer"
+            },
+            "availability_modifier": {
+              "type": "number"
+            },
+            "availability_note": {
+              "type": "string"
+            },
+            "availability_source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "followup_reason": {
+              "type": "string"
+            },
+            "full_name": {
+              "type": "string"
+            },
+            "needs_player_followup": {
+              "type": "boolean"
+            },
+            "official_player_id": {
+              "type": "string"
+            },
+            "overseas_competition_basis": {
+              "enum": [
+                "confirmed_role",
+                "conflicting_reports",
+                "domestic_player",
+                "overseas_slot_pressure",
+                "role_depth_competition",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "overseas_competition_comment": {
+              "type": "string"
+            },
+            "overseas_competition_note": {
+              "type": "string"
+            },
+            "overseas_competition_source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "playing_xi_basis": {
+              "enum": [
+                "confirmed_role",
+                "conflicting_reports",
+                "inferred_from_team_context",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "playing_xi_comment": {
+              "type": "string"
+            },
+            "playing_xi_source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "playing_xi_tier": {
+              "enum": [
+                "GUARANTEED",
+                "LIKELY",
+                "ROTATION",
+                "UNLIKELY"
+              ],
+              "type": "string"
+            },
+            "research_confidence": {
+              "enum": [
+                "High",
+                "Low",
+                "Medium"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "official_player_id",
+            "full_name",
+            "playing_xi_tier",
+            "playing_xi_basis",
+            "playing_xi_comment",
+            "playing_xi_source_urls",
+            "availability_modifier",
+            "availability_basis",
+            "availability_expected_matches_available",
+            "availability_note",
+            "availability_comment",
+            "availability_source_urls",
+            "overseas_competition_note",
+            "overseas_competition_basis",
+            "overseas_competition_comment",
+            "overseas_competition_source_urls",
+            "research_confidence",
+            "needs_player_followup",
+            "followup_reason"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "search_context_size": "medium",
+        "type": "web_search",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 23437,
+      "input_tokens_details": {
+        "cached_tokens": 3712
+      },
+      "output_tokens": 871,
+      "output_tokens_details": {
+        "reasoning_tokens": 367
+      },
+      "total_tokens": 24308
+    },
+    "user": null
+  },
+  "saved_at": "2026-03-23T12:33:52.987608+00:00"
+}

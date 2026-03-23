@@ -1,0 +1,257 @@
+{
+  "parsed": {
+    "availability_basis": "inferred_no_adverse_news",
+    "availability_modifier": 1.0,
+    "availability_note": "No current player-specific absence evidence was found; Jamie Overton should be treated as available for the full 14-match league stage.",
+    "expected_matches_available": 14,
+    "has_real_concern": false,
+    "official_player_id": "22109",
+    "reasoning": "The only concrete issue in the raw data is a historical 2025 finger injury, and there is no March 2026 evidence of an ongoing injury, suspension, delayed joining, or international-duty conflict. Overseas-slot competition and likely rotation affect selection chances, not availability, and partial fixture publication is explicitly irrelevant to this audit.",
+    "source_urls": [
+      "https://www.ecb.co.uk/news/4353805",
+      "https://www.iplt20.com/players/jamie-overton/22109"
+    ]
+  },
+  "request": {
+    "input": [
+      {
+        "content": [
+          {
+            "text": "You are an IPL 2026 availability auditor fixing contaminated fantasy input data.\n\nYour only job is to decide whether a player should have reduced availability for the 14-match league stage.\n\nCore rule:\n- Every IPL team plays 14 league matches.\n- Partial fixture publication is not a player availability issue.\n- Only reduce availability for player-specific reasons such as injury, delayed joining, tournament conflict, suspension, or credible workload management.\n\nUse web search to verify evidence when needed, but keep the decision anchored to the provided raw audit context.\nReturn JSON only.",
+            "type": "input_text"
+          }
+        ],
+        "role": "system"
+      },
+      {
+        "content": [
+          {
+            "text": "You are assessing the availability of an IPL 2026 cricket player for a fantasy league prediction model.\n\n## Player Context\n- Official Player ID: 22109\n- Name: Jamie Overton\n- IPL Team: CSK\n- Role: AR\n- Overseas: True\n\n## Raw Data Collected\nHere is everything we found about this player's availability, injury status, and fitness:\n\n<raw_availability_data>\nCurrent CSV availability fields:\n{\n  \"availability_basis\": \"inferred_no_adverse_news\",\n  \"availability_comment\": \"Available unless late tactical omission; no fresh unavailability signal found after recovery from 2025 finger injury.\",\n  \"availability_expected_matches_available\": \"13\",\n  \"availability_modifier\": \"0.9300\",\n  \"availability_note\": \"No current March 2026 injury, suspension, or national-duty restriction found; prior 2025 finger issue appears historical.\",\n  \"availability_source_urls\": [\n    \"https://www.ecb.co.uk/news/4420620/england-men-at-the-ipl-auction\",\n    \"https://www.ecb.co.uk/news/4353805\",\n    \"https://www.iplt20.com/players/jamie-overton/22109\"\n  ],\n  \"official_player_id\": \"22109\"\n}\n\nFixture publication context:\n{\n  \"fixtures_preview\": [\n    {\n      \"match_date\": \"2026-03-30\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"RR\",\n      \"venue\": \"ACA Stadium\"\n    },\n    {\n      \"match_date\": \"2026-04-03\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"PBKS\",\n      \"venue\": \"MA Chidambaram Stadium\"\n    },\n    {\n      \"match_date\": \"2026-04-05\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"RCB\",\n      \"venue\": \"M Chinnaswamy Stadium\"\n    },\n    {\n      \"match_date\": \"2026-04-11\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"DC\",\n      \"venue\": \"MA Chidambaram Stadium\"\n    }\n  ],\n  \"league_matches_expected\": 14,\n  \"published_fixture_count\": 4,\n  \"season\": \"2026\",\n  \"team\": \"CSK\",\n  \"team_name\": \"Chennai Super Kings\"\n}\n\nTeam-level research record:\n{\n  \"availability_basis\": \"inferred_no_adverse_news\",\n  \"availability_comment\": \"ECB reported broken finger in May 2025; no March 2026 IPL restriction found. Estimate remains conservative because published fixtures are incomplete.\",\n  \"availability_expected_matches_available\": 11,\n  \"availability_modifier\": 0.79,\n  \"availability_note\": \"No current IPL-window unavailability found, but prior 2025 finger injury and limited direct 2026 availability reporting reduce certainty.\",\n  \"availability_source_urls\": [\n    \"https://www.ecb.co.uk/news/4276191/jamie-overton-ruled-out-of-west-indies-series\",\n    \"https://www.ecb.co.uk/news/4353805\",\n    \"https://www.iplt20.com/news/4249/bcci-announces-schedule-for-first-phase-of-tata-ipl-2026\"\n  ],\n  \"followup_reason\": \"Need current fitness and role confirmation closer to season start.\",\n  \"full_name\": \"Jamie Overton\",\n  \"needs_player_followup\": true,\n  \"official_player_id\": \"22109\",\n  \"overseas_competition_basis\": \"overseas_slot_pressure\",\n  \"overseas_competition_comment\": \"Utility helps, but overseas cap and surface-dependent balance may make him rotational.\",\n  \"overseas_competition_note\": \"Competes for overseas slots with several bowling-heavy options.\",\n  \"overseas_competition_source_urls\": [\n    \"https://www.iplt20.com/index.php/teams/royal-challengers-bengaluru/squad-details/20575\"\n  ],\n  \"playing_xi_basis\": \"inferred_from_team_context\",\n  \"playing_xi_comment\": \"Overseas pace-bowling all-rounder option, but not a locked starter in all conditions.\",\n  \"playing_xi_source_urls\": [\n    \"https://www.iplt20.com/index.php/news/4247/tata-ipl-2026-player-retentions-announced\",\n    \"https://www.iplt20.com/index.php/teams/royal-challengers-bengaluru/squad-details/20575\"\n  ],\n  \"playing_xi_tier\": \"ROTATION\",\n  \"research_confidence\": \"Low\"\n}\n\nPlayer follow-up research record:\n{\n  \"availability_basis\": \"inferred_no_adverse_news\",\n  \"availability_comment\": \"Available unless late tactical omission; no fresh unavailability signal found after recovery from 2025 finger injury.\",\n  \"availability_expected_matches_available\": 13,\n  \"availability_modifier\": 0.93,\n  \"availability_note\": \"No current March 2026 injury, suspension, or national-duty restriction found; prior 2025 finger issue appears historical.\",\n  \"availability_source_urls\": [\n    \"https://www.ecb.co.uk/news/4420620/england-men-at-the-ipl-auction\",\n    \"https://www.ecb.co.uk/news/4353805\",\n    \"https://www.iplt20.com/players/jamie-overton/22109\"\n  ],\n  \"followup_reason\": \"No official XI confirmation yet; reassess after CSK team sheets for the opening matches.\",\n  \"full_name\": \"Jamie Overton\",\n  \"needs_player_followup\": true,\n  \"official_player_id\": \"22109\",\n  \"overseas_competition_basis\": \"overseas_slot_pressure\",\n  \"overseas_competition_comment\": \"Role versatility helps, but CSK have multiple overseas bowling and all-round options for only four slots.\",\n  \"overseas_competition_note\": \"Faces strong overseas-slot competition from Noor Ahmad, Dewald Brevis, Nathan Ellis, Akeal Hosein, Matt Henry, Matthew Short and Zak Foulkes.\",\n  \"overseas_competition_source_urls\": [\n    \"https://www.iplt20.com/teams/chennai-super-kings/squad/2026\",\n    \"https://documents.iplt20.com/bcci/documents/1763209725967_TATA%20IPL%202026%20-%20Playing%20Squad%20-%2015.11.2025%20%281%29.pdf\",\n    \"https://www.iplt20.com/index.php/auction/2026\"\n  ],\n  \"playing_xi_basis\": \"inferred_from_team_context\",\n  \"playing_xi_comment\": \"In CSK's 2026 squad, but overseas balance makes him a situational pick rather than a lock.\",\n  \"playing_xi_source_urls\": [\n    \"https://www.iplt20.com/players/jamie-overton/22109\",\n    \"https://www.iplt20.com/teams/chennai-super-kings/squad/2026\",\n    \"https://documents.iplt20.com/bcci/documents/1763209725967_TATA%20IPL%202026%20-%20Playing%20Squad%20-%2015.11.2025%20%281%29.pdf\",\n    \"https://www.cricbuzz.com/cricket-news/136884/ipl-auction-2026-what-the-teams-need-part-i\"\n  ],\n  \"playing_xi_tier\": \"ROTATION\",\n  \"research_confidence\": \"Medium\"\n}\n\nImportant interpretation rule:\n- Every team still plays 14 league matches.\n- Published fixture count is schedule completeness only.\n- Reduce availability only when there is player-specific absence evidence.\n</raw_availability_data>\n\n## Your Task\n\nDetermine what fraction of the 14-match IPL 2026 league season this player will be AVAILABLE to be selected for (not whether they'll be picked \u2014 just whether they're fit and eligible).\n\n**CRITICAL RULES:**\n1. Every IPL team plays exactly 14 league stage matches. This is a fact. Do not reduce availability just because only some fixtures have been published/announced yet. Partial schedule publication is NOT a player availability issue.\n2. Only reduce availability for PLAYER-SPECIFIC reasons:\n   - Confirmed injury with recovery timeline\n   - International duty that overlaps with IPL dates\n   - Suspension or ban\n   - Retirement or withdrawal from IPL\n   - Known workload management plans (e.g., fast bowlers being rested periodically)\n3. If there is NO evidence of any player-specific absence, availability_modifier MUST be 1.0.\n4. \"No news\" = healthy. Absence of injury reports means the player is available.\n\n## Response Format\n\nReply with ONLY a JSON object, no other text:\n\n```json\n{\n  \"official_player_id\": \"<string>\",\n  \"availability_modifier\": <float 0.0 to 1.0>,\n  \"expected_matches_available\": <int 0 to 14>,\n  \"availability_basis\": \"<confirmed_available | inferred_no_adverse_news | injury_report | late_joining | tournament_conflict | suspension | conflicting_reports | unknown>\",\n  \"availability_note\": \"<one sentence explaining your assessment>\",\n  \"reasoning\": \"<2-3 sentences explaining WHY you chose this value, what evidence you used or didn't find>\",\n  \"has_real_concern\": <boolean \u2014 true if there's a genuine player-specific issue, false if fully available>,\n  \"source_urls\": [\"<supporting URL 1>\", \"<supporting URL 2>\"]\n}\n```\n\nExamples:\n- Fully fit player, no issues: {\"official_player_id\": \"123\", \"availability_modifier\": 1.0, \"expected_matches_available\": 14, \"availability_basis\": \"confirmed_available\", \"availability_note\": \"No injury or availability concerns found.\", \"reasoning\": \"No reports of injury, fitness issues, or scheduling conflicts. Player is expected to be available for the full season.\", \"has_real_concern\": false, \"source_urls\": [\"https://example.com/player\"]}\n- Player recovering from knee surgery, expected back by match 5: {\"official_player_id\": \"123\", \"availability_modifier\": 0.64, \"expected_matches_available\": 9, \"availability_basis\": \"injury_report\", \"availability_note\": \"Recovering from knee surgery, expected to miss first 5 matches.\", \"reasoning\": \"Reports indicate knee surgery in Jan 2026 with 3-month recovery. IPL starts March, so likely available from match 5-6 onwards. 9/14 = 0.64.\", \"has_real_concern\": true, \"source_urls\": [\"https://example.com/injury-report\"]}\n- Fast bowler with workload management: {\"official_player_id\": \"123\", \"availability_modifier\": 0.85, \"expected_matches_available\": 12, \"availability_basis\": \"conflicting_reports\", \"availability_note\": \"Likely to be rested for 2 matches as part of workload management.\", \"reasoning\": \"As an international fast bowler with a heavy schedule, team is expected to manage workload. Typically rested for 1-2 league matches.\", \"has_real_concern\": true, \"source_urls\": [\"https://example.com/workload\"]}\n- Player whose data mentions schedule: {\"official_player_id\": \"123\", \"availability_modifier\": 1.0, \"expected_matches_available\": 14, \"availability_basis\": \"inferred_no_adverse_news\", \"availability_note\": \"No injury or availability concerns found.\", \"reasoning\": \"Raw data only mentions published fixture count, which is a schedule publication issue, not a player availability issue. No evidence of any player-specific absence.\", \"has_real_concern\": false, \"source_urls\": [\"https://example.com/fixtures\"]}\n\n\nReturn the final answer using this exact JSON shape:\n{\n  \"official_player_id\": \"22109\",\n  \"availability_modifier\": <float 0.0 to 1.0>,\n  \"expected_matches_available\": <int 0 to 14>,\n  \"availability_note\": \"<one sentence>\",\n  \"reasoning\": \"<2-3 audit-friendly sentences>\",\n  \"has_real_concern\": <true or false>,\n  \"availability_basis\": \"<one of confirmed_available, inferred_no_adverse_news, injury_report, late_joining, tournament_conflict, suspension, conflicting_reports, unknown>\",\n  \"source_urls\": [\"<url1>\", \"<url2>\"]\n}\nIf there is no player-specific absence evidence, return availability_modifier=1.0, expected_matches_available=14, and has_real_concern=false.\nDo not treat partial fixture publication as a real concern.",
+            "type": "input_text"
+          }
+        ],
+        "role": "user"
+      }
+    ],
+    "max_output_tokens": 2200,
+    "model": "gpt-5.4",
+    "text": {
+      "format": {
+        "name": "availability_repair_22109",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "availability_basis": {
+              "enum": [
+                "confirmed_available",
+                "conflicting_reports",
+                "inferred_no_adverse_news",
+                "injury_report",
+                "late_joining",
+                "suspension",
+                "tournament_conflict",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "availability_modifier": {
+              "type": "number"
+            },
+            "availability_note": {
+              "type": "string"
+            },
+            "expected_matches_available": {
+              "type": "integer"
+            },
+            "has_real_concern": {
+              "type": "boolean"
+            },
+            "official_player_id": {
+              "type": "string"
+            },
+            "reasoning": {
+              "type": "string"
+            },
+            "source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "official_player_id",
+            "availability_modifier",
+            "expected_matches_available",
+            "availability_note",
+            "reasoning",
+            "has_real_concern",
+            "availability_basis",
+            "source_urls"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ]
+  },
+  "request_id": "d7f52cff-fba8-4403-b56f-ea63dbffcc44",
+  "response": {
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1774275007,
+    "created_at": 1774275002,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "id": "resp_037015cd6a42ede30069c149ba930881918d7008ec01a6136b",
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": 2200,
+    "max_tool_calls": null,
+    "metadata": {},
+    "model": "gpt-5.4-2026-03-05",
+    "object": "response",
+    "output": [
+      {
+        "action": {
+          "type": "open_page",
+          "url": "https://www.ecb.co.uk/news/4420620/england-men-at-the-ipl-auction"
+        },
+        "id": "ws_037015cd6a42ede30069c149bb0f988191b8233cdddbf22d34",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "content": [
+          {
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"official_player_id\":\"22109\",\"availability_modifier\":1,\"expected_matches_available\":14,\"availability_note\":\"No current player-specific absence evidence was found; Jamie Overton should be treated as available for the full 14-match league stage.\",\"reasoning\":\"The only concrete issue in the raw data is a historical 2025 finger injury, and there is no March 2026 evidence of an ongoing injury, suspension, delayed joining, or international-duty conflict. Overseas-slot competition and likely rotation affect selection chances, not availability, and partial fixture publication is explicitly irrelevant to this audit.\",\"has_real_concern\":false,\"availability_basis\":\"inferred_no_adverse_news\",\"source_urls\":[\"https://www.ecb.co.uk/news/4353805\",\"https://www.iplt20.com/players/jamie-overton/22109\"]}",
+            "type": "output_text"
+          }
+        ],
+        "id": "msg_037015cd6a42ede30069c149bc6ccc81919da9a568531accd8",
+        "phase": "final_answer",
+        "role": "assistant",
+        "status": "completed",
+        "type": "message"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": null,
+    "reasoning": {
+      "effort": "none",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "store": true,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "description": null,
+        "name": "availability_repair_22109",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "availability_basis": {
+              "enum": [
+                "confirmed_available",
+                "conflicting_reports",
+                "inferred_no_adverse_news",
+                "injury_report",
+                "late_joining",
+                "suspension",
+                "tournament_conflict",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "availability_modifier": {
+              "type": "number"
+            },
+            "availability_note": {
+              "type": "string"
+            },
+            "expected_matches_available": {
+              "type": "integer"
+            },
+            "has_real_concern": {
+              "type": "boolean"
+            },
+            "official_player_id": {
+              "type": "string"
+            },
+            "reasoning": {
+              "type": "string"
+            },
+            "source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "official_player_id",
+            "availability_modifier",
+            "expected_matches_available",
+            "availability_note",
+            "reasoning",
+            "has_real_concern",
+            "availability_basis",
+            "source_urls"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "search_context_size": "medium",
+        "type": "web_search",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 11469,
+      "input_tokens_details": {
+        "cached_tokens": 7296
+      },
+      "output_tokens": 262,
+      "output_tokens_details": {
+        "reasoning_tokens": 82
+      },
+      "total_tokens": 11731
+    },
+    "user": null
+  },
+  "saved_at": "2026-03-23T14:10:07.235864+00:00"
+}

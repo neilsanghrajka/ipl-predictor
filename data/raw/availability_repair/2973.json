@@ -1,0 +1,261 @@
+{
+  "parsed": {
+    "availability_basis": "inferred_no_adverse_news",
+    "availability_modifier": 1.0,
+    "availability_note": "A February 2026 side-strain report created short-term uncertainty, but there is no credible player-specific evidence that Washington Sundar will miss any part of IPL 2026 for Gujarat Titans.",
+    "expected_matches_available": 14,
+    "has_real_concern": false,
+    "official_player_id": "2973",
+    "reasoning": "The raw concern is based on pre-IPL international injury news: Cricbuzz reported he was ruled out of New Zealand T20Is and was doubtful for the February 7, 2026 T20 World Cup because of a side strain. However, that report is time-bound to January-February 2026, and the later squad/context material supplied places him in GT's IPL 2026 setup with no GT-side absence, suspension, late-joining, or overlapping tournament conflict identified. Under the audit rule that 'no news = healthy' and that schedule incompleteness is not an availability issue, he should be treated as fully available for all 14 league matches.",
+    "source_urls": [
+      "https://www.cricbuzz.com/cricket-news/137289/washington-sundar-ruled-out-of-new-zealand-t20is-doubtful-for-icc-menst20-world-cup-2026-india-cricbuzzcom",
+      "https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report"
+    ]
+  },
+  "request": {
+    "input": [
+      {
+        "content": [
+          {
+            "text": "You are an IPL 2026 availability auditor fixing contaminated fantasy input data.\n\nYour only job is to decide whether a player should have reduced availability for the 14-match league stage.\n\nCore rule:\n- Every IPL team plays 14 league matches.\n- Partial fixture publication is not a player availability issue.\n- Only reduce availability for player-specific reasons such as injury, delayed joining, tournament conflict, suspension, or credible workload management.\n\nUse web search to verify evidence when needed, but keep the decision anchored to the provided raw audit context.\nReturn JSON only.",
+            "type": "input_text"
+          }
+        ],
+        "role": "system"
+      },
+      {
+        "content": [
+          {
+            "text": "You are assessing the availability of an IPL 2026 cricket player for a fantasy league prediction model.\n\n## Player Context\n- Official Player ID: 2973\n- Name: Washington Sundar\n- IPL Team: GT\n- Role: AR\n- Overseas: False\n\n## Raw Data Collected\nHere is everything we found about this player's availability, injury status, and fitness:\n\n<raw_availability_data>\nCurrent CSV availability fields:\n{\n  \"availability_basis\": \"conflicting_reports\",\n  \"availability_comment\": \"Retained by GT and listed in current IPL 2026 squad pages, but pre-IPL fitness trail is not fully clean.\",\n  \"availability_expected_matches_available\": \"12\",\n  \"availability_modifier\": \"0.8600\",\n  \"availability_note\": \"No GT-side absence report found, but a February 2026 injury report created some uncertainty before IPL.\",\n  \"availability_source_urls\": [\n    \"https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report\",\n    \"https://www.cricbuzz.com/cricket-news/137289/washington-sundar-ruled-out-of-new-zealand-t20is-doubtful-for-icc-menst20-world-cup-2026-india-cricbuzzcom\",\n    \"https://www.espn.com/cricket/story/_/id/47858815/t20-world-cup-2026-washington-sundar-link-squad-delhi\",\n    \"https://www.cricbuzz.com/cricket-match-squads/149651/pbks-vs-gt-4th-match-indian-premier-league-2026\"\n  ],\n  \"official_player_id\": \"2973\"\n}\n\nFixture publication context:\n{\n  \"fixtures_preview\": [\n    {\n      \"match_date\": \"2026-03-31\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"PBKS\",\n      \"venue\": \"PCA International Cricket Stadium\"\n    },\n    {\n      \"match_date\": \"2026-04-04\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"RR\",\n      \"venue\": \"Narendra Modi Stadium\"\n    },\n    {\n      \"match_date\": \"2026-04-08\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"DC\",\n      \"venue\": \"Arun Jaitley Stadium\"\n    },\n    {\n      \"match_date\": \"2026-04-12\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"LSG\",\n      \"venue\": \"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium\"\n    }\n  ],\n  \"league_matches_expected\": 14,\n  \"published_fixture_count\": 4,\n  \"season\": \"2026\",\n  \"team\": \"GT\",\n  \"team_name\": \"Gujarat Titans\"\n}\n\nTeam-level research record:\n{\n  \"availability_basis\": \"inferred_no_adverse_news\",\n  \"availability_comment\": \"No fresh injury or absence report located for April 2026 fixtures.\",\n  \"availability_expected_matches_available\": 11,\n  \"availability_modifier\": 0.79,\n  \"availability_note\": \"No current adverse availability report found; season estimate limited by incomplete schedule publication.\",\n  \"availability_source_urls\": [\n    \"https://www.gujarattitansipl.com/news/gujarat-titans-gt-retained-players-list-ahead-of-ipl-2026-auction\",\n    \"https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf\"\n  ],\n  \"followup_reason\": \"Need opener-week XI clarity in spin/all-round balance.\",\n  \"full_name\": \"Washington Sundar\",\n  \"needs_player_followup\": true,\n  \"official_player_id\": \"2973\",\n  \"overseas_competition_basis\": \"domestic_player\",\n  \"overseas_competition_comment\": \"Selection driven by combination and conditions, not overseas cap.\",\n  \"overseas_competition_note\": \"Domestic player; overseas cap is not the selection constraint. Main competition is from GT's Indian spin/all-round mix.\",\n  \"overseas_competition_source_urls\": [\n    \"https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report\",\n    \"https://www.gujarattitansipl.com/news/gujarat-titans-gt-retained-players-list-ahead-of-ipl-2026-auction\"\n  ],\n  \"playing_xi_basis\": \"inferred_from_team_context\",\n  \"playing_xi_comment\": \"Domestic spin-bowling all-round option frequently used for balance; likely but not fully locked.\",\n  \"playing_xi_source_urls\": [\n    \"https://www.gujarattitansipl.com/news/gujarat-titans-gt-retained-players-list-ahead-of-ipl-2026-auction\",\n    \"https://www.cricbuzz.com/cricket-news/134276/ipl-2025-preview-mumbai-indians-vs-gujarat-titans-cricbuzzcom\"\n  ],\n  \"playing_xi_tier\": \"LIKELY\",\n  \"research_confidence\": \"Medium\"\n}\n\nPlayer follow-up research record:\n{\n  \"availability_basis\": \"conflicting_reports\",\n  \"availability_comment\": \"Retained by GT and listed in current IPL 2026 squad pages, but pre-IPL fitness trail is not fully clean.\",\n  \"availability_expected_matches_available\": 12,\n  \"availability_modifier\": 0.86,\n  \"availability_note\": \"No GT-side absence report found, but a February 2026 injury report created some uncertainty before IPL.\",\n  \"availability_source_urls\": [\n    \"https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report\",\n    \"https://www.cricbuzz.com/cricket-news/137289/washington-sundar-ruled-out-of-new-zealand-t20is-doubtful-for-icc-menst20-world-cup-2026-india-cricbuzzcom\",\n    \"https://www.espn.com/cricket/story/_/id/47858815/t20-world-cup-2026-washington-sundar-link-squad-delhi\",\n    \"https://www.cricbuzz.com/cricket-match-squads/149651/pbks-vs-gt-4th-match-indian-premier-league-2026\"\n  ],\n  \"followup_reason\": \"Need confirmation from GT toss/XI sheets after Mar 31, 2026 opener because role is likely but conditions-dependent and prior fitness reporting was mixed.\",\n  \"full_name\": \"Washington Sundar\",\n  \"needs_player_followup\": true,\n  \"official_player_id\": \"2973\",\n  \"overseas_competition_basis\": \"domestic_player\",\n  \"overseas_competition_comment\": \"Selection pressure comes from Sai Kishore, Nishant Sindhu, Manav Suthar, Jayant Yadav and XI balance, not overseas cap.\",\n  \"overseas_competition_note\": \"Domestic player; no overseas-slot issue. Competition is from GT\\u2019s Indian spin/all-round options and pace-heavy combinations.\",\n  \"overseas_competition_source_urls\": [\n    \"https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report\",\n    \"https://www.cricbuzz.com/cricket-news/136890/ipl-auction-2026-what-the-teams-need-part-ii/\",\n    \"https://www.cricbuzz.com/cricket-match-squads/149746/dc-vs-gt-14th-match-indian-premier-league-2026\"\n  ],\n  \"playing_xi_basis\": \"inferred_from_team_context\",\n  \"playing_xi_comment\": \"Retained core Indian spin all-rounder; likely in GT\\u2019s balance but not fully locked every game.\",\n  \"playing_xi_source_urls\": [\n    \"https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report\",\n    \"https://www.cricbuzz.com/cricket-news/136890/ipl-auction-2026-what-the-teams-need-part-ii/\",\n    \"https://www.espn.com/cricket/story/_/id/44601078/ipl-2025-gt-vs-rr-toss-report-rr-bowl-farooqi-replaces-hasaranga\"\n  ],\n  \"playing_xi_tier\": \"LIKELY\",\n  \"research_confidence\": \"Medium\"\n}\n\nImportant interpretation rule:\n- Every team still plays 14 league matches.\n- Published fixture count is schedule completeness only.\n- Reduce availability only when there is player-specific absence evidence.\n</raw_availability_data>\n\n## Your Task\n\nDetermine what fraction of the 14-match IPL 2026 league season this player will be AVAILABLE to be selected for (not whether they'll be picked \u2014 just whether they're fit and eligible).\n\n**CRITICAL RULES:**\n1. Every IPL team plays exactly 14 league stage matches. This is a fact. Do not reduce availability just because only some fixtures have been published/announced yet. Partial schedule publication is NOT a player availability issue.\n2. Only reduce availability for PLAYER-SPECIFIC reasons:\n   - Confirmed injury with recovery timeline\n   - International duty that overlaps with IPL dates\n   - Suspension or ban\n   - Retirement or withdrawal from IPL\n   - Known workload management plans (e.g., fast bowlers being rested periodically)\n3. If there is NO evidence of any player-specific absence, availability_modifier MUST be 1.0.\n4. \"No news\" = healthy. Absence of injury reports means the player is available.\n\n## Response Format\n\nReply with ONLY a JSON object, no other text:\n\n```json\n{\n  \"official_player_id\": \"<string>\",\n  \"availability_modifier\": <float 0.0 to 1.0>,\n  \"expected_matches_available\": <int 0 to 14>,\n  \"availability_basis\": \"<confirmed_available | inferred_no_adverse_news | injury_report | late_joining | tournament_conflict | suspension | conflicting_reports | unknown>\",\n  \"availability_note\": \"<one sentence explaining your assessment>\",\n  \"reasoning\": \"<2-3 sentences explaining WHY you chose this value, what evidence you used or didn't find>\",\n  \"has_real_concern\": <boolean \u2014 true if there's a genuine player-specific issue, false if fully available>,\n  \"source_urls\": [\"<supporting URL 1>\", \"<supporting URL 2>\"]\n}\n```\n\nExamples:\n- Fully fit player, no issues: {\"official_player_id\": \"123\", \"availability_modifier\": 1.0, \"expected_matches_available\": 14, \"availability_basis\": \"confirmed_available\", \"availability_note\": \"No injury or availability concerns found.\", \"reasoning\": \"No reports of injury, fitness issues, or scheduling conflicts. Player is expected to be available for the full season.\", \"has_real_concern\": false, \"source_urls\": [\"https://example.com/player\"]}\n- Player recovering from knee surgery, expected back by match 5: {\"official_player_id\": \"123\", \"availability_modifier\": 0.64, \"expected_matches_available\": 9, \"availability_basis\": \"injury_report\", \"availability_note\": \"Recovering from knee surgery, expected to miss first 5 matches.\", \"reasoning\": \"Reports indicate knee surgery in Jan 2026 with 3-month recovery. IPL starts March, so likely available from match 5-6 onwards. 9/14 = 0.64.\", \"has_real_concern\": true, \"source_urls\": [\"https://example.com/injury-report\"]}\n- Fast bowler with workload management: {\"official_player_id\": \"123\", \"availability_modifier\": 0.85, \"expected_matches_available\": 12, \"availability_basis\": \"conflicting_reports\", \"availability_note\": \"Likely to be rested for 2 matches as part of workload management.\", \"reasoning\": \"As an international fast bowler with a heavy schedule, team is expected to manage workload. Typically rested for 1-2 league matches.\", \"has_real_concern\": true, \"source_urls\": [\"https://example.com/workload\"]}\n- Player whose data mentions schedule: {\"official_player_id\": \"123\", \"availability_modifier\": 1.0, \"expected_matches_available\": 14, \"availability_basis\": \"inferred_no_adverse_news\", \"availability_note\": \"No injury or availability concerns found.\", \"reasoning\": \"Raw data only mentions published fixture count, which is a schedule publication issue, not a player availability issue. No evidence of any player-specific absence.\", \"has_real_concern\": false, \"source_urls\": [\"https://example.com/fixtures\"]}\n\n\nReturn the final answer using this exact JSON shape:\n{\n  \"official_player_id\": \"2973\",\n  \"availability_modifier\": <float 0.0 to 1.0>,\n  \"expected_matches_available\": <int 0 to 14>,\n  \"availability_note\": \"<one sentence>\",\n  \"reasoning\": \"<2-3 audit-friendly sentences>\",\n  \"has_real_concern\": <true or false>,\n  \"availability_basis\": \"<one of confirmed_available, inferred_no_adverse_news, injury_report, late_joining, tournament_conflict, suspension, conflicting_reports, unknown>\",\n  \"source_urls\": [\"<url1>\", \"<url2>\"]\n}\nIf there is no player-specific absence evidence, return availability_modifier=1.0, expected_matches_available=14, and has_real_concern=false.\nDo not treat partial fixture publication as a real concern.",
+            "type": "input_text"
+          }
+        ],
+        "role": "user"
+      }
+    ],
+    "max_output_tokens": 2200,
+    "model": "gpt-5.4",
+    "text": {
+      "format": {
+        "name": "availability_repair_2973",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "availability_basis": {
+              "enum": [
+                "confirmed_available",
+                "conflicting_reports",
+                "inferred_no_adverse_news",
+                "injury_report",
+                "late_joining",
+                "suspension",
+                "tournament_conflict",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "availability_modifier": {
+              "type": "number"
+            },
+            "availability_note": {
+              "type": "string"
+            },
+            "expected_matches_available": {
+              "type": "integer"
+            },
+            "has_real_concern": {
+              "type": "boolean"
+            },
+            "official_player_id": {
+              "type": "string"
+            },
+            "reasoning": {
+              "type": "string"
+            },
+            "source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "official_player_id",
+            "availability_modifier",
+            "expected_matches_available",
+            "availability_note",
+            "reasoning",
+            "has_real_concern",
+            "availability_basis",
+            "source_urls"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ]
+  },
+  "request_id": "b1e6ccf3-baec-4960-a8c2-e45fb34e0809",
+  "response": {
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1774275163,
+    "created_at": 1774275157,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "id": "resp_060c9cf1af97f6e00069c14a5501788190877ae434dd254542",
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": 2200,
+    "max_tool_calls": null,
+    "metadata": {},
+    "model": "gpt-5.4-2026-03-05",
+    "object": "response",
+    "output": [
+      {
+        "action": {
+          "queries": [
+            "Washington Sundar February 2026 injury ruled out New Zealand T20Is doubtful for T20 World Cup 2026 Cricbuzz",
+            "Washington Sundar IPL 2026 Gujarat Titans squad March 2026 Washington Sundar available"
+          ],
+          "query": "Washington Sundar February 2026 injury ruled out New Zealand T20Is doubtful for T20 World Cup 2026 Cricbuzz",
+          "type": "search"
+        },
+        "id": "ws_060c9cf1af97f6e00069c14a557c408190801e8542af58c822",
+        "status": "completed",
+        "type": "web_search_call"
+      },
+      {
+        "content": [
+          {
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"official_player_id\":\"2973\",\"availability_modifier\":1,\"expected_matches_available\":14,\"availability_note\":\"A February 2026 side-strain report created short-term uncertainty, but there is no credible player-specific evidence that Washington Sundar will miss any part of IPL 2026 for Gujarat Titans.\",\"reasoning\":\"The raw concern is based on pre-IPL international injury news: Cricbuzz reported he was ruled out of New Zealand T20Is and was doubtful for the February 7, 2026 T20 World Cup because of a side strain. However, that report is time-bound to January-February 2026, and the later squad/context material supplied places him in GT's IPL 2026 setup with no GT-side absence, suspension, late-joining, or overlapping tournament conflict identified. Under the audit rule that 'no news = healthy' and that schedule incompleteness is not an availability issue, he should be treated as fully available for all 14 league matches.\",\"has_real_concern\":false,\"availability_basis\":\"inferred_no_adverse_news\",\"source_urls\":[\"https://www.cricbuzz.com/cricket-news/137289/washington-sundar-ruled-out-of-new-zealand-t20is-doubtful-for-icc-menst20-world-cup-2026-india-cricbuzzcom\",\"https://www.gujarattitansipl.com/news/indian-premier-league-ipl-2026-player-auction-report\"]}",
+            "type": "output_text"
+          }
+        ],
+        "id": "msg_060c9cf1af97f6e00069c14a57388081909087040a445f6ebe",
+        "phase": "final_answer",
+        "role": "assistant",
+        "status": "completed",
+        "type": "message"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": null,
+    "reasoning": {
+      "effort": "none",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "store": true,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "description": null,
+        "name": "availability_repair_2973",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "availability_basis": {
+              "enum": [
+                "confirmed_available",
+                "conflicting_reports",
+                "inferred_no_adverse_news",
+                "injury_report",
+                "late_joining",
+                "suspension",
+                "tournament_conflict",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "availability_modifier": {
+              "type": "number"
+            },
+            "availability_note": {
+              "type": "string"
+            },
+            "expected_matches_available": {
+              "type": "integer"
+            },
+            "has_real_concern": {
+              "type": "boolean"
+            },
+            "official_player_id": {
+              "type": "string"
+            },
+            "reasoning": {
+              "type": "string"
+            },
+            "source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "official_player_id",
+            "availability_modifier",
+            "expected_matches_available",
+            "availability_note",
+            "reasoning",
+            "has_real_concern",
+            "availability_basis",
+            "source_urls"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "search_context_size": "medium",
+        "type": "web_search",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 11579,
+      "input_tokens_details": {
+        "cached_tokens": 7552
+      },
+      "output_tokens": 382,
+      "output_tokens_details": {
+        "reasoning_tokens": 70
+      },
+      "total_tokens": 11961
+    },
+    "user": null
+  },
+  "saved_at": "2026-03-23T14:12:43.921241+00:00"
+}

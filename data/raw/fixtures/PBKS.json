@@ -1,0 +1,73 @@
+{
+  "competition_id": "284",
+  "fixtures": [
+    {
+      "city": "New Chandigarh",
+      "competition_id": "284",
+      "is_home": true,
+      "match_date": "2026-03-31",
+      "match_date_display": "31 Mar 2026",
+      "match_datetime_local": "2026-03-31 19:30:00",
+      "match_id": "2420",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "GT",
+      "opponent_name": "Gujarat Titans",
+      "team_code": "PBKS",
+      "team_name": "Punjab Kings",
+      "venue": "PCA International Cricket Stadium"
+    },
+    {
+      "city": "Chennai",
+      "competition_id": "284",
+      "is_home": false,
+      "match_date": "2026-04-03",
+      "match_date_display": "3 Apr 2026",
+      "match_datetime_local": "2026-04-03 19:30:00",
+      "match_id": "2423",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "CSK",
+      "opponent_name": "Chennai Super Kings",
+      "team_code": "PBKS",
+      "team_name": "Punjab Kings",
+      "venue": "MA Chidambaram Stadium"
+    },
+    {
+      "city": "Kolkata",
+      "competition_id": "284",
+      "is_home": false,
+      "match_date": "2026-04-06",
+      "match_date_display": "6 Apr 2026",
+      "match_datetime_local": "2026-04-06 19:30:00",
+      "match_id": "2428",
+      "match_status": "UpComing",
+      "match_time_local": "19:30",
+      "opponent_code": "KKR",
+      "opponent_name": "Kolkata Knight Riders",
+      "team_code": "PBKS",
+      "team_name": "Punjab Kings",
+      "venue": "Eden Gardens"
+    },
+    {
+      "city": "New Chandigarh",
+      "competition_id": "284",
+      "is_home": true,
+      "match_date": "2026-04-11",
+      "match_date_display": "11 Apr 2026",
+      "match_datetime_local": "2026-04-11 15:30:00",
+      "match_id": "2433",
+      "match_status": "UpComing",
+      "match_time_local": "15:30",
+      "opponent_code": "SRH",
+      "opponent_name": "Sunrisers Hyderabad",
+      "team_code": "PBKS",
+      "team_name": "Punjab Kings",
+      "venue": "PCA International Cricket Stadium"
+    }
+  ],
+  "published_fixture_count": 4,
+  "season": "2026",
+  "team": "PBKS",
+  "team_name": "Punjab Kings"
+}

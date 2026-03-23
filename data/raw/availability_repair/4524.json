@@ -1,0 +1,248 @@
+{
+  "parsed": {
+    "availability_basis": "confirmed_available",
+    "availability_modifier": 1.0,
+    "availability_note": "Recovered from the earlier hamstring issue and no current player-specific absence for IPL 2026 is evidenced.",
+    "expected_matches_available": 14,
+    "has_real_concern": false,
+    "official_player_id": "4524",
+    "reasoning": "The raw audit record shows the winter hamstring strain was followed by reports of Tim David training without visible limitation in February 2026, and he appears in RCB's 2026 squad. There is no evidence here of an active injury layoff, suspension, international-duty clash, late joining, or workload restriction for the IPL league stage. Overseas-slot competition affects selection, not availability, and partial fixture publication is irrelevant to the 14-match availability estimate.",
+    "source_urls": [
+      "https://www.cricket.com.au/news/4445672/tim-david-hamstring-injury-update-t20-world-cup-india-sri-lanka-australia-training-watch-sixes-colombo-higher-batting-role",
+      "https://www.iplt20.com/teams/royal-challengers-bengaluru/squad/2026"
+    ]
+  },
+  "request": {
+    "input": [
+      {
+        "content": [
+          {
+            "text": "You are an IPL 2026 availability auditor fixing contaminated fantasy input data.\n\nYour only job is to decide whether a player should have reduced availability for the 14-match league stage.\n\nCore rule:\n- Every IPL team plays 14 league matches.\n- Partial fixture publication is not a player availability issue.\n- Only reduce availability for player-specific reasons such as injury, delayed joining, tournament conflict, suspension, or credible workload management.\n\nUse web search to verify evidence when needed, but keep the decision anchored to the provided raw audit context.\nReturn JSON only.",
+            "type": "input_text"
+          }
+        ],
+        "role": "system"
+      },
+      {
+        "content": [
+          {
+            "text": "You are assessing the availability of an IPL 2026 cricket player for a fantasy league prediction model.\n\n## Player Context\n- Official Player ID: 4524\n- Name: Tim David\n- IPL Team: RCB\n- Role: BAT\n- Overseas: True\n\n## Raw Data Collected\nHere is everything we found about this player's availability, injury status, and fitness:\n\n<raw_availability_data>\nCurrent CSV availability fields:\n{\n  \"availability_basis\": \"confirmed_available\",\n  \"availability_comment\": \"Recent primary reporting indicates recovery; no March 2026 RCB unavailability report found, but no explicit franchise fitness bulletin either.\",\n  \"availability_expected_matches_available\": \"13\",\n  \"availability_modifier\": \"0.9300\",\n  \"availability_note\": \"Returned from the December 2025 hamstring strain and was reported training without visible limitation during Australia's T20 World Cup camp on February 6, 2026.\",\n  \"availability_source_urls\": [\n    \"https://www.cricket.com.au/news/4445672/tim-david-hamstring-injury-update-t20-world-cup-india-sri-lanka-australia-training-watch-sixes-colombo-higher-batting-role\",\n    \"https://www.espn.in/cricket/story/_/id/47422019/tim-david-hamstring-injury-concern-australia-2026-t20-world-cup-hopes\",\n    \"https://www.iplt20.com/teams/royal-challengers-bengaluru/squad/2026\"\n  ],\n  \"official_player_id\": \"4524\"\n}\n\nFixture publication context:\n{\n  \"fixtures_preview\": [\n    {\n      \"match_date\": \"2026-03-28\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"SRH\",\n      \"venue\": \"M Chinnaswamy Stadium\"\n    },\n    {\n      \"match_date\": \"2026-04-05\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"CSK\",\n      \"venue\": \"M Chinnaswamy Stadium\"\n    },\n    {\n      \"match_date\": \"2026-04-10\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"RR\",\n      \"venue\": \"ACA Stadium\"\n    },\n    {\n      \"match_date\": \"2026-04-12\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"MI\",\n      \"venue\": \"Wankhede Stadium\"\n    }\n  ],\n  \"league_matches_expected\": 14,\n  \"published_fixture_count\": 4,\n  \"season\": \"2026\",\n  \"team\": \"RCB\",\n  \"team_name\": \"Royal Challengers Bengaluru\"\n}\n\nTeam-level research record:\n{\n  \"availability_basis\": \"injury_report\",\n  \"availability_comment\": \"Availability remains an informed estimate, not a franchise confirmation; schedule visibility is also incomplete beyond April 12, 2026.\",\n  \"availability_expected_matches_available\": 11,\n  \"availability_modifier\": 0.79,\n  \"availability_note\": \"Recent hamstring issue was reported earlier in the winter; later coverage suggests likely fitness for IPL start, but not fully official.\",\n  \"availability_source_urls\": [\n    \"https://www.indiatoday.in/sports/cricket/story/tim-david-injury-rcb-ipl-2025-playoffs-setback-2729715-2025-05-24\",\n    \"https://www.mykhel.com/cricket/will-tim-david-play-for-rcb-in-ipl-2026-after-hamstring-injury-rules-him-out-of-bbl-403926.html\"\n  ],\n  \"followup_reason\": \"Recent injury recovery status before March 28, 2026 opener is not confirmed by a primary source.\",\n  \"full_name\": \"Tim David\",\n  \"needs_player_followup\": true,\n  \"official_player_id\": \"4524\",\n  \"overseas_competition_basis\": \"overseas_slot_pressure\",\n  \"overseas_competition_comment\": \"Finisher role is valuable but not automatically above all overseas alternatives.\",\n  \"overseas_competition_note\": \"Competes directly with Salt, Hazlewood, Bethell, Shepherd and Duffy for four overseas slots.\",\n  \"overseas_competition_source_urls\": [\n    \"https://www.iplt20.com/players/tim-david/4524\",\n    \"https://www.cricbuzz.com/cricket-news/134433/rcb-hope-to-keep-top-two-ambitions-on-track-after-long-break\"\n  ],\n  \"playing_xi_basis\": \"inferred_from_team_context\",\n  \"playing_xi_comment\": \"Retained overseas finisher and frequent probable-XI pick, but overseas-slot squeeze could alter combination.\",\n  \"playing_xi_source_urls\": [\n    \"https://www.cricbuzz.com/cricket-news/134433/rcb-hope-to-keep-top-two-ambitions-on-track-after-long-break\",\n    \"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\"\n  ],\n  \"playing_xi_tier\": \"LIKELY\",\n  \"research_confidence\": \"Low\"\n}\n\nPlayer follow-up research record:\n{\n  \"availability_basis\": \"confirmed_available\",\n  \"availability_comment\": \"Recent primary reporting indicates recovery; no March 2026 RCB unavailability report found, but no explicit franchise fitness bulletin either.\",\n  \"availability_expected_matches_available\": 13,\n  \"availability_modifier\": 0.93,\n  \"availability_note\": \"Returned from the December 2025 hamstring strain and was reported training without visible limitation during Australia's T20 World Cup camp on February 6, 2026.\",\n  \"availability_source_urls\": [\n    \"https://www.cricket.com.au/news/4445672/tim-david-hamstring-injury-update-t20-world-cup-india-sri-lanka-australia-training-watch-sixes-colombo-higher-batting-role\",\n    \"https://www.espn.in/cricket/story/_/id/47422019/tim-david-hamstring-injury-concern-australia-2026-t20-world-cup-hopes\",\n    \"https://www.iplt20.com/teams/royal-challengers-bengaluru/squad/2026\"\n  ],\n  \"followup_reason\": \"Recovery evidence is recent and credible, and no current suspension or tournament-conflict issue was found.\",\n  \"full_name\": \"Tim David\",\n  \"needs_player_followup\": false,\n  \"official_player_id\": \"4524\",\n  \"overseas_competition_basis\": \"overseas_slot_pressure\",\n  \"overseas_competition_comment\": \"Useful finisher, but not an automatic lock if RCB prefer extra bowling or Bethell's balance.\",\n  \"overseas_competition_note\": \"Competes mainly with Jacob Bethell, Romario Shepherd, Nuwan Thushara and Jacob Duffy around Salt/Hazlewood locks for overseas slots.\",\n  \"overseas_competition_source_urls\": [\n    \"https://www.iplt20.com/teams/royal-challengers-bengaluru/squad/2026\",\n    \"https://www.iplt20.com/index.php/players/tim-david/4524\",\n    \"https://www.cricbuzz.com/cricket-match-squads/149812/mi-vs-rcb-20th-match-indian-premier-league-2026\"\n  ],\n  \"playing_xi_basis\": \"inferred_from_team_context\",\n  \"playing_xi_comment\": \"In RCB's 2026 squad as a specialist finishing all-rounder, but four-overseas-slot squeeze keeps him short of guaranteed.\",\n  \"playing_xi_source_urls\": [\n    \"https://www.iplt20.com/teams/royal-challengers-bengaluru/squad/2026\",\n    \"https://www.iplt20.com/index.php/players/tim-david/4524\",\n    \"https://www.cricbuzz.com/cricket-match-squads/149768/rr-vs-rcb-16th-match-indian-premier-league-2026\"\n  ],\n  \"playing_xi_tier\": \"LIKELY\",\n  \"research_confidence\": \"Medium\"\n}\n\nImportant interpretation rule:\n- Every team still plays 14 league matches.\n- Published fixture count is schedule completeness only.\n- Reduce availability only when there is player-specific absence evidence.\n</raw_availability_data>\n\n## Your Task\n\nDetermine what fraction of the 14-match IPL 2026 league season this player will be AVAILABLE to be selected for (not whether they'll be picked \u2014 just whether they're fit and eligible).\n\n**CRITICAL RULES:**\n1. Every IPL team plays exactly 14 league stage matches. This is a fact. Do not reduce availability just because only some fixtures have been published/announced yet. Partial schedule publication is NOT a player availability issue.\n2. Only reduce availability for PLAYER-SPECIFIC reasons:\n   - Confirmed injury with recovery timeline\n   - International duty that overlaps with IPL dates\n   - Suspension or ban\n   - Retirement or withdrawal from IPL\n   - Known workload management plans (e.g., fast bowlers being rested periodically)\n3. If there is NO evidence of any player-specific absence, availability_modifier MUST be 1.0.\n4. \"No news\" = healthy. Absence of injury reports means the player is available.\n\n## Response Format\n\nReply with ONLY a JSON object, no other text:\n\n```json\n{\n  \"official_player_id\": \"<string>\",\n  \"availability_modifier\": <float 0.0 to 1.0>,\n  \"expected_matches_available\": <int 0 to 14>,\n  \"availability_basis\": \"<confirmed_available | inferred_no_adverse_news | injury_report | late_joining | tournament_conflict | suspension | conflicting_reports | unknown>\",\n  \"availability_note\": \"<one sentence explaining your assessment>\",\n  \"reasoning\": \"<2-3 sentences explaining WHY you chose this value, what evidence you used or didn't find>\",\n  \"has_real_concern\": <boolean \u2014 true if there's a genuine player-specific issue, false if fully available>,\n  \"source_urls\": [\"<supporting URL 1>\", \"<supporting URL 2>\"]\n}\n```\n\nExamples:\n- Fully fit player, no issues: {\"official_player_id\": \"123\", \"availability_modifier\": 1.0, \"expected_matches_available\": 14, \"availability_basis\": \"confirmed_available\", \"availability_note\": \"No injury or availability concerns found.\", \"reasoning\": \"No reports of injury, fitness issues, or scheduling conflicts. Player is expected to be available for the full season.\", \"has_real_concern\": false, \"source_urls\": [\"https://example.com/player\"]}\n- Player recovering from knee surgery, expected back by match 5: {\"official_player_id\": \"123\", \"availability_modifier\": 0.64, \"expected_matches_available\": 9, \"availability_basis\": \"injury_report\", \"availability_note\": \"Recovering from knee surgery, expected to miss first 5 matches.\", \"reasoning\": \"Reports indicate knee surgery in Jan 2026 with 3-month recovery. IPL starts March, so likely available from match 5-6 onwards. 9/14 = 0.64.\", \"has_real_concern\": true, \"source_urls\": [\"https://example.com/injury-report\"]}\n- Fast bowler with workload management: {\"official_player_id\": \"123\", \"availability_modifier\": 0.85, \"expected_matches_available\": 12, \"availability_basis\": \"conflicting_reports\", \"availability_note\": \"Likely to be rested for 2 matches as part of workload management.\", \"reasoning\": \"As an international fast bowler with a heavy schedule, team is expected to manage workload. Typically rested for 1-2 league matches.\", \"has_real_concern\": true, \"source_urls\": [\"https://example.com/workload\"]}\n- Player whose data mentions schedule: {\"official_player_id\": \"123\", \"availability_modifier\": 1.0, \"expected_matches_available\": 14, \"availability_basis\": \"inferred_no_adverse_news\", \"availability_note\": \"No injury or availability concerns found.\", \"reasoning\": \"Raw data only mentions published fixture count, which is a schedule publication issue, not a player availability issue. No evidence of any player-specific absence.\", \"has_real_concern\": false, \"source_urls\": [\"https://example.com/fixtures\"]}\n\n\nReturn the final answer using this exact JSON shape:\n{\n  \"official_player_id\": \"4524\",\n  \"availability_modifier\": <float 0.0 to 1.0>,\n  \"expected_matches_available\": <int 0 to 14>,\n  \"availability_note\": \"<one sentence>\",\n  \"reasoning\": \"<2-3 audit-friendly sentences>\",\n  \"has_real_concern\": <true or false>,\n  \"availability_basis\": \"<one of confirmed_available, inferred_no_adverse_news, injury_report, late_joining, tournament_conflict, suspension, conflicting_reports, unknown>\",\n  \"source_urls\": [\"<url1>\", \"<url2>\"]\n}\nIf there is no player-specific absence evidence, return availability_modifier=1.0, expected_matches_available=14, and has_real_concern=false.\nDo not treat partial fixture publication as a real concern.",
+            "type": "input_text"
+          }
+        ],
+        "role": "user"
+      }
+    ],
+    "max_output_tokens": 2200,
+    "model": "gpt-5.4",
+    "text": {
+      "format": {
+        "name": "availability_repair_4524",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "availability_basis": {
+              "enum": [
+                "confirmed_available",
+                "conflicting_reports",
+                "inferred_no_adverse_news",
+                "injury_report",
+                "late_joining",
+                "suspension",
+                "tournament_conflict",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "availability_modifier": {
+              "type": "number"
+            },
+            "availability_note": {
+              "type": "string"
+            },
+            "expected_matches_available": {
+              "type": "integer"
+            },
+            "has_real_concern": {
+              "type": "boolean"
+            },
+            "official_player_id": {
+              "type": "string"
+            },
+            "reasoning": {
+              "type": "string"
+            },
+            "source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "official_player_id",
+            "availability_modifier",
+            "expected_matches_available",
+            "availability_note",
+            "reasoning",
+            "has_real_concern",
+            "availability_basis",
+            "source_urls"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ]
+  },
+  "request_id": "fe30b1b9-4caa-481f-b46f-7f806eafa0dd",
+  "response": {
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1774275052,
+    "created_at": 1774275048,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "id": "resp_0eab59ac0b9817120069c149e83d2481a2ab490e200ebc9897",
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": 2200,
+    "max_tool_calls": null,
+    "metadata": {},
+    "model": "gpt-5.4-2026-03-05",
+    "object": "response",
+    "output": [
+      {
+        "content": [
+          {
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"official_player_id\":\"4524\",\"availability_modifier\":1,\"expected_matches_available\":14,\"availability_note\":\"Recovered from the earlier hamstring issue and no current player-specific absence for IPL 2026 is evidenced.\",\"reasoning\":\"The raw audit record shows the winter hamstring strain was followed by reports of Tim David training without visible limitation in February 2026, and he appears in RCB's 2026 squad. There is no evidence here of an active injury layoff, suspension, international-duty clash, late joining, or workload restriction for the IPL league stage. Overseas-slot competition affects selection, not availability, and partial fixture publication is irrelevant to the 14-match availability estimate.\",\"has_real_concern\":false,\"availability_basis\":\"confirmed_available\",\"source_urls\":[\"https://www.cricket.com.au/news/4445672/tim-david-hamstring-injury-update-t20-world-cup-india-sri-lanka-australia-training-watch-sixes-colombo-higher-batting-role\",\"https://www.iplt20.com/teams/royal-challengers-bengaluru/squad/2026\"]}",
+            "type": "output_text"
+          }
+        ],
+        "id": "msg_0eab59ac0b9817120069c149e8c5c081a2b7c06b4d8f4504af",
+        "phase": "final_answer",
+        "role": "assistant",
+        "status": "completed",
+        "type": "message"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": null,
+    "reasoning": {
+      "effort": "none",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "store": true,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "description": null,
+        "name": "availability_repair_4524",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "availability_basis": {
+              "enum": [
+                "confirmed_available",
+                "conflicting_reports",
+                "inferred_no_adverse_news",
+                "injury_report",
+                "late_joining",
+                "suspension",
+                "tournament_conflict",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "availability_modifier": {
+              "type": "number"
+            },
+            "availability_note": {
+              "type": "string"
+            },
+            "expected_matches_available": {
+              "type": "integer"
+            },
+            "has_real_concern": {
+              "type": "boolean"
+            },
+            "official_player_id": {
+              "type": "string"
+            },
+            "reasoning": {
+              "type": "string"
+            },
+            "source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "official_player_id",
+            "availability_modifier",
+            "expected_matches_available",
+            "availability_note",
+            "reasoning",
+            "has_real_concern",
+            "availability_basis",
+            "source_urls"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "search_context_size": "medium",
+        "type": "web_search",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 7519,
+      "input_tokens_details": {
+        "cached_tokens": 7424
+      },
+      "output_tokens": 240,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 7759
+    },
+    "user": null
+  },
+  "saved_at": "2026-03-23T14:10:52.229999+00:00"
+}

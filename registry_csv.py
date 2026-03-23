@@ -22,13 +22,48 @@ OFFICIAL_FIELDS = [
     "mapping_notes",
 ]
 
-MODEL_CONTROL_FIELDS = [
+PHASE2_FIELDS = [
     "playing_xi_tier",
     "availability_modifier",
     "availability_note",
     "overseas_competition_note",
     "availability_source",
     "confidence",
+    "research_confidence",
+]
+
+PHASE2_AUDIT_FIELDS = [
+    "playing_xi_basis",
+    "playing_xi_comment",
+    "playing_xi_source_urls",
+    "playing_xi_checked_at",
+    "availability_basis",
+    "availability_expected_matches_available",
+    "availability_comment",
+    "availability_source_urls",
+    "availability_checked_at",
+    "overseas_competition_basis",
+    "overseas_competition_comment",
+    "overseas_competition_source_urls",
+    "needs_player_followup",
+    "followup_reason",
+    "followup_checked_at",
+    "research_status",
+    "research_model",
+    "research_run_id",
+]
+
+AVAILABILITY_REPAIR_FIELDS = [
+    "availability_modifier",
+    "availability_note",
+    "availability_source",
+    "availability_basis",
+    "availability_expected_matches_available",
+    "availability_comment",
+    "availability_source_urls",
+    "availability_checked_at",
+    "research_model",
+    "research_run_id",
 ]
 
 STATS_METADATA_FIELDS = [
@@ -90,7 +125,8 @@ STATS_FIELDS = build_stats_fields()
 FIELDNAMES = (
     MANUAL_FIELDS
     + OFFICIAL_FIELDS
-    + MODEL_CONTROL_FIELDS
+    + PHASE2_FIELDS
+    + PHASE2_AUDIT_FIELDS
     + STATS_FIELDS
     + STATS_METADATA_FIELDS
 )
@@ -100,8 +136,14 @@ def blank_registry_row() -> dict[str, str]:
     row = {field: "" for field in FIELDNAMES}
     row["is_overseas"] = "False"
     row["playing_xi_tier"] = "LIKELY"
+    row["playing_xi_basis"] = "unknown"
     row["availability_modifier"] = "1.0"
     row["confidence"] = "Medium"
+    row["availability_basis"] = "unknown"
+    row["overseas_competition_basis"] = "unknown"
+    row["research_confidence"] = "Medium"
+    row["needs_player_followup"] = "False"
+    row["research_status"] = "not_started"
     return row
 
 
@@ -218,3 +260,55 @@ def season_payload_from_row(row: dict[str, str], season_key: str) -> dict[str, i
 
 def registry_key(row: dict[str, str]) -> tuple[str, str, str]:
     return (row["fantasy_owner"], row["ipl_team"], row["nickname"])
+
+
+def official_key(row: dict[str, str]) -> str:
+    return row.get("official_player_id", "")
+
+
+def owned_columns() -> set[str]:
+    return set([field for field in PHASE2_FIELDS if field != "confidence"] + PHASE2_AUDIT_FIELDS)
+
+
+def protected_columns() -> set[str]:
+    return set(MANUAL_FIELDS + OFFICIAL_FIELDS + STATS_FIELDS + STATS_METADATA_FIELDS + ["confidence"])
+
+
+def phase2_owned_columns() -> set[str]:
+    return owned_columns()
+
+
+def phase2_protected_columns() -> set[str]:
+    return protected_columns()
+
+
+def availability_repair_owned_columns() -> set[str]:
+    return set(AVAILABILITY_REPAIR_FIELDS)
+
+
+def build_official_index(rows: list[dict[str, str]]) -> dict[str, dict[str, str]]:
+    index: dict[str, dict[str, str]] = {}
+    for row in rows:
+        player_id = official_key(row).strip()
+        if not player_id:
+            raise ValueError(f"Missing official_player_id for {registry_key(row)}")
+        if player_id in index:
+            raise ValueError(f"Duplicate official_player_id {player_id} in player_registry.csv")
+        index[player_id] = row
+    return index
+
+
+def apply_owned_update(row: dict[str, str], update: dict[str, str], allowed_columns: set[str] | None = None) -> None:
+    allowed = allowed_columns or owned_columns()
+    for field, value in update.items():
+        if field not in allowed or field not in row:
+            continue
+        row[field] = "" if value is None else str(value)
+
+
+def serialize_url_list(urls: list[str]) -> str:
+    return "|".join(urls)
+
+
+def deserialize_url_list(value: str) -> list[str]:
+    return [u for u in value.split("|") if u]

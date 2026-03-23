@@ -1,0 +1,248 @@
+{
+  "parsed": {
+    "availability_basis": "confirmed_available",
+    "availability_modifier": 1.0,
+    "availability_note": "No injury, suspension, late-joining, or other player-specific availability concern is evidenced for Swapnil Singh.",
+    "expected_matches_available": 14,
+    "has_real_concern": false,
+    "official_player_id": "3180",
+    "reasoning": "The raw audit context only supports that Swapnil Singh is in the RCB squad and does not contain any credible player-specific absence report. The earlier reduction to 13/14 appears to be driven by uncertainty or tactical omission risk, which is a playing-XI issue rather than an availability issue. Under the stated rule that no adverse news means healthy, he should be treated as fully available for all 14 league matches.",
+    "source_urls": [
+      "https://www.royalchallengers.com/rcb-squad/swapnil-singh",
+      "https://www.iplt20.com/players/swapnil-singh/3180"
+    ]
+  },
+  "request": {
+    "input": [
+      {
+        "content": [
+          {
+            "text": "You are an IPL 2026 availability auditor fixing contaminated fantasy input data.\n\nYour only job is to decide whether a player should have reduced availability for the 14-match league stage.\n\nCore rule:\n- Every IPL team plays 14 league matches.\n- Partial fixture publication is not a player availability issue.\n- Only reduce availability for player-specific reasons such as injury, delayed joining, tournament conflict, suspension, or credible workload management.\n\nUse web search to verify evidence when needed, but keep the decision anchored to the provided raw audit context.\nReturn JSON only.",
+            "type": "input_text"
+          }
+        ],
+        "role": "system"
+      },
+      {
+        "content": [
+          {
+            "text": "You are assessing the availability of an IPL 2026 cricket player for a fantasy league prediction model.\n\n## Player Context\n- Official Player ID: 3180\n- Name: Swapnil Singh\n- IPL Team: RCB\n- Role: AR\n- Overseas: False\n\n## Raw Data Collected\nHere is everything we found about this player's availability, injury status, and fitness:\n\n<raw_availability_data>\nCurrent CSV availability fields:\n{\n  \"availability_basis\": \"confirmed_available\",\n  \"availability_comment\": \"Available unless late tactical omission; no adverse news located.\",\n  \"availability_expected_matches_available\": \"13\",\n  \"availability_modifier\": \"0.9300\",\n  \"availability_note\": \"Named in current RCB squad pages; no recent injury/suspension/unavailability report found.\",\n  \"availability_source_urls\": [\n    \"https://www.royalchallengers.com/rcb-squad/swapnil-singh\",\n    \"https://www.cricbuzz.com/cricket-match-squads/149768/rr-vs-rcb-16th-match-indian-premier-league-2026\",\n    \"https://thesportstak.com/cricket/match/rcb-vs-srh-match-1-ipl-28-march-2026-267882/players\"\n  ],\n  \"official_player_id\": \"3180\"\n}\n\nFixture publication context:\n{\n  \"fixtures_preview\": [\n    {\n      \"match_date\": \"2026-03-28\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"SRH\",\n      \"venue\": \"M Chinnaswamy Stadium\"\n    },\n    {\n      \"match_date\": \"2026-04-05\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"CSK\",\n      \"venue\": \"M Chinnaswamy Stadium\"\n    },\n    {\n      \"match_date\": \"2026-04-10\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"RR\",\n      \"venue\": \"ACA Stadium\"\n    },\n    {\n      \"match_date\": \"2026-04-12\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"MI\",\n      \"venue\": \"Wankhede Stadium\"\n    }\n  ],\n  \"league_matches_expected\": 14,\n  \"published_fixture_count\": 4,\n  \"season\": \"2026\",\n  \"team\": \"RCB\",\n  \"team_name\": \"Royal Challengers Bengaluru\"\n}\n\nTeam-level research record:\n{\n  \"availability_basis\": \"inferred_no_adverse_news\",\n  \"availability_comment\": \"Season-long precision limited by partial published fixture set.\",\n  \"availability_expected_matches_available\": 12,\n  \"availability_modifier\": 0.86,\n  \"availability_note\": \"No current adverse availability report found; estimate capped because only first 4 fixtures are published in the prompt.\",\n  \"availability_source_urls\": [\n    \"https://documents.iplt20.com/bcci/documents/1773233174530_TATA%20IPL%20Schedule%202026_Part%201.pdf\",\n    \"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\"\n  ],\n  \"followup_reason\": \"Little recent evidence on pecking-order position in 2026.\",\n  \"full_name\": \"Swapnil Singh\",\n  \"needs_player_followup\": true,\n  \"official_player_id\": \"3180\",\n  \"overseas_competition_basis\": \"domestic_player\",\n  \"overseas_competition_comment\": \"Competes on balance and conditions only.\",\n  \"overseas_competition_note\": \"Domestic player; overseas cap is not the constraint.\",\n  \"overseas_competition_source_urls\": [\n    \"https://www.iplt20.com/players/swapnil-singh/3180\",\n    \"https://www.cricbuzz.com/cricket-match-squads/149768/rr-vs-rcb-16th-match-indian-premier-league-2026\"\n  ],\n  \"playing_xi_basis\": \"inferred_from_team_context\",\n  \"playing_xi_comment\": \"Retained domestic spin-bowling all-round backup; likely matchup/bench option in full-strength squad.\",\n  \"playing_xi_source_urls\": [\n    \"https://indianexpress.com/article/sports/cricket/royal-challengers-bengaluru-rcb-ipl-2026-full-list-retained-released-players-10367415/\",\n    \"https://www.cricbuzz.com/cricket-match-squads/149768/rr-vs-rcb-16th-match-indian-premier-league-2026\"\n  ],\n  \"playing_xi_tier\": \"ROTATION\",\n  \"research_confidence\": \"Low\"\n}\n\nPlayer follow-up research record:\n{\n  \"availability_basis\": \"confirmed_available\",\n  \"availability_comment\": \"Available unless late tactical omission; no adverse news located.\",\n  \"availability_expected_matches_available\": 13,\n  \"availability_modifier\": 0.93,\n  \"availability_note\": \"Named in current RCB squad pages; no recent injury/suspension/unavailability report found.\",\n  \"availability_source_urls\": [\n    \"https://www.royalchallengers.com/rcb-squad/swapnil-singh\",\n    \"https://www.cricbuzz.com/cricket-match-squads/149768/rr-vs-rcb-16th-match-indian-premier-league-2026\",\n    \"https://thesportstak.com/cricket/match/rcb-vs-srh-match-1-ipl-28-march-2026-267882/players\"\n  ],\n  \"followup_reason\": \"Availability is clear; only XI status remains tactical rather than evidence-conflicted.\",\n  \"full_name\": \"Swapnil Singh\",\n  \"needs_player_followup\": false,\n  \"official_player_id\": \"3180\",\n  \"overseas_competition_basis\": \"domestic_player\",\n  \"overseas_competition_comment\": \"Selection pressure is role/combination based, not overseas-cap based.\",\n  \"overseas_competition_note\": \"Domestic player; overseas-slot limit does not apply.\",\n  \"overseas_competition_source_urls\": [\n    \"https://www.iplt20.com/players/swapnil-singh/3180\",\n    \"https://www.royalchallengers.com/rcb-squad/swapnil-singh\"\n  ],\n  \"playing_xi_basis\": \"inferred_from_team_context\",\n  \"playing_xi_comment\": \"Retained domestic left-arm spin all-rounder, but current RCB squad lists multiple ahead of him in primary XI balance; projects as conditions/matchup backup.\",\n  \"playing_xi_source_urls\": [\n    \"https://www.royalchallengers.com/rcb-cricket-news/news/rcb-finalize-star-studded-squad-for-ipl-2025-with-19-new-signings\",\n    \"https://www.cricbuzz.com/cricket-match-squads/149768/rr-vs-rcb-16th-match-indian-premier-league-2026\",\n    \"https://www.royalchallengers.com/rcb-squad/swapnil-singh\"\n  ],\n  \"playing_xi_tier\": \"ROTATION\",\n  \"research_confidence\": \"Medium\"\n}\n\nImportant interpretation rule:\n- Every team still plays 14 league matches.\n- Published fixture count is schedule completeness only.\n- Reduce availability only when there is player-specific absence evidence.\n</raw_availability_data>\n\n## Your Task\n\nDetermine what fraction of the 14-match IPL 2026 league season this player will be AVAILABLE to be selected for (not whether they'll be picked \u2014 just whether they're fit and eligible).\n\n**CRITICAL RULES:**\n1. Every IPL team plays exactly 14 league stage matches. This is a fact. Do not reduce availability just because only some fixtures have been published/announced yet. Partial schedule publication is NOT a player availability issue.\n2. Only reduce availability for PLAYER-SPECIFIC reasons:\n   - Confirmed injury with recovery timeline\n   - International duty that overlaps with IPL dates\n   - Suspension or ban\n   - Retirement or withdrawal from IPL\n   - Known workload management plans (e.g., fast bowlers being rested periodically)\n3. If there is NO evidence of any player-specific absence, availability_modifier MUST be 1.0.\n4. \"No news\" = healthy. Absence of injury reports means the player is available.\n\n## Response Format\n\nReply with ONLY a JSON object, no other text:\n\n```json\n{\n  \"official_player_id\": \"<string>\",\n  \"availability_modifier\": <float 0.0 to 1.0>,\n  \"expected_matches_available\": <int 0 to 14>,\n  \"availability_basis\": \"<confirmed_available | inferred_no_adverse_news | injury_report | late_joining | tournament_conflict | suspension | conflicting_reports | unknown>\",\n  \"availability_note\": \"<one sentence explaining your assessment>\",\n  \"reasoning\": \"<2-3 sentences explaining WHY you chose this value, what evidence you used or didn't find>\",\n  \"has_real_concern\": <boolean \u2014 true if there's a genuine player-specific issue, false if fully available>,\n  \"source_urls\": [\"<supporting URL 1>\", \"<supporting URL 2>\"]\n}\n```\n\nExamples:\n- Fully fit player, no issues: {\"official_player_id\": \"123\", \"availability_modifier\": 1.0, \"expected_matches_available\": 14, \"availability_basis\": \"confirmed_available\", \"availability_note\": \"No injury or availability concerns found.\", \"reasoning\": \"No reports of injury, fitness issues, or scheduling conflicts. Player is expected to be available for the full season.\", \"has_real_concern\": false, \"source_urls\": [\"https://example.com/player\"]}\n- Player recovering from knee surgery, expected back by match 5: {\"official_player_id\": \"123\", \"availability_modifier\": 0.64, \"expected_matches_available\": 9, \"availability_basis\": \"injury_report\", \"availability_note\": \"Recovering from knee surgery, expected to miss first 5 matches.\", \"reasoning\": \"Reports indicate knee surgery in Jan 2026 with 3-month recovery. IPL starts March, so likely available from match 5-6 onwards. 9/14 = 0.64.\", \"has_real_concern\": true, \"source_urls\": [\"https://example.com/injury-report\"]}\n- Fast bowler with workload management: {\"official_player_id\": \"123\", \"availability_modifier\": 0.85, \"expected_matches_available\": 12, \"availability_basis\": \"conflicting_reports\", \"availability_note\": \"Likely to be rested for 2 matches as part of workload management.\", \"reasoning\": \"As an international fast bowler with a heavy schedule, team is expected to manage workload. Typically rested for 1-2 league matches.\", \"has_real_concern\": true, \"source_urls\": [\"https://example.com/workload\"]}\n- Player whose data mentions schedule: {\"official_player_id\": \"123\", \"availability_modifier\": 1.0, \"expected_matches_available\": 14, \"availability_basis\": \"inferred_no_adverse_news\", \"availability_note\": \"No injury or availability concerns found.\", \"reasoning\": \"Raw data only mentions published fixture count, which is a schedule publication issue, not a player availability issue. No evidence of any player-specific absence.\", \"has_real_concern\": false, \"source_urls\": [\"https://example.com/fixtures\"]}\n\n\nReturn the final answer using this exact JSON shape:\n{\n  \"official_player_id\": \"3180\",\n  \"availability_modifier\": <float 0.0 to 1.0>,\n  \"expected_matches_available\": <int 0 to 14>,\n  \"availability_note\": \"<one sentence>\",\n  \"reasoning\": \"<2-3 audit-friendly sentences>\",\n  \"has_real_concern\": <true or false>,\n  \"availability_basis\": \"<one of confirmed_available, inferred_no_adverse_news, injury_report, late_joining, tournament_conflict, suspension, conflicting_reports, unknown>\",\n  \"source_urls\": [\"<url1>\", \"<url2>\"]\n}\nIf there is no player-specific absence evidence, return availability_modifier=1.0, expected_matches_available=14, and has_real_concern=false.\nDo not treat partial fixture publication as a real concern.",
+            "type": "input_text"
+          }
+        ],
+        "role": "user"
+      }
+    ],
+    "max_output_tokens": 2200,
+    "model": "gpt-5.4",
+    "text": {
+      "format": {
+        "name": "availability_repair_3180",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "availability_basis": {
+              "enum": [
+                "confirmed_available",
+                "conflicting_reports",
+                "inferred_no_adverse_news",
+                "injury_report",
+                "late_joining",
+                "suspension",
+                "tournament_conflict",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "availability_modifier": {
+              "type": "number"
+            },
+            "availability_note": {
+              "type": "string"
+            },
+            "expected_matches_available": {
+              "type": "integer"
+            },
+            "has_real_concern": {
+              "type": "boolean"
+            },
+            "official_player_id": {
+              "type": "string"
+            },
+            "reasoning": {
+              "type": "string"
+            },
+            "source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "official_player_id",
+            "availability_modifier",
+            "expected_matches_available",
+            "availability_note",
+            "reasoning",
+            "has_real_concern",
+            "availability_basis",
+            "source_urls"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ]
+  },
+  "request_id": "be3594ec-d490-46fb-aad4-4409742b5776",
+  "response": {
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1774275067,
+    "created_at": 1774275064,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "id": "resp_0aca8d8b5f00b3050069c149f8183c819fb36678adb2b1fdff",
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": 2200,
+    "max_tool_calls": null,
+    "metadata": {},
+    "model": "gpt-5.4-2026-03-05",
+    "object": "response",
+    "output": [
+      {
+        "content": [
+          {
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"official_player_id\":\"3180\",\"availability_modifier\":1,\"expected_matches_available\":14,\"availability_note\":\"No injury, suspension, late-joining, or other player-specific availability concern is evidenced for Swapnil Singh.\",\"reasoning\":\"The raw audit context only supports that Swapnil Singh is in the RCB squad and does not contain any credible player-specific absence report. The earlier reduction to 13/14 appears to be driven by uncertainty or tactical omission risk, which is a playing-XI issue rather than an availability issue. Under the stated rule that no adverse news means healthy, he should be treated as fully available for all 14 league matches.\",\"has_real_concern\":false,\"availability_basis\":\"confirmed_available\",\"source_urls\":[\"https://www.royalchallengers.com/rcb-squad/swapnil-singh\",\"https://www.iplt20.com/players/swapnil-singh/3180\"]}",
+            "type": "output_text"
+          }
+        ],
+        "id": "msg_0aca8d8b5f00b3050069c149f8a194819fb0bd8de23e406268",
+        "phase": "final_answer",
+        "role": "assistant",
+        "status": "completed",
+        "type": "message"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": null,
+    "reasoning": {
+      "effort": "none",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "store": true,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "description": null,
+        "name": "availability_repair_3180",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "availability_basis": {
+              "enum": [
+                "confirmed_available",
+                "conflicting_reports",
+                "inferred_no_adverse_news",
+                "injury_report",
+                "late_joining",
+                "suspension",
+                "tournament_conflict",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "availability_modifier": {
+              "type": "number"
+            },
+            "availability_note": {
+              "type": "string"
+            },
+            "expected_matches_available": {
+              "type": "integer"
+            },
+            "has_real_concern": {
+              "type": "boolean"
+            },
+            "official_player_id": {
+              "type": "string"
+            },
+            "reasoning": {
+              "type": "string"
+            },
+            "source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "official_player_id",
+            "availability_modifier",
+            "expected_matches_available",
+            "availability_note",
+            "reasoning",
+            "has_real_concern",
+            "availability_basis",
+            "source_urls"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "search_context_size": "medium",
+        "type": "web_search",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 7320,
+      "input_tokens_details": {
+        "cached_tokens": 7168
+      },
+      "output_tokens": 198,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 7518
+    },
+    "user": null
+  },
+  "saved_at": "2026-03-23T14:11:07.701595+00:00"
+}

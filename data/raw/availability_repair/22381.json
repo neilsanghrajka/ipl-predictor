@@ -1,0 +1,248 @@
+{
+  "parsed": {
+    "availability_basis": "inferred_no_adverse_news",
+    "availability_modifier": 1.0,
+    "availability_note": "No player-specific injury, absence, or eligibility concern is evidenced, so he should be treated as available for the full 14-match league stage.",
+    "expected_matches_available": 14,
+    "has_real_concern": false,
+    "official_player_id": "22381",
+    "reasoning": "The raw audit context contains only schedule-completeness commentary and no player-specific report of injury, delayed joining, suspension, withdrawal, or tournament clash. Harsh Dubey is a domestic SRH player, so overseas release issues do not apply, and partial publication of only four fixtures is explicitly not an availability problem. With no adverse evidence, the correct audit outcome is full availability.",
+    "source_urls": [
+      "https://www.iplt20.com/players/harsh-dubey/22381",
+      "https://www.iplt20.com/teams/sunrisers-hyderabad/squad/2026"
+    ]
+  },
+  "request": {
+    "input": [
+      {
+        "content": [
+          {
+            "text": "You are an IPL 2026 availability auditor fixing contaminated fantasy input data.\n\nYour only job is to decide whether a player should have reduced availability for the 14-match league stage.\n\nCore rule:\n- Every IPL team plays 14 league matches.\n- Partial fixture publication is not a player availability issue.\n- Only reduce availability for player-specific reasons such as injury, delayed joining, tournament conflict, suspension, or credible workload management.\n\nUse web search to verify evidence when needed, but keep the decision anchored to the provided raw audit context.\nReturn JSON only.",
+            "type": "input_text"
+          }
+        ],
+        "role": "system"
+      },
+      {
+        "content": [
+          {
+            "text": "You are assessing the availability of an IPL 2026 cricket player for a fantasy league prediction model.\n\n## Player Context\n- Official Player ID: 22381\n- Name: Harsh Dubey\n- IPL Team: SRH\n- Role: BOWL\n- Overseas: False\n\n## Raw Data Collected\nHere is everything we found about this player's availability, injury status, and fitness:\n\n<raw_availability_data>\nCurrent CSV availability fields:\n{\n  \"availability_basis\": \"inferred_no_adverse_news\",\n  \"availability_comment\": \"Prompt includes only 4 published fixtures; full-season availability is inferred from no adverse reports.\",\n  \"availability_expected_matches_available\": \"14\",\n  \"availability_modifier\": \"1.0000\",\n  \"availability_note\": \"No current unavailability issue found for IPL 2026 opening phase.\",\n  \"availability_source_urls\": [\n    \"https://www.iplt20.com/players/harsh-dubey/22381\",\n    \"https://www.iplt20.com/teams/sunrisers-hyderabad/squad/2026\"\n  ],\n  \"official_player_id\": \"22381\"\n}\n\nFixture publication context:\n{\n  \"fixtures_preview\": [\n    {\n      \"match_date\": \"2026-03-28\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"RCB\",\n      \"venue\": \"M Chinnaswamy Stadium\"\n    },\n    {\n      \"match_date\": \"2026-04-02\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"KKR\",\n      \"venue\": \"Eden Gardens\"\n    },\n    {\n      \"match_date\": \"2026-04-05\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"LSG\",\n      \"venue\": \"Rajiv Gandhi International Stadium\"\n    },\n    {\n      \"match_date\": \"2026-04-11\",\n      \"match_status\": \"UpComing\",\n      \"opponent_code\": \"PBKS\",\n      \"venue\": \"PCA International Cricket Stadium\"\n    }\n  ],\n  \"league_matches_expected\": 14,\n  \"published_fixture_count\": 4,\n  \"season\": \"2026\",\n  \"team\": \"SRH\",\n  \"team_name\": \"Sunrisers Hyderabad\"\n}\n\nTeam-level research record:\n{\n  \"availability_basis\": \"inferred_no_adverse_news\",\n  \"availability_comment\": \"Prompt includes only 4 published fixtures; full-season availability is inferred from no adverse reports.\",\n  \"availability_expected_matches_available\": 14,\n  \"availability_modifier\": 1.0,\n  \"availability_note\": \"No current unavailability issue found for IPL 2026 opening phase.\",\n  \"availability_source_urls\": [\n    \"https://www.iplt20.com/players/harsh-dubey/22381\",\n    \"https://www.iplt20.com/teams/sunrisers-hyderabad/squad/2026\"\n  ],\n  \"followup_reason\": \"\",\n  \"full_name\": \"Harsh Dubey\",\n  \"needs_player_followup\": false,\n  \"official_player_id\": \"22381\",\n  \"overseas_competition_basis\": \"domestic_player\",\n  \"overseas_competition_comment\": \"Selection depends on spin balance and impact-sub usage, not overseas slots.\",\n  \"overseas_competition_note\": \"Domestic player; overseas cap is not the issue.\",\n  \"overseas_competition_source_urls\": [\n    \"https://www.iplt20.com/players/harsh-dubey/22381\",\n    \"https://www.iplt20.com/teams/sunrisers-hyderabad/squad/2026\"\n  ],\n  \"playing_xi_basis\": \"inferred_from_team_context\",\n  \"playing_xi_comment\": \"Domestic spin-bowling all-rounder with official profile recognition, but still more matchup-dependent than locked in.\",\n  \"playing_xi_source_urls\": [\n    \"https://www.iplt20.com/players/harsh-dubey/22381\",\n    \"https://www.cricbuzz.com/cricket-news/134454/ipl-2025-no-playoffs-just-pride-last-years-finalists-fight-for-consolation-prize-srh-kkr-cricbuzzcom\"\n  ],\n  \"playing_xi_tier\": \"ROTATION\",\n  \"research_confidence\": \"Medium\"\n}\n\nPlayer follow-up research record:\nnull\n\nImportant interpretation rule:\n- Every team still plays 14 league matches.\n- Published fixture count is schedule completeness only.\n- Reduce availability only when there is player-specific absence evidence.\n</raw_availability_data>\n\n## Your Task\n\nDetermine what fraction of the 14-match IPL 2026 league season this player will be AVAILABLE to be selected for (not whether they'll be picked \u2014 just whether they're fit and eligible).\n\n**CRITICAL RULES:**\n1. Every IPL team plays exactly 14 league stage matches. This is a fact. Do not reduce availability just because only some fixtures have been published/announced yet. Partial schedule publication is NOT a player availability issue.\n2. Only reduce availability for PLAYER-SPECIFIC reasons:\n   - Confirmed injury with recovery timeline\n   - International duty that overlaps with IPL dates\n   - Suspension or ban\n   - Retirement or withdrawal from IPL\n   - Known workload management plans (e.g., fast bowlers being rested periodically)\n3. If there is NO evidence of any player-specific absence, availability_modifier MUST be 1.0.\n4. \"No news\" = healthy. Absence of injury reports means the player is available.\n\n## Response Format\n\nReply with ONLY a JSON object, no other text:\n\n```json\n{\n  \"official_player_id\": \"<string>\",\n  \"availability_modifier\": <float 0.0 to 1.0>,\n  \"expected_matches_available\": <int 0 to 14>,\n  \"availability_basis\": \"<confirmed_available | inferred_no_adverse_news | injury_report | late_joining | tournament_conflict | suspension | conflicting_reports | unknown>\",\n  \"availability_note\": \"<one sentence explaining your assessment>\",\n  \"reasoning\": \"<2-3 sentences explaining WHY you chose this value, what evidence you used or didn't find>\",\n  \"has_real_concern\": <boolean \u2014 true if there's a genuine player-specific issue, false if fully available>,\n  \"source_urls\": [\"<supporting URL 1>\", \"<supporting URL 2>\"]\n}\n```\n\nExamples:\n- Fully fit player, no issues: {\"official_player_id\": \"123\", \"availability_modifier\": 1.0, \"expected_matches_available\": 14, \"availability_basis\": \"confirmed_available\", \"availability_note\": \"No injury or availability concerns found.\", \"reasoning\": \"No reports of injury, fitness issues, or scheduling conflicts. Player is expected to be available for the full season.\", \"has_real_concern\": false, \"source_urls\": [\"https://example.com/player\"]}\n- Player recovering from knee surgery, expected back by match 5: {\"official_player_id\": \"123\", \"availability_modifier\": 0.64, \"expected_matches_available\": 9, \"availability_basis\": \"injury_report\", \"availability_note\": \"Recovering from knee surgery, expected to miss first 5 matches.\", \"reasoning\": \"Reports indicate knee surgery in Jan 2026 with 3-month recovery. IPL starts March, so likely available from match 5-6 onwards. 9/14 = 0.64.\", \"has_real_concern\": true, \"source_urls\": [\"https://example.com/injury-report\"]}\n- Fast bowler with workload management: {\"official_player_id\": \"123\", \"availability_modifier\": 0.85, \"expected_matches_available\": 12, \"availability_basis\": \"conflicting_reports\", \"availability_note\": \"Likely to be rested for 2 matches as part of workload management.\", \"reasoning\": \"As an international fast bowler with a heavy schedule, team is expected to manage workload. Typically rested for 1-2 league matches.\", \"has_real_concern\": true, \"source_urls\": [\"https://example.com/workload\"]}\n- Player whose data mentions schedule: {\"official_player_id\": \"123\", \"availability_modifier\": 1.0, \"expected_matches_available\": 14, \"availability_basis\": \"inferred_no_adverse_news\", \"availability_note\": \"No injury or availability concerns found.\", \"reasoning\": \"Raw data only mentions published fixture count, which is a schedule publication issue, not a player availability issue. No evidence of any player-specific absence.\", \"has_real_concern\": false, \"source_urls\": [\"https://example.com/fixtures\"]}\n\n\nReturn the final answer using this exact JSON shape:\n{\n  \"official_player_id\": \"22381\",\n  \"availability_modifier\": <float 0.0 to 1.0>,\n  \"expected_matches_available\": <int 0 to 14>,\n  \"availability_note\": \"<one sentence>\",\n  \"reasoning\": \"<2-3 audit-friendly sentences>\",\n  \"has_real_concern\": <true or false>,\n  \"availability_basis\": \"<one of confirmed_available, inferred_no_adverse_news, injury_report, late_joining, tournament_conflict, suspension, conflicting_reports, unknown>\",\n  \"source_urls\": [\"<url1>\", \"<url2>\"]\n}\nIf there is no player-specific absence evidence, return availability_modifier=1.0, expected_matches_available=14, and has_real_concern=false.\nDo not treat partial fixture publication as a real concern.",
+            "type": "input_text"
+          }
+        ],
+        "role": "user"
+      }
+    ],
+    "max_output_tokens": 2200,
+    "model": "gpt-5.4",
+    "text": {
+      "format": {
+        "name": "availability_repair_22381",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "availability_basis": {
+              "enum": [
+                "confirmed_available",
+                "conflicting_reports",
+                "inferred_no_adverse_news",
+                "injury_report",
+                "late_joining",
+                "suspension",
+                "tournament_conflict",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "availability_modifier": {
+              "type": "number"
+            },
+            "availability_note": {
+              "type": "string"
+            },
+            "expected_matches_available": {
+              "type": "integer"
+            },
+            "has_real_concern": {
+              "type": "boolean"
+            },
+            "official_player_id": {
+              "type": "string"
+            },
+            "reasoning": {
+              "type": "string"
+            },
+            "source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "official_player_id",
+            "availability_modifier",
+            "expected_matches_available",
+            "availability_note",
+            "reasoning",
+            "has_real_concern",
+            "availability_basis",
+            "source_urls"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      }
+    },
+    "tools": [
+      {
+        "type": "web_search"
+      }
+    ]
+  },
+  "request_id": "7ce57654-fba7-4cf7-b023-887022739105",
+  "response": {
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1774275047,
+    "created_at": 1774275043,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "id": "resp_05f787157b7eba030069c149e394f88194b81307ae4012f74f",
+    "incomplete_details": null,
+    "instructions": null,
+    "max_output_tokens": 2200,
+    "max_tool_calls": null,
+    "metadata": {},
+    "model": "gpt-5.4-2026-03-05",
+    "object": "response",
+    "output": [
+      {
+        "content": [
+          {
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"official_player_id\":\"22381\",\"availability_modifier\":1,\"expected_matches_available\":14,\"availability_note\":\"No player-specific injury, absence, or eligibility concern is evidenced, so he should be treated as available for the full 14-match league stage.\",\"reasoning\":\"The raw audit context contains only schedule-completeness commentary and no player-specific report of injury, delayed joining, suspension, withdrawal, or tournament clash. Harsh Dubey is a domestic SRH player, so overseas release issues do not apply, and partial publication of only four fixtures is explicitly not an availability problem. With no adverse evidence, the correct audit outcome is full availability.\",\"has_real_concern\":false,\"availability_basis\":\"inferred_no_adverse_news\",\"source_urls\":[\"https://www.iplt20.com/players/harsh-dubey/22381\",\"https://www.iplt20.com/teams/sunrisers-hyderabad/squad/2026\"]}",
+            "type": "output_text"
+          }
+        ],
+        "id": "msg_05f787157b7eba030069c149e425548194a90c4be3dd78f457",
+        "phase": "final_answer",
+        "role": "assistant",
+        "status": "completed",
+        "type": "message"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": null,
+    "reasoning": {
+      "effort": "none",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "status": "completed",
+    "store": true,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "description": null,
+        "name": "availability_repair_22381",
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "availability_basis": {
+              "enum": [
+                "confirmed_available",
+                "conflicting_reports",
+                "inferred_no_adverse_news",
+                "injury_report",
+                "late_joining",
+                "suspension",
+                "tournament_conflict",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "availability_modifier": {
+              "type": "number"
+            },
+            "availability_note": {
+              "type": "string"
+            },
+            "expected_matches_available": {
+              "type": "integer"
+            },
+            "has_real_concern": {
+              "type": "boolean"
+            },
+            "official_player_id": {
+              "type": "string"
+            },
+            "reasoning": {
+              "type": "string"
+            },
+            "source_urls": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "official_player_id",
+            "availability_modifier",
+            "expected_matches_available",
+            "availability_note",
+            "reasoning",
+            "has_real_concern",
+            "availability_basis",
+            "source_urls"
+          ],
+          "type": "object"
+        },
+        "strict": true,
+        "type": "json_schema"
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tools": [
+      {
+        "search_context_size": "medium",
+        "type": "web_search",
+        "user_location": {
+          "city": null,
+          "country": "US",
+          "region": null,
+          "timezone": null,
+          "type": "approximate"
+        }
+      }
+    ],
+    "top_logprobs": 0,
+    "top_p": 0.98,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 6669,
+      "input_tokens_details": {
+        "cached_tokens": 6528
+      },
+      "output_tokens": 204,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 6873
+    },
+    "user": null
+  },
+  "saved_at": "2026-03-23T14:10:47.343851+00:00"
+}
