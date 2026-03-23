@@ -22,6 +22,10 @@ const TIER: Record<string, { label: string; color: string; bg: string; prob: num
 const ROLE: Record<string, string> = { WK: "Wicketkeeper", AR: "All-Rounder", BOWL: "Bowler", BAT: "Batter" };
 
 function fmt(n: number) { return n >= 1000 ? `${(n / 1000).toFixed(1)}k` : Math.round(n).toString(); }
+function stat(v: number | null | undefined, d: number = 1): string {
+  if (v === null || v === undefined) return "-";
+  return d === 0 ? Math.round(v).toString() : v.toFixed(d);
+}
 
 /* ── Navigation ── */
 type View = { type: "home" } | { type: "owner"; name: string } | { type: "player"; player: Player } | { type: "method" } | { type: "allPlayers" };
@@ -74,7 +78,7 @@ function HomeScreen({ push }: { push: (v: View) => void }) {
       </div>
 
       {/* Leaderboard table */}
-      <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "#9CA3AF" }}>Leaderboard</p>
+      <SectionLabel>Leaderboard</SectionLabel>
       <div className="rounded-xl bg-white overflow-hidden" style={{ border: "1px solid #E5E7EB" }}>
         <table className="w-full text-sm">
           <thead>
@@ -199,7 +203,7 @@ function AllPlayersScreen({ pop, push }: { pop: () => void; push: (v: View) => v
                     <span className="w-1 h-6 rounded-full flex-shrink-0" style={{ background: TEAM_C[p.team] }} />
                     <div>
                       <p className="font-medium text-sm">{p.fn}</p>
-                      <p className="text-xs" style={{ color: "#9CA3AF" }}>{p.team} &middot; {ROLE[p.role] || p.role}{p.avail < 1 ? " &#9888;&#65039;" : ""}</p>
+                      <p className="text-xs" style={{ color: "#9CA3AF" }}>{p.team} &middot; {ROLE[p.role] || p.role}{p.avail < 1 ? " \u26A0\uFE0F" : ""}</p>
                     </div>
                   </div>
                 </td>
@@ -300,7 +304,7 @@ function OwnerScreen({ name, pop, push }: { name: string; pop: () => void; push:
       {/* Injured players */}
       {injured.length > 0 && (
         <div className="rounded-xl p-3 mb-4" style={{ background: "#FEF2F2", border: "1px solid #FECACA" }}>
-          <p className="text-xs font-semibold mb-1" style={{ color: "#DC2626" }}>&#9888;&#65039; Availability Concerns ({injured.length})</p>
+          <p className="text-xs font-semibold mb-1" style={{ color: "#DC2626" }}>{"\u26A0\uFE0F"} Availability Concerns ({injured.length})</p>
           {injured.map(p => (
             <p key={p.fn} className="text-xs" style={{ color: "#991B1B" }}>
               <strong>{p.fn}</strong> — {Math.round(p.avail * 100)}% available{p.avail === 0 ? " (ruled out)" : ""}
@@ -346,8 +350,8 @@ function OwnerScreen({ name, pop, push }: { name: string; pop: () => void; push:
                           <div>
                             <span className="font-medium">{p.fn}</span>
                             <span className="text-xs ml-1" style={{ color: "#D1D5DB" }}>{p.team}</span>
-                            {p.overseas && <span className="text-xs ml-1" style={{ color: "#D97706" }}>&#127757;</span>}
-                            {p.avail < 1 && <span className="text-xs ml-1" style={{ color: "#EF4444" }}>&#9888;&#65039;</span>}
+                            {p.overseas && <span className="text-xs ml-1">{"\uD83C\uDF0D"}</span>}
+                            {p.avail < 1 && <span className="text-xs ml-1" style={{ color: "#EF4444" }}>{"\u26A0\uFE0F"}</span>}
                           </div>
                         </div>
                       </td>
@@ -373,11 +377,13 @@ function OwnerScreen({ name, pop, push }: { name: string; pop: () => void; push:
 }
 
 /* ═══════════════════════════
-   PLAYER SCREEN — Full audit
+   PLAYER SCREEN — Redesigned
    ═══════════════════════════ */
 function PlayerScreen({ player: p, pop }: { player: Player; pop: () => void }) {
   const tc = TEAM_C[p.team] || "#6B7280";
   const ti = TIER[p.tier] || { label: p.tier, color: "#6B7280", bg: "#F3F4F6", prob: 0 };
+  const hasBat = p.careerR > 0 || p.s25R > 0 || p.s24R > 0;
+  const hasBowl = p.careerW > 0 || p.s25W > 0 || p.s24W > 0;
 
   return (
     <div className="px-5 pt-5 pb-10 fade-up">
@@ -396,7 +402,7 @@ function PlayerScreen({ player: p, pop }: { player: Player; pop: () => void }) {
         </div>
       </div>
 
-      {/* Points summary */}
+      {/* Points hero */}
       <div className="rounded-xl p-5 mb-4 text-center" style={{ background: "#FAFAF9", border: "1px solid #E7E5E4" }}>
         <p className="text-4xl font-extrabold">{fmt(p.expTotal)}</p>
         <p className="text-xs mt-1" style={{ color: "#9CA3AF" }}>predicted points</p>
@@ -407,89 +413,180 @@ function PlayerScreen({ player: p, pop }: { player: Player; pop: () => void }) {
         </div>
       </div>
 
-      {/* WHY this score — the key section */}
-      <Card title="Why this score?">
-        <p className="text-sm mb-3" style={{ color: "#6B7280" }}>
-          We estimate <strong style={{ color: "#1a1a1a" }}>{p.fn}</strong> plays <strong>{p.expMatches.toFixed(1)}</strong> of 14 matches,
-          scoring <strong style={{ color: "#2563EB" }}>{p.runsPerM.toFixed(1)} runs</strong> and taking <strong style={{ color: "#059669" }}>{p.wktsPerM.toFixed(2)} wickets</strong> per match.
-        </p>
-
-        <table className="w-full text-sm" style={{ borderCollapse: "collapse" }}>
-          <tbody>
-            <Row label="Runs/match" val={p.runsPerM.toFixed(1)} />
-            <Row label={`\u00D7 ${p.expMatches.toFixed(1)} matches`} val={fmt(p.expBat)} valColor="#2563EB" bold sub="= batting points" />
-            <tr><td colSpan={2} className="py-1"><div style={{ borderTop: "1px solid #F3F4F6" }} /></td></tr>
-            <Row label="Wickets/match" val={p.wktsPerM.toFixed(2)} />
-            <Row label={`\u00D7 25 pts \u00D7 ${p.expMatches.toFixed(1)} matches`} val={fmt(p.expBowl)} valColor="#059669" bold sub="= bowling points" />
-            <tr><td colSpan={2} className="py-1"><div style={{ borderTop: "1px solid #F3F4F6" }} /></td></tr>
-            <Row label="Total" val={`${fmt(p.expTotal)} pts`} valColor="#D97706" bold />
-          </tbody>
-        </table>
-      </Card>
-
-      {/* How many matches */}
-      <Card title="Expected matches">
-        <table className="w-full text-sm" style={{ borderCollapse: "collapse" }}>
-          <tbody>
-            <Row label="League matches" val="14" />
-            <Row label="Playing XI tier" val={ti.label} valColor={ti.color} />
-            <Row label="Selection probability" val={`${ti.prob}%`} />
-            <Row label="Availability" val={`${Math.round(p.avail * 100)}%`} valColor={p.avail < 1 ? "#EF4444" : undefined} />
-            <tr><td colSpan={2} className="py-1"><div style={{ borderTop: "1px solid #F3F4F6" }} /></td></tr>
-            <Row label="14 \u00D7 selection \u00D7 availability" val={`${p.expMatches.toFixed(1)} matches`} bold />
-          </tbody>
-        </table>
-        {p.debutant && <p className="text-xs mt-2" style={{ color: "#7C3AED" }}>IPL debutant &mdash; using baseline estimates for {ROLE[p.role] || p.role} role</p>}
+      {/* Prediction breakdown */}
+      <Card title="Prediction breakdown">
+        <div className="space-y-2 text-sm">
+          <div className="flex justify-between">
+            <span style={{ color: "#6B7280" }}>Runs per match</span>
+            <span className="font-medium">{p.runsPerM.toFixed(1)}</span>
+          </div>
+          <div className="flex justify-between">
+            <span style={{ color: "#6B7280" }}>Wickets per match</span>
+            <span className="font-medium">{p.wktsPerM.toFixed(2)}</span>
+          </div>
+          <div className="my-2" style={{ borderTop: "1px solid #F3F4F6" }} />
+          <div className="flex justify-between">
+            <span style={{ color: "#6B7280" }}>Expected matches</span>
+            <span className="font-medium">{p.expMatches.toFixed(1)} <span className="text-xs" style={{ color: "#9CA3AF" }}>of 14</span></span>
+          </div>
+          <div className="flex justify-between">
+            <span style={{ color: "#6B7280" }}>Playing XI tier</span>
+            <span className="font-medium" style={{ color: ti.color }}>{ti.label} ({ti.prob}%)</span>
+          </div>
+          <div className="flex justify-between">
+            <span style={{ color: "#6B7280" }}>Availability</span>
+            <span className="font-medium" style={p.avail < 1 ? { color: "#EF4444" } : {}}>{Math.round(p.avail * 100)}%</span>
+          </div>
+          <div className="my-2" style={{ borderTop: "1px solid #F3F4F6" }} />
+          <div className="flex justify-between">
+            <span style={{ color: "#6B7280" }}>Batting points</span>
+            <span className="font-bold" style={{ color: "#2563EB" }}>{fmt(p.expBat)}</span>
+          </div>
+          <div className="flex justify-between">
+            <span style={{ color: "#6B7280" }}>Bowling points</span>
+            <span className="font-bold" style={{ color: "#059669" }}>{fmt(p.expBowl)}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="font-semibold">Total</span>
+            <span className="font-bold" style={{ color: "#D97706" }}>{fmt(p.expTotal)} pts</span>
+          </div>
+        </div>
       </Card>
 
       {/* Availability */}
-      {p.availNote && (
-        <div className="rounded-xl p-4 mb-4" style={{
-          background: p.avail < 1 ? "#FEF2F2" : "#F0FDF4",
-          border: `1px solid ${p.avail < 1 ? "#FECACA" : "#BBF7D0"}`
-        }}>
-          <p className="text-xs font-semibold mb-1" style={{ color: p.avail < 1 ? "#DC2626" : "#16A34A" }}>
-            {p.avail < 1 ? "\u26A0\uFE0F Availability" : "\u2705 Available"}
-          </p>
+      {p.avail < 1 && p.availNote && (
+        <div className="rounded-xl p-4 mb-4" style={{ background: "#FEF2F2", border: "1px solid #FECACA" }}>
+          <p className="text-xs font-semibold mb-1" style={{ color: "#DC2626" }}>{"\u26A0\uFE0F"} Availability concern</p>
           <p className="text-sm leading-relaxed" style={{ color: "#4B5563" }}>{p.availNote}</p>
         </div>
       )}
 
-      {/* IPL Stats */}
-      <Card title="IPL career stats">
-        <table className="w-full text-sm" style={{ borderCollapse: "collapse" }}>
-          <thead>
-            <tr>
-              <th className="text-left py-1.5 text-xs font-medium" style={{ color: "#9CA3AF" }}></th>
-              <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#9CA3AF" }}>Matches</th>
-              <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#3B82F6" }}>Runs</th>
-              <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#10B981" }}>Wickets</th>
-            </tr>
-          </thead>
-          <tbody>
-            <StatsRow label="Career" matches={p.careerM} runs={p.careerR} wkts={p.careerW} />
-            <StatsRow label="IPL 2025" matches={p.s25M} runs={p.s25R} wkts={p.s25W} />
-            <StatsRow label="IPL 2024" matches={p.s24M} runs={p.s24R} wkts={p.s24W} />
-          </tbody>
-        </table>
-      </Card>
+      {/* ── BATTING STATS ── */}
+      {hasBat && (
+        <Card title="Batting">
+          <table className="w-full text-sm" style={{ borderCollapse: "collapse" }}>
+            <thead>
+              <tr>
+                <th className="text-left py-1.5 text-xs font-medium" style={{ color: "#9CA3AF" }}></th>
+                <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#9CA3AF" }}>M</th>
+                <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#9CA3AF" }}>Inn</th>
+                <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#3B82F6" }}>Runs</th>
+                <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#9CA3AF" }}>Avg</th>
+                <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#9CA3AF" }}>SR</th>
+                <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#9CA3AF" }}>HS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <BatRow label="Career" m={p.careerM} inn={g(p, "cBatInn")} runs={p.careerR} avg={g(p, "cBatAvg")} sr={g(p, "cBatSR")} hs={g(p, "cBatHS")} />
+              {p.s25M > 0 && <BatRow label="2025" m={p.s25M} inn={g(p, "s25BatInn")} runs={p.s25R} avg={g(p, "s25BatAvg")} sr={g(p, "s25BatSR")} hs={g(p, "s25BatHS")} />}
+              {p.s24M > 0 && <BatRow label="2024" m={p.s24M} inn={g(p, "s24BatInn")} runs={p.s24R} avg={g(p, "s24BatAvg")} sr={g(p, "s24BatSR")} hs={g(p, "s24BatHS")} />}
+            </tbody>
+          </table>
+          {(g(p, "cBat4s") != null || g(p, "cBat6s") != null) && (
+            <p className="text-xs mt-2" style={{ color: "#9CA3AF" }}>
+              Career: {stat(g(p, "cBat4s"), 0)} fours, {stat(g(p, "cBat6s"), 0)} sixes
+            </p>
+          )}
+        </Card>
+      )}
+
+      {/* ── BOWLING STATS ── */}
+      {hasBowl && (
+        <Card title="Bowling">
+          <table className="w-full text-sm" style={{ borderCollapse: "collapse" }}>
+            <thead>
+              <tr>
+                <th className="text-left py-1.5 text-xs font-medium" style={{ color: "#9CA3AF" }}></th>
+                <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#9CA3AF" }}>M</th>
+                <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#9CA3AF" }}>Inn</th>
+                <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#10B981" }}>Wkts</th>
+                <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#9CA3AF" }}>Avg</th>
+                <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#9CA3AF" }}>Econ</th>
+                <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#9CA3AF" }}>SR</th>
+              </tr>
+            </thead>
+            <tbody>
+              <BowlRow label="Career" m={p.careerM} inn={g(p, "cBowlInn")} wkts={p.careerW} avg={g(p, "cBowlAvg")} econ={g(p, "cBowlEcon")} sr={g(p, "cBowlSR")} />
+              {p.s25W > 0 && <BowlRow label="2025" m={p.s25M} inn={g(p, "s25BowlInn")} wkts={p.s25W} avg={g(p, "s25BowlAvg")} econ={g(p, "s25BowlEcon")} sr={g(p, "s25BowlSR")} />}
+              {p.s24W > 0 && <BowlRow label="2024" m={p.s24M} inn={g(p, "s24BowlInn")} wkts={p.s24W} avg={g(p, "s24BowlAvg")} econ={g(p, "s24BowlEcon")} sr={g(p, "s24BowlSR")} />}
+            </tbody>
+          </table>
+          {g(p, "cBowlBB") && (
+            <p className="text-xs mt-2" style={{ color: "#9CA3AF" }}>
+              Career best: {(p as Record<string, unknown>)["cBowlBB"] as string}
+            </p>
+          )}
+        </Card>
+      )}
+
+      {/* Debutant note */}
+      {p.debutant && (
+        <div className="rounded-xl p-4 mb-4" style={{ background: "#F5F3FF", border: "1px solid #DDD6FE" }}>
+          <p className="text-xs font-semibold mb-1" style={{ color: "#7C3AED" }}>IPL Debutant</p>
+          <p className="text-sm" style={{ color: "#6B7280" }}>No IPL history. Using baseline estimates for {ROLE[p.role] || p.role} role.</p>
+        </div>
+      )}
 
       {/* Weighting */}
-      <Card title="How stats are weighted">
-        <table className="w-full text-sm" style={{ borderCollapse: "collapse" }}>
-          <tbody>
-            <Row label="IPL 2025 (most recent)" val="50%" valColor="#D97706" />
-            <Row label="IPL 2024" val="30%" valColor="#2563EB" />
-            <Row label="Career average" val="20%" valColor="#9CA3AF" />
-          </tbody>
-        </table>
-        <p className="text-xs mt-2" style={{ color: "#9CA3AF" }}>If a season is missing, remaining weights normalize to 100%.</p>
+      <Card title="Stat weighting">
+        <div className="space-y-2 text-sm">
+          <div className="flex justify-between">
+            <span style={{ color: "#6B7280" }}>IPL 2025 (most recent)</span>
+            <span className="font-medium" style={{ color: "#D97706" }}>50%</span>
+          </div>
+          <div className="flex justify-between">
+            <span style={{ color: "#6B7280" }}>IPL 2024</span>
+            <span className="font-medium" style={{ color: "#2563EB" }}>30%</span>
+          </div>
+          <div className="flex justify-between">
+            <span style={{ color: "#6B7280" }}>Career average</span>
+            <span className="font-medium" style={{ color: "#9CA3AF" }}>20%</span>
+          </div>
+        </div>
+        <p className="text-xs mt-2" style={{ color: "#9CA3AF" }}>Missing seasons normalize remaining weights to 100%.</p>
       </Card>
 
       <p className="text-center text-xs mt-4" style={{ color: "#D1D5DB" }}>Confidence: {p.conf}</p>
     </div>
   );
 }
+
+/** Safe getter for optional enriched stats */
+function g(p: Player, key: string): number | null {
+  const val = (p as Record<string, unknown>)[key];
+  if (val === null || val === undefined) return null;
+  return val as number;
+}
+
+function BatRow({ label, m, inn, runs, avg, sr, hs }: { label: string; m: number; inn: number | null; runs: number; avg: number | null; sr: number | null; hs: number | null }) {
+  return (
+    <tr style={{ borderBottom: "1px solid #F3F4F6" }}>
+      <td className="py-2 text-xs font-medium" style={{ color: "#6B7280" }}>{label}</td>
+      <td className="py-2 text-right">{m}</td>
+      <td className="py-2 text-right">{stat(inn, 0)}</td>
+      <td className="py-2 text-right font-medium" style={{ color: "#3B82F6" }}>{runs.toLocaleString()}</td>
+      <td className="py-2 text-right font-medium">{stat(avg)}</td>
+      <td className="py-2 text-right">{stat(sr)}</td>
+      <td className="py-2 text-right">{stat(hs, 0)}</td>
+    </tr>
+  );
+}
+
+function BowlRow({ label, m, inn, wkts, avg, econ, sr }: { label: string; m: number; inn: number | null; wkts: number; avg: number | null; econ: number | null; sr: number | null }) {
+  return (
+    <tr style={{ borderBottom: "1px solid #F3F4F6" }}>
+      <td className="py-2 text-xs font-medium" style={{ color: "#6B7280" }}>{label}</td>
+      <td className="py-2 text-right">{m}</td>
+      <td className="py-2 text-right">{stat(inn, 0)}</td>
+      <td className="py-2 text-right font-medium" style={{ color: "#10B981" }}>{wkts}</td>
+      <td className="py-2 text-right font-medium">{stat(avg)}</td>
+      <td className="py-2 text-right">{stat(econ)}</td>
+      <td className="py-2 text-right">{stat(sr)}</td>
+    </tr>
+  );
+}
+
+/* ── Shared components ── */
 
 function Card({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -500,27 +597,8 @@ function Card({ title, children }: { title: string; children: React.ReactNode })
   );
 }
 
-function Row({ label, val, valColor, bold, sub }: { label: string; val: string; valColor?: string; bold?: boolean; sub?: string }) {
-  return (
-    <tr>
-      <td className="py-1.5" style={{ color: "#6B7280" }}>
-        {label}
-        {sub && <span className="text-xs ml-1" style={{ color: "#D1D5DB" }}>{sub}</span>}
-      </td>
-      <td className={`py-1.5 text-right ${bold ? "font-bold" : "font-medium"}`} style={valColor ? { color: valColor } : {}}>{val}</td>
-    </tr>
-  );
-}
-
-function StatsRow({ label, matches, runs, wkts }: { label: string; matches: number; runs: number; wkts: number }) {
-  return (
-    <tr style={{ borderBottom: "1px solid #F3F4F6" }}>
-      <td className="py-2 text-xs font-medium" style={{ color: "#6B7280" }}>{label}</td>
-      <td className="py-2 text-right font-medium">{matches}</td>
-      <td className="py-2 text-right font-medium" style={{ color: "#3B82F6" }}>{runs.toLocaleString()}</td>
-      <td className="py-2 text-right font-medium" style={{ color: "#10B981" }}>{wkts}</td>
-    </tr>
-  );
+function SectionLabel({ children }: { children: React.ReactNode }) {
+  return <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: "#9CA3AF" }}>{children}</p>;
 }
 
 function BackBtn({ onClick }: { onClick: () => void }) {
