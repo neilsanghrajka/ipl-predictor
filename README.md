@@ -70,7 +70,7 @@ Venue effects, head-to-head matchups, toss, position changes, and the Impact Pla
 
 ## Tech Stack
 
-**Backend:** Python — stats fetching from official IPL feeds, AI-powered research for lineup/availability, prediction model
+**Backend:** Python — stats fetching from official IPL feeds, automated research for lineup/availability, prediction model
 
 **Frontend:** Next.js, React, TypeScript, Tailwind CSS, Recharts — deployed on Vercel
 
