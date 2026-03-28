@@ -12,6 +12,12 @@ const TEAM_C: Record<string, string> = {
   PBKS: "#DD1F2D", RR: "#EA1A85", DC: "#4B64E8", KKR: "#3A225D",
   LSG: "#005DA0", GT: "#1B2133",
 };
+const TEAM_FULL: Record<string, string> = {
+  CSK: "Chennai Super Kings", MI: "Mumbai Indians", SRH: "Sunrisers Hyderabad",
+  RCB: "Royal Challengers Bengaluru", PBKS: "Punjab Kings", RR: "Rajasthan Royals",
+  DC: "Delhi Capitals", KKR: "Kolkata Knight Riders", LSG: "Lucknow Super Giants",
+  GT: "Gujarat Titans",
+};
 const OWNER_C = ["#D97706", "#7C3AED", "#059669", "#DC2626", "#2563EB", "#DB2777", "#0891B2"];
 const TIER: Record<string, { label: string; color: string; bg: string; prob: number }> = {
   GUARANTEED: { label: "Locked In", color: "#059669", bg: "#ECFDF5", prob: 92 },
@@ -19,7 +25,8 @@ const TIER: Record<string, { label: string; color: string; bg: string; prob: num
   ROTATION: { label: "Fringe", color: "#D97706", bg: "#FFFBEB", prob: 40 },
   UNLIKELY: { label: "Bench", color: "#9CA3AF", bg: "#F3F4F6", prob: 10 },
 };
-const ROLE: Record<string, string> = { WK: "Wicketkeeper", AR: "All-Rounder", BOWL: "Bowler", BAT: "Batter" };
+const ROLE: Record<string, string> = { WK: "Wicketkeeper", AR: "All-Rounder", BOWL: "Bowler", BAT: "Batter", "Wicketkeeper-Batter": "Wicketkeeper" };
+const ROLE_ICON: Record<string, string> = { WK: "🧤", AR: "⚡", BOWL: "🎯", BAT: "🏏", "Wicketkeeper-Batter": "🧤" };
 
 function fmt(n: number) { return n >= 1000 ? `${(n / 1000).toFixed(1)}k` : Math.round(n).toString(); }
 function stat(v: number | null | undefined, d: number = 1): string {
@@ -47,7 +54,7 @@ export default function Home() {
     <div className="max-w-md mx-auto w-full min-h-dvh">
       {view.type === "home" && <HomeScreen push={push} />}
       {view.type === "owner" && <OwnerScreen name={view.name} pop={pop} push={push} />}
-      {view.type === "player" && <PlayerScreen player={view.player} pop={pop} />}
+      {view.type === "player" && <PlayerScreen player={view.player} pop={pop} push={push} />}
       {view.type === "method" && <MethodScreen pop={pop} />}
       {view.type === "allPlayers" && <AllPlayersScreen pop={pop} push={push} />}
     </div>
@@ -59,22 +66,33 @@ export default function Home() {
    ═══════════════════════════ */
 function HomeScreen({ push }: { push: (v: View) => void }) {
   const w = data.rankings[0];
+  const totalPlayers = data.players.length;
+  const injuredCount = data.players.filter(p => p.avail < 1).length;
+  const overseasCount = data.players.filter(p => p.overseas).length;
+
   return (
     <div className="px-5 pt-8 pb-10 fade-up">
       <div className="text-center mb-8">
         <span className="inline-block px-3 py-1 rounded-full text-xs font-medium" style={{ background: "#FEF3C7", color: "#92400E" }}>
-          AI-Powered Predictions
+          🤖 AI-Powered Predictions
         </span>
         <h1 className="text-3xl font-bold mt-3 tracking-tight">IPL 2026 Fantasy</h1>
-        <p className="text-sm mt-1.5" style={{ color: "#9CA3AF" }}>186 players &middot; 7 owners &middot; Who wins?</p>
+        <p className="text-sm mt-1.5" style={{ color: "#9CA3AF" }}>{totalPlayers} players · {data.rankings.length} owners · {overseasCount} overseas · {injuredCount} injured</p>
       </div>
 
       {/* Winner */}
       <div className="rounded-2xl p-5 mb-7 relative overflow-hidden" style={{ background: "linear-gradient(135deg, #FFFBEB, #FEF3C7, #FDE68A)", border: "1px solid #FCD34D" }}>
-        <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#92400E" }}>Predicted Winner</p>
-        <h2 className="text-3xl font-extrabold mt-1" style={{ color: "#78350F" }}>{w.name}</h2>
+        <div className="flex items-center gap-2 mb-1">
+          <span className="text-lg">🏆</span>
+          <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#92400E" }}>Predicted Winner</p>
+        </div>
+        <h2 className="text-3xl font-extrabold" style={{ color: "#78350F" }}>{w.name}</h2>
         <p className="mt-2"><span className="text-2xl font-bold" style={{ color: "#B45309" }}>{fmt(w.total)}</span> <span className="text-sm" style={{ color: "#92400E" }}>points</span></p>
-        <p className="text-xs mt-2" style={{ color: "#92400E" }}>{w.count} players &middot; {Math.round(w.bat / w.total * 100)}% bat &middot; {Math.round(w.bowl / w.total * 100)}% bowl</p>
+        <div className="flex gap-4 mt-2">
+          <span className="text-xs" style={{ color: "#92400E" }}>🏏 {fmt(w.bat)} bat</span>
+          <span className="text-xs" style={{ color: "#92400E" }}>🎯 {fmt(w.bowl)} bowl</span>
+          <span className="text-xs" style={{ color: "#92400E" }}>{w.count} players</span>
+        </div>
       </div>
 
       {/* Leaderboard table */}
@@ -91,20 +109,28 @@ function HomeScreen({ push }: { push: (v: View) => void }) {
             </tr>
           </thead>
           <tbody>
-            {data.rankings.map((o, i) => (
-              <tr key={o.name} onClick={() => push({ type: "owner", name: o.name })}
-                className="cursor-pointer"
-                style={{ borderBottom: i < data.rankings.length - 1 ? "1px solid #F3F4F6" : "none" }}>
-                <td className="py-3 px-3 font-semibold" style={{ color: OWNER_C[i] }}>{i + 1}</td>
-                <td className="py-3 px-2">
-                  <span className="font-semibold">{o.name}</span>
-                  <span className="text-xs ml-1.5" style={{ color: "#D1D5DB" }}>{o.count}p</span>
-                </td>
-                <td className="py-3 px-2 text-right font-bold">{fmt(o.total)}</td>
-                <td className="py-3 px-2 text-right" style={{ color: "#3B82F6" }}>{fmt(o.bat)}</td>
-                <td className="py-3 px-3 text-right" style={{ color: "#10B981" }}>{fmt(o.bowl)}</td>
-              </tr>
-            ))}
+            {data.rankings.map((o, i) => {
+              const gap = i === 0 ? 0 : Math.round(data.rankings[0].total - o.total);
+              return (
+                <tr key={o.name} onClick={() => push({ type: "owner", name: o.name })}
+                  className="cursor-pointer card-hover"
+                  style={{ borderBottom: i < data.rankings.length - 1 ? "1px solid #F3F4F6" : "none" }}>
+                  <td className="py-3 px-3">
+                    <span className="font-semibold" style={{ color: OWNER_C[i] }}>
+                      {i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : `${i + 1}`}
+                    </span>
+                  </td>
+                  <td className="py-3 px-2">
+                    <span className="font-semibold">{o.name}</span>
+                    <span className="text-xs ml-1.5" style={{ color: "#D1D5DB" }}>{o.count}p</span>
+                    {gap > 0 && <span className="text-xs ml-1" style={{ color: "#EF4444" }}>-{gap}</span>}
+                  </td>
+                  <td className="py-3 px-2 text-right font-bold">{fmt(o.total)}</td>
+                  <td className="py-3 px-2 text-right" style={{ color: "#3B82F6" }}>{fmt(o.bat)}</td>
+                  <td className="py-3 px-3 text-right" style={{ color: "#10B981" }}>{fmt(o.bowl)}</td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
@@ -112,25 +138,55 @@ function HomeScreen({ push }: { push: (v: View) => void }) {
       {/* Quick stats */}
       {(() => {
         const mvp = [...data.players].sort((a, b) => b.expTotal - a.expTotal)[0];
-        const topB = [...data.players].sort((a, b) => b.expBowl - a.expBowl)[0];
-        const gap = Math.round(data.rankings[0].total - data.rankings[1].total);
+        const topBowler = [...data.players].sort((a, b) => b.expBowl - a.expBowl)[0];
+        const topBatter = [...data.players].sort((a, b) => b.expBat - a.expBat)[0];
         return (
           <div className="grid grid-cols-3 gap-2.5 mt-6">
-            <QuickStat label="MVP" value={mvp.fn.split(" ").pop() || ""} sub={`${fmt(mvp.expTotal)} pts`} />
-            <QuickStat label="Top Bowler" value={topB.fn.split(" ").pop() || ""} sub={`${fmt(topB.expBowl)} pts`} />
-            <QuickStat label="Lead" value={`${gap} pts`} sub={`${data.rankings[0].name} ahead`} />
+            <QuickStat label="🏆 MVP" value={mvp.fn.split(" ").pop() || ""} sub={`${fmt(mvp.expTotal)} pts`} />
+            <QuickStat label="🏏 Top Bat" value={topBatter.fn.split(" ").pop() || ""} sub={`${fmt(topBatter.expBat)} pts`} />
+            <QuickStat label="🎯 Top Bowl" value={topBowler.fn.split(" ").pop() || ""} sub={`${fmt(topBowler.expBowl)} pts`} />
+          </div>
+        );
+      })()}
+
+      {/* Injury watch */}
+      {(() => {
+        const injured = data.players.filter(p => p.avail < 1).sort((a, b) => a.avail - b.avail).slice(0, 5);
+        return injured.length > 0 && (
+          <div className="mt-6">
+            <SectionLabel>⚠️ Injury Watch</SectionLabel>
+            <div className="rounded-xl bg-white overflow-hidden" style={{ border: "1px solid #FECACA" }}>
+              {injured.map((p, i) => (
+                <div key={p.fn} onClick={() => push({ type: "player", player: p })}
+                  className="flex items-center justify-between px-3 py-2.5 cursor-pointer card-hover"
+                  style={{ borderBottom: i < injured.length - 1 ? "1px solid #FEE2E2" : "none", background: "#FEF2F2" }}>
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="w-1 h-5 rounded-full flex-shrink-0" style={{ background: TEAM_C[p.team] }} />
+                    <div className="min-w-0">
+                      <p className="text-sm font-medium truncate">{p.fn}</p>
+                      <p className="text-xs truncate" style={{ color: "#991B1B" }}>
+                        {p.availNote ? p.availNote.split('.')[0].split('—').pop()?.split('→').pop()?.trim().substring(0, 50) : `${Math.round(p.avail * 100)}% available`}
+                      </p>
+                    </div>
+                  </div>
+                  <span className="text-xs font-bold flex-shrink-0 ml-2" style={{ color: p.avail === 0 ? "#DC2626" : "#D97706" }}>
+                    {p.avail === 0 ? "OUT" : `${Math.round(p.avail * 100)}%`}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         );
       })()}
 
       {/* Links */}
       <div className="mt-6 space-y-2">
-        <LinkBtn label="Search all 186 players" onClick={() => push({ type: "allPlayers" })} />
-        <LinkBtn label="How predictions work" onClick={() => push({ type: "method" })} />
-        <LinkBtn label="Download all data (CSV)" onClick={() => downloadCSV(data.players)} arrow="&#8595;" />
+        <LinkBtn icon="🔍" label="Search all 186 players" onClick={() => push({ type: "allPlayers" })} />
+        <LinkBtn icon="📊" label="How predictions work" onClick={() => push({ type: "method" })} />
+        <LinkBtn icon="📥" label="Download all data (CSV)" onClick={() => downloadCSV(data.players)} arrow="↓" />
       </div>
 
-      <p className="text-center text-xs mt-8" style={{ color: "#D1D5DB" }}>Built with Claude &middot; IPL 2026</p>
+      <p className="text-center text-xs mt-8" style={{ color: "#D1D5DB" }}>Built with Claude · IPL 2026</p>
     </div>
   );
 }
@@ -145,10 +201,10 @@ function QuickStat({ label, value, sub }: { label: string; value: string; sub: s
   );
 }
 
-function LinkBtn({ label, onClick, arrow = "\u2192" }: { label: string; onClick: () => void; arrow?: string }) {
+function LinkBtn({ label, onClick, arrow = "→", icon }: { label: string; onClick: () => void; arrow?: string; icon?: string }) {
   return (
     <button onClick={onClick} className="w-full rounded-xl bg-white px-4 py-3 text-sm font-medium flex justify-between items-center card-hover" style={{ border: "1px solid #E5E7EB" }}>
-      <span>{label}</span>
+      <span className="flex items-center gap-2">{icon && <span>{icon}</span>}{label}</span>
       <span style={{ color: "#9CA3AF" }}>{arrow}</span>
     </button>
   );
@@ -160,27 +216,61 @@ function LinkBtn({ label, onClick, arrow = "\u2192" }: { label: string; onClick:
 function AllPlayersScreen({ pop, push }: { pop: () => void; push: (v: View) => void }) {
   const [q, setQ] = useState("");
   const [team, setTeam] = useState("");
+  const [role, setRole] = useState("");
+  const [sort, setSort] = useState<"total" | "bat" | "bowl" | "matches">("total");
 
   const list = useMemo(() => {
-    let l = [...data.players].sort((a, b) => b.expTotal - a.expTotal);
-    if (q) { const s = q.toLowerCase(); l = l.filter(p => p.fn.toLowerCase().includes(s) || p.n.toLowerCase().includes(s) || p.owner.toLowerCase().includes(s)); }
+    let l = [...data.players];
+    if (q) { const s = q.toLowerCase(); l = l.filter(p => p.fn.toLowerCase().includes(s) || p.n.toLowerCase().includes(s) || p.owner.toLowerCase().includes(s) || p.team.toLowerCase().includes(s)); }
     if (team) l = l.filter(p => p.team === team);
+    if (role) {
+      if (role === "INJURED") l = l.filter(p => p.avail < 1);
+      else if (role === "OVERSEAS") l = l.filter(p => p.overseas);
+      else l = l.filter(p => p.role === role || (role === "WK" && p.role === "Wicketkeeper-Batter"));
+    }
+    l.sort((a, b) => {
+      if (sort === "bat") return b.expBat - a.expBat;
+      if (sort === "bowl") return b.expBowl - a.expBowl;
+      if (sort === "matches") return b.expMatches - a.expMatches;
+      return b.expTotal - a.expTotal;
+    });
     return l;
-  }, [q, team]);
+  }, [q, team, role, sort]);
 
   return (
     <div className="px-5 pt-5 pb-10 fade-up">
       <BackBtn onClick={pop} />
-      <h2 className="text-2xl font-bold mb-4">All Players</h2>
+      <h2 className="text-2xl font-bold mb-1">All Players</h2>
+      <p className="text-xs mb-4" style={{ color: "#9CA3AF" }}>Tap any player for detailed stats & predictions</p>
 
-      <input type="text" placeholder="Search by name or owner..." value={q} onChange={e => setQ(e.target.value)}
-        className="w-full rounded-xl bg-white px-4 py-3 text-sm mb-3 focus:outline-none" style={{ border: "1px solid #E5E7EB" }} />
+      <input type="text" placeholder="Search name, team, or owner..." value={q} onChange={e => setQ(e.target.value)}
+        className="w-full rounded-xl bg-white px-4 py-3 text-sm mb-3 focus:outline-none focus:ring-2 focus:ring-amber-300" style={{ border: "1px solid #E5E7EB" }} />
 
-      <div className="flex gap-1.5 overflow-x-auto pb-3 mb-3">
-        <FilterPill label="All" active={!team} onClick={() => setTeam("")} />
+      {/* Team filter */}
+      <div className="flex gap-1.5 overflow-x-auto pb-2 mb-2 no-scrollbar">
+        <FilterPill label="All Teams" active={!team} onClick={() => setTeam("")} />
         {["CSK","MI","SRH","RCB","PBKS","RR","DC","KKR","LSG","GT"].map(t =>
           <FilterPill key={t} label={t} active={team === t} onClick={() => setTeam(team === t ? "" : t)} color={TEAM_C[t]} />
         )}
+      </div>
+
+      {/* Role filter */}
+      <div className="flex gap-1.5 overflow-x-auto pb-2 mb-2 no-scrollbar">
+        <FilterPill label="All Roles" active={!role} onClick={() => setRole("")} />
+        <FilterPill label="🏏 BAT" active={role === "BAT"} onClick={() => setRole(role === "BAT" ? "" : "BAT")} />
+        <FilterPill label="🎯 BOWL" active={role === "BOWL"} onClick={() => setRole(role === "BOWL" ? "" : "BOWL")} />
+        <FilterPill label="⚡ AR" active={role === "AR"} onClick={() => setRole(role === "AR" ? "" : "AR")} />
+        <FilterPill label="🧤 WK" active={role === "WK"} onClick={() => setRole(role === "WK" ? "" : "WK")} />
+        <FilterPill label="⚠️ Injured" active={role === "INJURED"} onClick={() => setRole(role === "INJURED" ? "" : "INJURED")} />
+        <FilterPill label="🌍 Overseas" active={role === "OVERSEAS"} onClick={() => setRole(role === "OVERSEAS" ? "" : "OVERSEAS")} />
+      </div>
+
+      {/* Sort */}
+      <div className="flex gap-1.5 mb-3">
+        <SortPill label="Total" active={sort === "total"} onClick={() => setSort("total")} />
+        <SortPill label="Batting" active={sort === "bat"} onClick={() => setSort("bat")} />
+        <SortPill label="Bowling" active={sort === "bowl"} onClick={() => setSort("bowl")} />
+        <SortPill label="Matches" active={sort === "matches"} onClick={() => setSort("matches")} />
       </div>
 
       <p className="text-xs mb-3" style={{ color: "#9CA3AF" }}>{list.length} players</p>
@@ -190,24 +280,32 @@ function AllPlayersScreen({ pop, push }: { pop: () => void; push: (v: View) => v
           <thead>
             <tr style={{ background: "#FAFAF9", borderBottom: "1px solid #F3F4F6" }}>
               <th className="text-left py-2 px-3 font-medium text-xs" style={{ color: "#9CA3AF" }}>Player</th>
-              <th className="text-left py-2 px-2 font-medium text-xs" style={{ color: "#9CA3AF" }}>Owner</th>
-              <th className="text-right py-2 px-3 font-medium text-xs" style={{ color: "#9CA3AF" }}>Pts</th>
+              <th className="text-right py-2 px-2 font-medium text-xs" style={{ color: "#3B82F6" }}>Bat</th>
+              <th className="text-right py-2 px-2 font-medium text-xs" style={{ color: "#10B981" }}>Bowl</th>
+              <th className="text-right py-2 px-3 font-medium text-xs" style={{ color: "#9CA3AF" }}>Total</th>
             </tr>
           </thead>
           <tbody>
             {list.slice(0, 50).map((p, i) => (
-              <tr key={p.fn} onClick={() => push({ type: "player", player: p })} className="cursor-pointer"
+              <tr key={p.fn} onClick={() => push({ type: "player", player: p })} className="cursor-pointer card-hover"
                 style={{ borderBottom: "1px solid #F3F4F6" }}>
                 <td className="py-2.5 px-3">
                   <div className="flex items-center gap-2">
                     <span className="w-1 h-6 rounded-full flex-shrink-0" style={{ background: TEAM_C[p.team] }} />
                     <div>
-                      <p className="font-medium text-sm">{p.fn}</p>
-                      <p className="text-xs" style={{ color: "#9CA3AF" }}>{p.team} &middot; {ROLE[p.role] || p.role}{p.avail < 1 ? " \u26A0\uFE0F" : ""}</p>
+                      <p className="font-medium text-sm">
+                        {p.fn}
+                        {p.overseas && <span className="ml-1 text-xs">🌍</span>}
+                        {p.avail < 1 && <span className="ml-1 text-xs">⚠️</span>}
+                      </p>
+                      <p className="text-xs" style={{ color: "#9CA3AF" }}>
+                        {p.team} · {ROLE[p.role] || p.role} · <span style={{ color: "#6B7280" }}>{p.owner}</span>
+                      </p>
                     </div>
                   </div>
                 </td>
-                <td className="py-2.5 px-2 text-xs" style={{ color: "#6B7280" }}>{p.owner}</td>
+                <td className="py-2.5 px-2 text-right text-xs" style={{ color: "#3B82F6" }}>{fmt(p.expBat)}</td>
+                <td className="py-2.5 px-2 text-right text-xs" style={{ color: "#10B981" }}>{fmt(p.expBowl)}</td>
                 <td className="py-2.5 px-3 text-right font-bold">{fmt(p.expTotal)}</td>
               </tr>
             ))}
@@ -221,10 +319,22 @@ function AllPlayersScreen({ pop, push }: { pop: () => void; push: (v: View) => v
 
 function FilterPill({ label, active, onClick, color }: { label: string; active: boolean; onClick: () => void; color?: string }) {
   return (
-    <button onClick={onClick} className="px-3 py-1.5 rounded-full text-xs font-medium flex-shrink-0 whitespace-nowrap"
+    <button onClick={onClick} className="px-3 py-1.5 rounded-full text-xs font-medium flex-shrink-0 whitespace-nowrap transition-all"
       style={active
         ? { background: color || "#1a1a1a", color: "white" }
         : { background: "white", color: color || "#6B7280", border: "1px solid #E5E7EB" }
+      }>
+      {label}
+    </button>
+  );
+}
+
+function SortPill({ label, active, onClick }: { label: string; active: boolean; onClick: () => void }) {
+  return (
+    <button onClick={onClick} className="px-2.5 py-1 rounded-md text-xs font-medium transition-all"
+      style={active
+        ? { background: "#FEF3C7", color: "#92400E", border: "1px solid #FCD34D" }
+        : { background: "transparent", color: "#9CA3AF" }
       }>
       {label}
     </button>
@@ -264,6 +374,10 @@ function OwnerScreen({ name, pop, push }: { name: string; pop: () => void; push:
     return Object.entries(m).sort((a, b) => b[1].pts - a[1].pts);
   }, [players]);
 
+  // Commentary
+  const topPlayer = players[0];
+  const totalInjuryLoss = injured.reduce((s, p) => s + (1 - p.avail) * p.expTotal / p.avail, 0);
+
   return (
     <div className="px-5 pt-5 pb-10 fade-up">
       <BackBtn onClick={pop} />
@@ -272,7 +386,9 @@ function OwnerScreen({ name, pop, push }: { name: string; pop: () => void; push:
       <div className="flex items-center justify-between mb-5">
         <div>
           <h2 className="text-2xl font-bold">{name}</h2>
-          <p className="text-sm" style={{ color: "#9CA3AF" }}>Rank #{od.rank} &middot; {players.length} players &middot; {overseas} overseas</p>
+          <p className="text-sm" style={{ color: "#9CA3AF" }}>
+            {idx === 0 ? "🥇" : idx === 1 ? "🥈" : idx === 2 ? "🥉" : `#${od.rank}`} · {players.length} players · {overseas} overseas
+          </p>
         </div>
         <div className="text-right">
           <p className="text-2xl font-bold" style={{ color }}>{fmt(od.total)}</p>
@@ -283,32 +399,60 @@ function OwnerScreen({ name, pop, push }: { name: string; pop: () => void; push:
       {/* Bat / Bowl split */}
       <div className="rounded-xl bg-white p-4 mb-4" style={{ border: "1px solid #E5E7EB" }}>
         <div className="flex justify-between text-xs font-medium mb-1.5">
-          <span style={{ color: "#2563EB" }}>Batting {batPct}% &middot; {fmt(od.bat)}</span>
-          <span style={{ color: "#059669" }}>Bowling {100 - batPct}% &middot; {fmt(od.bowl)}</span>
+          <span style={{ color: "#2563EB" }}>🏏 Batting {batPct}% · {fmt(od.bat)}</span>
+          <span style={{ color: "#059669" }}>🎯 Bowling {100 - batPct}% · {fmt(od.bowl)}</span>
         </div>
-        <div className="h-2.5 rounded-full overflow-hidden flex" style={{ background: "#F3F4F6" }}>
-          <div className="h-full" style={{ width: `${batPct}%`, background: "#3B82F6", borderRadius: "9999px 0 0 9999px" }} />
-          <div className="h-full" style={{ width: `${100 - batPct}%`, background: "#10B981", borderRadius: "0 9999px 9999px 0" }} />
+        <div className="h-3 rounded-full overflow-hidden flex" style={{ background: "#F3F4F6" }}>
+          <div className="h-full" style={{ width: `${batPct}%`, background: "linear-gradient(90deg, #3B82F6, #60A5FA)", borderRadius: "9999px 0 0 9999px" }} />
+          <div className="h-full" style={{ width: `${100 - batPct}%`, background: "linear-gradient(90deg, #10B981, #34D399)", borderRadius: "0 9999px 9999px 0" }} />
         </div>
       </div>
 
       {/* Teams */}
+      <SectionLabel>Team Distribution</SectionLabel>
       <div className="flex flex-wrap gap-1.5 mb-5">
         {teams.map(([t, { pts, count }]) => (
-          <span key={t} className="px-2.5 py-1 rounded-full text-xs font-medium" style={{ background: TEAM_C[t] + "15", color: TEAM_C[t], border: `1px solid ${TEAM_C[t]}30` }}>
-            {t} {count}p &middot; {fmt(pts)}
+          <span key={t} className="px-2.5 py-1.5 rounded-lg text-xs font-medium" style={{ background: TEAM_C[t] + "15", color: TEAM_C[t], border: `1px solid ${TEAM_C[t]}30` }}>
+            {t} {count}p · {fmt(pts)} pts
           </span>
         ))}
       </div>
 
-      {/* Injured players */}
+      {/* Team commentary */}
+      <div className="rounded-xl p-4 mb-4" style={{ background: "#F5F3FF", border: "1px solid #DDD6FE" }}>
+        <p className="text-xs font-semibold mb-2" style={{ color: "#7C3AED" }}>💬 Squad Analysis</p>
+        <p className="text-sm leading-relaxed" style={{ color: "#4B5563" }}>
+          {topPlayer && <>Star player <strong>{topPlayer.fn}</strong> leads with {fmt(topPlayer.expTotal)} pts. </>}
+          {batPct > 60 ? "Batting-heavy squad — success depends on top-order consistency. " :
+           batPct < 40 ? "Bowling-dominant squad — could dominate if pitches assist. " :
+           "Balanced batting-bowling split gives flexibility. "}
+          {overseas > 8 ? "Heavy overseas reliance could be risky with 4-player limits per team. " : ""}
+          {injured.length > 0 ? `${injured.length} player${injured.length > 1 ? 's' : ''} with availability concerns (est. ~${fmt(totalInjuryLoss)} pts at risk). ` : "No injury concerns — full strength squad. "}
+          {teams.length <= 4 ? "Concentrated across few teams — correlated risk/reward. " : `Diversified across ${teams.length} teams for balanced exposure. `}
+        </p>
+      </div>
+
+      {/* Injured players with reasons */}
       {injured.length > 0 && (
         <div className="rounded-xl p-3 mb-4" style={{ background: "#FEF2F2", border: "1px solid #FECACA" }}>
-          <p className="text-xs font-semibold mb-1" style={{ color: "#DC2626" }}>{"\u26A0\uFE0F"} Availability Concerns ({injured.length})</p>
+          <p className="text-xs font-semibold mb-2" style={{ color: "#DC2626" }}>⚠️ Availability Concerns ({injured.length})</p>
           {injured.map(p => (
-            <p key={p.fn} className="text-xs" style={{ color: "#991B1B" }}>
-              <strong>{p.fn}</strong> — {Math.round(p.avail * 100)}% available{p.avail === 0 ? " (ruled out)" : ""}
-            </p>
+            <div key={p.fn} className="mb-2 last:mb-0">
+              <div className="flex items-center justify-between">
+                <span className="text-sm font-medium" style={{ color: "#991B1B" }}>{p.fn}</span>
+                <span className="text-xs font-bold px-2 py-0.5 rounded-full" style={{
+                  background: p.avail === 0 ? "#FEE2E2" : "#FEF3C7",
+                  color: p.avail === 0 ? "#DC2626" : "#D97706"
+                }}>
+                  {p.avail === 0 ? "RULED OUT" : `${Math.round(p.avail * 100)}%`}
+                </span>
+              </div>
+              {p.availNote && (
+                <p className="text-xs mt-0.5 leading-relaxed" style={{ color: "#6B7280" }}>
+                  {p.availNote.split('.').slice(0, 2).join('.').trim()}{p.availNote.split('.').length > 2 ? '.' : ''}
+                </p>
+              )}
+            </div>
           ))}
         </div>
       )}
@@ -328,7 +472,7 @@ function OwnerScreen({ name, pop, push }: { name: string; pop: () => void; push:
               <span className="text-xs font-semibold px-2 py-1 rounded-md" style={{ background: ti.bg, color: ti.color }}>
                 {ti.label} ({ti.prob}%)
               </span>
-              <span className="text-xs font-medium" style={{ color: "#9CA3AF" }}>{g.list.length} players &middot; {fmt(grpPts)} pts</span>
+              <span className="text-xs font-medium" style={{ color: "#9CA3AF" }}>{g.list.length} players · {fmt(grpPts)} pts</span>
             </div>
             <div className="rounded-xl bg-white overflow-hidden" style={{ border: "1px solid #E5E7EB" }}>
               <table className="w-full text-sm">
@@ -342,7 +486,7 @@ function OwnerScreen({ name, pop, push }: { name: string; pop: () => void; push:
                 </thead>
                 <tbody>
                   {g.list.sort((a, b) => b.expTotal - a.expTotal).map((p, i) => (
-                    <tr key={p.fn} onClick={() => push({ type: "player", player: p })} className="cursor-pointer"
+                    <tr key={p.fn} onClick={() => push({ type: "player", player: p })} className="cursor-pointer card-hover"
                       style={{ borderBottom: i < g.list.length - 1 ? "1px solid #F3F4F6" : "none" }}>
                       <td className="py-2.5 px-3">
                         <div className="flex items-center gap-2">
@@ -350,8 +494,8 @@ function OwnerScreen({ name, pop, push }: { name: string; pop: () => void; push:
                           <div>
                             <span className="font-medium">{p.fn}</span>
                             <span className="text-xs ml-1" style={{ color: "#D1D5DB" }}>{p.team}</span>
-                            {p.overseas && <span className="text-xs ml-1">{"\uD83C\uDF0D"}</span>}
-                            {p.avail < 1 && <span className="text-xs ml-1" style={{ color: "#EF4444" }}>{"\u26A0\uFE0F"}</span>}
+                            {p.overseas && <span className="text-xs ml-1">🌍</span>}
+                            {p.avail < 1 && <span className="text-xs ml-1">⚠️</span>}
                           </div>
                         </div>
                       </td>
@@ -370,20 +514,27 @@ function OwnerScreen({ name, pop, push }: { name: string; pop: () => void; push:
       <button onClick={() => downloadCSV(players, `${name}_squad.csv`)}
         className="w-full rounded-xl bg-white px-4 py-3 mt-3 text-sm font-medium card-hover flex items-center justify-center gap-2"
         style={{ border: "1px solid #E5E7EB" }}>
-        Download {name}&apos;s squad (CSV) &#8595;
+        📥 Download {name}&apos;s squad (CSV)
       </button>
     </div>
   );
 }
 
 /* ═══════════════════════════
-   PLAYER SCREEN — Redesigned
+   PLAYER SCREEN — Enhanced
    ═══════════════════════════ */
-function PlayerScreen({ player: p, pop }: { player: Player; pop: () => void }) {
+function PlayerScreen({ player: p, pop, push }: { player: Player; pop: () => void; push: (v: View) => void }) {
   const tc = TEAM_C[p.team] || "#6B7280";
   const ti = TIER[p.tier] || { label: p.tier, color: "#6B7280", bg: "#F3F4F6", prob: 0 };
   const hasBat = p.careerR > 0 || p.s25R > 0 || p.s24R > 0;
   const hasBowl = p.careerW > 0 || p.s25W > 0 || p.s24W > 0;
+  const roleIcon = ROLE_ICON[p.role] || "🏏";
+
+  // Find teammates
+  const teammates = useMemo(() =>
+    data.players.filter(t => t.owner === p.owner && t.fn !== p.fn).sort((a, b) => b.expTotal - a.expTotal).slice(0, 5),
+    [p.fn, p.owner]
+  );
 
   return (
     <div className="px-5 pt-5 pb-10 fade-up">
@@ -391,79 +542,88 @@ function PlayerScreen({ player: p, pop }: { player: Player; pop: () => void }) {
 
       {/* Header */}
       <div className="flex items-center gap-3 mb-5">
-        <div className="w-12 h-12 rounded-xl flex items-center justify-center text-xs font-bold text-white flex-shrink-0" style={{ background: tc }}>{p.team}</div>
+        <div className="w-14 h-14 rounded-xl flex items-center justify-center text-lg font-bold text-white flex-shrink-0 relative" style={{ background: `linear-gradient(135deg, ${tc}, ${tc}CC)` }}>
+          <span>{roleIcon}</span>
+          <span className="absolute -bottom-1 -right-1 text-xs bg-white rounded-full px-1.5 py-0.5 font-bold" style={{ color: tc, border: `1px solid ${tc}30`, fontSize: "9px" }}>{p.team}</span>
+        </div>
         <div className="min-w-0">
           <h2 className="text-xl font-bold truncate">{p.fn}</h2>
           <p className="text-xs" style={{ color: "#6B7280" }}>
-            {ROLE[p.role] || p.role} &middot; Owned by <strong>{p.owner}</strong>
-            {p.overseas ? " \u00B7 Overseas" : ""}
-            {p.debutant ? " \u00B7 IPL Debutant" : ""}
+            {ROLE[p.role] || p.role} · {TEAM_FULL[p.team] || p.team}
+          </p>
+          <p className="text-xs mt-0.5" style={{ color: "#9CA3AF" }}>
+            Owned by <strong style={{ color: "#6B7280" }}>{p.owner}</strong>
+            {p.overseas ? " · 🌍 Overseas" : ""}
+            {p.debutant ? " · ✨ IPL Debutant" : ""}
           </p>
         </div>
       </div>
 
       {/* Points hero */}
-      <div className="rounded-xl p-5 mb-4 text-center" style={{ background: "#FAFAF9", border: "1px solid #E7E5E4" }}>
-        <p className="text-4xl font-extrabold">{fmt(p.expTotal)}</p>
-        <p className="text-xs mt-1" style={{ color: "#9CA3AF" }}>predicted points</p>
-        <div className="flex justify-center gap-8 mt-4 text-sm">
-          <div><span className="font-bold" style={{ color: "#2563EB" }}>{fmt(p.expBat)}</span> <span style={{ color: "#9CA3AF" }}>bat</span></div>
-          <div><span className="font-bold" style={{ color: "#059669" }}>{fmt(p.expBowl)}</span> <span style={{ color: "#9CA3AF" }}>bowl</span></div>
-          <div><span className="font-bold">{p.expMatches.toFixed(1)}</span> <span style={{ color: "#9CA3AF" }}>matches</span></div>
+      <div className="rounded-xl p-5 mb-4 text-center relative overflow-hidden" style={{ background: `linear-gradient(135deg, ${tc}08, ${tc}15)`, border: `1px solid ${tc}25` }}>
+        <p className="text-4xl font-extrabold" style={{ color: tc }}>{fmt(p.expTotal)}</p>
+        <p className="text-xs mt-1" style={{ color: "#9CA3AF" }}>predicted fantasy points</p>
+        <div className="flex justify-center gap-6 mt-4 text-sm">
+          <div className="text-center">
+            <span className="font-bold text-lg" style={{ color: "#2563EB" }}>{fmt(p.expBat)}</span>
+            <p className="text-xs" style={{ color: "#9CA3AF" }}>🏏 batting</p>
+          </div>
+          <div style={{ width: 1, background: "#E5E7EB" }} />
+          <div className="text-center">
+            <span className="font-bold text-lg" style={{ color: "#059669" }}>{fmt(p.expBowl)}</span>
+            <p className="text-xs" style={{ color: "#9CA3AF" }}>🎯 bowling</p>
+          </div>
+          <div style={{ width: 1, background: "#E5E7EB" }} />
+          <div className="text-center">
+            <span className="font-bold text-lg">{p.expMatches.toFixed(1)}</span>
+            <p className="text-xs" style={{ color: "#9CA3AF" }}>matches</p>
+          </div>
         </div>
       </div>
 
-      {/* Prediction breakdown */}
-      <Card title="Prediction breakdown">
-        <div className="space-y-2 text-sm">
-          <div className="flex justify-between">
-            <span style={{ color: "#6B7280" }}>Runs per match</span>
-            <span className="font-medium">{p.runsPerM.toFixed(1)}</span>
-          </div>
-          <div className="flex justify-between">
-            <span style={{ color: "#6B7280" }}>Wickets per match</span>
-            <span className="font-medium">{p.wktsPerM.toFixed(2)}</span>
-          </div>
-          <div className="my-2" style={{ borderTop: "1px solid #F3F4F6" }} />
-          <div className="flex justify-between">
-            <span style={{ color: "#6B7280" }}>Expected matches</span>
-            <span className="font-medium">{p.expMatches.toFixed(1)} <span className="text-xs" style={{ color: "#9CA3AF" }}>of 14</span></span>
-          </div>
-          <div className="flex justify-between">
-            <span style={{ color: "#6B7280" }}>Playing XI tier</span>
-            <span className="font-medium" style={{ color: ti.color }}>{ti.label} ({ti.prob}%)</span>
-          </div>
-          <div className="flex justify-between">
-            <span style={{ color: "#6B7280" }}>Availability</span>
-            <span className="font-medium" style={p.avail < 1 ? { color: "#EF4444" } : {}}>{Math.round(p.avail * 100)}%</span>
-          </div>
-          <div className="my-2" style={{ borderTop: "1px solid #F3F4F6" }} />
-          <div className="flex justify-between">
-            <span style={{ color: "#6B7280" }}>Batting points</span>
-            <span className="font-bold" style={{ color: "#2563EB" }}>{fmt(p.expBat)}</span>
-          </div>
-          <div className="flex justify-between">
-            <span style={{ color: "#6B7280" }}>Bowling points</span>
-            <span className="font-bold" style={{ color: "#059669" }}>{fmt(p.expBowl)}</span>
-          </div>
-          <div className="flex justify-between">
-            <span className="font-semibold">Total</span>
-            <span className="font-bold" style={{ color: "#D97706" }}>{fmt(p.expTotal)} pts</span>
-          </div>
-        </div>
-      </Card>
+      {/* Quick info pills */}
+      <div className="flex flex-wrap gap-1.5 mb-4">
+        <span className="text-xs px-2.5 py-1 rounded-full font-medium" style={{ background: ti.bg, color: ti.color }}>
+          {ti.label} ({ti.prob}% XI)
+        </span>
+        <span className="text-xs px-2.5 py-1 rounded-full font-medium" style={p.avail < 1 ? { background: "#FEF2F2", color: "#DC2626" } : { background: "#ECFDF5", color: "#059669" }}>
+          {p.avail === 1 ? "✅ Fully Available" : p.avail === 0 ? "❌ Ruled Out" : `⚠️ ${Math.round(p.avail * 100)}% Available`}
+        </span>
+        <span className="text-xs px-2.5 py-1 rounded-full font-medium" style={{ background: "#F3F4F6", color: "#6B7280" }}>
+          {p.conf} confidence
+        </span>
+      </div>
 
-      {/* Availability */}
+      {/* Availability concern with reason */}
       {p.avail < 1 && p.availNote && (
         <div className="rounded-xl p-4 mb-4" style={{ background: "#FEF2F2", border: "1px solid #FECACA" }}>
-          <p className="text-xs font-semibold mb-1" style={{ color: "#DC2626" }}>{"\u26A0\uFE0F"} Availability concern</p>
+          <p className="text-xs font-semibold mb-1" style={{ color: "#DC2626" }}>⚠️ Why availability is reduced</p>
           <p className="text-sm leading-relaxed" style={{ color: "#4B5563" }}>{p.availNote}</p>
         </div>
       )}
 
+      {/* ── IPL Career Summary (always show) ── */}
+      {!p.debutant && p.careerM > 0 && (
+        <Card title="📊 IPL Career Summary">
+          <div className="grid grid-cols-2 gap-3">
+            <MiniStat label="Matches" value={p.careerM.toString()} />
+            <MiniStat label="Career Runs" value={p.careerR.toLocaleString()} color="#2563EB" />
+            <MiniStat label="Career Wickets" value={p.careerW.toString()} color="#059669" />
+            {g(p, "cBatAvg") != null && <MiniStat label="Bat Average" value={stat(g(p, "cBatAvg"))} highlight />}
+            {g(p, "cBatSR") != null && <MiniStat label="Bat SR" value={stat(g(p, "cBatSR"))} />}
+            {g(p, "cBowlAvg") != null && <MiniStat label="Bowl Average" value={stat(g(p, "cBowlAvg"))} highlight />}
+            {g(p, "cBowlEcon") != null && <MiniStat label="Bowl Economy" value={stat(g(p, "cBowlEcon"))} />}
+            {g(p, "cBowlSR") != null && <MiniStat label="Bowl SR" value={stat(g(p, "cBowlSR"))} />}
+          </div>
+          <p className="text-xs mt-3" style={{ color: "#9CA3AF" }}>
+            Career averages are weighted 20% in our prediction formula
+          </p>
+        </Card>
+      )}
+
       {/* ── BATTING STATS ── */}
       {hasBat && (
-        <Card title="Batting">
+        <Card title="🏏 Batting Stats">
           <table className="w-full text-sm" style={{ borderCollapse: "collapse" }}>
             <thead>
               <tr>
@@ -471,20 +631,20 @@ function PlayerScreen({ player: p, pop }: { player: Player; pop: () => void }) {
                 <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#9CA3AF" }}>M</th>
                 <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#9CA3AF" }}>Inn</th>
                 <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#3B82F6" }}>Runs</th>
-                <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#9CA3AF" }}>Avg</th>
+                <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#D97706" }}>Avg</th>
                 <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#9CA3AF" }}>SR</th>
                 <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#9CA3AF" }}>HS</th>
               </tr>
             </thead>
             <tbody>
-              <BatRow label="Career" m={p.careerM} inn={g(p, "cBatInn")} runs={p.careerR} avg={g(p, "cBatAvg")} sr={g(p, "cBatSR")} hs={g(p, "cBatHS")} />
-              {p.s25M > 0 && <BatRow label="2025" m={p.s25M} inn={g(p, "s25BatInn")} runs={p.s25R} avg={g(p, "s25BatAvg")} sr={g(p, "s25BatSR")} hs={g(p, "s25BatHS")} />}
-              {p.s24M > 0 && <BatRow label="2024" m={p.s24M} inn={g(p, "s24BatInn")} runs={p.s24R} avg={g(p, "s24BatAvg")} sr={g(p, "s24BatSR")} hs={g(p, "s24BatHS")} />}
+              <BatRow label="Career" m={p.careerM} inn={g(p, "cBatInn")} runs={p.careerR} avg={g(p, "cBatAvg")} sr={g(p, "cBatSR")} hs={g(p, "cBatHS")} weight="20%" />
+              {p.s25M > 0 && <BatRow label="IPL '25" m={p.s25M} inn={g(p, "s25BatInn")} runs={p.s25R} avg={g(p, "s25BatAvg")} sr={g(p, "s25BatSR")} hs={g(p, "s25BatHS")} weight="50%" />}
+              {p.s24M > 0 && <BatRow label="IPL '24" m={p.s24M} inn={g(p, "s24BatInn")} runs={p.s24R} avg={g(p, "s24BatAvg")} sr={g(p, "s24BatSR")} hs={g(p, "s24BatHS")} weight="30%" />}
             </tbody>
           </table>
           {(g(p, "cBat4s") != null || g(p, "cBat6s") != null) && (
             <p className="text-xs mt-2" style={{ color: "#9CA3AF" }}>
-              Career: {stat(g(p, "cBat4s"), 0)} fours, {stat(g(p, "cBat6s"), 0)} sixes
+              Career: {stat(g(p, "cBat4s"), 0)} fours · {stat(g(p, "cBat6s"), 0)} sixes
             </p>
           )}
         </Card>
@@ -492,7 +652,7 @@ function PlayerScreen({ player: p, pop }: { player: Player; pop: () => void }) {
 
       {/* ── BOWLING STATS ── */}
       {hasBowl && (
-        <Card title="Bowling">
+        <Card title="🎯 Bowling Stats">
           <table className="w-full text-sm" style={{ borderCollapse: "collapse" }}>
             <thead>
               <tr>
@@ -500,15 +660,15 @@ function PlayerScreen({ player: p, pop }: { player: Player; pop: () => void }) {
                 <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#9CA3AF" }}>M</th>
                 <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#9CA3AF" }}>Inn</th>
                 <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#10B981" }}>Wkts</th>
-                <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#9CA3AF" }}>Avg</th>
+                <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#D97706" }}>Avg</th>
                 <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#9CA3AF" }}>Econ</th>
                 <th className="text-right py-1.5 text-xs font-medium" style={{ color: "#9CA3AF" }}>SR</th>
               </tr>
             </thead>
             <tbody>
-              <BowlRow label="Career" m={p.careerM} inn={g(p, "cBowlInn")} wkts={p.careerW} avg={g(p, "cBowlAvg")} econ={g(p, "cBowlEcon")} sr={g(p, "cBowlSR")} />
-              {p.s25W > 0 && <BowlRow label="2025" m={p.s25M} inn={g(p, "s25BowlInn")} wkts={p.s25W} avg={g(p, "s25BowlAvg")} econ={g(p, "s25BowlEcon")} sr={g(p, "s25BowlSR")} />}
-              {p.s24W > 0 && <BowlRow label="2024" m={p.s24M} inn={g(p, "s24BowlInn")} wkts={p.s24W} avg={g(p, "s24BowlAvg")} econ={g(p, "s24BowlEcon")} sr={g(p, "s24BowlSR")} />}
+              <BowlRow label="Career" m={p.careerM} inn={g(p, "cBowlInn")} wkts={p.careerW} avg={g(p, "cBowlAvg")} econ={g(p, "cBowlEcon")} sr={g(p, "cBowlSR")} weight="20%" />
+              {p.s25W > 0 && <BowlRow label="IPL '25" m={p.s25M} inn={g(p, "s25BowlInn")} wkts={p.s25W} avg={g(p, "s25BowlAvg")} econ={g(p, "s25BowlEcon")} sr={g(p, "s25BowlSR")} weight="50%" />}
+              {p.s24W > 0 && <BowlRow label="IPL '24" m={p.s24M} inn={g(p, "s24BowlInn")} wkts={p.s24W} avg={g(p, "s24BowlAvg")} econ={g(p, "s24BowlEcon")} sr={g(p, "s24BowlSR")} weight="30%" />}
             </tbody>
           </table>
           {g(p, "cBowlBB") && (
@@ -519,34 +679,84 @@ function PlayerScreen({ player: p, pop }: { player: Player; pop: () => void }) {
         </Card>
       )}
 
+      {/* Prediction breakdown */}
+      <Card title="🧮 How we calculated this">
+        <div className="space-y-2 text-sm">
+          <div className="flex justify-between">
+            <span style={{ color: "#6B7280" }}>Runs per match (weighted avg)</span>
+            <span className="font-medium">{p.runsPerM.toFixed(1)}</span>
+          </div>
+          <div className="flex justify-between">
+            <span style={{ color: "#6B7280" }}>Wickets per match (weighted avg)</span>
+            <span className="font-medium">{p.wktsPerM.toFixed(2)}</span>
+          </div>
+          <div className="my-2" style={{ borderTop: "1px dashed #E5E7EB" }} />
+          <div className="flex justify-between">
+            <span style={{ color: "#6B7280" }}>Expected matches</span>
+            <span className="font-medium">{p.expMatches.toFixed(1)} <span className="text-xs" style={{ color: "#9CA3AF" }}>of 14</span></span>
+          </div>
+          <div className="flex justify-between">
+            <span style={{ color: "#6B7280" }}>Playing XI probability</span>
+            <span className="font-medium" style={{ color: ti.color }}>{ti.label} ({ti.prob}%)</span>
+          </div>
+          <div className="flex justify-between">
+            <span style={{ color: "#6B7280" }}>Availability factor</span>
+            <span className="font-medium" style={p.avail < 1 ? { color: "#EF4444" } : {}}>{Math.round(p.avail * 100)}%</span>
+          </div>
+          <div className="my-2" style={{ borderTop: "1px dashed #E5E7EB" }} />
+          <div className="rounded-lg p-3" style={{ background: "#FAFAF9" }}>
+            <div className="flex justify-between mb-1">
+              <span style={{ color: "#2563EB" }}>🏏 Batting points</span>
+              <span className="font-bold" style={{ color: "#2563EB" }}>{fmt(p.expBat)}</span>
+            </div>
+            <div className="flex justify-between mb-1">
+              <span style={{ color: "#059669" }}>🎯 Bowling points</span>
+              <span className="font-bold" style={{ color: "#059669" }}>{fmt(p.expBowl)}</span>
+            </div>
+            <div className="my-1.5" style={{ borderTop: "1px solid #E5E7EB" }} />
+            <div className="flex justify-between">
+              <span className="font-semibold">Total predicted</span>
+              <span className="font-bold text-lg" style={{ color: tc }}>{fmt(p.expTotal)} pts</span>
+            </div>
+          </div>
+        </div>
+      </Card>
+
       {/* Debutant note */}
       {p.debutant && (
         <div className="rounded-xl p-4 mb-4" style={{ background: "#F5F3FF", border: "1px solid #DDD6FE" }}>
-          <p className="text-xs font-semibold mb-1" style={{ color: "#7C3AED" }}>IPL Debutant</p>
-          <p className="text-sm" style={{ color: "#6B7280" }}>No IPL history. Using baseline estimates for {ROLE[p.role] || p.role} role.</p>
+          <p className="text-xs font-semibold mb-1" style={{ color: "#7C3AED" }}>✨ IPL Debutant</p>
+          <p className="text-sm" style={{ color: "#6B7280" }}>No IPL history. Using baseline estimates for {ROLE[p.role] || p.role} role (batter: ~15 runs/match, bowler: ~0.5 wkts/match).</p>
         </div>
       )}
 
-      {/* Weighting */}
-      <Card title="Stat weighting">
+      {/* Stat weighting */}
+      <Card title="⚖️ Stat Weighting">
         <div className="space-y-2 text-sm">
-          <div className="flex justify-between">
-            <span style={{ color: "#6B7280" }}>IPL 2025 (most recent)</span>
-            <span className="font-medium" style={{ color: "#D97706" }}>50%</span>
-          </div>
-          <div className="flex justify-between">
-            <span style={{ color: "#6B7280" }}>IPL 2024</span>
-            <span className="font-medium" style={{ color: "#2563EB" }}>30%</span>
-          </div>
-          <div className="flex justify-between">
-            <span style={{ color: "#6B7280" }}>Career average</span>
-            <span className="font-medium" style={{ color: "#9CA3AF" }}>20%</span>
-          </div>
+          <WeightBar label="IPL 2025 (most recent)" pct={50} color="#D97706" />
+          <WeightBar label="IPL 2024" pct={30} color="#2563EB" />
+          <WeightBar label="Career average" pct={20} color="#9CA3AF" />
         </div>
-        <p className="text-xs mt-2" style={{ color: "#9CA3AF" }}>Missing seasons normalize remaining weights to 100%.</p>
+        <p className="text-xs mt-3" style={{ color: "#9CA3AF" }}>Missing seasons normalize remaining weights to 100%.</p>
       </Card>
 
-      <p className="text-center text-xs mt-4" style={{ color: "#D1D5DB" }}>Confidence: {p.conf}</p>
+      {/* Same-owner teammates */}
+      {teammates.length > 0 && (
+        <Card title={`👥 ${p.owner}'s other players`}>
+          {teammates.map(t => (
+            <div key={t.fn} onClick={() => push({ type: "player", player: t })}
+              className="flex items-center justify-between py-2 cursor-pointer card-hover"
+              style={{ borderBottom: "1px solid #F3F4F6" }}>
+              <div className="flex items-center gap-2">
+                <span className="w-1 h-4 rounded-full" style={{ background: TEAM_C[t.team] }} />
+                <span className="text-sm">{t.fn}</span>
+                <span className="text-xs" style={{ color: "#D1D5DB" }}>{t.team}</span>
+              </div>
+              <span className="text-sm font-medium">{fmt(t.expTotal)}</span>
+            </div>
+          ))}
+        </Card>
+      )}
     </div>
   );
 }
@@ -558,28 +768,57 @@ function g(p: Player, key: string): number | null {
   return val as number;
 }
 
-function BatRow({ label, m, inn, runs, avg, sr, hs }: { label: string; m: number; inn: number | null; runs: number; avg: number | null; sr: number | null; hs: number | null }) {
+function MiniStat({ label, value, color, highlight }: { label: string; value: string; color?: string; highlight?: boolean }) {
+  return (
+    <div className="rounded-lg p-2.5" style={{ background: highlight ? "#FFFBEB" : "#FAFAF9", border: highlight ? "1px solid #FDE68A" : "1px solid #F3F4F6" }}>
+      <p className="text-xs" style={{ color: "#9CA3AF" }}>{label}</p>
+      <p className="font-bold text-lg" style={{ color: color || (highlight ? "#B45309" : "#1a1a1a") }}>{value}</p>
+    </div>
+  );
+}
+
+function WeightBar({ label, pct, color }: { label: string; pct: number; color: string }) {
+  return (
+    <div>
+      <div className="flex justify-between mb-1">
+        <span style={{ color: "#6B7280" }}>{label}</span>
+        <span className="font-medium" style={{ color }}>{pct}%</span>
+      </div>
+      <div className="h-1.5 rounded-full" style={{ background: "#F3F4F6" }}>
+        <div className="h-full rounded-full bar-fill" style={{ width: `${pct}%`, background: color }} />
+      </div>
+    </div>
+  );
+}
+
+function BatRow({ label, m, inn, runs, avg, sr, hs, weight }: { label: string; m: number; inn: number | null; runs: number; avg: number | null; sr: number | null; hs: number | null; weight?: string }) {
   return (
     <tr style={{ borderBottom: "1px solid #F3F4F6" }}>
-      <td className="py-2 text-xs font-medium" style={{ color: "#6B7280" }}>{label}</td>
+      <td className="py-2 text-xs font-medium" style={{ color: "#6B7280" }}>
+        {label}
+        {weight && <span className="ml-1 text-xs" style={{ color: "#D97706" }}>({weight})</span>}
+      </td>
       <td className="py-2 text-right">{m}</td>
       <td className="py-2 text-right">{stat(inn, 0)}</td>
       <td className="py-2 text-right font-medium" style={{ color: "#3B82F6" }}>{runs.toLocaleString()}</td>
-      <td className="py-2 text-right font-medium">{stat(avg)}</td>
+      <td className="py-2 text-right font-medium" style={{ color: "#B45309" }}>{stat(avg)}</td>
       <td className="py-2 text-right">{stat(sr)}</td>
       <td className="py-2 text-right">{stat(hs, 0)}</td>
     </tr>
   );
 }
 
-function BowlRow({ label, m, inn, wkts, avg, econ, sr }: { label: string; m: number; inn: number | null; wkts: number; avg: number | null; econ: number | null; sr: number | null }) {
+function BowlRow({ label, m, inn, wkts, avg, econ, sr, weight }: { label: string; m: number; inn: number | null; wkts: number; avg: number | null; econ: number | null; sr: number | null; weight?: string }) {
   return (
     <tr style={{ borderBottom: "1px solid #F3F4F6" }}>
-      <td className="py-2 text-xs font-medium" style={{ color: "#6B7280" }}>{label}</td>
+      <td className="py-2 text-xs font-medium" style={{ color: "#6B7280" }}>
+        {label}
+        {weight && <span className="ml-1 text-xs" style={{ color: "#D97706" }}>({weight})</span>}
+      </td>
       <td className="py-2 text-right">{m}</td>
       <td className="py-2 text-right">{stat(inn, 0)}</td>
       <td className="py-2 text-right font-medium" style={{ color: "#10B981" }}>{wkts}</td>
-      <td className="py-2 text-right font-medium">{stat(avg)}</td>
+      <td className="py-2 text-right font-medium" style={{ color: "#B45309" }}>{stat(avg)}</td>
       <td className="py-2 text-right">{stat(econ)}</td>
       <td className="py-2 text-right">{stat(sr)}</td>
     </tr>
@@ -603,8 +842,8 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 
 function BackBtn({ onClick }: { onClick: () => void }) {
   return (
-    <button onClick={onClick} className="flex items-center gap-1 text-sm font-medium mb-4" style={{ color: "#6B7280" }}>
-      &larr; Back
+    <button onClick={onClick} className="flex items-center gap-1 text-sm font-medium mb-4 card-hover" style={{ color: "#6B7280" }}>
+      ← Back
     </button>
   );
 }
@@ -618,33 +857,53 @@ function MethodScreen({ pop }: { pop: () => void }) {
       <BackBtn onClick={pop} />
       <h2 className="text-2xl font-bold mb-5">How It Works</h2>
 
-      <MBlock title="Scoring">
+      <MBlock title="📊 Scoring">
         Simple: <strong style={{ color: "#2563EB" }}>1 run = 1 point</strong>, <strong style={{ color: "#059669" }}>1 wicket = 25 points</strong>. No bonuses, no strike rate.
       </MBlock>
-      <MBlock title="The Formula">
+      <MBlock title="🧮 The Formula">
         <code className="block rounded-lg p-3 text-xs" style={{ background: "#FAFAF9", border: "1px solid #F3F4F6" }}>
-          Expected Pts = Expected Matches &times; (Runs/Match + Wkts/Match &times; 25)
-          <br />Expected Matches = 14 &times; Playing XI % &times; Availability
+          Expected Pts = Expected Matches × (Runs/Match + Wkts/Match × 25)
+          <br />Expected Matches = 14 × Playing XI % × Availability
         </code>
       </MBlock>
-      <MBlock title="Stat Weighting">
-        50% IPL 2025, 30% IPL 2024, 20% career average. Recent form matters most. Missing seasons normalize the remaining weights.
+      <MBlock title="⚖️ Stat Weighting">
+        <strong style={{ color: "#D97706" }}>50% IPL 2025</strong> (most recent), <strong style={{ color: "#2563EB" }}>30% IPL 2024</strong>, <strong style={{ color: "#9CA3AF" }}>20% career average</strong>. Recent form matters most. Missing seasons normalize the remaining weights.
       </MBlock>
-      <MBlock title="Playing XI Tiers">
-        <strong style={{ color: "#059669" }}>Locked In (92%)</strong> — captains, franchise stars.{" "}
-        <strong style={{ color: "#2563EB" }}>Likely (75%)</strong> — first-choice, may rotate.{" "}
-        <strong style={{ color: "#D97706" }}>Fringe (40%)</strong> — competing for spot.{" "}
-        <strong style={{ color: "#9CA3AF" }}>Bench (10%)</strong> — deep squad.
+      <MBlock title="🎯 Playing XI Tiers">
+        <div className="space-y-1.5 mt-2">
+          <TierPill tier="GUARANTEED" />
+          <TierPill tier="LIKELY" />
+          <TierPill tier="ROTATION" />
+          <TierPill tier="UNLIKELY" />
+        </div>
       </MBlock>
-      <MBlock title="Availability">
-        Only reduced for player-specific evidence: injury, international duty, retirement. Assessed via AI analysis of multiple news sources.
+      <MBlock title="⚠️ Availability">
+        Only reduced for player-specific evidence: injury, international duty, retirement. Assessed via AI analysis of multiple news sources. Each player card shows the specific reason if availability is reduced.
       </MBlock>
-      <MBlock title="Debutants">
+      <MBlock title="✨ Debutants">
         16 players with no IPL history get baseline estimates by role (e.g. batter: 15 runs/match, bowler: 0.5 wickets/match).
       </MBlock>
-      <MBlock title="Not Modeled">
+      <MBlock title="🚫 Not Modeled">
         Venue effects, head-to-head matchups, toss, position changes, Impact Player rule. Over 14 matches these tend to even out.
       </MBlock>
+    </div>
+  );
+}
+
+function TierPill({ tier }: { tier: string }) {
+  const t = TIER[tier];
+  const desc: Record<string, string> = {
+    GUARANTEED: "Captains, franchise stars — automatic selections",
+    LIKELY: "First-choice players, may rotate occasionally",
+    ROTATION: "Competing for a spot, squad depth players",
+    UNLIKELY: "Deep bench — only play in emergencies",
+  };
+  return (
+    <div className="flex items-center gap-2">
+      <span className="text-xs font-semibold px-2 py-0.5 rounded-md inline-block" style={{ background: t.bg, color: t.color, minWidth: 80, textAlign: "center" }}>
+        {t.label} {t.prob}%
+      </span>
+      <span className="text-xs" style={{ color: "#6B7280" }}>{desc[tier]}</span>
     </div>
   );
 }

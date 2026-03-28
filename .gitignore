@@ -9,4 +9,11 @@ tsconfig.tsbuildinfo
 player_data.json
 predictions.json
 data/kaggle_stats.csv
-.vercel
+
+# Internal tooling
+.claude/
+AGENTS.md
+PRD.md
+CLAUDE.md
+ipl-fantasy-site/AGENTS.md
+ipl-fantasy-site/CLAUDE.md
