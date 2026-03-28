@@ -1,8 +1,9 @@
 # IPL 2026 Fantasy Predictor
 
-**186 players. 7 friends. 1 question: who drafted the best team?**
-
-We built a prediction engine to settle our fantasy IPL draft before a single ball is bowled. It scrapes official IPL stats, researches player availability from news sources, and runs every player through a prediction model to forecast the season.
+Hey @claudeai predict our IPL fantasy group.
+- Scoring  is simple. 1 point per run. 25 points per wicket. 
+- Infer starting odds, injuries & player availability from news.
+- Get player stats by scraping the official IPL website.
 
 **[See the live predictions](https://tinyurl.com/7xf8zxj7)**
 
